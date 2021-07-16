@@ -9,6 +9,24 @@ An opinionated CSS library of components. Offical CSS written by [Francis Rubio]
 - Promote accessibility by using HTML structure as basis for styling in some components
 - Include minimal JavaScript (this is for a blog, not a website)
 
+## How to build the CSS files
+1. Clone the repository
+```bash
+git clone https://github.com/antaresprogramming/zirconium.git
+```
+
+2. Install packages
+```bash
+npm install
+```
+
+3. Run the start script
+```bash
+npm start
+```
+
+After the build finishes, the CSS files and source maps can be accessed inside the `dist/` folder.
+
 ## Documentation
 The docs for this stylesheet can be found in the `public` folder. 
 
