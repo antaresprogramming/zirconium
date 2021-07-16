@@ -1,0 +1,131 @@
+.button {
+    align-items     : baseline;
+    background-color: var(--secondary-500);
+    border-radius   : var(--border-radius);
+    border          : none;
+    color           : var(--silver-100);
+    cursor          : pointer;
+    display         : inline-flex;
+    font-size       : 1em;
+    font-weight     : 700;
+    gap             : 1em;
+    padding         : 0.5em;
+    text-decoration : none;
+    transition      : color 300ms, background-color 300ms, opacity 300ms, box-shadow 300ms;
+}
+
+.button.no-bg {
+    background-color: transparent;
+    color           : var(--secondary-900);
+}
+
+.button:hover {
+    background-color: var(--secondary-100);
+    color           : var(--secondary-900);
+}
+
+.button:active {
+    opacity: 0.5;
+}
+
+.button:focus {
+    box-shadow: 0 0 0 5px var(--secondary-100);
+    outline   : none;
+}
+
+.button.no-bg:focus {
+    background-color: var(--secondary-100);
+    box-shadow      : 0 0 0 5px var(--secondary-500);
+}
+
+.button svg,
+.button .icon {
+    height: auto;
+    width : 16px;
+}
+
+.button.shadow {
+    box-shadow: 0 4px 15px var(--secondary-500-transparent);
+}
+
+.button.shadow:hover {
+    box-shadow: 0 4px 15px var(--secondary-100-transparent);
+}
+
+.button.shadow:focus {
+    box-shadow: 0 4px 15px 5px var(--secondary-100-transparent),
+        0 0 0 5px var(--secondary-100);
+}
+
+.button.shadow:active {
+    box-shadow: none;
+}
+
+.button.large {
+    padding: 1em;
+}
+
+@media (min-width: 720px) {
+    .button.small {
+        padding: 0.25em;
+    }
+}
+
+.button.accent {
+    background-color: var(--accent-500);
+}
+
+.button.accent:hover {
+    color           : var(--accent-900);
+    background-color: var(--accent-100);
+}
+
+.button.accent:focus {
+    box-shadow: 0 0 0 5px var(--accent-100);
+}
+
+.button.accent.shadow {
+    box-shadow: 0 4px 15px var(--accent-500-transparent);
+}
+
+.button.accent.shadow:focus {
+    box-shadow: 0 4px 15px 5px var(--accent-100), 0 0 0 5px var(--accent-100);
+}
+
+.button.accent.shadow:active {
+    box-shadow: none;
+}
+
+.button.accent.no-bg {
+    background-color: transparent;
+    color           : var(--accent-900);
+}
+
+.button.accent.no-bg:hover {
+    background-color: var(--accent-100);
+}
+
+.button.accent.no-bg:focus {
+    box-shadow: 0 0 0 5px var(--accent-500);
+}
+
+@media (prefers-color-scheme: dark) {
+    .button.no-bg {
+        color: var(--secondary-100);
+    }
+
+    .button.no-bg:focus,
+    .button.no-bg:hover {
+        background-color: var(--secondary-500-transparent);
+    }
+
+    .button.accent.no-bg {
+        color: var(--accent-100);
+    }
+
+    .button.accent.no-bg:hover,
+    .button.accent.no-bg:hover {
+        background-color: var(--accent-500-transparent);
+        color           : var(--accent-100);
+    }
+}

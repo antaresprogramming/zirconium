@@ -1,0 +1,16 @@
+.flex {
+    display    : flex;
+    flex-wrap  : wrap;
+    align-items: center;
+    gap        : 1em;
+}
+
+.grid {
+    display: grid;
+    gap    : 0.5em;
+    padding: 2em;
+}
+
+.section {
+    padding: 1em;
+}

@@ -1,0 +1,108 @@
+.alert {
+    align-items     : center;
+    background-color: #0003;
+    border          : 1px solid #0005;
+    border-radius   : var(--border-radius);
+    display         : flex;
+    gap             : 1em;
+    padding         : 1em;
+
+    --focus-color: currentColor;
+    --hover-color: var(--silver-100);
+}
+
+.alert.info {
+    background-color: var(--info-t);
+    border-color    : var(--info-500);
+    color           : var(--info-900);
+
+    --focus-color: var(--info-500);
+    --hover-color: var(--info-500);
+}
+
+.alert.error {
+    background-color: var(--error-t);
+    border-color    : var(--error-500);
+    color           : var(--error-900);
+
+    --focus-color: var(--error-500);
+    --hover-color: var(--error-500);
+}
+
+.alert.warning {
+    background-color: var(--warning-t);
+    border-color    : var(--warning-500);
+    color           : var(--warning-900);
+
+    --focus-color: var(--warning-500);
+    --hover-color: var(--warning-500);
+}
+
+.alert.success {
+    background-color: var(--success-t);
+    border-color    : var(--success-500);
+    color           : var(--success-900);
+
+    --focus-color: var(--success-500);
+    --hover-color: var(--success-500);
+}
+
+@media (prefers-color-scheme: dark) {
+    .alert {
+        color: var(--fg-300);
+
+        --focus-color: currentColor;
+        --hover-color: #fff3;
+    }
+
+    .alert.info {
+        color: var(--info-100);
+
+        --focus-color: currentColor;
+        --hover-color: var(--info-900);
+    }
+
+    .alert.error {
+        color: var(--error-100);
+
+        --focus-color: currentColor;
+        --hover-color: var(--error-900);
+    }
+
+    .alert.warning {
+        color: var(--warning-100);
+
+        --focus-color: currentColor;
+        --hover-color: var(--warning-900);
+    }
+
+    .alert.success {
+        color: var(--success-100);
+
+        --focus-color: currentColor;
+        --hover-color: var(--success-900);
+    }
+}
+
+.alert__body {
+    flex: 1;
+    gap : 0;
+}
+
+.alert__body>* {
+    font-size: inherit;
+    margin   : 0;
+}
+
+.alert .button.no-bg {
+    color: inherit;
+}
+
+.alert>.button.no-bg:hover {
+    background-color: var(--hover-color);
+}
+
+.alert>.button.no-bg:focus {
+    background-color: transparent;
+    box-shadow      : 0 0 0 5px var(--focus-color);
+}

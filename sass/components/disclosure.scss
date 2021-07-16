@@ -1,0 +1,44 @@
+/* Disclosure Widget */
+
+details {
+	border: 1px solid var(--bg-500);
+}
+
+@media (prefers-color-scheme: dark) {
+	details {
+		border: 1px solid var(--silver-500-transparent);
+	}
+}
+
+details summary {
+	padding: 1em;
+	display: flex;
+	cursor: pointer;
+	list-style: none;
+	align-items: center;
+}
+
+details summary::after {
+	content: '';
+	width: 0.5em;
+	height: 0.5em;
+	display: block;
+	margin-left: auto;
+	transition: transform 300ms;
+	border: 1px solid transparent;
+	border-right-color: currentColor;
+	border-bottom-color: currentColor;
+	transform: rotate(45deg) translateY(-0.25em);
+}
+
+details[open] summary::after {
+	transform: rotate(-135deg) translateY(0.25em);
+}
+
+.disclosure-group {
+  margin: 1em;
+}
+
+.disclosure-group details + details {
+  border-top: none;
+}

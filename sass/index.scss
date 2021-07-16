@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-100);
+    color           : var(--fg-300);
+    margin          : 0;
+}
+
+
+@import "colors.scss";
+@import "variables.scss";
+@import "typography.scss";
+
+/* COMPONENTS */
+@import "components/alert.scss";
+@import "components/breadcrumb.scss";
+@import "components/button.scss";
+@import "components/code-snippet.scss";
+@import "components/disclosure.scss";

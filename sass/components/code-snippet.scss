@@ -1,0 +1,30 @@
+.code-snippet {
+    background-color: var(--bg-300);
+    border-radius   : var(--border-radius);
+    font-size       : 1rem;
+    padding         : 1em;
+    padding-top     : 3em;
+    position        : relative;
+}
+
+.code-snippet code[data-language]::before {
+    background-color: var(--secondary-500-transparent);
+    border-radius   : var(--border-radius);
+    color           : var(--secondary-900);
+    content         : attr(data-language);
+    font-family     : var(--font-sans);
+    font-size       : smaller;
+    font-weight     : bold;
+    left            : 0;
+    margin          : 0.5em;
+    padding         : 0.5em;
+    position        : absolute;
+    text-transform  : uppercase;
+    top             : 0;
+}
+
+@media (prefers-color-scheme: dark) {
+    .code-snippet code[data-language]::before {
+        color: var(--secondary-100);
+    }
+}

@@ -1,0 +1,17 @@
+:root {
+    --font-sans : "Inter", sans-serif;
+    --font-serif: "Lora", serif;
+    --monospace : "Monacode", monospace;
+}
+
+body {
+    font-family: var(--font-sans);
+}
+
+pre,
+code,
+kbd,
+var,
+samp {
+    font-family: var(--monospace);
+}
