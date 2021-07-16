@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/maniczirconium/zirconium/issues"
   },
-  "homepage": "https://github.com/maniczirconium/zirconium#readme"
+  "homepage": "https://github.com/maniczirconium/zirconium#readme",
+  "devDependencies": {
+    "sass": "^1.35.2"
+  }
 }
