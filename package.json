@@ -10,14 +10,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/maniczirconium/zirconium.git"
+		"url": "git+https://github.com/antaresprogramming/zirconium.git"
 	},
 	"author": "Francis Rubio <devFrancisRubio@gmail.com>",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/maniczirconium/zirconium/issues"
+		"url": "https://github.com/antaresprogramming/zirconium/issues"
 	},
-	"homepage": "https://github.com/maniczirconium/zirconium#readme",
+	"homepage": "https://github.com/antaresprogramming/zirconium#readme",
 	"devDependencies": {
 		"chalk": "^4.1.1",
 		"fibers": "^5.0.0",
