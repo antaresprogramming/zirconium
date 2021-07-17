@@ -11,7 +11,7 @@ details {
 }
 
 details summary {
-	padding: 1em;
+	padding: var(--space-l);
 	display: flex;
 	cursor: pointer;
 	list-style: none;
@@ -36,7 +36,7 @@ details[open] summary::after {
 }
 
 .disclosure-group {
-  margin: 1em;
+  margin: var(--space-l);
 }
 
 .disclosure-group details + details {

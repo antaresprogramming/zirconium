@@ -14,3 +14,7 @@
 .section {
     padding: 1em;
 }
+
+.section+.section {
+    margin-top: 1em;
+}

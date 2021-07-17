@@ -9,7 +9,7 @@
     font-size       : 1em;
     font-weight     : 700;
     gap             : 1em;
-    padding         : 0.5em;
+    padding         : var(--space-s);
     text-decoration : none;
     transition      : color 300ms, background-color 300ms, opacity 300ms, box-shadow 300ms;
 }
@@ -62,12 +62,12 @@
 }
 
 .button.large {
-    padding: 1em;
+    padding: var(--space-l);
 }
 
 @media (min-width: 720px) {
     .button.small {
-        padding: 0.25em;
+        padding: var(--space-s);
     }
 }
 

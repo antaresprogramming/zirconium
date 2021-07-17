@@ -2,8 +2,8 @@
     background-color: var(--bg-300);
     border-radius   : var(--border-radius);
     font-size       : 1rem;
-    padding         : 1em;
-    padding-top     : 3em;
+    padding         : var(--space-l);
+    padding-top     : calc(var(--space-l) * 3);
     position        : relative;
 }
 
@@ -16,8 +16,8 @@
     font-size       : smaller;
     font-weight     : bold;
     left            : 0;
-    margin          : 0.5em;
-    padding         : 0.5em;
+    margin          : var(--space-s);
+    padding         : var(--space-s);
     position        : absolute;
     text-transform  : uppercase;
     top             : 0;
