@@ -1,4 +1,9 @@
 ;(function () {
+	const ESCAPE_KEY = 27
+	const ENTER_KEY = 13
+	const DOWN_ARROW = 40
+	const UP_ARROW = 38
+
 	// NAVIGATION MENU
 	const navigationMenuToggles = document.querySelectorAll(
 		'button[data-navmenu]'
@@ -9,10 +14,33 @@
 		const dropdown = button.nextElementSibling
 
 		button.addEventListener('click', (e) => {
-			const expanded = button.getAttribute('aria-expanded') === 'true'
-			dropdown.classList.toggle('open')
-			button.setAttribute('aria-expanded', expanded ? 'false' : 'true')
+			toggleDropdown(button, dropdown)
 		})
+
+		dropdown.addEventListener('keydown', (e) => {
+			if (e.keyCode === ESCAPE_KEY || e.keyCode === ENTER_KEY)
+				closeDropdown(button, dropdown)
+		})
+	}
+
+	function toggleDropdown(button, dropdown) {
+		const expanded = button.getAttribute('aria-expanded') === 'true'
+
+		if (expanded) {
+			closeDropdown(button, dropdown)
+		} else {
+			openDropdown(button, dropdown)
+		}
+	}
+
+	function closeDropdown(button = document.createElement('button'), dropdown) {
+		dropdown.classList.remove('open')
+		button.setAttribute('aria-expanded', 'false')
+	}
+
+	function openDropdown(button = document.createElement('button'), dropdown) {
+		dropdown.classList.add('open')
+		button.setAttribute('aria-expanded', 'true')
 	}
 
 	// CLOSE BUTTONS
