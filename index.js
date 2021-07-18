@@ -10,8 +10,13 @@ const minOutputFile = 'dist/zirconium.min.css'
 const minMapFile = 'dist/zirconium.min.css.map'
 const includesDirectories = ['sass/', 'sass/components']
 
+
 const publicOutfile = 'public/src/zirconium.min.css'
 const publicMapfile = 'public/src/zirconium.min.css.map'
+
+const rawScriptFile = 'js/zirconium.js'
+const publicScriptFile = 'public/src/zirconium.js'
+const distScriptFile = 'dist/zirconium.js'
 
 console.log('Rendering zirconium.css...')
 sass.render(
@@ -82,9 +87,15 @@ function copyToPublic() {
 		logFormat.successBody(publicOutfile)
 	)
 
-	fs.copyFileSync(minMapFile, publicMapfile)
+	fs.copyFileSync(rawScriptFile, publicScriptFile)
 	console.log(
 		logFormat.successHeader('Done:'),
-		logFormat.successBody(publicMapfile)
+		logFormat.successBody(publicScriptFile)
+	)
+
+	fs.copyFileSync(publicScriptFile, distScriptFile)
+	console.log(
+		logFormat.successHeader('Done:'),
+		logFormat.successBody(distScriptFile)
 	)
 }
