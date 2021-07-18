@@ -1,34 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>
-			Zirconium &middot; An opinionated CSS library for Antares Programming
-		</title>
-		<link rel="stylesheet" href="src/zirconium.min.css">
-	</head>
-	<body>
-		<h1>Zirconium</h1>
 
-		<p>
-			An opinionated CSS library of components. Offical CSS written by [Francis
-			Rubio](https://github.com/maniczirconium/maniczirconium) for [Antares
-			Programming](https://antaresprogramming.github.io/)
-		</p>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        Zirconium &middot; An opinionated CSS library for Antares Programming
+    </title>
+    <link rel="stylesheet" href="src/zirconium.min.css" />
+</head>
 
-		<h2>Goals</h2>
-		<ul>
-			<li>
-				Standardize components for the website - Support dark mode from the
-				get-go
-			</li>
-			<li>
-				Promote accessibility by using HTML structure as basis for styling in
-				some components
-			</li>
-			<li>Include minimal JavaScript (this is for a blog, not a website)</li>
-		</ul>
-	</body>
+<body>
+    <div class="page section">
+        <h1>Zirconium</h1>
+
+        <p>
+            An opinionated CSS library of components. Offical CSS written by
+            [Francis Rubio](https://github.com/maniczirconium/maniczirconium) for
+            [Antares Programming](https://antaresprogramming.github.io/)
+        </p>
+
+        <h2>Goals</h2>
+        <ul>
+            <li>Standardize components for the website</li>
+            <li>Support dark mode from the get-go</li>
+            <li>
+                Promote accessibility by using HTML structure as basis for styling in
+                some components
+            </li>
+            <li>Include minimal JavaScript (this is for a blog, not a website)</li>
+        </ul>
+
+        <h2>Elements</h2>
+        <h3>Buttons</h3>
+
+        <div class="section">
+            <p>
+                This is the <b>standard button</b>. Styles are applied to
+                <code>button</code> or <code>a</code> elements by giving them the
+                <code>.button</code> class.
+            </p>
+            <button class="button">Standard Button</button>
+            <a href="#!" class="button">Button-styled Link</a>
+            <pre class="code-snippet"><code data-language="html">&lt;button class="button">Default Button&lt;/button>
+&lt;a href="#!" class="button">Button-styled Link&lt;/a></code></pre>
+        </div>
+
+        <div class="section">
+            <p>
+                Buttons can appear elevated by using <b>shadows</b>. Add shadows to
+                buttons by using the <code>shadow</code> class.
+            </p>
+            <button class="button shadow">Shadow Button</button>
+            <a href="#!" class="button shadow">Shadow button</a>
+            <pre class="code-snippet"><code data-language="html">&lt;button class="shadow button">Shadow Button&lt;/button>
+&lt;a href="#!" class="shadow button">Shadow button&lt;/a></code></pre>
+        </div>
+
+        <div class="section">
+            <p>
+                <b>Icon buttons</b> can be created by using either an
+                <code>&lt;svg></code> or <code>&lt;img</code> element. Left-side icons
+                are placed as the first child of the button, while the right-side ones
+                are placed as the last in the markup. Icons are also resized to
+                16px&times;16px images.
+            </p>
+            <button class="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-download">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Left Icon Button
+            </button>
+            <button class="button">
+                Right Icon Button
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-download">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+            </button>
+            <button class="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-download">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+            </button>
+            <pre class="code-snippet"><code data-language="html">&lt;button class="button">
+  &lt;svg>&hellip;&lt;/svg>
+  Left Icon Button
+&lt;/button>
+&lt;button class="button">
+  Right Icon Button
+  &lt;svg>&hellip;&lt;/svg>
+&lt;/button>
+&lt;button class="button">
+  &lt;svg>&hellip;&lt;/svg>
+&lt;/button></code></pre>
+        </div>
+
+        <div class="section">
+            <p>
+                Buttons can also appear <b>flat</b> by removing their background color
+                on the default state. Do this by adding the <code>.no-bg</code> class.
+                Note that <code>.no-bg</code> buttons have transparent backgrounds
+                only on the default state. They will still be styled with background
+                colors on hover, click, and focus.
+            </p>
+            <button class="button no-bg">Default Button</button>
+            <pre
+                class="code-snippet"><code data-language="html">&lt;button class="button accent">Default Button&lt;/button></code></pre>
+        </div>
+
+        <div class="section">
+            <p>
+                Buttons can be <b>smaller</b> by adding the <code>.small</code> class.
+                This doesn't change the font size, but rather only the padding.
+            </p>
+            <button class="small button">Small Button</button>
+            <button class="small button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-download">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Small Button
+            </button>
+            <pre class="code-snippet"><code data-language="html">&lt;button class="button small">Small Button&lt;/button>
+&lt;button class="button small">
+    &lt;svg>&hellip;&lt;/svg>
+    Small Button
+&lt;/button></code></pre>
+            <p>
+                <code>.button.small</code> buttons automatically revert to the normal
+                button size in mobile devices so they get easily tapped by people with
+                big thumbs. This behavior should not be overrided.
+            </p>
+        </div>
+
+        <div class="section">
+            <p>
+                Buttons can also be <b>larger</b> by adding the
+                <code>.large</code> class. This doesn't change the font size, but
+                rather only the padding.
+            </p>
+
+            <button class="large button">Large Button</button>
+            <pre
+                class="code-snippet"><code data-language="html">&lt;button class="large button">Large Button&lt;/button></code></pre>
+        </div>
+
+        <div class="section">
+            <p>
+                <b>Accent buttons</b>, used sparingly, are created by using the
+                <code>.accent</code> class.
+            </p>
+            <button class="accent button">Accent</button>
+            <pre
+                class="code-snippet"><code data-language="html">&lt;button class="accent button">Accent&lt;/button></code></pre>
+        </div>
+
+        <h3>Alerts</h3>
+        <p>
+            Alerts are banners that present information to the user when something
+            happens. Use cases include, but are not limited to, the following:
+        </p>
+        <ul>
+            <li>Accomplishment of a background task</li>
+            <li>Introduction of new features that need onboarding</li>
+            <li>Errors in the app</li>
+            <li>Warnings before the user decides on any vital action</li>
+            <li>Communicating the result of a user action</li>
+        </ul>
+
+        <div class="section">
+            <p>This is the <b>default alert</b>.</p>
+            <p>
+                <strong class="warning badge">Note</strong> Make sure that alerts have
+                <code>role="alert"</code> on them so assistive technologies will
+                recognize them as actual alerts.
+            </p>
+            <div class="alert" role="alert">
+                <div class="alert__body">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <pre class="code-snippet"><code data-language="html">&lt;div class="alert" role="alert">
+    &lt;div class="alert__body">
+    &lt;p>Lorem ipsum dolor sit amet.&lt;/p>
+    &lt;/div>
+&lt;/div></code></pre>
+        </div>
+
+        <div class="section">
+            <p>
+                Alerts can also have titles, or headers. This example adds an
+                <code>h3</code> element to the alert as its heading.
+            </p>
+            <div class="alert" role="alert">
+                <div class="alert__body">
+                    <h3>Alert!</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <pre class="code-snippet"><code data-language="html">&lt;div class="alert" role="alert">
+  &lt;div class="alert__body">
+    &lt;h3>Alert!&lt;/h3>
+    &lt;p>Lorem ipsum dolor sit amet.&lt;/p>
+  &lt;/div>
+&lt;/div></code></pre>
+        </div>
+
+        <div class="section">
+            <p>
+                <b>Closable alerts</b> can add their own close buttons as the last
+                child of the <code>.alert</code> element. Notice that pressing the
+                button inside the <code>.alert</code> component does not automatically
+                close the alert. You will have to handle this on your own script.
+            </p>
+            <div class="alert" role="alert">
+            <div class="alert__body">
+                <h3>Default</h3>
+                <p>This is a default alert</p>
+            </div>
+            <button class="button small no-bg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-x">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <pre class="code-snippet"><code data-language="html">&lt;div class="alert" role="alert">
+  &lt;div class="alert__body">
+    &lt;h3>Default&lt;/h3>
+    &lt;p>This is a default alert&lt;/p>
+  &lt;/div>
+  &lt;button class="button small no-bg">
+    &lt;svg>&helip;&lt;/svg>
+  &lt;/button>
+&lt;/div></code></pre>
+        </div>
+
+        <div class="section">
+            <p><strong class="warning badge">Note:</strong> Close buttons are handled automatically by <code>zirconium.js</code>. Closable alerts can work without custom script by adding the <code>data-close</code> attribute to your close button. Just make sure that you include <code>zirconium.js</code> in your markup, and that your close button is an immediate child of <code>.alert</code>.</p>
+
+            <div class="alert" role="alert">
+                <div class="alert__body">
+                    <h3>Default</h3>
+                    <p>This is a default alert</p>
+                </div>
+                <button class="button small no-bg" data-close>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-x">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <pre class="code-snippet"><code data-language="html">&lt;div class="alert" role="alert">
+  &lt;div class="alert__body">
+    &lt;h3>Default&lt;/h3>
+    &lt;p>This is a default alert&lt;/p>
+  &lt;/div>
+  &lt;button class="button small no-bg" data-close>
+    &lt;svg>&hellip;&lt;/svg>
+  &lt;/button>
+&lt;/div>
+
+&lt;script src="zirconium.js">&lt;/script></code></pre>
+        </div>
+
+        <div class="section">
+            <p>Alerts also come in different colors. Use <code>.info</code>, <code>.success</code>, <code>.warning</code>, and
+                <code>.error</code>.</p>
+        </div>
+        <div class="grid">
+            <div class="info alert" role="alert">
+                <div class="alert__body">
+                <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="success alert" role="alert">
+                <div class="alert__body">
+                <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="warning alert" role="alert">
+                <div class="alert__body">
+                <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="error alert" role="alert">
+                <div class="alert__body">
+                <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </div>
+        <pre class="code-snippet"><code data-language="html">&lt;div class="info alert" role="alert">
+  &lt;div class="alert__body">
+    &lt;p>Lorem ipsum dolor sit amet.&lt;/p>
+  &lt;/div>
+&lt;/div>
+&lt;div class="success alert" role="alert">
+  &lt;div class="alert__body">
+    &lt;p>Lorem ipsum dolor sit amet.&lt;/p>
+  &lt;/div>
+&lt;/div>
+&lt;div class="warning alert" role="alert">
+  &lt;div class="alert__body">
+    &lt;p>Lorem ipsum dolor sit amet.&lt;/p>
+  &lt;/div>
+&lt;/div>
+&lt;div class="error alert" role="alert">
+  &lt;div class="alert__body">
+    &lt;p>Lorem ipsum dolor sit amet.&lt;/p>
+  &lt;/div>
+&lt;/div></code></pre>
+    </div>
+
+    <script src="src/zirconium.js"></script>
+    <script src="src/rainbow.min.js"></script>
+</body>
+
 </html>
