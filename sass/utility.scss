@@ -48,3 +48,17 @@
 .portrait {
     aspect-ratio: 9/16
 }
+
+/* SHADOWS */
+.raised {
+    box-shadow: var(--shadow, var(--shadow-1));
+    --shadow  : var(--shadow-1);
+}
+
+.raised.level-2 {
+    --shadow: var(--shadow-2);
+}
+
+.raised.level-3 {
+    --shadow: var(--shadow-3);
+}
