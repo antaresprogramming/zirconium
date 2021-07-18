@@ -1,0 +1,42 @@
+.card {
+    display         : grid;
+    padding         : var(--space, var(--space-s));
+    border-radius   : var(--border-radius);
+    background-color: var(--background, var(--bg-100));
+    border          : var(--border);
+
+    --border: 1px solid var(--border-color, #0002);
+}
+
+.card.brand {
+    --background  : var(--brand-transparent);
+    --border-color: var(--brand-100);
+}
+
+.card.accent {
+    --background  : var(--accent-100-transparent);
+    --border-color: var(--accent-100);
+}
+
+.card.secondary {
+    --background  : var(--secondary-100-transparent);
+    --border-color: var(--secondary-100);
+}
+
+.card.raised {
+    --border: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    .card.brand {
+        --border-color: var(--brand-900);
+    }
+
+    .card.secondary {
+        --border-color: var(--secondary-900);
+    }
+
+    .card.accent {
+        --border-color: var(--accent-900);
+    }
+}
