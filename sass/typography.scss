@@ -15,3 +15,15 @@ var,
 samp {
     font-family: var(--monospace);
 }
+
+code {
+    background-color: #0001;
+    border-radius   : var(--border-radius);
+    padding         : calc(var(--space-xs) / 2);
+}
+
+@media (prefers-color-scheme: dark) {
+    code {
+        background-color: #fff1;
+    }
+}
