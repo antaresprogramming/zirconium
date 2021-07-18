@@ -1,0 +1,36 @@
+.byline {
+    align-items: center;
+    display    : flex;
+    flex-wrap  : wrap;
+    gap        : 0.5em;
+}
+
+.byline.large {
+    font-size: 1.25em;
+}
+
+.byline__image {
+    aspect-ratio   : 1;
+    border-radius  : 100%;
+    height         : auto;
+    object-fit     : cover;
+    object-position: center;
+    width          : 2em;
+}
+
+.byline address,
+.byline__body {
+    display: grid;
+}
+
+.byline address {
+    font-style: normal;
+}
+
+.byline__name {
+    font-weight: 700;
+}
+
+.byline.large .byline__label {
+    font-size: 0.75em;
+}

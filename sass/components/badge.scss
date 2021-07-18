@@ -1,0 +1,69 @@
+.badge {
+    background-color: var(--bg-color);
+    border-radius   : var(--border-radius);
+    color           : var(--text-color);
+    font-weight     : bold;
+    padding         : var(--space-xs) var(--space-s);
+    text-decoration : none;
+    transition      : background-color 300ms, box-shadow 300ms;
+
+    --bg-color   : var(--silver-300);
+    --focus-color: #0005;
+    --hover-color: #0001;
+    --text-color : var(--black-500);
+}
+
+@media (prefers-color-scheme: dark) {
+    .badge:hover {
+        color: var(--bg-color);
+    }
+}
+
+.badge.rounded {
+    border-radius: 100px;
+    padding      : var(--space-xs) var(--space-m);
+}
+
+.badge.small {
+    font-size: smaller;
+}
+
+.badge.large {
+    padding: var(--space-s) var(--space-l);
+}
+
+.badge:hover {
+    background-color: var(--hover-color);
+}
+
+.badge:focus {
+    box-shadow: 0 0 0 5px var(--focus-color);
+}
+
+.badge.success {
+    --bg-color   : var(--success-100);
+    --focus-color: var(--success-500);
+    --hover-color: var(--success-t);
+    --text-color : var(--success-900);
+}
+
+.badge.error {
+    --bg-color   : var(--error-100);
+    --focus-color: var(--error-500);
+    --hover-color: var(--error-t);
+    --text-color : var(--error-900);
+}
+
+.badge.warning {
+    --bg-color   : var(--warning-100);
+    --focus-color: var(--warning-500);
+    --hover-color: var(--warning-t);
+    --text-color : var(--warning-900);
+}
+
+.badge.info {
+    --bg-color   : var(--info-100);
+    --focus-color: var(--info-500);
+    --hover-color: var(--info-t);
+    --text-color : var(--info-900);
+}

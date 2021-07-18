@@ -1,0 +1,72 @@
+.navbar {
+    align-items     : center;
+    background-color: var(--bg-100);
+    display         : flex;
+    position        : relative;
+    width           : 100%;
+
+    --space: var(--space-m);
+}
+
+.navbar.pinned,
+.navbar.sticky {
+    border-bottom: 1px solid var(--bg-300);
+    box-shadow   : 0 4px 15px #0001;
+    position     : sticky;
+    top          : 0;
+    width        : 100%;
+    z-index      : calc(var(--elevate-navbar) * 2);
+}
+
+@supports (backdrop-filter: blur(72px)) {
+    .blurred.navbar {
+        background-color: var(--bg-t);
+        backdrop-filter : saturate(120%) blur(72px);
+    }
+}
+
+.navbar ul {
+    display   : flex;
+    flex      : 1;
+    list-style: none;
+    margin    : 0;
+    padding   : var(--space-s);
+}
+
+.navbar .end-aligned {
+    justify-content: flex-end;
+}
+
+.navbar .dropdown {
+    flex-direction: column;
+    padding       : var(--space-s);
+    position      : absolute;
+}
+
+.navbar .dropdown.end-aligned {
+    right: 0;
+    top  : 100%;
+}
+
+@media (max-width: 959px) {
+    .navbar .dropdown:not(.open) {
+        display: none;
+    }
+}
+
+@media (min-width: 960px) {
+    .navbar .dropdown {
+        box-shadow    : none;
+        flex-direction: row;
+        padding       : revert;
+        position      : static;
+    }
+
+    .navbar .nav-item.menu {
+        display: none;
+    }
+
+    .navbar.pinned {
+        --space: var(--space-xs)
+    }
+}

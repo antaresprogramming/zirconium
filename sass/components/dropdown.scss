@@ -1,0 +1,18 @@
+.dropdown {
+    background-color: var(--bg-100);
+    border-radius   : var(--border-radius);
+    box-shadow      : 0 4px 15px #0003;
+    display         : grid;
+    gap             : var(--space-s);
+    min-width       : 20ch;
+    padding         : var(--space-s);
+    z-index         : var(--elevate-dropdown);
+}
+
+.dropdown.compact {
+    --space: var(--space-xs);
+}
+
+.dropdown.large {
+    --space: var(--space-m);
+}
