@@ -13,11 +13,17 @@ body {
 
 @import "colors.scss";
 @import "variables.scss";
+@import "layout.scss";
+@import "utility.scss";
+@import "syntax-highlighting.scss";
 @import "typography.scss";
 
 /* COMPONENTS */
 @import "components/alert.scss";
+@import "components/badge.scss";
 @import "components/breadcrumb.scss";
 @import "components/button.scss";
+@import "components/byline.scss";
 @import "components/code-snippet.scss";
 @import "components/disclosure.scss";
+@import "components/pagination.scss";

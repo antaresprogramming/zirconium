@@ -1,17 +1,18 @@
 .button {
-    align-items     : baseline;
+    align-items     : center;
     background-color: var(--secondary-500);
-    border-radius   : var(--border-radius);
     border          : none;
+    border-radius   : var(--border-radius);
     color           : var(--silver-100);
     cursor          : pointer;
     display         : inline-flex;
     font-size       : 1em;
     font-weight     : 700;
-    gap             : 1em;
-    padding         : var(--space-s);
+    gap             : var(--space, var(--space-s));
+    padding         : var(--space, var(--space-s));
     text-decoration : none;
     transition      : color 300ms, background-color 300ms, opacity 300ms, box-shadow 300ms;
+    vertical-align  : middle;
 }
 
 .button.no-bg {
@@ -62,12 +63,12 @@
 }
 
 .button.large {
-    padding: var(--space-l);
+    --space: var(--space-l);
 }
 
 @media (min-width: 720px) {
     .button.small {
-        padding: var(--space-s);
+        --space: var(--space-xs);
     }
 }
 
