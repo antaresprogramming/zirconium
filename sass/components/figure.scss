@@ -18,3 +18,38 @@
 .figure figcaption b {
     font-family: var(--font-sans);
 }
+
+.quotation {
+    padding: 1em 2em;
+    border : 1px solid var(--bg-500);
+}
+
+@media (prefers-color-scheme: dark) {
+    .quotation {
+        border-color: var(--silver-500-transparent);
+    }
+}
+
+.quotation blockquote {
+    font-size  : 1.25em;
+    line-height: 1.5;
+    padding    : 0;
+    margin     : 0;
+    font-family: var(--font-sans);
+    font-weight: 300;
+}
+
+.quotation figcaption {
+    text-align: center;
+    margin    : auto;
+    display   : block;
+}
+
+.quotation figcaption::before {
+    content: '—';
+}
+
+.quotation cite {
+    font-style : normal;
+    font-family: var(--font-sans);
+}
