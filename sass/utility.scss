@@ -62,3 +62,15 @@
 .raised.level-3 {
     --shadow: var(--shadow-3);
 }
+
+.spaced {
+    justify-content: space-between;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}

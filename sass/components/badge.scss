@@ -67,3 +67,10 @@
     --hover-color: var(--info-t);
     --text-color : var(--info-900);
 }
+
+.badge-group {
+    align-items: center;
+    display    : flex;
+    flex-wrap  : wrap;
+    gap        : var(--space, var(--space-s));
+}

@@ -43,3 +43,11 @@ a {
         color: var(--accent-300);
     }
 }
+
+pre {
+    overflow: auto;
+}
+
+.pre-wrap {
+    white-space: pre-wrap;
+}
