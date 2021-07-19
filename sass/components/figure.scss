@@ -1,0 +1,20 @@
+.figure {
+    display: grid;
+}
+
+.figure img {
+    border-radius: var(--border-radius);
+}
+
+.figure figcaption {
+    font-family: var(--body-copy, var(--font-serif));
+    font-size  : 0.9em;
+    text-align : center;
+    width      : 75%;
+    max-width  : 45ch;
+    margin     : auto;
+}
+
+.figure figcaption b {
+    font-family: var(--font-sans);
+}
