@@ -2,6 +2,7 @@
 .post {
     display              : grid;
     grid-template-columns: 1fr min(65ch, 100%) 1fr;
+    padding-bottom       : 10vh;
 }
 
 .post .header {
@@ -16,13 +17,13 @@
 
 .header.image-card>img {
     grid-row  : 1/2;
-    max-height: 35ch;
+    max-height: 45ch;
     width     : 100%;
 }
 
 .header.image-card .card {
-    gap         : var(--space-s);
-    margin      : 0;
+    gap   : var(--space-s);
+    margin: 0;
 
     --box-shadow: none;
     --space     : var(--space-l);

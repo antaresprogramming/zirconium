@@ -1,23 +1,25 @@
 .nav-item {
+    align-items     : center;
     background-color: transparent;
     border          : none;
     border-radius   : var(--border-radius);
     color           : var(--fg-100);
     cursor          : pointer;
+    display         : flex;
+    flex-wrap       : wrap;
     font-size       : 1em;
+    gap             : var(--space, var(--space-s));
+    justify-content : center;
+    letter-spacing  : 2px;
     padding         : var(--space, var(--space-s));
     text-decoration : none;
-
-    display        : flex;
-    flex-wrap      : wrap;
-    gap            : var(--space, var(--space-s));
-    justify-content: center;
+    text-transform  : uppercase;
 }
-
 .nav-item.selected,
 .nav-item:focus,
 .nav-item:hover {
     background-color: var(--bg-300);
+    text-decoration: none;
 }
 
 .nav-item:active {
@@ -35,6 +37,15 @@
     width : 1em;
 }
 
+.nav-item .logo {
+    height: 2em;
+    width : 2em;
+}
+
 .nav-item__main {
     flex: 1;
+}
+
+.menu {
+    margin-right: var(--space, --space-s);
 }

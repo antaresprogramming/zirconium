@@ -6,9 +6,10 @@
 }
 
 .grid {
-    display: grid;
-    gap    : 0.5em;
-    padding: 2em;
+    --padding: calc(var(--space, 0.5em) * 4);
+    display  : grid;
+    gap      : var(--space, 0.5em);
+    padding  : var(--padding, 4em);
 }
 
 .section {
@@ -20,8 +21,14 @@
 }
 
 .page {
-    width : 75%;
+    width : 90%;
     margin: auto;
+}
+
+@media (min-width: 75%) {
+    .page {
+        width : 75%;
+    }
 }
 
 .visually-hidden {
@@ -73,4 +80,86 @@
 
 .uppercase {
     text-transform: uppercase;
+}
+
+.responsive-grid {
+    display              : grid;
+    gap                  : var(--space, --space-s);
+    padding              : var(--space, --space-s);
+    grid-template-columns: repeat(auto-fill, minmax(var(--column-size, 200px), 1fr));
+}
+
+.responsive-flex {
+    display  : flex;
+    gap      : var(--space, --space-s);
+    padding  : var(--space, --space-s);
+    flex-wrap: wrap;
+
+    &>* {
+        flex: 1 0 var(--column-size, 12em);
+    }
+}
+
+.center-aligned {
+    align-items: center;
+}
+
+.end-aligned {
+    align-items: end;
+}
+
+.start-aligned {
+    align-items: start;
+}
+
+.center-justified {
+    justify-items: center;
+}
+
+.end-justified {
+    justify-items: end;
+}
+
+.start-justified {
+    justify-items: start;
+}
+
+.end-self-justified {
+    justify-self: end;
+}
+
+.center-self-justified {
+    justify-self: center;
+}
+
+.start-self-justified {
+    justify-self: start;
+}
+
+.end-self-aligned {
+    align-self: end;
+}
+
+.center-self-aligned {
+    align-self: center;
+}
+
+.start-self-aligned {
+    align-self: start;
+}
+
+.sans {
+    font-family: var(--font-sans);
+}
+
+.serif {
+    font-family: var(--font-serif);
+}
+
+.mono {
+    font-family: var(--font-mono);
+}
+
+.bordered {
+    border: 1px solid var(--bg-300);
 }

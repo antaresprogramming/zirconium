@@ -4,6 +4,7 @@
     border-radius   : var(--border-radius);
     display         : grid;
     padding         : var(--space, var(--space-s));
+    transition      : box-shadow 300ms;
 
     --border: 1px solid var(--border-color, #0002);
 }
@@ -81,6 +82,7 @@
 
     .image-card img {
         grid-row: 1/3;
+        height: 100%;
     }
 
     .image-card.horizontal img {

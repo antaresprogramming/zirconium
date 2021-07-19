@@ -4,6 +4,12 @@
     padding         : 0.25em;
 }
 
+@media (prefers-color-scheme: dark) {
+    .breadcrumb {
+        background-color: var(--bg-100);
+    }
+}
+
 .breadcrumb.full-width {
     border-radius: 0;
 }
@@ -61,4 +67,10 @@
 
 .breadcrumb.center-aligned ol {
     justify-content: center;
+}
+
+.breadcrumb.small {
+    --space  : var(--space-xs);
+    font-size: smaller;
+    padding  : var(--space);
 }

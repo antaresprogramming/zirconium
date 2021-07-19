@@ -2,6 +2,10 @@
     --font-sans : "Inter", sans-serif;
     --font-serif: "Lora", serif;
     --monospace : "Monacode", monospace;
+
+    /* ALIASES */
+    --font-mono: var(--monospace);
+    --font-monospace: var(--monospace);
 }
 
 body {
@@ -36,6 +40,7 @@ cite {
 
 a {
     color: var(--accent-700);
+    text-decoration: none;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -44,10 +49,18 @@ a {
     }
 }
 
+a:hover {
+    text-decoration: 1px underline;
+}
+
 pre {
     overflow: auto;
 }
 
 .pre-wrap {
     white-space: pre-wrap;
+}
+
+h1 {
+    font-size: clamp(2.5em, 10vw, 3.5em);
 }

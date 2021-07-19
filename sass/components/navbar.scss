@@ -38,7 +38,7 @@
     flex      : 1;
     list-style: none;
     margin    : 0;
-    padding   : var(--space-s);
+    padding   : var(--space, --space-s);
 }
 
 .navbar .end-aligned {
@@ -52,7 +52,7 @@
 }
 
 .navbar .dropdown.end-aligned {
-    right: 0;
+    right: var(--space, --space-s);
     top  : 100%;
 }
 
@@ -67,7 +67,7 @@
         background-color: transparent;
         box-shadow      : none;
         flex-direction  : row;
-        padding         : revert;
+        padding         : var(--space);
         position        : static;
     }
 
