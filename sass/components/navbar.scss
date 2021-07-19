@@ -20,8 +20,16 @@
 
 @supports (backdrop-filter: blur(72px)) {
     .blurred.navbar {
-        background-color: var(--bg-t);
-        backdrop-filter : saturate(120%) blur(72px);
+        backdrop-filter : saturate(180%) blur(20px);
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    @supports (backdrop-filter: blur(72px)) {
+        .blurred.navbar {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
     }
 }
 
@@ -56,10 +64,11 @@
 
 @media (min-width: 960px) {
     .navbar .dropdown {
-        box-shadow    : none;
-        flex-direction: row;
-        padding       : revert;
-        position      : static;
+        background-color: transparent;
+        box-shadow      : none;
+        flex-direction  : row;
+        padding         : revert;
+        position        : static;
     }
 
     .navbar .nav-item.menu {

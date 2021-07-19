@@ -28,6 +28,10 @@
 }
 
 @media (prefers-color-scheme: dark) {
+    .card {
+        --background: var(--bg-100);
+    }
+
     .card.brand {
         --border-color: var(--brand-900);
     }
