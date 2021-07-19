@@ -27,3 +27,19 @@ code {
         background-color: #fff1;
     }
 }
+
+i,
+em,
+cite {
+    font-family: var(--font-serif);
+}
+
+a {
+    color: var(--accent-700);
+}
+
+@media (prefers-color-scheme: dark) {
+    a {
+        color: var(--accent-300);
+    }
+}
