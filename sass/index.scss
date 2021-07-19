@@ -1,7 +1,15 @@
+/* 
+    Contains reset from CSS Remedy (https://github.com/jensimmons/cssremedy)
+*/
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+html {
+    line-sizing: normal;
 }
 
 body {
@@ -38,6 +46,96 @@ h5 {
 
 h6 {
     font-size: 0.67rem;
+}
+
+hr {
+    border-style: solid;
+    border-width: 1px 0 0;
+    color       : inherit;
+    height      : 0;
+    overflow    : visible;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+    display       : block;
+    max-width     : 100%;
+    vertical-align: middle;
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+picture {
+    display: contents;
+}
+
+source {
+    display: none;
+}
+
+img,
+svg,
+video,
+canvas {
+    height: auto;
+}
+
+audio {
+    width: 100%;
+}
+
+img {
+    border-style: none;
+}
+
+svg {
+    overflow: hidden;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+    display: block;
+}
+
+[type='checkbox'],
+[type='radio'] {
+    box-sizing: border-box;
+    padding   : 0;
+}
+
+/*
+ * Remove list bullets in navigation lists
+ * Also removes the list semantics
+*/
+nav ul {
+    list-style: none;
+}
+
+/* Add zero-width space so assistive technologies still recognize the list */
+nav li:before {
+    content : "\200B";
+    position: absolute;
 }
 
 @import "colors.scss";
