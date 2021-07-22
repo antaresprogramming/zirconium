@@ -44,6 +44,7 @@
     --fg-100: var(--black-500);
     --fg-300: var(--black-700);
     --fg-500: var(--black-900);
+    --fg-t  : var(--black-500-transparent);
 
     --info-900: #002e99;
     --info-700: #0d52bf;
@@ -88,6 +89,7 @@ body {
         --fg-100: var(--silver-500);
         --fg-300: var(--silver-300);
         --fg-500: var(--silver-100);
+        --fg-t  : var(--silver-500-transparent);
     }
 
     body {

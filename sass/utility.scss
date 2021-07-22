@@ -27,7 +27,7 @@
 
 @media (min-width: 75%) {
     .page {
-        width : 75%;
+        width: 75%;
     }
 }
 
@@ -57,17 +57,29 @@
 }
 
 /* SHADOWS */
+.shadow,
 .raised {
     box-shadow: var(--shadow, var(--shadow-1));
     --shadow  : var(--shadow-1);
+    --shadow-1: 0 4px 8px var(--shadow-color, #0003);
+    --shadow-2: 0 8px 16px var(--shadow-color, #0003);
+    --shadow-3: 0 16px 32px var(--shadow-color, #0004);
+    --shadow-4: 0 32px 64px var(--shadow-color, #0005);
 }
 
+.shadow.level-2,
 .raised.level-2 {
     --shadow: var(--shadow-2);
 }
 
+.shadow.level-3,
 .raised.level-3 {
     --shadow: var(--shadow-3);
+}
+
+.shadow.level-4,
+.raised.level-4 {
+    --shadow: var(--shadow-4);
 }
 
 .spaced {
@@ -162,4 +174,16 @@
 
 .bordered {
     border: 1px solid var(--bg-300);
+}
+
+/*
+ * SIZE UTILITIES
+ * paddings and margins use `em`. Resizing font size will resize them too. 
+ */
+.small {
+    font-size: 0.8em;
+}
+
+.large {
+    font-size: 1.1em;
 }
