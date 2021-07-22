@@ -1,132 +1,113 @@
 .button {
-    align-items     : center;
-    background-color: var(--secondary-500);
-    border          : none;
-    border-radius   : var(--border-radius);
-    color           : var(--silver-100);
-    cursor          : pointer;
+    color           : var(--color, var(--bg-100));
+    font-weight     : 600;
+    background-color: var(--background-color, var(--fg-100));
     display         : inline-flex;
+    gap             : 1em;
+    align-items     : center;
+    border          : none;
+    padding         : 0.5em;
     font-size       : 1em;
-    font-weight     : 700;
-    gap             : var(--space, var(--space-s));
-    padding         : var(--space, var(--space-s));
+    border-radius   : 0.25em;
     text-decoration : none;
+    cursor          : pointer;
     transition      : color 300ms, background-color 300ms, opacity 300ms, box-shadow 300ms;
-    vertical-align  : middle;
-}
 
-.button.no-bg {
-    background-color: transparent;
-    color           : var(--secondary-900);
+    --color           : var(--fg-100);
+    --background-color: var(--bg-t);
+    --focus-color     : var(--accent-500);
 }
 
 .button:hover {
-    background-color: var(--secondary-100);
-    color           : var(--secondary-900);
+    color           : var(--hover-color, var(--fg-100));
+    background-color: var(--hover-background-color, var(--fg-t));
+    text-decoration : none;
+}
+
+.button:focus {
+    outline   : none;
+    box-shadow: 0 0 0 3px var(--focus-color);
 }
 
 .button:active {
     opacity: 0.5;
 }
 
-.button:focus {
-    box-shadow: 0 0 0 5px var(--secondary-100);
-    outline   : none;
+.button.no-bg {
+    --color           : var(--fg-100, inherit);
+    --background-color: transparent;
+    --shadow          : transparent !important;
 }
 
-.button.no-bg:focus {
-    background-color: var(--secondary-100);
-    box-shadow      : 0 0 0 5px var(--secondary-500);
+.button.secondary {
+    --background-color      : var(--secondary-500);
+    --color                 : var(--silver-100);
+    --hover-background-color: var(--secondary-100);
+    --hover-color           : var(--secondary-900);
+    --shadow-color          : var(--secondary-500-transparent);
 }
 
-.button svg,
-.button .icon {
-    height: auto;
-    width : 16px;
-}
-
-.button.shadow {
-    box-shadow: 0 4px 15px var(--secondary-500-transparent);
-}
-
-.button.shadow:hover {
-    box-shadow: 0 4px 15px var(--secondary-100-transparent);
-}
-
-.button.shadow:focus {
-    box-shadow: 0 4px 15px 5px var(--secondary-100-transparent),
-        0 0 0 5px var(--secondary-100);
-}
-
-.button.shadow:active {
-    box-shadow: none;
-}
-
-.button.large {
-    --space: var(--space-l);
-}
-
-@media (min-width: 720px) {
-    .button.small {
-        --space: var(--space-xs);
-    }
+.button.secondary.no-bg {
+    --background-color      : transparent;
+    --color                 : var(--secondary-900);
+    --hover-background-color: var(--secondary-100);
+    --hover-color           : var(--secondary-900);
 }
 
 .button.accent {
-    background-color: var(--accent-500);
-}
-
-.button.accent:hover {
-    color           : var(--accent-900);
-    background-color: var(--accent-100);
-}
-
-.button.accent:focus {
-    box-shadow: 0 0 0 5px var(--accent-100);
-}
-
-.button.accent.shadow {
-    box-shadow: 0 4px 15px var(--accent-500-transparent);
-}
-
-.button.accent.shadow:focus {
-    box-shadow: 0 4px 15px 5px var(--accent-100), 0 0 0 5px var(--accent-100);
-}
-
-.button.accent.shadow:active {
-    box-shadow: none;
+    --background-color      : var(--accent-500);
+    --color                 : var(--silver-100);
+    --focus-color           : var(--accent-300);
+    --hover-background-color: var(--accent-100);
+    --hover-color           : var(--accent-900);
+    --shadow-color          : var(--accent-500-transparent);
 }
 
 .button.accent.no-bg {
-    background-color: transparent;
-    color           : var(--accent-900);
+    --background-color      : transparent;
+    --color                 : var(--accent-900);
+    --hover-background-color: var(--accent-100);
+    --hover-color           : var(--accent-900);
 }
 
-.button.accent.no-bg:hover {
-    background-color: var(--accent-100);
-}
-
-.button.accent.no-bg:focus {
-    box-shadow: 0 0 0 5px var(--accent-500);
+.button .feather,
+.button .icon {
+    height: 0.9em;
+    width : auto;
 }
 
 @media (prefers-color-scheme: dark) {
-    .button.no-bg {
-        color: var(--secondary-100);
+    .button {
+        --color           : var(--fg-500);
+        --background-color: var(--bg-100);
     }
 
-    .button.no-bg:focus,
-    .button.no-bg:hover {
-        background-color: var(--secondary-500-transparent);
+    .button.no-bg {
+        --background-color: transparent;
+        --color           : var(--fg-300, inherit);
+    }
+
+    .button.secondary {
+        --background-color      : var(--secondary-700);
+        --color                 : var(--silver-100);
+        --hover-background-color: var(--secondary-900);
+        --hover-color           : var(--secondary-100);
+    }
+
+    .button.secondary.no-bg {
+        --background-color: transparent;
+        --color           : var(--secondary-300);
+    }
+
+    .button.accent {
+        --background-color      : var(--accent-700);
+        --color                 : var(--silver-100);
+        --hover-background-color: var(--accent-900);
+        --hover-color           : var(--accent-100);
     }
 
     .button.accent.no-bg {
-        color: var(--accent-100);
-    }
-
-    .button.accent.no-bg:hover,
-    .button.accent.no-bg:hover {
-        background-color: var(--accent-500-transparent);
-        color           : var(--accent-100);
+        --background-color: transparent;
+        --color           : var(--accent-300);
     }
 }
