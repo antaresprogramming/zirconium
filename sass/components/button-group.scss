@@ -1,0 +1,28 @@
+.button-group {
+    border-radius: var(--border-radius);
+    display      : flex;
+    gap          : 0;
+    overflow     : hidden;
+    width        : -moz-fit-content;
+    width        : fit-content;
+}
+
+.button-group .button {
+    border-radius: 0;
+}
+
+.button-group.bordered {
+    border: 1px solid var(--border-color, #0003);
+}
+
+.button-group.bordered .button:not(:last-child) {
+    border-right: 1px solid var(--border-color, #0003);
+}
+
+.button-group.secondary {
+    --border-color: var(--secondary-500-transparent);
+}
+
+.button-group.accent {
+    --border-color: var(--accent-500-transparent);
+}
