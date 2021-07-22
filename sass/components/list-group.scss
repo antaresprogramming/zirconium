@@ -1,0 +1,46 @@
+.list-group {
+    padding      : 0;
+    margin       : 0;
+    list-style   : none;
+    border-radius: var(--border-radius);
+    border       : 1px solid var(--border-color);
+
+    --border-color: var(--bg-500);
+    --space       : var(--space-m);
+}
+
+@media (prefers-color-scheme: dark) {
+    .list-group {
+        --border-color: var(--silver-500-transparent);
+    }
+}
+
+.list-group.tight {
+    --space: var(--space-s);
+}
+
+.list-group.tighter {
+    --space: var(--space-xs);
+}
+
+.list-group.spacious {
+    --space: var(--space-l);
+}
+
+.list-group li {
+    padding: var(--space, var(--space-s));
+}
+
+.list-group li:not(:last-child) {
+    border-bottom: 1px solid var(--border-color);
+}
+
+/*
+ * So assistive technologies can still
+ * recognize this as a list even when
+ * we removed the list bullets
+ */
+.list-group li:before {
+    content : "\200B";
+    position: absolute;
+}
