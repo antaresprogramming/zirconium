@@ -64,6 +64,47 @@
 
     <div class="disclosure-group">
         <details open>
+            <summary>List Groups</summary>
+            <div class="grid" style="align-items: start; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))">
+            <div class="section">
+                <ul class="list-group">
+                <li>List Item 1</li>
+                <li>List Item 2</li>
+                <li>List Item 3</li>
+                <li>List Item 4</li>
+                <li>List Item 5</li>
+                </ul>
+            </div>
+            <div class="section">
+                <ul class="tighter list-group">
+                <li>List Item 1</li>
+                <li>List Item 2</li>
+                <li>List Item 3</li>
+                <li>List Item 4</li>
+                <li>List Item 5</li>
+                </ul>
+            </div>
+            <div class="section">
+                <ul class="tight list-group">
+                <li>List Item 1</li>
+                <li>List Item 2</li>
+                <li>List Item 3</li>
+                <li>List Item 4</li>
+                <li>List Item 5</li>
+                </ul>
+            </div>
+            <div class="section">
+                <ul class="spacious list-group">
+                <li>List Item 1</li>
+                <li>List Item 2</li>
+                <li>List Item 3</li>
+                <li>List Item 4</li>
+                <li>List Item 5</li>
+                </ul>
+            </div>
+            </div>
+        </details>
+        <details>
             <summary>Buttons</summary>
             <div class="flex section">
                 <button class="button">Default Button</button>
@@ -150,47 +191,6 @@
                 </a>
                 <button class="button large">Default Button</button>
                 <a href="#!" class="button large">Default button</a>
-            </div>
-        </details>
-        <details>
-            <summary>List Groups</summary>
-            <div class="grid" style="align-items: start; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))">
-            <div class="section">
-                <ul class="list-group">
-                <li>List Item 1</li>
-                <li>List Item 2</li>
-                <li>List Item 3</li>
-                <li>List Item 4</li>
-                <li>List Item 5</li>
-                </ul>
-            </div>
-            <div class="section">
-                <ul class="tighter list-group">
-                <li>List Item 1</li>
-                <li>List Item 2</li>
-                <li>List Item 3</li>
-                <li>List Item 4</li>
-                <li>List Item 5</li>
-                </ul>
-            </div>
-            <div class="section">
-                <ul class="tight list-group">
-                <li>List Item 1</li>
-                <li>List Item 2</li>
-                <li>List Item 3</li>
-                <li>List Item 4</li>
-                <li>List Item 5</li>
-                </ul>
-            </div>
-            <div class="section">
-                <ul class="spacious list-group">
-                <li>List Item 1</li>
-                <li>List Item 2</li>
-                <li>List Item 3</li>
-                <li>List Item 4</li>
-                <li>List Item 5</li>
-                </ul>
-            </div>
             </div>
         </details>
         <details>
@@ -939,6 +939,19 @@
         // For loading the stylesheet
         document.getElementById('zirconium-stylesheet')
             .setAttribute('href', 'src/zirconium.min.css?v=' + Date.now())
+
+        const disclosureGroup = document.querySelectorAll('.disclosure-group details')
+        disclosureGroup.forEach(disclosureWidget => disclosureWidget.addEventListener('toggle', e => {
+            if(disclosureWidget.open) {
+                disclosureWidget.classList.add('currently-open')
+                
+                document
+                    .querySelectorAll('.disclosure-group details[open]:not(.currently-open)')
+                    .forEach(details => details.open = false)
+
+                disclosureWidget.classList.remove('currently-open')
+            }
+        }))
     </script>
 </body>
 </html>
