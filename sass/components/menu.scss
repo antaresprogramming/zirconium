@@ -1,0 +1,60 @@
+.menu :is(h1, h2, h3, h4, h5, h6) {
+    color         : var(--fg-100);
+    font-size     : 0.8em;
+    font-weight   : normal;
+    letter-spacing: 1px;
+    margin        : 1ch 0;
+    text-transform: uppercase;
+}
+
+.menu ul,
+.menu ol {
+    margin      : 0;
+    padding-left: 1ch;
+}
+
+.menu li {
+    padding-left: 1ch;
+    border-left : 1px solid var(--bg-300);
+}
+
+.menu a,
+.menu .button {
+    background-color: var(--background-color);
+    border-radius   : var(--border-radius);
+    color           : var(--color, var(--fg-100));
+    display         : block;
+    font-weight     : normal;
+    padding         : var(--space, var(--space-s));
+    text-align      : left;
+    width           : 100%;
+
+    --background-color: transparent;
+}
+
+.menu a:hover,
+.menu button:hover {
+    --background-color: var(--bg-300);
+    text-decoration   : none;
+}
+
+.menu .selected {
+    --background-color: var(--accent-500);
+    --color           : var(--silver-100);
+}
+
+@media (prefers-color-scheme: dark) {
+
+    .menu a:hover,
+    .menu button:hover {
+        --background-color: var(--bg-100);
+    }
+
+    .menu .selected {
+        --background-color: var(--accent-900);
+    }
+
+    .menu li {
+        border-left-color: var(--silver-500-transparent);
+    }
+}
