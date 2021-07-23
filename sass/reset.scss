@@ -1,0 +1,151 @@
+/* 
+    Contains reset from CSS Remedy (https://github.com/jensimmons/cssremedy)
+*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    line-sizing: normal;
+}
+
+body {
+    background-color: var(--bg-0);
+    color           : var(--default-text);
+    margin          : 0;
+}
+
+img {
+    height    : 100%;
+    object-fit: cover;
+    width     : 100%;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.17rem;
+}
+
+h4 {
+    font-size: 1.00rem;
+}
+
+h5 {
+    font-size: 0.83rem;
+}
+
+h6 {
+    font-size: 0.67rem;
+}
+
+hr {
+    border-style: solid;
+    border-width: 1px 0 0;
+    color       : inherit;
+    height      : 0;
+    overflow    : visible;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+    display       : block;
+    max-width     : 100%;
+    vertical-align: middle;
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+picture {
+    display: contents;
+}
+
+source {
+    display: none;
+}
+
+img,
+svg,
+video,
+canvas {
+    height: auto;
+}
+
+audio {
+    width: 100%;
+}
+
+img {
+    border-style: none;
+}
+
+svg {
+    overflow: hidden;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+    display: block;
+}
+
+[type='checkbox'],
+[type='radio'] {
+    box-sizing: border-box;
+    padding   : 0;
+}
+
+/*
+ * Remove list bullets in navigation lists
+ * Also removes the list semantics
+*/
+nav ul {
+    list-style: none;
+}
+
+/* Add zero-width space so assistive technologies still recognize the list */
+nav li:before {
+    content : "\200B";
+    position: absolute;
+}
+
+::selection {
+    background-color: var(--brand-100);
+    color           : var(--brand-900);
+}
+
+@media (prefers-color-scheme: dark) {
+    ::selection {
+        background-color: var(--brand-900);
+        color           : var(--brand-100);
+    }
+}
