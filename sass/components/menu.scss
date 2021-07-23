@@ -22,7 +22,7 @@
 .menu .button {
     background-color: var(--background-color);
     border-radius   : var(--border-radius);
-    color           : var(--color, var(--fg-100));
+    color           : var(--color, var(--default-text));
     display         : block;
     font-weight     : normal;
     padding         : var(--space, var(--space-s));
@@ -34,20 +34,25 @@
 
 .menu a:hover,
 .menu button:hover {
-    --background-color: var(--bg-300);
+    --background-color: var(--bg-1);
+    --color: revert;
     text-decoration   : none;
 }
 
+.menu a:focus,
+.menu .button:focus {
+    @include focus-ring(var(--focus-color, var(--blueberry-700)));
+}
+
 .menu .selected {
-    --background-color: var(--accent-500);
+    --background-color: var(--blueberry-500);
     --color           : var(--silver-100);
 }
 
 @media (prefers-color-scheme: dark) {
 
-    .menu a:hover,
-    .menu button:hover {
-        --background-color: var(--bg-100);
+    .menu {
+        --focus-color: var(--blueberry-300);
     }
 
     .menu .selected {

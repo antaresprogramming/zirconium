@@ -1,13 +1,7 @@
 /* Disclosure Widget */
 
 details {
-	border: 1px solid var(--bg-500);
-}
-
-@media (prefers-color-scheme: dark) {
-	details {
-		border: 1px solid var(--silver-500-transparent);
-	}
+	border: 1px solid var(--bg-1);
 }
 
 details summary {

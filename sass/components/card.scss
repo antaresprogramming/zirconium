@@ -1,5 +1,5 @@
 .card {
-    background-color: var(--background, var(--bg-100));
+    background-color: var(--background, var(--bg-0));
     border          : var(--border);
     border-radius   : var(--border-radius);
     display         : grid;
@@ -15,13 +15,13 @@
 }
 
 .card.accent {
-    --background  : var(--accent-100-transparent);
-    --border-color: var(--accent-100);
+    --background  : var(--blueberry-100);
+    --border-color: var(--blueberry-300);
 }
 
-.card.secondary {
-    --background  : var(--secondary-100-transparent);
-    --border-color: var(--secondary-100);
+.card.primary {
+    --background  : var(--bubblegum-100);
+    --border-color: var(--bubblegum-300);
 }
 
 .card.raised {

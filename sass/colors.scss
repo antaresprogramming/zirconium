@@ -136,11 +136,11 @@ body {
     --chocolate-700: hsl(var(--chocolate), 25%, 25%, var(--alpha, 1));
     --chocolate-900: hsl(var(--chocolate), 25%, 15%, var(--alpha, 1));
 
-    --bubblegum-100: hsl(var(--bubblegum), 71%, 76%, var(--alpha, 1));
+    --bubblegum-100: hsl(var(--bubblegum), 71%, 86%, var(--alpha, 1));
     --bubblegum-300: hsl(var(--bubblegum), 71%, 66%, var(--alpha, 1));
     --bubblegum-500: hsl(var(--bubblegum), 71%, 56%, var(--alpha, 1));
     --bubblegum-700: hsl(var(--bubblegum), 71%, 46%, var(--alpha, 1));
-    --bubblegum-900: hsl(var(--bubblegum), 71%, 36%, var(--alpha, 1));
+    --bubblegum-900: hsl(var(--bubblegum), 71%, 16%, var(--alpha, 1));
 
     --grape-100: hsl(var(--grape), 67%, 86%, var(--alpha, 1));
     --grape-300: hsl(var(--grape), 67%, 76%, var(--alpha, 1));
@@ -148,11 +148,11 @@ body {
     --grape-700: hsl(var(--grape), 67%, 56%, var(--alpha, 1));
     --grape-900: hsl(var(--grape), 67%, 46%, var(--alpha, 1));
 
-    --blueberry-100: hsl(var(--blueberry), 78%, 76%, var(--alpha, 1));
-    --blueberry-300: hsl(var(--blueberry), 78%, 66%, var(--alpha, 1));
+    --blueberry-100: hsl(var(--blueberry), 78%, 86%, var(--alpha, 1));
+    --blueberry-300: hsl(var(--blueberry), 78%, 76%, var(--alpha, 1));
     --blueberry-500: hsl(var(--blueberry), 78%, 56%, var(--alpha, 1));
     --blueberry-700: hsl(var(--blueberry), 78%, 46%, var(--alpha, 1));
-    --blueberry-900: hsl(var(--blueberry), 78%, 36%, var(--alpha, 1));
+    --blueberry-900: hsl(var(--blueberry), 78%, 16%, var(--alpha, 1));
 
     --mint-100: hsl(var(--mint), 65%, 85%, var(--alpha, 1));
     --mint-300: hsl(var(--mint), 65%, 65%, var(--alpha, 1));
@@ -230,7 +230,6 @@ body {
     color: var(--contrast-text);
 }
 
-body,
 .default-text {
     color: var(--default-text);
 }

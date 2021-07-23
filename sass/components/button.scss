@@ -1,32 +1,34 @@
 .button {
-    color           : var(--color, var(--bg-100));
-    font-weight     : 600;
-    background-color: var(--background-color, var(--fg-100));
-    display         : inline-flex;
-    gap             : 1em;
     align-items     : center;
+    background-color: var(--background-color, var(--bg-1));
     border          : none;
-    padding         : 0.5em;
-    font-size       : 1em;
     border-radius   : 0.25em;
-    text-decoration : none;
+    color           : var(--color, var(--default-text));
     cursor          : pointer;
+    display         : inline-flex;
+    font-size       : 1em;
+    font-weight     : 600;
+    gap             : 1em;
+    justify-content : center;
+    padding         : var(--space-s) calc(var(--space-s) * 2);
+    text-decoration : none;
     transition      : color 300ms, background-color 300ms, opacity 300ms, box-shadow 300ms;
 
-    --color           : var(--fg-100);
-    --background-color: var(--bg-t);
-    --focus-color     : var(--accent-500);
+    --focus-color: var(--blueberry-500);
+}
+
+.button.icon-only {
+    padding: var(--space-s);
 }
 
 .button:hover {
-    color           : var(--hover-color, var(--fg-100));
-    background-color: var(--hover-background-color, var(--fg-t));
+    color           : var(--hover-color, var(--default-text));
+    background-color: var(--hover-background-color, var(--silver-500));
     text-decoration : none;
 }
 
 .button:focus {
-    outline   : none;
-    box-shadow: 0 0 0 3px var(--focus-color);
+    @include focus-ring(var(--focus-color));
 }
 
 .button:active {
@@ -34,40 +36,41 @@
 }
 
 .button.no-bg {
-    --color           : var(--fg-100, inherit);
-    --background-color: transparent;
-    --shadow          : transparent !important;
-}
-
-.button.secondary {
-    --background-color      : var(--secondary-500);
-    --color                 : var(--silver-100);
-    --hover-background-color: var(--secondary-100);
-    --hover-color           : var(--secondary-900);
-    --shadow-color          : var(--secondary-500-transparent);
-}
-
-.button.secondary.no-bg {
+    --color                 : var(--default-text, inherit);
     --background-color      : transparent;
-    --color                 : var(--secondary-900);
-    --hover-background-color: var(--secondary-100);
-    --hover-color           : var(--secondary-900);
+    --shadow                : transparent !important;
+    --hover-background-color: var(--silver-300);
+}
+
+.button.primary {
+    --background-color      : var(--bubblegum-500);
+    --color                 : var(--silver-100);
+    --hover-background-color: var(--bubblegum-100);
+    --hover-color           : var(--bubblegum-900);
+    --shadow-color          : var(--bubblegum-500-transparent);
+}
+
+.button.primary.no-bg {
+    --background-color      : transparent;
+    --color                 : var(--bubblegum-700);
+    --hover-background-color: var(--bubblegum-100);
+    --hover-color           : var(--bubblegum-900);
 }
 
 .button.accent {
-    --background-color      : var(--accent-500);
+    --background-color      : var(--blueberry-500);
     --color                 : var(--silver-100);
-    --focus-color           : var(--accent-300);
-    --hover-background-color: var(--accent-100);
-    --hover-color           : var(--accent-900);
-    --shadow-color          : var(--accent-500-transparent);
+    --focus-color           : var(--blueberry-300);
+    --hover-background-color: var(--blueberry-100);
+    --hover-color           : var(--blueberry-900);
+    --shadow-color          : var(--blueberry-500-transparent);
 }
 
 .button.accent.no-bg {
     --background-color      : transparent;
-    --color                 : var(--accent-900);
-    --hover-background-color: var(--accent-100);
-    --hover-color           : var(--accent-900);
+    --color                 : var(--blueberry-700);
+    --hover-background-color: var(--blueberry-100);
+    --hover-color           : var(--blueberry-900);
 }
 
 .button .feather,
@@ -78,36 +81,49 @@
 
 @media (prefers-color-scheme: dark) {
     .button {
-        --color           : var(--fg-500);
-        --background-color: var(--bg-100);
+        --color           : var(--default-text);
+        --background-color: var(--bg-1);
+        --hover-background-color: var(--bg-2);
     }
 
     .button.no-bg {
         --background-color: transparent;
-        --color           : var(--fg-300, inherit);
+        --color           : var(--default-text, inherit);
+        --hover-background-color: var(--bg-1);
     }
 
-    .button.secondary {
-        --background-color      : var(--secondary-700);
-        --color                 : var(--silver-100);
-        --hover-background-color: var(--secondary-900);
-        --hover-color           : var(--secondary-100);
+    .button.primary {
+        --background-color      : var(--bubblegum-700);
+        --color                 : var(--bubblegum-100);
+        --hover-background-color: var(--bubblegum-900);
+        --hover-color           : var(--bubblegum-100);
     }
 
-    .button.secondary.no-bg {
+    .button.primary.no-bg {
         --background-color: transparent;
-        --color           : var(--secondary-300);
+        --color           : var(--bubblegum-300);
     }
 
     .button.accent {
-        --background-color      : var(--accent-700);
+        --background-color      : var(--blueberry-700);
         --color                 : var(--silver-100);
-        --hover-background-color: var(--accent-900);
-        --hover-color           : var(--accent-100);
+        --hover-background-color: var(--blueberry-900);
+        --hover-color           : var(--blueberry-100);
     }
 
     .button.accent.no-bg {
         --background-color: transparent;
-        --color           : var(--accent-300);
+        --color           : var(--blueberry-300);
     }
+}
+
+.floating {
+    position: absolute;
+    bottom  : var(--space, var(--space-m));
+    right   : var(--space, var(--space-m));
+    z-index : var(--elevate-navbar);
+}
+
+.fixed.floating {
+    position: fixed;
 }

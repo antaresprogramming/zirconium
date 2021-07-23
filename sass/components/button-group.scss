@@ -11,6 +11,10 @@
     border-radius: 0;
 }
 
+.button-group .button:focus {
+    @include focus-ring(var(--blueberry-500), true);
+}
+
 .button-group.bordered {
     border: 1px solid var(--border-color, #0003);
 }
@@ -19,10 +23,40 @@
     border-right: 1px solid var(--border-color, #0003);
 }
 
-.button-group.secondary {
-    --border-color: var(--secondary-500-transparent);
+.button-group.primary {
+    --border-color: var(--bubblegum-100);
+}
+
+.button-group.primary .button {
+    --hover-background-color: var(--bubblegum-100);
+    --hover-color           : var(--bubblegum-900);
 }
 
 .button-group.accent {
-    --border-color: var(--accent-500-transparent);
+    --border-color: var(--blueberry-100);
+}
+
+.button-group.accent .button {
+    --hover-background-color: var(--blueberry-100);
+    --hover-color           : var(--blueberry-900);
+}
+
+@media (prefers-color-scheme: dark) {
+    .button-group.primary {
+        --border-color: var(--bubblegum-900);
+    }
+
+    .button-group.accent {
+        --border-color: var(--blueberry-900);
+    }
+
+    .button-group.primary .button {
+        --hover-background-color: var(--bubblegum-900);
+        --hover-color           : var(--bubblegum-100);
+    }
+
+    .button-group.accent .button {
+        --hover-background-color: var(--blueberry-900);
+        --hover-color           : var(--blueberry-100);
+    }
 }
