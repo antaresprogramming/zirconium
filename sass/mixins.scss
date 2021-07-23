@@ -1,4 +1,9 @@
-@mixin focus-ring($color) {
-    outline   : none;
-    box-shadow: 0 0 0 5px $color;
+@mixin focus-ring($color, $inset: false) {
+    outline: none;
+
+    @if $inset {
+        box-shadow: 0 0 0 3px $color inset;
+    } @else {
+        box-shadow: 0 0 0 5px $color;
+    }
 }
