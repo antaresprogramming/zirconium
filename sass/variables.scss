@@ -1,11 +1,16 @@
 :root {
     --border-radius: 0.25em;
 
+    /* Used for paddings and margins */
     --space-xs: 0.25em;
     --space-s : 0.5em;
     --space-m : 0.75em;
     --space-l : 1em;
 
+    /* Z-index for components */
     --elevate-dropdown: 800;
     --elevate-navbar  : 900;
+
+    /* Maximum width of article paragraphs */
+    --longform-width: 65ch;
 }
