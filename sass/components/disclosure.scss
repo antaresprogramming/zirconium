@@ -31,7 +31,7 @@ details summary::after {
 	transform: rotate(45deg) translateY(-0.25em);
 }
 
-details[open] summary::after {
+details[open] > summary::after {
 	transform: rotate(-135deg) translateY(0.25em);
 }
 
