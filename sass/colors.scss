@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --brand-100        : #fff394;
     --brand-300        : #ffe16b;
     --brand-500        : #f9c440;
@@ -94,5 +94,851 @@ body {
 
     body {
         --background: var(--bg-300);
+    }
+} */
+
+:root {
+    /* HUES */
+    --strawberry: 357;
+    --orange    : 22;
+    --banana    : 43;
+    --lime      : 120;
+    --mint      : 170;
+    --blueberry : 212;
+    --grape     : 269;
+    --bubblegum : 335;
+    --chocolate : 20;
+    --silver    : 220;
+    --slate     : 210;
+    --black     : 0;
+
+    --black-100: hsl(var(--black), 0%, 40%, var(--alpha, 1));
+    --black-300: hsl(var(--black), 0%, 30%, var(--alpha, 1));
+    --black-500: hsl(var(--black), 0%, 20%, var(--alpha, 1));
+    --black-700: hsl(var(--black), 0%, 10%, var(--alpha, 1));
+    --black-900: hsl(var(--black), 0%, 0%, var(--alpha, 1));
+
+    --slate-100: hsl(var(--slate), 20%, 85%, var(--alpha, 1));
+    --slate-300: hsl(var(--slate), 20%, 65%, var(--alpha, 1));
+    --slate-500: hsl(var(--slate), 20%, 45%, var(--alpha, 1));
+    --slate-700: hsl(var(--slate), 20%, 25%, var(--alpha, 1));
+    --slate-900: hsl(var(--slate), 20%, 15%, var(--alpha, 1));
+
+    --silver-100: hsl(var(--silver), 2%, 100%, var(--alpha, 1));
+    --silver-300: hsl(var(--silver), 2%, 90%, var(--alpha, 1));
+    --silver-500: hsl(var(--silver), 2%, 80%, var(--alpha, 1));
+    --silver-700: hsl(var(--silver), 2%, 70%, var(--alpha, 1));
+    --silver-900: hsl(var(--silver), 2%, 65%, var(--alpha, 1));
+
+    --chocolate-100: hsl(var(--chocolate), 25%, 55%, var(--alpha, 1));
+    --chocolate-300: hsl(var(--chocolate), 25%, 45%, var(--alpha, 1));
+    --chocolate-500: hsl(var(--chocolate), 25%, 35%, var(--alpha, 1));
+    --chocolate-700: hsl(var(--chocolate), 25%, 25%, var(--alpha, 1));
+    --chocolate-900: hsl(var(--chocolate), 25%, 15%, var(--alpha, 1));
+
+    --bubblegum-100: hsl(var(--bubblegum), 71%, 76%, var(--alpha, 1));
+    --bubblegum-300: hsl(var(--bubblegum), 71%, 66%, var(--alpha, 1));
+    --bubblegum-500: hsl(var(--bubblegum), 71%, 56%, var(--alpha, 1));
+    --bubblegum-700: hsl(var(--bubblegum), 71%, 46%, var(--alpha, 1));
+    --bubblegum-900: hsl(var(--bubblegum), 71%, 36%, var(--alpha, 1));
+
+    --grape-100: hsl(var(--grape), 67%, 86%, var(--alpha, 1));
+    --grape-300: hsl(var(--grape), 67%, 76%, var(--alpha, 1));
+    --grape-500: hsl(var(--grape), 67%, 66%, var(--alpha, 1));
+    --grape-700: hsl(var(--grape), 67%, 56%, var(--alpha, 1));
+    --grape-900: hsl(var(--grape), 67%, 46%, var(--alpha, 1));
+
+    --blueberry-100: hsl(var(--blueberry), 78%, 76%, var(--alpha, 1));
+    --blueberry-300: hsl(var(--blueberry), 78%, 66%, var(--alpha, 1));
+    --blueberry-500: hsl(var(--blueberry), 78%, 56%, var(--alpha, 1));
+    --blueberry-700: hsl(var(--blueberry), 78%, 46%, var(--alpha, 1));
+    --blueberry-900: hsl(var(--blueberry), 78%, 36%, var(--alpha, 1));
+
+    --mint-100: hsl(var(--mint), 65%, 85%, var(--alpha, 1));
+    --mint-300: hsl(var(--mint), 65%, 65%, var(--alpha, 1));
+    --mint-500: hsl(var(--mint), 65%, 45%, var(--alpha, 1));
+    --mint-700: hsl(var(--mint), 65%, 35%, var(--alpha, 1));
+    --mint-900: hsl(var(--mint), 65%, 25%, var(--alpha, 1));
+
+    --lime-100: hsl(var(--lime), 68%, 73%, var(--alpha, 1));
+    --lime-300: hsl(var(--lime), 68%, 63%, var(--alpha, 1));
+    --lime-500: hsl(var(--lime), 68%, 53%, var(--alpha, 1));
+    --lime-700: hsl(var(--lime), 68%, 43%, var(--alpha, 1));
+    --lime-900: hsl(var(--lime), 68%, 33%, var(--alpha, 1));
+
+    --strawberry-100: hsl(var(--strawberry), 68%, 66%, var(--alpha, 1));
+    --strawberry-300: hsl(var(--strawberry), 68%, 56%, var(--alpha, 1));
+    --strawberry-500: hsl(var(--strawberry), 68%, 46%, var(--alpha, 1));
+    --strawberry-700: hsl(var(--strawberry), 68%, 36%, var(--alpha, 1));
+    --strawberry-900: hsl(var(--strawberry), 68%, 26%, var(--alpha, 1));
+
+    --orange-100: hsl(var(--orange), 89%, 76%, var(--alpha, 1));
+    --orange-300: hsl(var(--orange), 89%, 66%, var(--alpha, 1));
+    --orange-500: hsl(var(--orange), 89%, 56%, var(--alpha, 1));
+    --orange-700: hsl(var(--orange), 89%, 46%, var(--alpha, 1));
+    --orange-900: hsl(var(--orange), 89%, 36%, var(--alpha, 1));
+
+    --banana-100: hsl(var(--banana), 94%, 81%, var(--alpha, 1));
+    --banana-300: hsl(var(--banana), 94%, 71%, var(--alpha, 1));
+    --banana-500: hsl(var(--banana), 94%, 61%, var(--alpha, 1));
+    --banana-700: hsl(var(--banana), 94%, 51%, var(--alpha, 1));
+    --banana-900: hsl(var(--banana), 94%, 41%, var(--alpha, 1));
+}
+
+@mixin dark-colors {
+    --bg-0: var(--black-700);
+    --bg-1: var(--black-500);
+    --bg-2: var(--black-300);
+    --bg-3: var(--black-100);
+
+    --contrast-text     : var(--silver-100);
+    --default-text      : var(--silver-300);
+    --subtle-text       : var(--silver-500);
+    --non-essential-text: var(--silver-700);
+}
+
+@mixin light-colors {
+    --bg-0: var(--silver-100);
+    --bg-1: var(--silver-300);
+    --bg-2: var(--silver-500);
+    --bg-3: var(--silver-900);
+
+    --contrast-text     : var(--black-700);
+    --default-text      : var(--black-500);
+    --subtle-text       : var(--black-300);
+    --non-essential-text: var(--black-100);
+
+}
+
+:root {
+    @include light-colors();
+
+    @media (prefers-color-scheme: dark) {
+        @include dark-colors();
+    }
+}
+
+.light {
+    @include light-colors();
+}
+
+.dark {
+    @include dark-colors();
+}
+
+.contrast-text {
+    color: var(--contrast-text);
+}
+
+body,
+.default-text {
+    color: var(--default-text);
+}
+
+.subtle-text {
+    color: var(--subtle-text);
+}
+
+.non-essential-text {
+    color: var(--non-essential-text);
+}
+
+.level-0-bg {
+    background-color: var(--bg-0);
+}
+
+.level-1-bg {
+    background-color: var(--bg-1);
+}
+
+.level-2-bg {
+    background-color: var(--bg-2);
+}
+
+.level-3-bg {
+    background-color: var(--bg-3);
+}
+
+.black {
+    &-100 {
+
+        &-fg {
+            color: var(--black-100);
+        }
+
+        &-bg {
+            background-color: var(--black-100);
+        }
+    }
+
+    &-300 {
+
+        &-fg {
+            color: var(--black-300);
+        }
+
+        &-bg {
+            background-color: var(--black-300);
+        }
+    }
+
+    &-500 {
+
+        &-fg {
+            color: var(--black-500);
+        }
+
+        &-bg {
+            background-color: var(--black-500);
+        }
+    }
+
+    &-700 {
+
+        &-fg {
+            color: var(--black-700);
+        }
+
+        &-bg {
+            background-color: var(--black-700);
+        }
+    }
+
+    &-900 {
+
+        &-fg {
+            color: var(--black-900);
+        }
+
+        &-bg {
+            background-color: var(--black-900);
+        }
+    }
+}
+
+.slate {
+    &-100 {
+
+        &-fg {
+            color: var(--slate-100);
+        }
+
+        &-bg {
+            background-color: var(--slate-100);
+        }
+    }
+
+    &-300 {
+
+        &-fg {
+            color: var(--slate-300);
+        }
+
+        &-bg {
+            background-color: var(--slate-300);
+        }
+    }
+
+    &-500 {
+
+        &-fg {
+            color: var(--slate-500);
+        }
+
+        &-bg {
+            background-color: var(--slate-500);
+        }
+    }
+
+    &-700 {
+
+        &-fg {
+            color: var(--slate-700);
+        }
+
+        &-bg {
+            background-color: var(--slate-700);
+        }
+    }
+
+    &-900 {
+
+        &-fg {
+            color: var(--slate-900);
+        }
+
+        &-bg {
+            background-color: var(--slate-900);
+        }
+    }
+}
+
+.silver {
+    &-100 {
+
+        &-fg {
+            color: var(--silver-100);
+        }
+
+        &-bg {
+            background-color: var(--silver-100);
+        }
+    }
+
+    &-300 {
+
+        &-fg {
+            color: var(--silver-300);
+        }
+
+        &-bg {
+            background-color: var(--silver-300);
+        }
+    }
+
+    &-500 {
+
+        &-fg {
+            color: var(--silver-500);
+        }
+
+        &-bg {
+            background-color: var(--silver-500);
+        }
+    }
+
+    &-700 {
+
+        &-fg {
+            color: var(--silver-700);
+        }
+
+        &-bg {
+            background-color: var(--silver-700);
+        }
+    }
+
+    &-900 {
+
+        &-fg {
+            color: var(--silver-900);
+        }
+
+        &-bg {
+            background-color: var(--silver-900);
+        }
+    }
+}
+
+.bubblegum {
+    &-100 {
+
+        &-fg {
+            color: var(--bubblegum-100);
+        }
+
+        &-bg {
+            background-color: var(--bubblegum-100);
+        }
+    }
+
+    &-300 {
+
+        &-fg {
+            color: var(--bubblegum-300);
+        }
+
+        &-bg {
+            background-color: var(--bubblegum-300);
+        }
+    }
+
+    &-500 {
+
+        &-fg {
+            color: var(--bubblegum-500);
+        }
+
+        &-bg {
+            background-color: var(--bubblegum-500);
+        }
+    }
+
+    &-700 {
+
+        &-fg {
+            color: var(--bubblegum-700);
+        }
+
+        &-bg {
+            background-color: var(--bubblegum-700);
+        }
+    }
+
+    &-900 {
+
+        &-fg {
+            color: var(--bubblegum-900);
+        }
+
+        &-bg {
+            background-color: var(--bubblegum-900);
+        }
+    }
+}
+
+.chocolate {
+    &-100 {
+
+        &-fg {
+            color: var(--chocolate-100);
+        }
+
+        &-bg {
+            background-color: var(--chocolate-100);
+        }
+    }
+
+    &-300 {
+
+        &-fg {
+            color: var(--chocolate-300);
+        }
+
+        &-bg {
+            background-color: var(--chocolate-300);
+        }
+    }
+
+    &-500 {
+
+        &-fg {
+            color: var(--chocolate-500);
+        }
+
+        &-bg {
+            background-color: var(--chocolate-500);
+        }
+    }
+
+    &-700 {
+
+        &-fg {
+            color: var(--chocolate-700);
+        }
+
+        &-bg {
+            background-color: var(--chocolate-700);
+        }
+    }
+
+    &-900 {
+
+        &-fg {
+            color: var(--chocolate-900);
+        }
+
+        &-bg {
+            background-color: var(--chocolate-900);
+        }
+    }
+}
+
+.grape {
+    &-100 {
+
+        &-fg {
+            color: var(--grape-100);
+        }
+
+        &-bg {
+            background-color: var(--grape-100);
+        }
+    }
+
+    &-300 {
+
+        &-fg {
+            color: var(--grape-300);
+        }
+
+        &-bg {
+            background-color: var(--grape-300);
+        }
+    }
+
+    &-500 {
+
+        &-fg {
+            color: var(--grape-500);
+        }
+
+        &-bg {
+            background-color: var(--grape-500);
+        }
+    }
+
+    &-700 {
+
+        &-fg {
+            color: var(--grape-700);
+        }
+
+        &-bg {
+            background-color: var(--grape-700);
+        }
+    }
+
+    &-900 {
+
+        &-fg {
+            color: var(--grape-900);
+        }
+
+        &-bg {
+            background-color: var(--grape-900);
+        }
+    }
+}
+
+.blueberry {
+    &-100 {
+
+        &-fg {
+            color: var(--blueberry-100);
+        }
+
+        &-bg {
+            background-color: var(--blueberry-100);
+        }
+    }
+
+    &-300 {
+
+        &-fg {
+            color: var(--blueberry-300);
+        }
+
+        &-bg {
+            background-color: var(--blueberry-300);
+        }
+    }
+
+    &-500 {
+
+        &-fg {
+            color: var(--blueberry-500);
+        }
+
+        &-bg {
+            background-color: var(--blueberry-500);
+        }
+    }
+
+    &-700 {
+
+        &-fg {
+            color: var(--blueberry-700);
+        }
+
+        &-bg {
+            background-color: var(--blueberry-700);
+        }
+    }
+
+    &-900 {
+
+        &-fg {
+            color: var(--blueberry-900);
+        }
+
+        &-bg {
+            background-color: var(--blueberry-900);
+        }
+    }
+}
+
+.mint {
+    &-100 {
+
+        &-fg {
+            color: var(--mint-100);
+        }
+
+        &-bg {
+            background-color: var(--mint-100);
+        }
+    }
+
+    &-300 {
+
+        &-fg {
+            color: var(--mint-300);
+        }
+
+        &-bg {
+            background-color: var(--mint-300);
+        }
+    }
+
+    &-500 {
+
+        &-fg {
+            color: var(--mint-500);
+        }
+
+        &-bg {
+            background-color: var(--mint-500);
+        }
+    }
+
+    &-700 {
+
+        &-fg {
+            color: var(--mint-700);
+        }
+
+        &-bg {
+            background-color: var(--mint-700);
+        }
+    }
+
+    &-900 {
+
+        &-fg {
+            color: var(--mint-900);
+        }
+
+        &-bg {
+            background-color: var(--mint-900);
+        }
+    }
+}
+
+.lime {
+    &-100 {
+
+        &-fg {
+            color: var(--lime-100);
+        }
+
+        &-bg {
+            background-color: var(--lime-100);
+        }
+    }
+
+    &-300 {
+
+        &-fg {
+            color: var(--lime-300);
+        }
+
+        &-bg {
+            background-color: var(--lime-300);
+        }
+    }
+
+    &-500 {
+
+        &-fg {
+            color: var(--lime-500);
+        }
+
+        &-bg {
+            background-color: var(--lime-500);
+        }
+    }
+
+    &-700 {
+
+        &-fg {
+            color: var(--lime-700);
+        }
+
+        &-bg {
+            background-color: var(--lime-700);
+        }
+    }
+
+    &-900 {
+
+        &-fg {
+            color: var(--lime-900);
+        }
+
+        &-bg {
+            background-color: var(--lime-900);
+        }
+    }
+}
+
+.strawberry {
+    &-100 {
+
+        &-fg {
+            color: var(--strawberry-100);
+        }
+
+        &-bg {
+            background-color: var(--strawberry-100);
+        }
+    }
+
+    &-300 {
+
+        &-fg {
+            color: var(--strawberry-300);
+        }
+
+        &-bg {
+            background-color: var(--strawberry-300);
+        }
+    }
+
+    &-500 {
+
+        &-fg {
+            color: var(--strawberry-500);
+        }
+
+        &-bg {
+            background-color: var(--strawberry-500);
+        }
+    }
+
+    &-700 {
+
+        &-fg {
+            color: var(--strawberry-700);
+        }
+
+        &-bg {
+            background-color: var(--strawberry-700);
+        }
+    }
+
+    &-900 {
+
+        &-fg {
+            color: var(--strawberry-900);
+        }
+
+        &-bg {
+            background-color: var(--strawberry-900);
+        }
+    }
+}
+
+.orange {
+    &-100 {
+
+        &-fg {
+            color: var(--orange-100);
+        }
+
+        &-bg {
+            background-color: var(--orange-100);
+        }
+    }
+
+    &-300 {
+
+        &-fg {
+            color: var(--orange-300);
+        }
+
+        &-bg {
+            background-color: var(--orange-300);
+        }
+    }
+
+    &-500 {
+
+        &-fg {
+            color: var(--orange-500);
+        }
+
+        &-bg {
+            background-color: var(--orange-500);
+        }
+    }
+
+    &-700 {
+
+        &-fg {
+            color: var(--orange-700);
+        }
+
+        &-bg {
+            background-color: var(--orange-700);
+        }
+    }
+
+    &-900 {
+
+        &-fg {
+            color: var(--orange-900);
+        }
+
+        &-bg {
+            background-color: var(--orange-900);
+        }
+    }
+}
+
+.banana {
+    &-100 {
+
+        &-fg {
+            color: var(--banana-100);
+        }
+
+        &-bg {
+            background-color: var(--banana-100);
+        }
+    }
+
+    &-300 {
+
+        &-fg {
+            color: var(--banana-300);
+        }
+
+        &-bg {
+            background-color: var(--banana-300);
+        }
+    }
+
+    &-500 {
+
+        &-fg {
+            color: var(--banana-500);
+        }
+
+        &-bg {
+            background-color: var(--banana-500);
+        }
+    }
+
+    &-700 {
+
+        &-fg {
+            color: var(--banana-700);
+        }
+
+        &-bg {
+            background-color: var(--banana-700);
+        }
+    }
+
+    &-900 {
+
+        &-fg {
+            color: var(--banana-900);
+        }
+
+        &-bg {
+            background-color: var(--banana-900);
+        }
     }
 }
