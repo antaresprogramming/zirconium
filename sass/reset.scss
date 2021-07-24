@@ -139,13 +139,13 @@ nav li:before {
 }
 
 ::selection {
-    background-color: var(--brand-100);
-    color           : var(--brand-900);
+    background-color: var(--bubblegum-100);
+    color           : var(--bubblegum-900);
 }
 
 @media (prefers-color-scheme: dark) {
     ::selection {
-        background-color: var(--brand-900);
-        color           : var(--brand-100);
+        background-color: var(--bubblegum-900);
+        color           : var(--bubblegum-100);
     }
 }

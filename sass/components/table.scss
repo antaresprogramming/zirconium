@@ -4,11 +4,11 @@
 
 .table {
     border-collapse     : collapse;
-    color               : var(--fg-100);
+    color               : var(--default-text);
     font-variant-numeric: lining-nums tabular-nums;
     table-layout        : fixed;
 
-    --border-color: var(--silver-500-transparent);
+    --border-color: var(--bg-1);
     --space       : var(--space-m);
 }
 

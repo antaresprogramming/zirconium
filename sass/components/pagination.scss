@@ -41,29 +41,31 @@
 
 .pagination a {
     border-radius  : var(--border-radius);
-    color          : var(--secondary-900);
+    color          : var(--bubblegum-700);
     display        : block;
     padding        : var(--space-xs);
     text-align     : center;
     text-decoration: none;
 
-    --focus-color: var(--secondary-500-transparent);
-    --hover-color: var(--secondary-500-transparent);
+    --focus-color: var(--bubblegum-500);
+    --hover-color: var(--bubblegum-100);
 }
 
 @media (prefers-color-scheme: dark) {
     .pagination a {
-        color: var(--secondary-100);
+        --hover-color: var(--bubblegum-900);
+        color: var(--bubblegum-100);
     }
 }
 
 .pagination a[aria-current=page] {
-    background-color: var(--secondary-500);
+    background-color: var(--bubblegum-500);
     color           : var(--silver-100);
     font-weight     : bold;
 }
 
 .pagination a:hover {
+    text-decoration: none;
     background-color: var(--hover-color);
 }
 

@@ -7,16 +7,10 @@
     text-decoration : none;
     transition      : background-color 300ms, box-shadow 300ms;
 
-    --bg-color   : var(--silver-300);
-    --focus-color: #0005;
-    --hover-color: #0001;
-    --text-color : var(--black-500);
-}
-
-@media (prefers-color-scheme: dark) {
-    .badge:hover {
-        color: var(--bg-color);
-    }
+    --bg-color   : var(--bg-1);
+    --focus-color: var(--bg-2);
+    --hover-color: var(--bg-2);
+    --text-color : var(--subtle-text);
 }
 
 .badge.rounded {
@@ -41,31 +35,61 @@
 }
 
 .badge.success {
-    --bg-color   : var(--success-100);
-    --focus-color: var(--success-500);
-    --hover-color: var(--success-t);
-    --text-color : var(--success-900);
+    --bg-color   : var(--lime-100);
+    --focus-color: var(--lime-500);
+    --hover-color: var(--lime-300);
+    --text-color : var(--lime-900);
 }
 
 .badge.error {
-    --bg-color   : var(--error-100);
-    --focus-color: var(--error-500);
-    --hover-color: var(--error-t);
-    --text-color : var(--error-900);
+    --bg-color   : var(--strawberry-100);
+    --focus-color: var(--strawberry-500);
+    --hover-color: var(--strawberry-300);
+    --text-color : var(--strawberry-900);
 }
 
 .badge.warning {
-    --bg-color   : var(--warning-100);
-    --focus-color: var(--warning-500);
-    --hover-color: var(--warning-t);
-    --text-color : var(--warning-900);
+    --bg-color   : var(--banana-100);
+    --focus-color: var(--banana-500);
+    --hover-color: var(--banana-300);
+    --text-color : var(--banana-900);
 }
 
 .badge.info {
-    --bg-color   : var(--info-100);
-    --focus-color: var(--info-500);
-    --hover-color: var(--info-t);
-    --text-color : var(--info-900);
+    --bg-color   : var(--blueberry-100);
+    --focus-color: var(--blueberry-500);
+    --hover-color: var(--blueberry-300);
+    --text-color : var(--blueberry-900);
+}
+
+@media (prefers-color-scheme: dark) {
+    .badge.success {
+        --bg-color   : var(--lime-900);
+        --focus-color: var(--lime-500);
+        --hover-color: var(--lime-700);
+        --text-color : var(--lime-100);
+    }
+
+    .badge.error {
+        --bg-color   : var(--strawberry-900);
+        --focus-color: var(--strawberry-500);
+        --hover-color: var(--strawberry-700);
+        --text-color : var(--strawberry-100);
+    }
+
+    .badge.warning {
+        --bg-color   : var(--banana-900);
+        --focus-color: var(--banana-500);
+        --hover-color: var(--banana-700);
+        --text-color : var(--banana-100);
+    }
+
+    .badge.info {
+        --bg-color   : var(--blueberry-900);
+        --focus-color: var(--blueberry-500);
+        --hover-color: var(--blueberry-700);
+        --text-color : var(--blueberry-100);
+    }
 }
 
 .badge-group {

@@ -81,14 +81,14 @@
 
 @media (prefers-color-scheme: dark) {
     .button {
-        --color           : var(--default-text);
-        --background-color: var(--bg-1);
+        --color                 : var(--default-text);
+        --background-color      : var(--bg-1);
         --hover-background-color: var(--bg-2);
     }
 
     .button.no-bg {
-        --background-color: transparent;
-        --color           : var(--default-text, inherit);
+        --background-color      : transparent;
+        --color                 : var(--default-text, inherit);
         --hover-background-color: var(--bg-1);
     }
 

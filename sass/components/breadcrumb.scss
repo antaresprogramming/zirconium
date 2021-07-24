@@ -1,13 +1,7 @@
 .breadcrumb {
-    background-color: var(--bg-300);
+    background-color: var(--bg-1);
     border-radius   : var(--border-radius);
     padding         : 0.25em;
-}
-
-@media (prefers-color-scheme: dark) {
-    .breadcrumb {
-        background-color: var(--bg-100);
-    }
 }
 
 .breadcrumb.full-width {
@@ -48,10 +42,11 @@
 .breadcrumb a:hover {
     background-color: var(--hover-color, #0003);
     opacity         : 1;
+    text-decoration : none;
 }
 
 .breadcrumb a[aria-current="page"] {
-    font-weight: bold;
+    font-weight: 600;
     opacity    : 1;
 }
 

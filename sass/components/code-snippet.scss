@@ -1,5 +1,5 @@
 .code-snippet {
-    background-color: #0001;
+    background-color: var(--bg-1);
     border-radius   : var(--border-radius);
     font-size       : 1rem;
     overflow        : auto;
@@ -9,9 +9,9 @@
 }
 
 .code-snippet code[data-language]::before {
-    background-color: var(--secondary-500-transparent);
+    background-color: var(--bg-2);
     border-radius   : var(--border-radius);
-    color           : var(--secondary-900);
+    color           : var(--subtle-text);
     content         : attr(data-language);
     font-family     : var(--font-sans);
     font-size       : smaller;
