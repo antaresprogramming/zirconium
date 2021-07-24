@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Page &middot; Zirconium by Antares Programming</title><link rel="preconnect" href="https://fonts.googleapis.com" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Page &middot; Zirconium by Antares Programming</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
@@ -14,944 +15,2369 @@
       href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="src/zirconium.min.css" id="zirconium-stylesheet" />
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="src/zirconium.min.css"
+      id="zirconium-stylesheet"
+    />
+
+    <style>
+      .circle {
+        height: 3em;
+      }
+
+      #color-palette .flex {
+        margin: auto;
+        justify-content: space-between;
+        margin-bottom: 1em;
+      }
+
+      #color-palette .flex .card,
+      #color-palette .flex .circle {
+        flex: 1;
+        height: auto;
+        width: 4em;
+      }
+
+      .flex h4 {
+        width: 100%;
+      }
+
+      .responsive-grid {
+        --column-size: 25ch;
+        --space: 2em;
+      }
+
+      .circle.level-0-bg,
+      .silver-100-bg {
+        border: 1px solid var(--silver-500);
+      }
+
+      #color-palette .flex:is(.light, .dark) {
+          max-width: 30ch;
+      }
+
+      #color-palette #status-colors .flex,
+      #color-palette #text-colors .flex {
+            max-width: 60ch;
+        }
+    </style>
+  </head>
+  <body>
     <nav class="pinned blurred navbar">
-        <ul>
-            <li>
-            <a href="#!" class="nav-item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span class="nav-item__main">
-                Left Icon
-                </span>
-            </a>
-            </li>
-        </ul>
-        <button class="menu nav-item" data-navmenu aria-expanded="false">
-            <svg class="nav-item__main" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-            <span class="visually-hidden">
-            Toggle Menu
-            </span>
-        </button>
-        <ul class="end-aligned dropdown">
-            <li>
-            <a href="#!" class="nav-item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span class="nav-item__main">
-                Left Icon
-                </span>
-            </a>
-            </li>
-            <li>
-            <a href="#!" class="nav-item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span class="nav-item__main">
-                Left Icon
-                </span>
-            </a>
-            </li>
-            <li>
-            <a href="#!" class="nav-item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span class="nav-item__main">
-                Left Icon
-                </span>
-            </a>
-            </li>
-        </ul>
+      <ul>
+        <li>
+          <a href="#!" class="nav-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-download"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span class="nav-item__main"> Left Icon </span>
+          </a>
+        </li>
+      </ul>
+      <button class="menu nav-item" data-navmenu aria-expanded="false">
+        <svg
+          class="nav-item__main"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="feather feather-menu"
+        >
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <span class="visually-hidden"> Toggle Menu </span>
+      </button>
+      <ul class="end-aligned dropdown">
+        <li>
+          <a href="#!" class="nav-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-download"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span class="nav-item__main"> Left Icon </span>
+          </a>
+        </li>
+        <li>
+          <a href="#!" class="nav-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-download"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span class="nav-item__main"> Left Icon </span>
+          </a>
+        </li>
+        <li>
+          <a href="#!" class="nav-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-download"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span class="nav-item__main"> Left Icon </span>
+          </a>
+        </li>
+      </ul>
     </nav>
 
+    <button class="circle fixed floating level-2 raised primary button"
+            onclick="reloadStylesheet()"
+    >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+        <span class="visually-hidden">Reload stylesheet</span>
+    </button>
+
     <div class="disclosure-group">
-        <details open>
-            <summary>List Groups</summary>
-            <div class="grid" style="align-items: start; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))">
+      <details id="color-palette">
+        <summary>Color</summary>
+        <div class="section disclosure-group">
+          <details>
+            <summary>Color Palette</summary>
+            <div class="responsive-grid">
+              <div class="flex">
+                <h4>Strawberry</h4>
+                <div class="strawberry-100-bg circle"></div>
+                <div class="strawberry-300-bg circle"></div>
+                <div class="strawberry-500-bg circle"></div>
+                <div class="strawberry-700-bg circle"></div>
+                <div class="strawberry-900-bg circle"></div>
+              </div>
+              <div class="flex">
+                <h4>Orange</h4>
+                <div class="orange-100-bg circle"></div>
+                <div class="orange-300-bg circle"></div>
+                <div class="orange-500-bg circle"></div>
+                <div class="orange-700-bg circle"></div>
+                <div class="orange-900-bg circle"></div>
+              </div>
+              <div class="flex">
+                <h4>Banana</h4>
+                <div class="banana-100-bg circle"></div>
+                <div class="banana-300-bg circle"></div>
+                <div class="banana-500-bg circle"></div>
+                <div class="banana-700-bg circle"></div>
+                <div class="banana-900-bg circle"></div>
+              </div>
+              <div class="flex">
+                <h4>Lime</h4>
+                <div class="lime-100-bg circle"></div>
+                <div class="lime-300-bg circle"></div>
+                <div class="lime-500-bg circle"></div>
+                <div class="lime-700-bg circle"></div>
+                <div class="lime-900-bg circle"></div>
+              </div>
+              <div class="flex">
+                <h4>Mint</h4>
+                <div class="mint-100-bg circle"></div>
+                <div class="mint-300-bg circle"></div>
+                <div class="mint-500-bg circle"></div>
+                <div class="mint-700-bg circle"></div>
+                <div class="mint-900-bg circle"></div>
+              </div>
+              <div class="flex">
+                <h4>Blueberry</h4>
+                <div class="blueberry-100-bg circle"></div>
+                <div class="blueberry-300-bg circle"></div>
+                <div class="blueberry-500-bg circle"></div>
+                <div class="blueberry-700-bg circle"></div>
+                <div class="blueberry-900-bg circle"></div>
+              </div>
+              <div class="flex">
+                <h4>Grape</h4>
+                <div class="grape-100-bg circle"></div>
+                <div class="grape-300-bg circle"></div>
+                <div class="grape-500-bg circle"></div>
+                <div class="grape-700-bg circle"></div>
+                <div class="grape-900-bg circle"></div>
+              </div>
+              <div class="flex">
+                <h4>Bubblegum</h4>
+                <div class="bubblegum-100-bg circle"></div>
+                <div class="bubblegum-300-bg circle"></div>
+                <div class="bubblegum-500-bg circle"></div>
+                <div class="bubblegum-700-bg circle"></div>
+                <div class="bubblegum-900-bg circle"></div>
+              </div>
+              <div class="flex">
+                <h4>Chocolate</h4>
+                <div class="chocolate-100-bg circle"></div>
+                <div class="chocolate-300-bg circle"></div>
+                <div class="chocolate-500-bg circle"></div>
+                <div class="chocolate-700-bg circle"></div>
+                <div class="chocolate-900-bg circle"></div>
+              </div>
+              <div class="flex">
+                <h4>Silver</h4>
+                <div class="silver-100-bg circle"></div>
+                <div class="silver-300-bg circle"></div>
+                <div class="silver-500-bg circle"></div>
+                <div class="silver-700-bg circle"></div>
+                <div class="silver-900-bg circle"></div>
+              </div>
+              <div class="flex">
+                <h4>Slate</h4>
+                <div class="slate-100-bg circle"></div>
+                <div class="slate-300-bg circle"></div>
+                <div class="slate-500-bg circle"></div>
+                <div class="slate-700-bg circle"></div>
+                <div class="slate-900-bg circle"></div>
+              </div>
+              <div class="flex">
+                <h4>Black</h4>
+                <div class="black-100-bg circle"></div>
+                <div class="black-300-bg circle"></div>
+                <div class="black-500-bg circle"></div>
+                <div class="black-700-bg circle"></div>
+                <div class="black-900-bg circle"></div>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>Background Colors</summary>
             <div class="section">
-                <ul class="list-group">
-                <li>List Item 1</li>
-                <li>List Item 2</li>
-                <li>List Item 3</li>
-                <li>List Item 4</li>
-                <li>List Item 5</li>
-                </ul>
-            </div>
-            <div class="section">
-                <ul class="tighter list-group">
-                <li>List Item 1</li>
-                <li>List Item 2</li>
-                <li>List Item 3</li>
-                <li>List Item 4</li>
-                <li>List Item 5</li>
-                </ul>
-            </div>
-            <div class="section">
-                <ul class="tight list-group">
-                <li>List Item 1</li>
-                <li>List Item 2</li>
-                <li>List Item 3</li>
-                <li>List Item 4</li>
-                <li>List Item 5</li>
-                </ul>
-            </div>
-            <div class="section">
-                <ul class="spacious list-group">
-                <li>List Item 1</li>
-                <li>List Item 2</li>
-                <li>List Item 3</li>
-                <li>List Item 4</li>
-                <li>List Item 5</li>
-                </ul>
-            </div>
-            </div>
-        </details>
-        <details>
-            <summary>Buttons</summary>
-            <div class="flex section">
-                <button class="button">Default Button</button>
-                <button class="no-bg button">Default Button</button>
-                <a href="#!" class="secondary button">Secondary button</a>
-                <a href="#!" class="secondary no-bg button">Secondary button</a>
-                <a href="#!" class="accent button">Secondary button</a>
-                <a href="#!" class="accent no-bg button">Secondary button</a>
+              <div class="flex light">
+                <div class="square circle level-0-bg"></div>
+                <div class="square circle level-1-bg"></div>
+                <div class="square circle level-2-bg"></div>
+                <div class="square circle level-3-bg"></div>
+              </div>
 
-                <button class="raised button">Default Button</button>
-                <button class="no-bg raised button">Default Button</button>
-                <a href="#!" class="secondary raised button">Secondary button</a>
-                <a href="#!" class="secondary no-bg raised button">Secondary button</a>
-                <a href="#!" class="accent raised button">Secondary button</a>
-                <a href="#!" class="accent no-bg raised button">Secondary button</a>
-
-                
-
+              <div class="flex dark">
+                <div class="square circle level-0-bg"></div>
+                <div class="square circle level-1-bg"></div>
+                <div class="square circle level-2-bg"></div>
+                <div class="square circle level-3-bg"></div>
+              </div>
+            </div>
+          </details>
+          <details id="text-colors">
+            <summary>Text Colors</summary>
+            <div class="section">
+              <div class="flex light level-0-bg padding">
+                <span class="contrast-text">Contrast Text</span>
+                <span class="default-text">Default Text</span>
+                <span class="subtle-text">Subtle Text</span>
+                <span class="non-essential-text">Non-essential Text</span>
+              </div>
+              <div class="flex dark level-0-bg padding">
+                <span class="contrast-text">Contrast Text</span>
+                <span class="default-text">Default Text</span>
+                <span class="subtle-text">Subtle Text</span>
+                <span class="non-essential-text">Non-essential Text</span>
+              </div>
+            </div>
+          </details>
+          <details id="status-colors" open>
+            <summary>Status Colors</summary>
+            <div class="responsive-grid section">
+              <div class="flex">
+                <h4>Default (Slate)</h4>
+                <div class="slate-100-bg circle"></div>
+                <div class="slate-300-bg circle"></div>
+                <div class="slate-500-bg circle"></div>
+                <div class="slate-700-bg circle"></div>
+                <div class="slate-900-bg circle"></div>
+              </div>
+              <div class="flex">
+                <h4>Info (Blueberry)</h4>
+                <div class="blueberry-100-bg circle"></div>
+                <div class="blueberry-300-bg circle"></div>
+                <div class="blueberry-500-bg circle"></div>
+                <div class="blueberry-700-bg circle"></div>
+                <div class="blueberry-900-bg circle"></div>
+              </div>
+              <div class="flex">
+                <h4>Success (Lime)</h4>
+                <div class="lime-100-bg circle"></div>
+                <div class="lime-300-bg circle"></div>
+                <div class="lime-500-bg circle"></div>
+                <div class="lime-700-bg circle"></div>
+                <div class="lime-900-bg circle"></div>
+              </div>
+              <div class="flex">
+                <h4>Warning (Banana)</h4>
+                <div class="banana-100-bg circle"></div>
+                <div class="banana-300-bg circle"></div>
+                <div class="banana-500-bg circle"></div>
+                <div class="banana-700-bg circle"></div>
+                <div class="banana-900-bg circle"></div>
+              </div>
+              <div class="flex">
+                <h4>Error (Strawberry)</h4>
+                <div class="strawberry-100-bg circle"></div>
+                <div class="strawberry-300-bg circle"></div>
+                <div class="strawberry-500-bg circle"></div>
+                <div class="strawberry-700-bg circle"></div>
+                <div class="strawberry-900-bg circle"></div>
+              </div>
+            </div>
+          </details>
+        </div>
+      </details>
+      <details id="buttons" open>
+          <summary>Buttons</summary>
+          <div class="start-aligned responsive-grid">
+              <div class="flex">
+                  <h4>Color</h4>
+                  <button class="button">Default</button>
+                  <button class="primary button">Primary</button>
+                  <button class="accent button">Accent</button>
+              </div>
+              <div class="flex">
+                  <h4>Flat</h4>
+                  <button class="no-bg button">Default</button>
+                  <button class="no-bg primary button">Primary</button>
+                  <button class="no-bg accent button">Accent</button>
+              </div>
+              <div class="flex">
+                  <h4>Size</h4>
+                  <button class="button">Default</button>
+                  <button class="small accent button">Small</button>
+                  <button class="large accent button">Large</button>
+                  <button class="accent no-bg button">Default</button>
+                  <button class="small no-bg accent button">Small</button>
+                  <button class="large no-bg accent button">Large</button>
+              </div>
+              <div class="flex">
+                <h4>Icons</h4>
                 <button class="button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                    Left Icon Button
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+                  Reload
                 </button>
-                <a href="#!" class="button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                    Left Icon button
-                </a>
+                <button class="primary button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+                  Reload
+                </button>
+                <button class="accent button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+                  Reload
+                </button>
+                <button class="no-bg button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+                  Reload
+                </button>
+                <button class="no-bg primary button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+                  Reload
+                </button>
+                <button class="no-bg accent button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+                  Reload
+                </button>
+                <button class="icon-only button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+                </button>
+                <button class="icon-only primary button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+                </button>
+                <button class="icon-only accent button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+                </button>
+                <button class="icon-only no-bg button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+                </button>
+                <button class="icon-only no-bg primary button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+                </button>
+                <button class="icon-only no-bg accent button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+                </button>
+              </div>
+              <div class="flex">
+                  <h4>Raised</h4>
+                  <button class="raised button">Default Button</button>
+                  <button class="raised primary button">Primary Button</button>
+                  <button class="raised accent button">Accent Button</button>
+              </div>
+          </div>
+      </details>
+      <details id="button-groups">
+        <summary>Button Groups</summary>
+        <div class="responsive-grid section">
+          <div class="button-group">
+            <button class="button">Button</button>
+            <button class="button">Button</button>
+            <button class="button">Button</button>
+          </div>
+          <div class="bordered button-group">
+            <button class="no-bg button">Button</button>
+            <button class="no-bg button">Button</button>
+            <button class="no-bg button">Button</button>
+          </div>
+          <div class="button-group">
+            <button class="primary button">Button</button>
+            <button class="primary button">Button</button>
+            <button class="primary button">Button</button>
+          </div>
+          <div class="primary bordered button-group">
+            <button class="no-bg button">Button</button>
+            <button class="no-bg button">Button</button>
+            <button class="no-bg button">Button</button>
+          </div>
+          <div class="button-group">
+            <button class="accent button">Button</button>
+            <button class="accent button">Button</button>
+            <button class="accent button">Button</button>
+          </div>
+          <div class="accent bordered button-group">
+            <button class="no-bg button">Button</button>
+            <button class="no-bg button">Button</button>
+            <button class="no-bg button">Button</button>
+          </div>
+          <div class="button-group">
+            <button class="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+            </button>
+            <button class="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+            </button>
+            <button class="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+            </button>
+          </div>
+          <div class="bordered button-group">
+            <button class="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+            </button>
+            <button class="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+            </button>
+            <button class="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+            </button>
+          </div>
+          <div class="bordered button-group">
+            <button class="no-bg button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+            </button>
+            <button class="no-bg button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+            </button>
+            <button class="no-bg button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+            </button>
+          </div>
+          <div class="button-group">
+            <button class="primary button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+            </button>
+            <button class="primary button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+            </button>
+            <button class="primary button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+            </button>
+          </div>
+          <div class="primary bordered button-group">
+            <button class="primary no-bg button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+            </button>
+            <button class="primary no-bg button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+            </button>
+            <button class="primary no-bg button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+            </button>
+          </div>
+        </div>
+      </details>
+      <details id="side-notes">
+        <summary>Side Notes</summary>
+        <div class="section">
+          <div class="grid">
+            <aside class="side-note">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              This is a new information.
+            </aside>
+            <aside class="success side-note">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              This is correct. Do this.
+            </aside>
+            <aside class="warning side-note">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-triangle"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+              Doing this will have negative ramifications in some systems. Be careful.
+            </aside>
+            <aside class="error side-note">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-octagon"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              Don't do this! This is harmful.
+            </aside>
+          </div>
+        </div>
+      </details>
+      <details>
+        <summary>Menus</summary>
+        <div class="section">
+          <nav class="menu">
+            <h3>Lessons</h3>
+            <ul>
+              <li><a href="#!">Link #1</a></li>
+              <li><button class="no-bg button">Button #1</button></li>
+              <li><a href="#!">Link #2</a></li>
+              <li><a href="#!">Link #3</a></li>
+              <li><a href="#!">Link #4</a></li>
+              <li><a href="#!">Link #5</a></li>
+            </ul>
+          </nav>
+        </div>
+      </details>
+      <details>
+        <summary>Definition Lists</summary>
+        <div class="section">
+          <dl>
+            <dt>HTML</dt>
+            <dd>
+              Hypertext Markup Language. The programming language of the Web
+              that deals with structuring content and assigning meaning to it.
+            </dd>
 
-                <button class="button">
-                    Right Icon Button
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                </button>
-                <a href="#!" class="button">
-                    Right Icon button
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                </a>
+            <dt>CSS</dt>
+            <dd>
+              Cascading Style Sheet The programming language of the Web that
+              deals with giving styling and layout to content.
+            </dd>
 
-                <button class="button shadow">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                    Left Icon Button
-                </button>
-                <a href="#!" class="button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                    Left Icon button
+            <dt>JavaScript</dt>
+            <dd>
+              The programming language of the Web that deals with giving
+              interactivity and additional behavior to webpages.
+            </dd>
+          </dl>
+        </div>
+      </details>
+      <details>
+        <summary>List Groups</summary>
+        <div
+          class="grid"
+          style="
+            align-items: start;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          "
+        >
+          <div class="section">
+            <ul class="list-group">
+              <li>List Item 1</li>
+              <li>List Item 2</li>
+              <li>List Item 3</li>
+              <li>List Item 4</li>
+              <li>List Item 5</li>
+            </ul>
+          </div>
+          <div class="section">
+            <ul class="tighter list-group">
+              <li>List Item 1</li>
+              <li>List Item 2</li>
+              <li>List Item 3</li>
+              <li>List Item 4</li>
+              <li>List Item 5</li>
+            </ul>
+          </div>
+          <div class="section">
+            <ul class="tight list-group">
+              <li>List Item 1</li>
+              <li>List Item 2</li>
+              <li>List Item 3</li>
+              <li>List Item 4</li>
+              <li>List Item 5</li>
+            </ul>
+          </div>
+          <div class="section">
+            <ul class="spacious list-group">
+              <li>List Item 1</li>
+              <li>List Item 2</li>
+              <li>List Item 3</li>
+              <li>List Item 4</li>
+              <li>List Item 5</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+      <details>
+        <summary>Tables</summary>
+        <div class="section">
+          <div class="table-wrapper">
+            <table class="table">
+              <caption>
+                Figure 1:
+                <p><i>Students Table</i></p>
+              </caption>
+              <thead>
+                <tr>
+                  <th>Last Name</th>
+                  <th>First Name</th>
+                  <th>Middle Name</th>
+                  <th>Grade Level</th>
+                  <th>Section</th>
+                  <th>Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Rubio</td>
+                  <td>Francis</td>
+                  <td></td>
+                  <td>Grade 11</td>
+                  <td>Venus</td>
+                  <td>25</td>
+                </tr>
+                <tr>
+                  <td>Angala</td>
+                  <td>Jonathan Casey</td>
+                  <td>Chu</td>
+                  <td>Grade 11</td>
+                  <td>Mars</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <td>Deinla</td>
+                  <td>Christian Dior</td>
+                  <td>Mame</td>
+                  <td>Grade 11</td>
+                  <td>Mercury</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>Suba</td>
+                  <td>Joshua Rey</td>
+                  <td></td>
+                  <td>Grade 11</td>
+                  <td>Earth</td>
+                  <td>16</td>
+                </tr>
+                <tr>
+                  <td>Quezon</td>
+                  <td>Mica</td>
+                  <td></td>
+                  <td>Grade 11</td>
+                  <td>Jupiter</td>
+                  <td>20</td>
+                </tr>
+                <tr>
+                  <td>Urmeneta</td>
+                  <td>Angelique Mae</td>
+                  <td></td>
+                  <td>Grade 11</td>
+                  <td>Saturn</td>
+                  <td>21</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+      <details>
+        <summary>Headings</summary>
+        <div class="section">
+          <h1>Heading 1</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <h4>Heading 4</h4>
+          <h5>Heading 5</h5>
+          <h6>Heading 6</h6>
+        </div>
+      </details>
+      <details>
+        <summary>Blockquotes</summary>
+        <div class="section">
+          <figure class="quotation">
+            <blockquote>
+              <p>
+                You must not lie down with a male in the same way that you lie
+                down with a woman.
+              </p>
+            </blockquote>
+            <figcaption>
+              <cite>Leviticus 18:22</cite>
+            </figcaption>
+          </figure>
+          <figure class="quotation">
+            <blockquote>
+              <p>
+                Five decades of psychiatric evidence demonstrates that
+                homosexuality is <em>immutable</em>, and nonpathological, and a
+                growing body of more recent evidence implicates biology in the
+                development of sexual orientation.
+              </p>
+            </blockquote>
+            <figcaption>
+              <a
+                href="https://www.theatlantic.com/magazine/archive/1993/03/homosexuality-and-biology/304683/"
+                ><cite>Homosexuality and Biology</cite></a
+              >, emphasis mine
+            </figcaption>
+          </figure>
+        </div>
+      </details>
+      <details>
+        <summary>Figures with caption</summary>
+        <div class="section">
+          <figure class="figure">
+            <img
+              class="figure__object"
+              src="https://antaresprogramming.github.io/images/posts/box-sizing/cover.png"
+              alt="box sizing article cover"
+            />
+            <figcaption>
+              <p>
+                <b>Figure 1:</b> Box sizing can be applied to all elements as
+                part of a reset stylesheet
+              </p>
+            </figcaption>
+          </figure>
+        </div>
+      </details>
+      <details>
+        <summary>Image Cards</summary>
+        <div class="section">
+          <article class="image-card">
+            <img
+              src="https://antaresprogramming.github.io/images/posts/box-sizing/cover.png"
+              alt="box sizing article cover"
+            />
+            <div class="level-2 raised landscape card"></div>
+          </article>
+        </div>
+        <div class="section">
+          <article class="horizontal image-card">
+            <img
+              src="https://antaresprogramming.github.io/images/posts/box-sizing/cover.png"
+              alt="box sizing article cover"
+            />
+            <div class="level-2 raised card"></div>
+          </article>
+        </div>
+      </details>
+      <details>
+        <summary>Cards</summary>
+        <div class="section">
+          <div
+            class="grid"
+            style="gap: 2em; grid-template-columns: repeat(3, 1fr)"
+          >
+            <div class="raised square card"></div>
+            <div class="level-2 raised square card"></div>
+            <div class="level-3 raised square card"></div>
+          </div>
+        </div>
+        <div class="section">
+          <div
+            class="grid"
+            style="gap: 2em; grid-template-columns: repeat(3, 1fr)"
+          >
+            <div class="square brand card"></div>
+            <div class="square accent card"></div>
+            <div class="square primary card"></div>
+          </div>
+        </div>
+        <div class="section">
+          <div class="grid" style="grid-template-columns: repeat(3, 1fr)">
+            <div class="square card"></div>
+            <div class="landscape card"></div>
+            <div class="portrait card"></div>
+          </div>
+        </div>
+      </details>
+      <details>
+        <summary>Navigation Bar</summary>
+        <div class="section">
+          <nav class="sticky blurred navbar">
+            <ul>
+              <li>
+                <a href="#!" class="nav-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-download"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span class="nav-item__main"> Left Icon </span>
                 </a>
-
-                <button class="button shadow">
-                    Right Icon Button
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                </button>
-                <a href="#!" class="button shadow">
-                    Right Icon button
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              </li>
+            </ul>
+            <button class="menu nav-item" data-navmenu aria-expanded="false">
+              <svg
+                class="nav-item__main"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-menu"
+              >
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+              <span class="visually-hidden"> Toggle Menu </span>
+            </button>
+            <ul class="end-aligned dropdown">
+              <li>
+                <a href="#!" class="nav-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-download"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span class="nav-item__main"> Left Icon </span>
                 </a>
-
-                <button class="button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                </button>
-                <a href="#!" class="button no-bg">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              </li>
+              <li>
+                <a href="#!" class="nav-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-download"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span class="nav-item__main"> Left Icon </span>
                 </a>
-
-                <button class="button small">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                </button>
-                <a href="#!" class="button small no-bg">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              </li>
+              <li>
+                <a href="#!" class="nav-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-download"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span class="nav-item__main"> Left Icon </span>
                 </a>
-
-                <button class="button small">
-                    Small Right Icon Button
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                </button>
-                <a href="#!" class="button small no-bg">Small button</a>
-
-                <button class="button accent">Default Button</button>
-                <a href="#!" class="button accent no-bg">Default button</a>
-                <a href="#!" class="button accent shadow">Default button</a>
-                <a href="#!" class="button accent no-bg">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                    Default button
+              </li>
+              <li>
+                <a href="#!" class="nav-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-download"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span class="nav-item__main"> Left Icon </span>
                 </a>
-                <a href="#!" class="button accent no-bg">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="section">
+          <nav class="navbar">
+            <ul>
+              <li>
+                <a href="#!" class="nav-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-download"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span class="nav-item__main"> Left Icon </span>
                 </a>
-                <button class="button large">Default Button</button>
-                <a href="#!" class="button large">Default button</a>
+              </li>
+            </ul>
+            <button class="menu nav-item" data-navmenu aria-expanded="false">
+              <svg
+                class="nav-item__main"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-menu"
+              >
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+              <span class="visually-hidden"> Toggle Menu </span>
+            </button>
+            <ul class="end-aligned dropdown">
+              <li>
+                <a href="#!" class="nav-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-download"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span class="nav-item__main"> Left Icon </span>
+                </a>
+              </li>
+              <li>
+                <a href="#!" class="nav-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-download"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span class="nav-item__main"> Left Icon </span>
+                </a>
+              </li>
+              <li>
+                <a href="#!" class="nav-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-download"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span class="nav-item__main"> Left Icon </span>
+                </a>
+              </li>
+              <li>
+                <a href="#!" class="nav-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-download"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span class="nav-item__main"> Left Icon </span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="pinned navbar">
+            <ul>
+              <li>
+                <a href="#!" class="nav-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-download"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span class="nav-item__main"> Left Icon </span>
+                </a>
+              </li>
+            </ul>
+            <button class="menu nav-item" data-navmenu aria-expanded="false">
+              <svg
+                class="nav-item__main"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-menu"
+              >
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+              <span class="visually-hidden"> Toggle Menu </span>
+            </button>
+            <ul class="end-aligned dropdown">
+              <li>
+                <a href="#!" class="nav-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-download"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span class="nav-item__main"> Left Icon </span>
+                </a>
+              </li>
+              <li>
+                <a href="#!" class="nav-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-download"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span class="nav-item__main"> Left Icon </span>
+                </a>
+              </li>
+              <li>
+                <a href="#!" class="nav-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-download"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span class="nav-item__main"> Left Icon </span>
+                </a>
+              </li>
+              <li>
+                <a href="#!" class="nav-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-download"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span class="nav-item__main"> Left Icon </span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </details>
+      <details>
+        <summary>Alert</summary>
+        <div class="grid">
+          <div class="alert" role="alert">
+            <div class="alert__body">
+              <h3>Default</h3>
+              <p>This is a default alert</p>
             </div>
-        </details>
-        <details>
-            <summary>Button Groups</summary>
-            <div class="section">
-            <div class="button-group">
-                <button class="button">Button 1</button>
-                <button class="button">Button 2</button>
-                <button class="button">Button 3</button>
+            <button class="button small no-bg" data-close>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-download"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </button>
+          </div>
+          <div class="alert info" role="alert">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-info"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            <div class="alert__body">
+              <p>This is an informative alert</p>
             </div>
+            <button class="button small no-bg">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-download"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </button>
+          </div>
+          <div class="alert error" role="alert">
+            <div class="alert__body">
+              <h3>It's the end of the world!</h3>
+              <p>This is an error alert</p>
             </div>
-            <div class="section">
-            <div class="button-group">
-                <button class="no-bg button">Button 1</button>
-                <button class="no-bg button">Button 2</button>
-                <button class="no-bg button">Button 3</button>
+            <button class="button small no-bg">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-download"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </button>
+          </div>
+          <div class="alert warning" role="alert">
+            <div class="alert__body">
+              <h3>This is going to break things</h3>
+              <p>
+                This is a warning alert. You should probably stop doing that.
+              </p>
             </div>
+            <button class="button small no-bg">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-download"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </button>
+          </div>
+          <div class="alert success" role="alert">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-check-circle"
+            >
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <div class="alert__body">
+              <h3>Victory!</h3>
+              <p>You did it! I knew you could! You always had it in you.</p>
             </div>
-            <div class="section">
-            <div class="secondary bordered button-group">
-                <button class="no-bg button">Button 1</button>
-                <button class="no-bg button">Button 2</button>
-                <button class="no-bg button">Button 3</button>
-            </div>
-            </div>
-            <div class="section">
-            <div class="button-group">
-                <button class="accent button">Button 1</button>
-                <button class="accent button">Button 2</button>
-                <button class="accent button">Button 3</button>
-            </div>
-            </div>
-            <div class="section">
-            <div class="button-group">
-                <button class="accent no-bg button">Button 1</button>
-                <button class="accent no-bg button">Button 2</button>
-                <button class="accent no-bg button">Button 3</button>
-            </div>
-            </div>
-            <div class="section">
-            <div class="accent bordered button-group">
-                <button class="accent no-bg button">Button 1</button>
-                <button class="accent no-bg button">Button 2</button>
-                <button class="accent no-bg button">Button 3</button>
-            </div>
-            </div>
-        </details>
-        <details>
-            <summary>Tables</summary>
-            <div class="section">
-            <div class="table-wrapper">
-                <table class="table">
-                <caption>
-                    Figure 1:
-                    <p><i>Students Table</i></p>
-                </caption>
-                <thead>
-                    <tr>
-                    <th>Last Name</th>
-                    <th>First Name</th>
-                    <th>Middle Name</th>
-                    <th>Grade Level</th>
-                    <th>Section</th>
-                    <th>Score</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                    <td>Rubio</td>
-                    <td>Francis</td>
-                    <td></td>
-                    <td>Grade 11</td>
-                    <td>Venus</td>
-                    <td>25</td>
-                    </tr>
-                    <tr>
-                    <td>Angala</td>
-                    <td>Jonathan Casey</td>
-                    <td>Chu</td>
-                    <td>Grade 11</td>
-                    <td>Mars</td>
-                    <td>10</td>
-                    </tr>
-                    <tr>
-                    <td>Deinla</td>
-                    <td>Christian Dior</td>
-                    <td>Mame</td>
-                    <td>Grade 11</td>
-                    <td>Mercury</td>
-                    <td>5</td>
-                    </tr>
-                    <tr>
-                    <td>Suba</td>
-                    <td>Joshua Rey</td>
-                    <td></td>
-                    <td>Grade 11</td>
-                    <td>Earth</td>
-                    <td>16</td>
-                    </tr>
-                    <tr>
-                    <td>Quezon</td>
-                    <td>Mica</td>
-                    <td></td>
-                    <td>Grade 11</td>
-                    <td>Jupiter</td>
-                    <td>20</td>
-                    </tr>
-                    <tr>
-                    <td>Urmeneta</td>
-                    <td>Angelique Mae</td>
-                    <td></td>
-                    <td>Grade 11</td>
-                    <td>Saturn</td>
-                    <td>21</td>
-                    </tr>
-                </tbody>
-                </table>
-            </div>
-            </div>
-        </details>
-        <details>
-            <summary>Headings</summary>
-            <div class="section">
-            <h1>Heading 1</h1>
-            <h2>Heading 2</h2>
-            <h3>Heading 3</h3>
-            <h4>Heading 4</h4>
-            <h5>Heading 5</h5>
-            <h6>Heading 6</h6>
-            </div>
-        </details>
-        <details>
-            <summary>Blockquotes</summary>
-            <div class="section">
-            <figure class="quotation">
-                <blockquote>
-                <p>You must not lie down with a male in the same way that you lie down with a woman.</p>
-                </blockquote>
-                <figcaption>
-                <cite>Leviticus 18:22</cite>
-                </figcaption>
-            </figure>
-            <figure class="quotation">
-                <blockquote>
-                <p>Five decades of psychiatric evidence demonstrates that homosexuality is <em>immutable</em>, and nonpathological, and a growing body of more recent evidence implicates biology in the development of sexual orientation.</p>
-                </blockquote>
-                <figcaption>
-                <a href="https://www.theatlantic.com/magazine/archive/1993/03/homosexuality-and-biology/304683/"><cite>Homosexuality and Biology</cite></a>, emphasis mine
-                </figcaption>
-            </figure>
-            </div>
-        </details>
-        <details>
-            <summary>Figures with caption</summary>
-            <div class="section">
-            <figure class="figure">
-                <img class="figure__object" src="https://antaresprogramming.github.io/images/posts/box-sizing/cover.png" alt="box sizing article cover">
-                <figcaption>
-                <p><b>Figure 1:</b> Box sizing can be applied to all elements as part of a reset stylesheet</p>
-                </figcaption>
-            </figure>
-            </div>
-        </details>
-        <details>
-            <summary>Image Cards</summary>
-            <div class="section">
-            <article class="image-card">
-                <img src="https://antaresprogramming.github.io/images/posts/box-sizing/cover.png" alt="box sizing article cover">
-                <div class="level-2 raised landscape card"></div>
-            </article>
-            </div>
-            <div class="section">
-            <article class="horizontal image-card">
-                <img src="https://antaresprogramming.github.io/images/posts/box-sizing/cover.png" alt="box sizing article cover">
-                <div class="level-2 raised card"></div>
-            </article>
-            </div>
-        </details>
-        <details>
-            <summary>Cards</summary>
-            <div class="section">
-            <div class="grid" style="gap: 2em; grid-template-columns: repeat(3, 1fr)">
-                <div class="raised square card"></div>
-                <div class="level-2 raised square card"></div>
-                <div class="level-3 raised square card"></div>
-            </div>
-            </div>
-            <div class="section">
-            <div class="grid" style="gap: 2em; grid-template-columns: repeat(3, 1fr)">
-                <div class="square brand card"></div>
-                <div class="square accent card"></div>
-                <div class="square secondary card"></div>
-            </div>
-            </div>
-            <div class="section">
-            <div class="grid" style="grid-template-columns: repeat(3, 1fr)">
-                <div class="square card"></div>
-                <div class="landscape card"></div>
-                <div class="portrait card"></div>
-            </div>
-            </div>
-        </details>
-        <details>
-            <summary>Navigation Bar</summary>
-            <div class="section">
-            <nav class="sticky blurred navbar">
-                <ul>
-                <li>
-                    <a href="#!" class="nav-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                    <span class="nav-item__main">
-                        Left Icon
-                    </span>
-                    </a>
-                </li>
-                </ul>
-                <button class="menu nav-item" data-navmenu aria-expanded="false">
-                <svg class="nav-item__main" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-                <span class="visually-hidden">
-                    Toggle Menu
-                </span>
-                </button>
-                <ul class="end-aligned dropdown">
-                <li>
-                    <a href="#!" class="nav-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                    <span class="nav-item__main">
-                        Left Icon
-                    </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#!" class="nav-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                    <span class="nav-item__main">
-                        Left Icon
-                    </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#!" class="nav-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                    <span class="nav-item__main">
-                        Left Icon
-                    </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#!" class="nav-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                    <span class="nav-item__main">
-                        Left Icon
-                    </span>
-                    </a>
-                </li>
-                </ul>
-            </nav>
-            </div>
-            <div class="section">
-            <nav class="navbar">
-                <ul>
-                <li>
-                    <a href="#!" class="nav-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                    <span class="nav-item__main">
-                        Left Icon
-                    </span>
-                    </a>
-                </li>
-                </ul>
-                <button class="menu nav-item" data-navmenu aria-expanded="false">
-                <svg class="nav-item__main" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-                <span class="visually-hidden">
-                    Toggle Menu
-                </span>
-                </button>
-                <ul class="end-aligned dropdown">
-                <li>
-                    <a href="#!" class="nav-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                    <span class="nav-item__main">
-                        Left Icon
-                    </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#!" class="nav-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                    <span class="nav-item__main">
-                        Left Icon
-                    </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#!" class="nav-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                    <span class="nav-item__main">
-                        Left Icon
-                    </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#!" class="nav-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                    <span class="nav-item__main">
-                        Left Icon
-                    </span>
-                    </a>
-                </li>
-                </ul>
-            </nav>
-            <nav class="pinned navbar">
-                <ul>
-                <li>
-                    <a href="#!" class="nav-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                    <span class="nav-item__main">
-                        Left Icon
-                    </span>
-                    </a>
-                </li>
-                </ul>
-                <button class="menu nav-item" data-navmenu aria-expanded="false">
-                <svg class="nav-item__main" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-                <span class="visually-hidden">
-                    Toggle Menu
-                </span>
-                </button>
-                <ul class="end-aligned dropdown">
-                <li>
-                    <a href="#!" class="nav-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                    <span class="nav-item__main">
-                        Left Icon
-                    </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#!" class="nav-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                    <span class="nav-item__main">
-                        Left Icon
-                    </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#!" class="nav-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                    <span class="nav-item__main">
-                        Left Icon
-                    </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#!" class="nav-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                    <span class="nav-item__main">
-                        Left Icon
-                    </span>
-                    </a>
-                </li>
-                </ul>
-            </nav>
-            </div>
-        </details>
-        <details>
-            <summary>Alert</summary>
-            <div class="grid">
-            <div class="alert" role="alert">
-                <div class="alert__body">
-                <h3>Default</h3>
-                <p>This is a default alert</p>
-                </div>
-                <button class="button small no-bg" data-close>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                </button>
-            </div>
-            <div class="alert info" role="alert">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-                <div class="alert__body">
-                <p>This is an informative alert</p>
-                </div>
-                <button class="button small no-bg">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                </button>
-            </div>
-            <div class="alert error" role="alert">
-                <div class="alert__body">
-                <h3>It's the end of the world!</h3>
-                <p>This is an error alert</p>
-                </div>
-                <button class="button small no-bg">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                </button>
-            </div>
-            <div class="alert warning" role="alert">
-                <div class="alert__body">
-                <h3>This is going to break things</h3>
-                <p>This is a warning alert. You should probably stop doing that.</p>
-                </div>
-                <button class="button small no-bg">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                </button>
-            </div>
-            <div class="alert success" role="alert">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                <div class="alert__body">
-                <h3>Victory!</h3>
-                <p>You did it! I knew you could! You always had it in you.</p>
-                </div>
-                <button class="button small no-bg">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                </button>
-            </div>
-            </div>
-        </details>
-        <details>
-            <summary>Breadcrumb</summary>
-            <div class="section">
-            <nav class="breadcrumb" aria-label="breadcrumbs">
-                <ol>
-                <li><a href="#">Bulma</a></li>
-                <li><a href="#">Documentation</a></li>
-                <li><a href="#">Components</a></li>
-                <li><a href="#" aria-current="page">Breadcrumb</a></li>
-                </ol>
-            </nav>
-            </div>
-            <nav class="full-width breadcrumb" aria-label="breadcrumbs">
+            <button class="button small no-bg">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-download"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </details>
+      <details>
+        <summary>Breadcrumb</summary>
+        <div class="section">
+          <nav class="breadcrumb" aria-label="breadcrumbs">
             <ol>
-                <li><a href="#">Bulma</a></li>
-                <li><a href="#">Documentation</a></li>
-                <li><a href="#">Components</a></li>
-                <li><a href="#" aria-current="page">Breadcrumb</a></li>
+              <li><a href="#">Bulma</a></li>
+              <li><a href="#">Documentation</a></li>
+              <li><a href="#">Components</a></li>
+              <li><a href="#" aria-current="page">Breadcrumb</a></li>
             </ol>
-            </nav>
-            <div class="section">
-            <nav class="end-aligned breadcrumb" aria-label="breadcrumbs">
-                <ol>
-                <li><a href="#">Bulma</a></li>
-                <li><a href="#">Documentation</a></li>
-                <li><a href="#">Components</a></li>
-                <li><a href="#" aria-current="page">Breadcrumb</a></li>
-                </ol>
-            </nav>
-            </div>
-            <nav class="full-width center-aligned breadcrumb" aria-label="breadcrumbs">
+          </nav>
+        </div>
+        <nav class="full-width breadcrumb" aria-label="breadcrumbs">
+          <ol>
+            <li><a href="#">Bulma</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Components</a></li>
+            <li><a href="#" aria-current="page">Breadcrumb</a></li>
+          </ol>
+        </nav>
+        <div class="section">
+          <nav class="end-aligned breadcrumb" aria-label="breadcrumbs">
             <ol>
-                <li><a href="#">Bulma</a></li>
-                <li><a href="#">Documentation</a></li>
-                <li><a href="#">Components</a></li>
-                <li><a href="#" aria-current="page">Breadcrumb</a></li>
+              <li><a href="#">Bulma</a></li>
+              <li><a href="#">Documentation</a></li>
+              <li><a href="#">Components</a></li>
+              <li><a href="#" aria-current="page">Breadcrumb</a></li>
             </ol>
-            </nav>
-
-        </details>
-        <details>
-            <summary>
-            Code Snippet
-            </summary>
-            <section class="section">
-            <pre class="code-snippet"><code data-language="html">&lt;div class="html">
+          </nav>
+        </div>
+        <nav
+          class="full-width center-aligned breadcrumb"
+          aria-label="breadcrumbs"
+        >
+          <ol>
+            <li><a href="#">Bulma</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Components</a></li>
+            <li><a href="#" aria-current="page">Breadcrumb</a></li>
+          </ol>
+        </nav>
+      </details>
+      <details>
+        <summary>Code Snippet</summary>
+        <section class="section">
+          <pre
+            class="code-snippet"
+          ><code data-language="html">&lt;div class="html">
             &lt;p>Hello all of the world!&lt;/p>
-        &lt;/div></code></pre></section>
-        </details>
-        <details>
-            <summary>Pagination</summary>
-            <div class="section">
-            <b>Default Pagination</b>
-            <nav class="pagination" aria-label="Pagination Navigation">
-                <ul>
-                <li><a href="#!" aria-label="first page"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-left"><polyline points="11 17 6 12 11 7"></polyline><polyline points="18 17 13 12 18 7"></polyline></svg></a></li> 
-                <li><a href="#!" aria-label="previous page"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg></a></li>
-                <li><a href="#!" aria-label="page 1">1</a></li>
-                <li><a href="#!" aria-label="page 2">2</a></li>
-                <li><a href="#!" aria-label="Current Page, page 3" aria-current="page">3</a></li>
-                <li><a href="#!" aria-label="page 4">4</a></li>
-                <li><a href="#!" aria-label="next page"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg></a></li>
-                <li><a href="#!" aria-label="last page"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-right"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></a></li>
-                </ul>
-            </nav>
+        &lt;/div></code></pre>
+        </section>
+      </details>
+      <details>
+        <summary>Pagination</summary>
+        <div class="section">
+          <b>Default Pagination</b>
+          <nav class="pagination" aria-label="Pagination Navigation">
+            <ul>
+              <li>
+                <a href="#!" aria-label="first page">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-chevrons-left"
+                    >
+                        <polyline points="11 17 6 12 11 7"></polyline>
+                        <polyline points="18 17 13 12 18 7"></polyline>
+                    </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#!" aria-label="previous page">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-chevrons-left"
+                    >
+                        <polyline points="11 17 6 12 11 7"></polyline>
+                        <polyline points="18 17 13 12 18 7"></polyline>
+                    </svg>
+                </a>
+              </li>
+              <li><a href="#!" aria-label="page 1">1</a></li>
+              <li><a href="#!" aria-label="page 2">2</a></li>
+              <li>
+                <a
+                  href="#!"
+                  aria-label="Current Page, page 3"
+                  aria-current="page"
+                  >3</a
+                >
+              </li>
+              <li><a href="#!" aria-label="page 4">4</a></li>
+              <li>
+                <a href="#!" aria-label="next page">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-chevrons-left"
+                    >
+                        <polyline points="11 17 6 12 11 7"></polyline>
+                        <polyline points="18 17 13 12 18 7"></polyline>
+                    </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#!" aria-label="last page">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-chevrons-left"
+                    >
+                        <polyline points="11 17 6 12 11 7"></polyline>
+                        <polyline points="18 17 13 12 18 7"></polyline>
+                    </svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="section">
+          <b>Full-width Pagination</b>
+          <nav class="full-width pagination" aria-label="Pagination Navigation">
+            <ul>
+              <li>
+                <a href="#!" aria-label="first page"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-chevrons-left"
+                  >
+                    <polyline points="11 17 6 12 11 7"></polyline>
+                    <polyline points="18 17 13 12 18 7"></polyline></svg
+                ></a>
+              </li>
+              <li>
+                <a href="#!" aria-label="previous page"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-chevron-left"
+                  >
+                    <polyline points="15 18 9 12 15 6"></polyline></svg
+                ></a>
+              </li>
+              <li><a href="#!" aria-label="page 1">1</a></li>
+              <li><a href="#!" aria-label="page 2">2</a></li>
+              <li>
+                <a
+                  href="#!"
+                  aria-label="Current Page, page 3"
+                  aria-current="page"
+                  >3</a
+                >
+              </li>
+              <li><a href="#!" aria-label="page 4">4</a></li>
+              <li>
+                <a href="#!" aria-label="next page"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-chevron-right"
+                  >
+                    <polyline points="9 18 15 12 9 6"></polyline></svg
+                ></a>
+              </li>
+              <li>
+                <a href="#!" aria-label="last page"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-chevrons-right"
+                  >
+                    <polyline points="13 17 18 12 13 7"></polyline>
+                    <polyline points="6 17 11 12 6 7"></polyline></svg
+                ></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="section">
+          <b>Spaced Pagination</b>
+          <nav class="spaced pagination" aria-label="Pagination Navigation">
+            <ul>
+              <li>
+                <a href="#!" aria-label="first page"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-chevrons-left"
+                  >
+                    <polyline points="11 17 6 12 11 7"></polyline>
+                    <polyline points="18 17 13 12 18 7"></polyline></svg
+                ></a>
+              </li>
+              <li>
+                <a href="#!" aria-label="previous page"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-chevron-left"
+                  >
+                    <polyline points="15 18 9 12 15 6"></polyline></svg
+                ></a>
+              </li>
+              <li><a href="#!" aria-label="page 1">1</a></li>
+              <li><a href="#!" aria-label="page 2">2</a></li>
+              <li>
+                <a
+                  href="#!"
+                  aria-label="Current Page, page 3"
+                  aria-current="page"
+                  >3</a
+                >
+              </li>
+              <li><a href="#!" aria-label="page 4">4</a></li>
+              <li>
+                <a href="#!" aria-label="next page"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-chevron-right"
+                  >
+                    <polyline points="9 18 15 12 9 6"></polyline></svg
+                ></a>
+              </li>
+              <li>
+                <a href="#!" aria-label="last page"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-chevrons-right"
+                  >
+                    <polyline points="13 17 18 12 13 7"></polyline>
+                    <polyline points="6 17 11 12 6 7"></polyline></svg
+                ></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="section">
+          <b>Center-Aligned Pagination</b>
+          <nav
+            class="center-aligned pagination"
+            aria-label="Pagination Navigation"
+          >
+            <ul>
+              <li>
+                <a href="#!" aria-label="first page"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-chevrons-left"
+                  >
+                    <polyline points="11 17 6 12 11 7"></polyline>
+                    <polyline points="18 17 13 12 18 7"></polyline></svg
+                ></a>
+              </li>
+              <li>
+                <a href="#!" aria-label="previous page"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-chevron-left"
+                  >
+                    <polyline points="15 18 9 12 15 6"></polyline></svg
+                ></a>
+              </li>
+              <li><a href="#!" aria-label="page 1">1</a></li>
+              <li><a href="#!" aria-label="page 2">2</a></li>
+              <li>
+                <a
+                  href="#!"
+                  aria-label="Current Page, page 3"
+                  aria-current="page"
+                  >3</a
+                >
+              </li>
+              <li><a href="#!" aria-label="page 4">4</a></li>
+              <li>
+                <a href="#!" aria-label="next page"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-chevron-right"
+                  >
+                    <polyline points="9 18 15 12 9 6"></polyline></svg
+                ></a>
+              </li>
+              <li>
+                <a href="#!" aria-label="last page"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-chevrons-right"
+                  >
+                    <polyline points="13 17 18 12 13 7"></polyline>
+                    <polyline points="6 17 11 12 6 7"></polyline></svg
+                ></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="section">
+          <b>End-Aligned Pagination</b>
+          <nav
+            class="end-aligned pagination"
+            aria-label="Pagination Navigation"
+          >
+            <ul>
+              <li>
+                <a href="#!" aria-label="first page"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-chevrons-left"
+                  >
+                    <polyline points="11 17 6 12 11 7"></polyline>
+                    <polyline points="18 17 13 12 18 7"></polyline></svg
+                ></a>
+              </li>
+              <li>
+                <a href="#!" aria-label="previous page"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-chevron-left"
+                  >
+                    <polyline points="15 18 9 12 15 6"></polyline></svg
+                ></a>
+              </li>
+              <li><a href="#!" aria-label="page 1">1</a></li>
+              <li><a href="#!" aria-label="page 2">2</a></li>
+              <li>
+                <a
+                  href="#!"
+                  aria-label="Current Page, page 3"
+                  aria-current="page"
+                  >3</a
+                >
+              </li>
+              <li><a href="#!" aria-label="page 4">4</a></li>
+              <li>
+                <a href="#!" aria-label="next page"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-chevron-right"
+                  >
+                    <polyline points="9 18 15 12 9 6"></polyline></svg
+                ></a>
+              </li>
+              <li>
+                <a href="#!" aria-label="last page"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-chevrons-right"
+                  >
+                    <polyline points="13 17 18 12 13 7"></polyline>
+                    <polyline points="6 17 11 12 6 7"></polyline></svg
+                ></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </details>
+      <details>
+        <summary>Badges</summary>
+        <section class="flex section">
+          <a href="#!" class="badge">Default</a>
+          <a href="#!" class="info badge">Information</a>
+          <a href="#!" class="warning badge">Warning</a>
+          <a href="#!" class="error badge">Error</a>
+          <a href="#!" class="success badge">Success</a>
+        </section>
+        <section class="flex section">
+          <a href="#!" class="large badge">Default</a>
+          <a href="#!" class="large info badge">Information</a>
+          <a href="#!" class="large warning badge">Warning</a>
+          <a href="#!" class="large error badge">Error</a>
+          <a href="#!" class="large success badge">Success</a>
+        </section>
+        <section class="flex section">
+          <a href="#!" class="rounded badge">Default</a>
+          <a href="#!" class="rounded info badge">Information</a>
+          <a href="#!" class="rounded warning badge">Warning</a>
+          <a href="#!" class="rounded error badge">Error</a>
+          <a href="#!" class="rounded success badge">Success</a>
+        </section>
+        <section class="flex section">
+          <a href="#!" class="small badge">Default</a>
+          <a href="#!" class="small info badge">Information</a>
+          <a href="#!" class="small warning badge">Warning</a>
+          <a href="#!" class="small error badge">Error</a>
+          <a href="#!" class="small success badge">Success</a>
+        </section>
+        <section class="flex section">
+          <a href="#!" class="rounded small badge">Default</a>
+          <a href="#!" class="rounded small info badge">Information</a>
+          <a href="#!" class="rounded small warning badge">Warning</a>
+          <a href="#!" class="rounded small error badge">Error</a>
+          <a href="#!" class="rounded small success badge">Success</a>
+        </section>
+      </details>
+      <details>
+        <summary>Byline</summary>
+        <div class="section">
+          <div class="byline">
+            <img
+              src="https://www.gravatar.com/avatar/821268102c1c7397c7ee4fc3ecb2cb6a?s=400"
+              alt=""
+              width="400"
+              height="400"
+              class="byline__image"
+            />
+            <div class="byline__body">
+              <address>
+                <span class="byline__name">Francis Rubio</span>
+              </address>
             </div>
-            <div class="section">
-            <b>Full-width Pagination</b>
-            <nav class="full-width pagination" aria-label="Pagination Navigation">
-                <ul>
-                <li><a href="#!" aria-label="first page"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-left"><polyline points="11 17 6 12 11 7"></polyline><polyline points="18 17 13 12 18 7"></polyline></svg></a></li> 
-                <li><a href="#!" aria-label="previous page"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg></a></li>
-                <li><a href="#!" aria-label="page 1">1</a></li>
-                <li><a href="#!" aria-label="page 2">2</a></li>
-                <li><a href="#!" aria-label="Current Page, page 3" aria-current="page">3</a></li>
-                <li><a href="#!" aria-label="page 4">4</a></li>
-                <li><a href="#!" aria-label="next page"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg></a></li>
-                <li><a href="#!" aria-label="last page"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-right"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></a></li>
-                </ul>
-            </nav>
+          </div>
+        </div>
+        <div class="section">
+          <div class="large byline">
+            <img
+              src="https://www.gravatar.com/avatar/821268102c1c7397c7ee4fc3ecb2cb6a?s=400"
+              alt=""
+              width="400"
+              height="400"
+              class="byline__image"
+            />
+            <div class="byline__body">
+              <span class="byline__label">written by</span>
+              <address>
+                <span class="byline__name">Francis Rubio</span>
+              </address>
             </div>
-            <div class="section">
-            <b>Spaced Pagination</b>
-            <nav class="spaced pagination" aria-label="Pagination Navigation">
-                <ul>
-                <li><a href="#!" aria-label="first page"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-left"><polyline points="11 17 6 12 11 7"></polyline><polyline points="18 17 13 12 18 7"></polyline></svg></a></li> 
-                <li><a href="#!" aria-label="previous page"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg></a></li>
-                <li><a href="#!" aria-label="page 1">1</a></li>
-                <li><a href="#!" aria-label="page 2">2</a></li>
-                <li><a href="#!" aria-label="Current Page, page 3" aria-current="page">3</a></li>
-                <li><a href="#!" aria-label="page 4">4</a></li>
-                <li><a href="#!" aria-label="next page"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg></a></li>
-                <li><a href="#!" aria-label="last page"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-right"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></a></li>
-                </ul>
-            </nav>
+          </div>
+        </div>
+        <div class="section">
+          <div class="large byline">
+            <img
+              src="https://www.gravatar.com/avatar/821268102c1c7397c7ee4fc3ecb2cb6a?s=400"
+              alt=""
+              width="400"
+              height="400"
+              class="byline__image"
+            />
+            <div class="byline__body">
+              <address>
+                <span class="byline__name">Francis Rubio</span>
+                <span class="byline__label"
+                  >Web developer, designer, and educator from the
+                  Philippines.</span
+                >
+              </address>
             </div>
-            <div class="section">
-            <b>Center-Aligned Pagination</b>
-            <nav class="center-aligned pagination" aria-label="Pagination Navigation">
-                <ul>
-                <li><a href="#!" aria-label="first page"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-left"><polyline points="11 17 6 12 11 7"></polyline><polyline points="18 17 13 12 18 7"></polyline></svg></a></li> 
-                <li><a href="#!" aria-label="previous page"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg></a></li>
-                <li><a href="#!" aria-label="page 1">1</a></li>
-                <li><a href="#!" aria-label="page 2">2</a></li>
-                <li><a href="#!" aria-label="Current Page, page 3" aria-current="page">3</a></li>
-                <li><a href="#!" aria-label="page 4">4</a></li>
-                <li><a href="#!" aria-label="next page"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg></a></li>
-                <li><a href="#!" aria-label="last page"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-right"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></a></li>
-                </ul>
-            </nav>
+          </div>
+        </div>
+        <div class="section">
+          <div class="large byline">
+            <img
+              src="https://www.gravatar.com/avatar/821268102c1c7397c7ee4fc3ecb2cb6a?s=400"
+              alt=""
+              width="400"
+              height="400"
+              class="byline__image"
+            />
+            <div class="byline__body">
+              <span class="byline__label">written by</span>
+              <address>
+                <span class="byline__name">Francis Rubio</span>
+                <span class="byline__label"
+                  >Web developer, designer, and educator from the
+                  Philippines.</span
+                >
+              </address>
             </div>
-            <div class="section">
-            <b>End-Aligned Pagination</b>
-            <nav class="end-aligned pagination" aria-label="Pagination Navigation">
-                <ul>
-                <li><a href="#!" aria-label="first page"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-left"><polyline points="11 17 6 12 11 7"></polyline><polyline points="18 17 13 12 18 7"></polyline></svg></a></li> 
-                <li><a href="#!" aria-label="previous page"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg></a></li>
-                <li><a href="#!" aria-label="page 1">1</a></li>
-                <li><a href="#!" aria-label="page 2">2</a></li>
-                <li><a href="#!" aria-label="Current Page, page 3" aria-current="page">3</a></li>
-                <li><a href="#!" aria-label="page 4">4</a></li>
-                <li><a href="#!" aria-label="next page"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg></a></li>
-                <li><a href="#!" aria-label="last page"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-right"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg></a></li>
-                </ul>
-            </nav>
-            </div>
-        </details>
-        <details>
-            <summary>Badges</summary>
-            <section class="flex section">
-            <a href="#!" class="badge">Default</a>
-            <a href="#!" class="info badge">Information</a>
-            <a href="#!" class="warning badge">Warning</a>
-            <a href="#!" class="error badge">Error</a>
-            <a href="#!" class="success badge">Success</a>
-            </section>
-            <section class="flex section">
-            <a href="#!" class="large badge">Default</a>
-            <a href="#!" class="large info badge">Information</a>
-            <a href="#!" class="large warning badge">Warning</a>
-            <a href="#!" class="large error badge">Error</a>
-            <a href="#!" class="large success badge">Success</a>
-            </section>
-            <section class="flex section">
-            <a href="#!" class="rounded badge">Default</a>
-            <a href="#!" class="rounded info badge">Information</a>
-            <a href="#!" class="rounded warning badge">Warning</a>
-            <a href="#!" class="rounded error badge">Error</a>
-            <a href="#!" class="rounded success badge">Success</a>
-            </section>
-            <section class="flex section">
-            <a href="#!" class="small badge">Default</a>
-            <a href="#!" class="small info badge">Information</a>
-            <a href="#!" class="small warning badge">Warning</a>
-            <a href="#!" class="small error badge">Error</a>
-            <a href="#!" class="small success badge">Success</a>
-            </section>
-            <section class="flex section">
-            <a href="#!" class="rounded small badge">Default</a>
-            <a href="#!" class="rounded small info badge">Information</a>
-            <a href="#!" class="rounded small warning badge">Warning</a>
-            <a href="#!" class="rounded small error badge">Error</a>
-            <a href="#!" class="rounded small success badge">Success</a>
-            </section>
-        </details>
-        <details>
-            <summary>Byline</summary>
-            <div class="section">
-            <div class="byline">
-                <img src="https://www.gravatar.com/avatar/821268102c1c7397c7ee4fc3ecb2cb6a?s=400" alt="" width="400" height="400" class="byline__image">
-                <div class="byline__body">
-                <address>
-                    <span class="byline__name">Francis Rubio</span>
-                </address>
-                </div>
-            </div>
-            </div>
-            <div class="section">
-            <div class="large byline">
-                <img src="https://www.gravatar.com/avatar/821268102c1c7397c7ee4fc3ecb2cb6a?s=400" alt="" width="400" height="400" class="byline__image">
-                <div class="byline__body">
-                <span class="byline__label">written by</span>
-                <address>
-                    <span class="byline__name">Francis Rubio</span>
-                </address>
-                </div>
-            </div> 
-            </div>
-            <div class="section">
-            <div class="large byline">
-                <img src="https://www.gravatar.com/avatar/821268102c1c7397c7ee4fc3ecb2cb6a?s=400" alt="" width="400" height="400" class="byline__image">
-                <div class="byline__body">
-                <address>
-                    <span class="byline__name">Francis Rubio</span>
-                    <span class="byline__label">Web developer, designer, and educator from the Philippines.</span>
-                </address>
-                </div>
-            </div> 
-            </div>
-            <div class="section">
-            <div class="large byline">
-                <img src="https://www.gravatar.com/avatar/821268102c1c7397c7ee4fc3ecb2cb6a?s=400" alt="" width="400" height="400" class="byline__image">
-                <div class="byline__body">
-                <span class="byline__label">written by</span>
-                <address>
-                    <span class="byline__name">Francis Rubio</span>
-                    <span class="byline__label">Web developer, designer, and educator from the Philippines.</span>
-                </address>
-                </div>
-            </div> 
-            </div>
-        </details>
-        <details>
-            <summary>Navigation Items</summary>
-            <div class="section">
-            <a href="#!" class="nav-item">Default</a>
+          </div>
+        </div>
+      </details>
+      <details>
+        <summary>Navigation Items</summary>
+        <div class="section">
+          <a href="#!" class="nav-item">Default</a>
+          <a href="#!" class="selected nav-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-download"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span class="nav-item__main"> Left Icon </span>
+          </a>
+          <a href="#!" class="nav-item">
+            <span class="nav-item__main"> Right Icon </span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-download"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </a>
+          <a href="#!" class="nav-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-download"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span class="nav-item__main"> Left and Right Icons </span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-download"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </a>
+          <a href="#!" class="nav-item icon-only">
+            <svg
+              class="nav-item__main"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-download"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span class="visually-hidden"> Icon Only </span>
+          </a>
+        </div>
+      </details>
+      <details>
+        <summary>Dropdown</summary>
+        <div class="flex section">
+          <div class="dropdown">
+            <a href="#!" class="nav-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-download"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span class="nav-item__main"> Left Icon </span>
+            </a>
+            <a href="#!" class="nav-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-download"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span class="nav-item__main"> Left Icon </span>
+            </a>
             <a href="#!" class="selected nav-item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span class="nav-item__main">
-                Left Icon
-                </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-download"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span class="nav-item__main"> Left Icon </span>
             </a>
             <a href="#!" class="nav-item">
-                <span class="nav-item__main">
-                Right Icon
-                </span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-download"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span class="nav-item__main"> Left Icon </span>
+            </a>
+          </div>
+          <div class="compact dropdown">
+            <a href="#!" class="nav-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-download"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span class="nav-item__main"> Left Icon </span>
             </a>
             <a href="#!" class="nav-item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span class="nav-item__main">
-                Left and Right Icons
-                </span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-download"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span class="nav-item__main"> Left Icon </span>
             </a>
-            <a href="#!" class="nav-item icon-only">
-                <svg class="nav-item__main" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span class="visually-hidden">
-                Icon Only
-                </span>
+            <a href="#!" class="selected nav-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-download"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span class="nav-item__main"> Left Icon </span>
             </a>
-            </div>
-        </details>
-        <details>
-            <summary>Dropdown</summary>
-            <div class="flex section">
-            <div class="dropdown">
-                <a href="#!" class="nav-item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span class="nav-item__main">
-                    Left Icon
-                </span>
-                </a>
-                <a href="#!" class="nav-item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span class="nav-item__main">
-                    Left Icon
-                </span>
-                </a>
-                <a href="#!" class="selected nav-item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span class="nav-item__main">
-                    Left Icon
-                </span>
-                </a>
-                <a href="#!" class="nav-item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span class="nav-item__main">
-                    Left Icon
-                </span>
-                </a>
-            </div>
-            <div class="compact dropdown">
-                <a href="#!" class="nav-item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span class="nav-item__main">
-                    Left Icon
-                </span>
-                </a>
-                <a href="#!" class="nav-item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span class="nav-item__main">
-                    Left Icon
-                </span>
-                </a>
-                <a href="#!" class="selected nav-item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span class="nav-item__main">
-                    Left Icon
-                </span>
-                </a>
-                <a href="#!" class="nav-item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span class="nav-item__main">
-                    Left Icon
-                </span>
-                </a>
-            </div>
-            <div class="large dropdown">
-                <a href="#!" class="nav-item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span class="nav-item__main">
-                    Left Icon
-                </span>
-                </a>
-                <a href="#!" class="nav-item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span class="nav-item__main">
-                    Left Icon
-                </span>
-                </a>
-                <a href="#!" class="selected nav-item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span class="nav-item__main">
-                    Left Icon
-                </span>
-                </a>
-                <a href="#!" class="nav-item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span class="nav-item__main">
-                    Left Icon
-                </span>
-                </a>
-            </div>
-            </div>
-        </details>
+            <a href="#!" class="nav-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-download"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span class="nav-item__main"> Left Icon </span>
+            </a>
+          </div>
+          <div class="large dropdown">
+            <a href="#!" class="nav-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-download"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span class="nav-item__main"> Left Icon </span>
+            </a>
+            <a href="#!" class="nav-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-download"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span class="nav-item__main"> Left Icon </span>
+            </a>
+            <a href="#!" class="selected nav-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-download"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span class="nav-item__main"> Left Icon </span>
+            </a>
+            <a href="#!" class="nav-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-download"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span class="nav-item__main"> Left Icon </span>
+            </a>
+          </div>
+        </div>
+      </details>
     </div>
 
     <script>
-        // For loading the stylesheet
-        document.getElementById('zirconium-stylesheet')
-            .setAttribute('href', 'src/zirconium.min.css?v=' + Date.now())
+        reloadStylesheet()
+    
+        function reloadStylesheet() {
+            // For loading the stylesheet
+            document
+                .getElementById('zirconium-stylesheet')
+                .setAttribute('href', 'src/zirconium.min.css?v=' + Date.now())
+        }
 
-        const disclosureGroup = document.querySelectorAll('.disclosure-group details')
-        disclosureGroup.forEach(disclosureWidget => disclosureWidget.addEventListener('toggle', e => {
-            if(disclosureWidget.open) {
-                disclosureWidget.classList.add('currently-open')
-                
-                document
-                    .querySelectorAll('.disclosure-group details[open]:not(.currently-open)')
-                    .forEach(details => details.open = false)
+      const disclosureGroup = document.querySelectorAll(
+        '.disclosure-group > details'
+      )
+      disclosureGroup.forEach((disclosureWidget) =>
+        disclosureWidget.addEventListener('toggle', (e) => {
+          if (disclosureWidget.open) {
+            disclosureWidget.classList.add('currently-open')
 
-                disclosureWidget.classList.remove('currently-open')
-            }
-        }))
+            disclosureWidget.parentElement
+              .querySelectorAll(
+                '.disclosure-group details[open]:not(.currently-open)'
+              )
+              .forEach((details) => (details.open = false))
+
+            disclosureWidget.classList.remove('currently-open')
+          }
+        })
+      )
     </script>
-</body>
+  </body>
 </html>
