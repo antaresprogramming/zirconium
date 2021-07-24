@@ -1,0 +1,68 @@
+.side-note {
+    align-items: center;
+    color      : var(--color, var(--subtle-text));
+    display    : flex;
+    gap        : 1ch;
+    padding    : var(--space-xs);
+
+    --color: var(--subtle-text);
+}
+
+.side-note .feather,
+.side-note .icon {
+    height: 1.25em;
+    width : 1.25em;
+}
+
+.success.side-note {
+    --color: var(--lime-900);
+}
+
+.success.side-note::selection {
+    color           : revert;
+    background-color: var(--lime-100);
+}
+
+.warning.side-note {
+    --color: var(--banana-900);
+}
+
+.warning.side-note::selection {
+    color           : revert;
+    background-color: var(--banana-100);
+}
+
+.error.side-note {
+    --color: var(--strawberry-700);
+}
+
+.error.side-note::selection {
+    color           : revert;
+    background-color: var(--strawberry-100);
+}
+
+@media (prefers-color-scheme: dark) {
+    .success.side-note {
+        --color: var(--lime-100);
+    }
+
+    .success.side-note::selection {
+        background-color: var(--lime-900);
+    }
+
+    .warning.side-note {
+        --color: var(--banana-100);
+    }
+
+    .warning.side-note::selection {
+        background-color: var(--banana-900);
+    }
+
+    .error.side-note {
+        --color: var(--strawberry-100);
+    }
+
+    .error.side-note::selection {
+        background-color: var(--strawberry-700);
+    }
+}
