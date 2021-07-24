@@ -103,13 +103,18 @@
     margin-bottom: 1em;
 }
 
-.contents>*:not(h1, h2, h3, h4, h5, h6) {
-    color: var(--fg-100);
+.contents>*:not(h1, h2, h3, h4, h5, h6, .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6):not([class]) {
+    color: var(--subtle-text);
 }
 
 .contents :is(h2, h3, h4, h5, h6) {
     font-family: var(--font-sans);
-    margin-top : 2em;
+    margin-top : 1em;
 }
 
 .contents h2 {

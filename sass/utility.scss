@@ -12,6 +12,20 @@
     padding  : var(--padding, 4em);
 }
 
+.multicolumn {
+    column-gap: 2em;
+}
+
+.multicolumn.ruled {
+    column-rule: 1px solid var(--bg-1);
+}
+
+@for $index from 2 through 6 {
+    .columns-#{$index} {
+        column-count: $index;
+    }
+}
+
 .section {
     padding: 1em;
 }
@@ -176,6 +190,30 @@
 
 .start-self-aligned {
     align-self: start;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justified {
+    text-align: justify
+}
+
+.text-end {
+    text-align: end;
+}
+
+.text-start {
+    text-align: start;
 }
 
 .sans {
