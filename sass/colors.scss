@@ -160,13 +160,13 @@ body {
     --mint-700: hsl(var(--mint), 65%, 35%, var(--alpha, 1));
     --mint-900: hsl(var(--mint), 65%, 25%, var(--alpha, 1));
 
-    --lime-100: hsl(var(--lime), 68%, 73%, var(--alpha, 1));
-    --lime-300: hsl(var(--lime), 68%, 63%, var(--alpha, 1));
-    --lime-500: hsl(var(--lime), 68%, 53%, var(--alpha, 1));
+    --lime-100: hsl(var(--lime), 68%, 83%, var(--alpha, 1));
+    --lime-300: hsl(var(--lime), 68%, 73%, var(--alpha, 1));
+    --lime-500: hsl(var(--lime), 68%, 63%, var(--alpha, 1));
     --lime-700: hsl(var(--lime), 68%, 43%, var(--alpha, 1));
-    --lime-900: hsl(var(--lime), 68%, 33%, var(--alpha, 1));
+    --lime-900: hsl(var(--lime), 68%, 23%, var(--alpha, 1));
 
-    --strawberry-100: hsl(var(--strawberry), 68%, 66%, var(--alpha, 1));
+    --strawberry-100: hsl(var(--strawberry), 68%, 76%, var(--alpha, 1));
     --strawberry-300: hsl(var(--strawberry), 68%, 56%, var(--alpha, 1));
     --strawberry-500: hsl(var(--strawberry), 68%, 46%, var(--alpha, 1));
     --strawberry-700: hsl(var(--strawberry), 68%, 36%, var(--alpha, 1));
@@ -181,8 +181,8 @@ body {
     --banana-100: hsl(var(--banana), 94%, 81%, var(--alpha, 1));
     --banana-300: hsl(var(--banana), 94%, 71%, var(--alpha, 1));
     --banana-500: hsl(var(--banana), 94%, 61%, var(--alpha, 1));
-    --banana-700: hsl(var(--banana), 94%, 51%, var(--alpha, 1));
-    --banana-900: hsl(var(--banana), 94%, 41%, var(--alpha, 1));
+    --banana-700: hsl(var(--banana), 94%, 41%, var(--alpha, 1));
+    --banana-900: hsl(var(--banana), 94%, 21%, var(--alpha, 1));
 }
 
 @mixin dark-colors {
