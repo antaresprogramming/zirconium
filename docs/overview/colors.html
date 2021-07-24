@@ -23,7 +23,10 @@
       property="og:description"
       content="The set of colors used in Zirconium."
     />
-    <meta property="og:image" content="https://antaresprogramming.github.io/zirconium/images/seo-cover.png" />
+    <meta
+      property="og:image"
+      content="https://antaresprogramming.github.io/zirconium/images/seo-cover.png"
+    />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -39,7 +42,10 @@
       property="twitter:description"
       content="The set of colors used in Zirconium."
     />
-    <meta property="twitter:image" content="https://antaresprogramming.github.io/zirconium/images/seo-cover.png" />
+    <meta
+      property="twitter:image"
+      content="https://antaresprogramming.github.io/zirconium/images/seo-cover.png"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -76,7 +82,7 @@
       }
     </style>
   </head>
-  <body>
+  <body class="page-with-sidebar">
     <nav class="navbar">
       <ul>
         <li>
@@ -501,6 +507,48 @@
         </li>
       </ul>
     </nav>
+    <nav class="menu">
+      <span class="menu__header">Overview</span>
+      <ul>
+        <li><a href="overview/colors.html" class="selected">Colors</a></li>
+        <li><a href="overview/typography.html">Typography and Icons</a></li>
+        <li><a href="overview/elevation.html">Elevation and Shadows</a></li>
+      </ul>
+
+      <span class="menu__header">Components</span>
+      <ul>
+        <li><a href="components/article.html">Article elements</a></li>
+        <li><a href="components/avatar.html">Avatar</a></li>
+        <li><a href="components/badges.html">Badges</a></li>
+        <li><a href="components/breadcrumbs.html">Breadcrumbs</a></li>
+        <li><a href="components/buttons.html">Buttons</a></li>
+        <li><a href="components/byline.html">Byline</a></li>
+        <li><a href="components/cards.html">Cards</a></li>
+        <li><a href="components/code-snippets.html">Code Snippets</a></li>
+        <li><a href="components/disclosure.html">Disclosure</a></li>
+        <li><a href="components/dropdown.html">Dropdown</a></li>
+        <li><a href="components/form-controls.html">Form controls</a></li>
+        <li><a href="components/horizontal-rule.html">Horizontal Rule</a></li>
+        <li><a href="components/lists.html">Lists and list groups</a></li>
+        <li>
+          <a href="components/live-examples.html"
+            >Live examples (via <code>&lt;iframe></code>s)</a
+          >
+        </li>
+        <li><a href="components/menu.html">Menu</a></li>
+        <li><a href="components/navbar.html">Navigation bar</a></li>
+        <li><a href="components/sequece.html">Sequence Control</a></li>
+        <li><a href="components/pagination.html">Pagination</a></li>
+        <li>
+          <a href="components/progress-indicator.html">Progress Indicator</a>
+        </li>
+        <li><a href="components/progress-tracker.html">Progress Tracker</a></li>
+        <li><a href="components/side-note.html">Side Note</a></li>
+        <li><a href="components/slideset.html">Slideset</a></li>
+        <li><a href="components/switch.html">Switch Control</a></li>
+        <li><a href="components/tooltip.html">Tooltip</a></li>
+      </ul>
+    </nav>
 
     <main>
       <article class="post">
@@ -553,162 +601,214 @@
             diagrams will show the colors used throughout Zirconium.
           </p>
 
-          <h2>Brand colors</h2>
+          <h2>Main colors</h2>
+          <h3>Bubblegum as primary</h3>
           <p>
-            Zirconium uses <i>Banana</i> as its brand color. It is a specific
-            shade of yellow used by the
+            Zirconium uses a shade of pink called <i>Bubblegum</i> for most of
+            its primary controls. The hue of this color comes from the
             <a href="https://elementary.io/brand#color"
               >elementary OS color palette</a
-            >. We also use this as the warning color for some controls.
+            >, while the saturation and lightness were customized to fit Antares
+            Programming's needs. Use Bubblegum for most commonly used actions,
+            like links or buttons. Use the class <code>primary</code> to
+            override elements and components with this color.
           </p>
 
           <div class="responsive-flex section" style="--space: var(--space-m)">
             <article class="center-justified card">
-              <div class="color" style="--color: var(--banana-900)"></div>
-              <h3 class="sans">Banana 900</h3>
-              <p><code>#ad5f00</code></p>
-            </article>
-            <article class="center-justified card">
-              <div class="color" style="--color: var(--banana-700)"></div>
-              <h3 class="sans">Banana 700</h3>
-              <p><code>#d48e15</code></p>
-            </article>
-            <article class="center-justified card">
-              <div class="color" style="--color: var(--banana-500)"></div>
-              <h3 class="sans">Banana 500</h3>
-              <p><code>#f9c440</code></p>
-            </article>
-            <article class="center-justified card">
-              <div class="color" style="--color: var(--banana-300)"></div>
-              <h3 class="sans">Banana 300</h3>
-              <p><code>#ffe16b</code></p>
-            </article>
-            <article class="center-justified card">
-              <div class="color" style="--color: var(--banana-100)"></div>
-              <h3 class="sans">Banana 100</h3>
-              <p><code>#fff394</code></p>
-            </article>
-          </div>
-
-          <h2>Secondary colors</h2>
-          <p>
-            Zirconium uses <i>Bubblegum</i> as its secondary color. It is a
-            specific shade of pink used by the elementary OS color palette. For
-            most controls, Bubblegum serves as the default color.
-          </p>
-
-          <div class="responsive-flex section" style="--space: var(--space-m)">
-            <article class="center-justified card">
-              <div class="color" style="--color: var(--secondary-900)"></div>
+              <div class="color" style="--color: var(--bubblegum-900)"></div>
               <h3 class="sans">Bubblegum 900</h3>
-              <p><code>#910e38</code></p>
+              <p><code>--bubblegum-900</code></p>
             </article>
             <article class="center-justified card">
-              <div class="color" style="--color: var(--secondary-700)"></div>
+              <div class="color" style="--color: var(--bubblegum-700)"></div>
               <h3 class="sans">Bubblegum 700</h3>
-              <p><code>#bc245d</code></p>
+              <p><code>--bubblegum-700</code></p>
             </article>
             <article class="center-justified card">
-              <div class="color" style="--color: var(--secondary-500)"></div>
+              <div class="color" style="--color: var(--bubblegum-500)"></div>
               <h3 class="sans">Bubblegum 500</h3>
-              <p><code>#f9c440</code></p>
+              <p><code>--bubblegum-500</code></p>
             </article>
             <article class="center-justified card">
-              <div class="color" style="--color: var(--secondary-300)"></div>
+              <div class="color" style="--color: var(--bubblegum-300)"></div>
               <h3 class="sans">Bubblegum 300</h3>
-              <p><code>#f4679d</code></p>
+              <p><code>--bubblegum-300</code></p>
             </article>
             <article class="center-justified card">
-              <div class="color" style="--color: var(--secondary-100)"></div>
+              <div class="color" style="--color: var(--bubblegum-100)"></div>
               <h3 class="sans">Bubblegum 100</h3>
-              <p><code>#fe9ab8</code></p>
+              <p><code>--bubblegum-100</code></p>
             </article>
           </div>
 
-          <h2>Accent colors</h2>
+          <h3>Blueberry as accent</h3>
           <p>
-            Zirconium uses <i>Blueberry</i> as its accent color. It is a
-            specific shade of blue used by the elementary OS color palette. It
-            is used sparingly throughout some controls and element defaults that
-            don't have much styling in them. It is also used to signify
-            additional information in some controls like the
-            <a href="./controls/alert.html">alert control</a>.
+            Zirconium uses a shade of blue called <i>Blueberry</i> for most of
+            its primary controls. The hue of this color comes from the
+            <a href="https://elementary.io/brand#color"
+              >elementary OS color palette</a
+            >, while the saturation and lightness were customized to fit Antares
+            Programming's needs. Use Blueberry only for actions that need the
+            user's utmost attention without it bringing a sense of warning or
+            error. <strong>Use it sparingly.</strong> Use the class
+            <code>accent</code> to override elements and components with this
+            color.
           </p>
 
           <div class="responsive-flex section" style="--space: var(--space-m)">
             <article class="center-justified card">
-              <div class="color" style="--color: var(--accent-900)"></div>
+              <div class="color" style="--color: var(--blueberry-900)"></div>
               <h3 class="sans">Blueberry 900</h3>
-              <p><code>#002e99</code></p>
+              <p><code>--blueberry-900</code></p>
             </article>
             <article class="center-justified card">
-              <div class="color" style="--color: var(--accent-700)"></div>
+              <div class="color" style="--color: var(--blueberry-700)"></div>
               <h3 class="sans">Blueberry 700</h3>
-              <p><code>#0d52bf</code></p>
+              <p><code>--blueberry-700</code></p>
             </article>
             <article class="center-justified card">
-              <div class="color" style="--color: var(--accent-500)"></div>
+              <div class="color" style="--color: var(--blueberry-500)"></div>
               <h3 class="sans">Blueberry 500</h3>
-              <p><code>#3689e6</code></p>
+              <p><code>--blueberry-500</code></p>
             </article>
             <article class="center-justified card">
-              <div class="color" style="--color: var(--accent-300)"></div>
+              <div class="color" style="--color: var(--blueberry-300)"></div>
               <h3 class="sans">Blueberry 300</h3>
-              <p><code>#64baff</code></p>
+              <p><code>--blueberry-300</code></p>
             </article>
             <article class="center-justified card">
-              <div class="color" style="--color: var(--accent-100)"></div>
+              <div class="color" style="--color: var(--blueberry-100)"></div>
               <h3 class="sans">Blueberry 100</h3>
-              <p><code>#8cd5ff</code></p>
+              <p><code>--blueberry-100</code></p>
             </article>
           </div>
 
-          <h2>Neutral Colors</h2>
+          <h2>Content colors</h2>
           <p>
-            Zirconium uses <i>Black</i> and <i>Silver</i> as its neutral colors.
-            They are both used as foreground and background colors. In light
-            mode (default), Black is used for the foreground, and Silver is used
-            for the background. In dark mode, these are reversed, and Silver
-            becomes the foreground, while Black is used for the background.
-          </p>
-          <p>
-            Both of these colors currently have three levels each. These levels
-            are used to signify elevation and difference in context.
+            Zirconium uses the patterns set by
+            <a href="https://uniform.hudl.com/guidelines/colors/content/design"
+              >Hudl Uniform guidelines</a
+            >
+            for content colors. We use a scale of <b>contrast</b>,
+            <b>default</b>, <b>subtle</b>, and <b>non-essential</b> text colors.
           </p>
 
+          <article class="section">
+            <p>
+              <b>Contrast:</b> fully opaque, it differs the most from its
+              background. Use it for more important or dominant elements. Use
+              the class <code>contrast-text</code> to override elements with
+              this color.
+            </p>
+            <div class="responsive-flex">
+              <span class="padding-m bordered light level-0-bg contrast-text"
+                >This is a text that uses contrast text color.</span
+              >
+              <span class="padding-m bordered dark level-0-bg contrast-text"
+                >This is a text that uses contrast text color.</span
+              >
+            </div>
+          </article>
+
+          <article class="section">
+            <p>
+              <b>Default:</b> this is the starting point for content colors. If
+              you’re not sure which to use, default is the answer. Use the class
+              <code>default-text</code> to override elements with this color.
+            </p>
+            <div class="responsive-flex">
+              <span class="padding-m bordered light level-0-bg default-text"
+                >This is a text that uses contrast text color.</span
+              >
+              <span class="padding-m bordered dark level-0-bg default-text"
+                >This is a text that uses contrast text color.</span
+              >
+            </div>
+          </article>
+
+          <article class="section">
+            <p>
+              <b>Subtle:</b> use this for supporting elements. Use the class
+              <code>subtle-text</code> to override elements with this color.
+            </p>
+            <div class="responsive-flex">
+              <span class="padding-m bordered light level-0-bg subtle-text"
+                >This is a text that uses contrast text color.</span
+              >
+              <span class="padding-m bordered dark level-0-bg subtle-text"
+                >This is a text that uses contrast text color.</span
+              >
+            </div>
+          </article>
+
+          <article class="section">
+            <p>
+              <b>Non-essential:</b> provides the least contrast of our content
+              colors and does not pass accessibility standards. Use it only for
+              additional supportive elements. Nonessential
+              <strong>should never</strong> be used for important information.
+              Use the class <code>non-essential-text</code> to override elements
+              with this color.
+            </p>
+            <div class="responsive-flex">
+              <span
+                class="padding-m bordered light level-0-bg non-essential-text"
+                >This is a text that uses contrast text color.</span
+              >
+              <span
+                class="padding-m bordered dark level-0-bg non-essential-text"
+                >This is a text that uses contrast text color.</span
+              >
+            </div>
+          </article>
+
+          <h3>Background Colors</h3>
+          <p>Zirconium also follows the <a href="https://uniform.hudl.com/guidelines/colors/themes/design">Hudl Uniform guidelines</a> for background colors. We use a system of level 0 to level 3 colors. This is also true for dark mode</p>
+
           <div class="responsive-flex section" style="--space: var(--space-m)">
-            <article class="center-justified card">
-              <div class="color" style="--color: var(--black-900)"></div>
-              <h3 class="sans">Black 900</h3>
-              <p><code>#002e99</code></p>
+            <article class="center-justified card light level-0-bg default-text">
+              <div class="bordered circle level-0-bg"></div>
+              <h3 class="sans">Level 0 background</h3>
+              <p><code>.level-0-bg</code></p>
             </article>
-            <article class="center-justified card">
-              <div class="color" style="--color: var(--black-700)"></div>
-              <h3 class="sans">Black 700</h3>
-              <p><code>#0d52bf</code></p>
+            <article class="center-justified card light level-0-bg default-text">
+              <div class="bordered circle level-1-bg"></div>
+              <h3 class="sans">Level 1 background</h3>
+              <p><code>.level-1-bg</code></p>
             </article>
-            <article class="center-justified card">
-              <div class="color" style="--color: var(--black-500)"></div>
-              <h3 class="sans">Black 500</h3>
-              <p><code>#3689e6</code></p>
+            <article class="center-justified card light level-0-bg default-text">
+              <div class="bordered circle level-2-bg"></div>
+              <h3 class="sans">Level 2 background</h3>
+              <p><code>.level-2-bg</code></p>
             </article>
-            <article class="center-justified card">
-              <div class="color" style="--color: var(--silver-500)"></div>
-              <h3 class="sans">Silver 500</h3>
-              <p><code>#3689e6</code></p>
+            <article class="center-justified card light level-0-bg default-text">
+              <div class="bordered circle level-3-bg"></div>
+              <h3 class="sans">Level 3 background</h3>
+              <p><code>.level-3-bg</code></p>
             </article>
-            <article class="center-justified card">
-              <div class="color" style="--color: var(--silver-300)"></div>
-              <h3 class="sans">Silver 300</h3>
-              <p><code>#64baff</code></p>
+          </div>
+
+          <div class="responsive-flex section" style="--space: var(--space-m)">
+            <article class="center-justified card dark level-0-bg default-text">
+              <div class="bordered circle level-0-bg"></div>
+              <h3 class="sans">Level 0 background</h3>
+              <p><code>.level-0-bg</code></p>
             </article>
-            <article class="center-justified card">
-              <div
-                class="bordered color"
-                style="--color: var(--silver-100)"
-              ></div>
-              <h3 class="sans">Silver 100</h3>
-              <p><code>#8cd5ff</code></p>
+            <article class="center-justified card dark level-0-bg default-text">
+              <div class="bordered circle level-1-bg"></div>
+              <h3 class="sans">Level 1 background</h3>
+              <p><code>.level-1-bg</code></p>
+            </article>
+            <article class="center-justified card dark level-0-bg default-text">
+              <div class="bordered circle level-2-bg"></div>
+              <h3 class="sans">Level 2 background</h3>
+              <p><code>.level-2-bg</code></p>
+            </article>
+            <article class="center-justified card dark level-0-bg default-text">
+              <div class="bordered circle level-3-bg"></div>
+              <h3 class="sans">Level 3 background</h3>
+              <p><code>.level-3-bg</code></p>
             </article>
           </div>
 

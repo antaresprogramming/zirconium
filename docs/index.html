@@ -62,10 +62,15 @@
       .card > * {
         margin: 0 !important;
       }
+
+      .post__title {
+        margin-top: 0;
+        font-size: clamp(3em, 15vw, 6em);
+      }
     </style>
   </head>
 
-  <body>
+  <body class="page-with-sidebar">
     <nav class="navbar">
       <ul>
         <li>
@@ -490,7 +495,43 @@
         </li>
       </ul>
     </nav>
-    <main class="page section">
+    <nav class="menu">
+      <span class="menu__header">Overview</span>
+      <ul>
+        <li><a href="overview/colors.html">Colors</a></li>
+        <li><a href="overview/typography.html">Typography and Icons</a></li>
+        <li><a href="overview/elevation.html">Elevation and Shadows</a></li>
+      </ul>
+
+      <span class="menu__header">Components</span>
+      <ul>
+        <li><a href="components/article.html">Article elements</a></li>
+        <li><a href="components/avatar.html">Avatar</a></li>
+        <li><a href="components/badges.html">Badges</a></li>
+        <li><a href="components/breadcrumbs.html">Breadcrumbs</a></li>
+        <li><a href="components/buttons.html">Buttons</a></li>
+        <li><a href="components/byline.html">Byline</a></li>
+        <li><a href="components/cards.html">Cards</a></li>
+        <li><a href="components/code-snippets.html">Code Snippets</a></li>
+        <li><a href="components/disclosure.html">Disclosure</a></li>
+        <li><a href="components/dropdown.html">Dropdown</a></li>
+        <li><a href="components/form-controls.html">Form controls</a></li>
+        <li><a href="components/horizontal-rule.html">Horizontal Rule</a></li>
+        <li><a href="components/lists.html">Lists and list groups</a></li>
+        <li><a href="components/live-examples.html">Live examples (via <code>&lt;iframe></code>s)</a></li>
+        <li><a href="components/menu.html">Menu</a></li>
+        <li><a href="components/navbar.html">Navigation bar</a></li>
+        <li><a href="components/sequece.html">Sequence Control</a></li>
+        <li><a href="components/pagination.html">Pagination</a></li>
+        <li><a href="components/progress-indicator.html">Progress Indicator</a></li>
+        <li><a href="components/progress-tracker.html">Progress Tracker</a></li>
+        <li><a href="components/side-note.html">Side Note</a></li>
+        <li><a href="components/slideset.html">Slideset</a></li>
+        <li><a href="components/switch.html">Switch Control</a></li>
+        <li><a href="components/tooltip.html">Tooltip</a></li>
+      </ul>
+    </nav>
+    <main class="section">
       <div
         class="grid"
         style="--space: var(--space-m); --padding: var(--space)"

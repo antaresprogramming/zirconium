@@ -39,13 +39,13 @@ cite {
 }
 
 a {
-    color          : var(--accent-700);
+    color          : var(--bubblegum-700);
     text-decoration: none;
 }
 
 @media (prefers-color-scheme: dark) {
     a {
-        color: var(--accent-300);
+        color: var(--bubblegum-300);
     }
 }
 

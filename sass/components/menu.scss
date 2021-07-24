@@ -1,9 +1,15 @@
+.menu {
+    padding: var(--space-m);
+}
+
+.menu .menu__header,
 .menu :is(h1, h2, h3, h4, h5, h6) {
-    color         : var(--fg-100);
+    color         : var(--default-text);
+    display: block;
     font-size     : 0.8em;
     font-weight   : normal;
     letter-spacing: 1px;
-    margin        : 1ch 0;
+    margin        : 2ch 0 1ch;
     text-transform: uppercase;
 }
 
@@ -15,7 +21,7 @@
 
 .menu li {
     padding-left: 1ch;
-    border-left : 1px solid var(--bg-300);
+    border-left : 1px solid var(--bg-1);
 }
 
 .menu a,
@@ -41,25 +47,25 @@
 
 .menu a:focus,
 .menu .button:focus {
-    @include focus-ring(var(--focus-color, var(--blueberry-700)));
+    @include focus-ring(var(--focus-color, var(--bubblegum-700)));
 }
 
 .menu .selected {
-    --background-color: var(--blueberry-500);
+    --background-color: var(--bubblegum-500);
     --color           : var(--silver-100);
 }
 
 @media (prefers-color-scheme: dark) {
 
     .menu {
-        --focus-color: var(--blueberry-300);
+        --focus-color: var(--bubblegum-300);
     }
 
     .menu .selected {
-        --background-color: var(--accent-900);
+        --background-color: var(--bubblegum-900);
     }
 
     .menu li {
-        border-left-color: var(--silver-500-transparent);
+        border-left-color: var(--bg-1);
     }
 }

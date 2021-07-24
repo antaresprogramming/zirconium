@@ -191,7 +191,7 @@
 }
 
 .bordered {
-    border: 1px solid var(--bg-300);
+    border: 1px solid var(--bg-1);
 }
 
 /*
@@ -209,6 +209,7 @@
 .circle {
     aspect-ratio : 1;
     border-radius: 100%;
+    min-width: 6em
 }
 
 .padding {
