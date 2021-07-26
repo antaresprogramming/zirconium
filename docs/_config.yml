@@ -23,7 +23,7 @@ email: devFrancisRubio@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   An opinionated CSS library of components used in Antares Programming
 # baseurl: "" # the subpath of your site, e.g. /blog
-baseurl: "https://antaresprogramming.github.io/zirconium/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "https://antaresprogramming.github.io/zirconium" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: antaresphdev
 github_username:  antaresprogramming
 
