@@ -1,0 +1,7 @@
+{% assign icon = include.icon %}
+{% assign path = icon | prepend: 'feathericons/' | append: '.svg' %}
+{% capture final_icon %}
+{% include {{path}} %}
+{% endcapture %}
+
+{{ final_icon | replace: '<svg', '<svg aria-hidden="true"'}}

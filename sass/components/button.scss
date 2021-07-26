@@ -7,7 +7,7 @@
     cursor          : pointer;
     display         : inline-flex;
     font-family     : var(--font-sans);
-    font-size       : 1em;
+    font-size       : 1rem;
     font-weight     : 600;
     gap             : 1em;
     justify-content : center;
@@ -131,4 +131,24 @@
 
 .button.circle {
     min-width: 0;
+}
+
+.button.loading::before {
+    content         : '';
+    animation       : spin 1s infinite;
+    border          : 2px solid transparent;
+    border-radius   : 100%;
+    border-top-color: currentColor;
+    height          : 1em;
+    width           : 1em;
+}
+
+.button.loading svg {
+    display: none;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
 }
