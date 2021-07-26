@@ -103,13 +103,18 @@
     margin-bottom: 1em;
 }
 
-.contents>*:not(h1, h2, h3, h4, h5, h6) {
-    color: var(--fg-100);
+.contents>*:not(h1, h2, h3, h4, h5, h6, .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6):not([class]) {
+    color: var(--subtle-text);
 }
 
 .contents :is(h2, h3, h4, h5, h6) {
     font-family: var(--font-sans);
-    margin-top : 2em;
+    margin-top : 1em;
 }
 
 .contents h2 {
@@ -120,4 +125,33 @@
     color      : var(--fg-500);
     font-size  : clamp(1.5rem, 2vw, 1.9rem);
     font-weight: 800;
+}
+
+.page-with-sidebar {
+    display              : grid;
+    grid-template-columns: 1fr;
+    gap                  : 1em;
+}
+
+.page-with-sidebar .menu {
+    display: none;
+}
+
+@media (min-width: 960px) {
+    .page-with-sidebar {
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .page-with-sidebar .navbar {
+        grid-column: 1/3;
+    }
+
+    .page-with-sidebar .menu {
+        display    : revert;
+        grid-column: 1/2;
+    }
+
+    .page-with-sidebar main {
+        grid-column: 2/3;
+    }
 }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body class="page-with-sidebar">
+    {% include components/navbar.html %}
+    {% include components/menu.html %}
+    {% assign author = site.authors[page.author] %}
+    <main>
+      <article class="post">
+        <header class="header image-card">
+          <img
+            src="https://antaresprogramming.github.io/images/courses/css.jpg"
+            alt=""
+          />
+          <div class="raised card">
+            <h1 class="post__title">{{ page.title }}</h1>
+            <p class="post__subtitle">{{ page.description }}</p>
+            <div class="spaced flex">
+              <div class="byline">
+                <img
+                  class="byline__image"
+                  src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=400"
+                  alt=""
+                />
+                <div class="byline__body">
+                  <address>
+                    <a href="https://antaresprogramming.github.io/authors/{{page.author}}" class="byline__name">{{ author.name }}</a>
+                  </address>
+                </div>
+              </div>
+              <time datetime="{{ page.publish_date | date: '%Y-%m-%d' }}">{{ page.publish_date | date: '%B %e, %Y' }}</time>
+            </div>
+            <div class="uppercase badge-group">
+            </div>
+            <nav class="small breadcrumb" aria-label="breadcrumbs">
+              <ol>
+                <li>
+                  <a href="https://antaresprogramming.github.io/"
+                    >Antares Programming</a
+                  >
+                </li>
+                <li><a href="../">Zirconium</a></li>
+                <li><a>{{ page.subdirectory | split: ' ' | last }}</a></li>
+                <li><a aria-current="page">{{ page.title }}</a></li>
+              </ol>
+            </nav>
+          </div>
+        </header>
+        <section class="sans page section">{{ content }}</section>
+      </article>
+    </main>
+    {% include scripts.html %}
+  </body>
+</html>

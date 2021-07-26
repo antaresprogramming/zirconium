@@ -1,0 +1,120 @@
+.banner {
+    align-items     : center;
+    background-color: var(--banner-background-color);
+    color           : var(--banner-text-color);
+    display         : flex;
+    gap             : var(--space-l);
+    justify-content : center;
+    padding         : var(--space-l);
+    position        : relative;
+
+    --banner-background-color: var(--bg-1);
+    --banner-text-color      : var(--default-text);
+}
+
+.banner .feather,
+.banner .icon {
+    height: auto;
+    width : 1em;
+}
+
+.banner__text {
+    max-width    : 65ch;
+    overflow     : hidden;
+    text-overflow: ellipsis;
+    white-space  : nowrap;
+}
+
+.info.banner {
+    --banner-background-color: var(--blueberry-300);
+    --banner-text-color      : var(--blueberry-900);
+}
+
+.success.banner {
+    --banner-background-color: var(--lime-300);
+    --banner-text-color      : var(--lime-900);
+}
+
+.warning.banner {
+    --banner-background-color: var(--banana-300);
+    --banner-text-color      : var(--orange-900);
+}
+
+.error.banner {
+    --banner-background-color: var(--strawberry-300);
+    --banner-text-color      : var(--strawberry-900);
+}
+
+.banner::selection,
+.banner ::selection {
+    color: var(--banner-text-color);
+}
+
+.info.banner::selection,
+.info.banner ::selection {
+    background-color: var(--blueberry-500);
+}
+
+.success.banner::selection,
+.success.banner ::selection {
+    background-color: var(--lime-500);
+}
+
+.warning.banner::selection,
+.warning.banner ::selection {
+    background-color: var(--banana-700);
+}
+
+.error.banner::selection,
+.error.banner ::selection {
+    background-color: var(--strawberry-100);
+}
+
+@media (prefers-color-scheme: dark) {
+    .info.banner {
+        --banner-background-color: var(--blueberry-900);
+        --banner-text-color      : var(--blueberry-100);
+    }
+
+    .success.banner {
+        --banner-background-color: var(--lime-900);
+        --banner-text-color      : var(--lime-100);
+    }
+
+    .warning.banner {
+        --banner-background-color: var(--banana-900);
+        --banner-text-color      : var(--orange-100);
+    }
+
+    .error.banner {
+        --banner-background-color: var(--strawberry-900);
+        --banner-text-color      : var(--strawberry-100);
+    }
+
+    .info.banner ::selection,
+    .info.banner::selection {
+        background-color: var(--blueberry-700);
+    }
+
+    .success.banner::selection,
+    .success.banner ::selection {
+        background-color: var(--lime-700);
+    }
+
+    .warning.banner::selection,
+    .warning.banner ::selection {
+        background-color: var(--orange-700);
+    }
+
+    .error.banner::selection,
+    .error.banner ::selection {
+        background-color: var(--strawberry-700);
+    }
+}
+
+.banner .button {
+    bottom  : auto;
+    position: absolute;
+    right   : var(--space-s);
+    top     : auto;
+}

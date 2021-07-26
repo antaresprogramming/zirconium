@@ -10,11 +10,11 @@ const minOutputFile = 'dist/zirconium.min.css'
 const minMapFile = 'dist/zirconium.min.css.map'
 const includesDirectories = ['sass/', 'sass/components']
 
-const publicOutfile = 'docs/src/zirconium.min.css'
-const publicMapfile = 'docs/src/zirconium.min.css.map'
+const publicOutfile = 'docs/assets/css/zirconium.min.css'
+const publicMapfile = 'docs/assets/css/zirconium.min.css.map'
 
 const rawScriptFile = 'js/zirconium.js'
-const publicScriptFile = 'docs/src/zirconium.js'
+const publicScriptFile = 'docs/assets/js/zirconium.js'
 const distScriptFile = 'dist/zirconium.js'
 
 console.log('Rendering zirconium.css...')

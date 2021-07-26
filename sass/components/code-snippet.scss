@@ -1,36 +1,36 @@
 .code-snippet {
-    background-color: var(--bg-1);
-    border-radius   : var(--border-radius);
-    font-size       : 1rem;
-    overflow        : auto;
-    padding         : var(--space-l);
-    padding-top     : calc(var(--space-l) * 3);
-    position        : relative;
+    background-color  : var(--bg-1);
+    border-radius     : var(--border-radius);
+    display           : grid;
+    font-size         : 1rem;
+    gap               : var(--space-l);
+    grid-template-rows: auto 1fr;
+    overflow          : auto;
+    padding           : var(--space-s);
+    scrollbar-color   : var(--bg-3) transparent;
 }
 
-.code-snippet code[data-language]::before {
+.code-snippet[data-prog-lang]::before {
     background-color: var(--bg-2);
     border-radius   : var(--border-radius);
     color           : var(--subtle-text);
-    content         : attr(data-language);
+    content         : attr(data-prog-lang);
     font-family     : var(--font-sans);
     font-size       : smaller;
     font-weight     : bold;
-    left            : 0;
-    margin          : var(--space-s);
+    justify-self    : start;
+    left: 0;
     padding         : var(--space-s);
-    position        : absolute;
+    position: sticky;
     text-transform  : uppercase;
-    top             : 0;
+}
+
+.code-snippet .preloader {
+    display: none;
 }
 
 .code-snippet code {
     border-radius   : 0;
     background-color: transparent;
-}
-
-@media (prefers-color-scheme: dark) {
-    .code-snippet code[data-language]::before {
-        color: var(--secondary-100);
-    }
+    color           : var(--default-text);
 }

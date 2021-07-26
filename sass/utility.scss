@@ -12,6 +12,20 @@
     padding  : var(--padding, 4em);
 }
 
+.multicolumn {
+    column-gap: 2em;
+}
+
+.multicolumn.ruled {
+    column-rule: 1px solid var(--bg-1);
+}
+
+@for $index from 2 through 6 {
+    .columns-#{$index} {
+        column-count: $index;
+    }
+}
+
 .section {
     padding: 1em;
 }
@@ -178,6 +192,30 @@
     align-self: start;
 }
 
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justified {
+    text-align: justify
+}
+
+.text-end {
+    text-align: end;
+}
+
+.text-start {
+    text-align: start;
+}
+
 .sans {
     font-family: var(--font-sans);
 }
@@ -191,7 +229,7 @@
 }
 
 .bordered {
-    border: 1px solid var(--bg-300);
+    border: 1px solid var(--bg-1);
 }
 
 /*
@@ -209,6 +247,7 @@
 .circle {
     aspect-ratio : 1;
     border-radius: 100%;
+    min-width: 6em
 }
 
 .padding {
@@ -302,6 +341,101 @@
 
         &-l {
             padding-bottom: var(--space-l);
+        }
+    }
+}
+
+.margin {
+    &-xs {
+        margin: var(--space-xs);
+    }
+
+    &,
+    &-s {
+        margin: var(--space-s);
+    }
+
+    &-m {
+        margin: var(--space-m);
+    }
+
+    &-l {
+        margin: var(--space-l);
+    }
+
+    &-left {
+        &-xs {
+            margin-left: var(--space-xs);
+        }
+
+        &,
+        &-s {
+            margin-left: var(--space-s);
+        }
+
+        &-m {
+            margin-left: var(--space-m);
+        }
+
+        &-l {
+            margin-left: var(--space-l);
+        }
+    }
+
+    &-right {
+        &-xs {
+            margin-right: var(--space-xs);
+        }
+
+        &,
+        &-s {
+            margin-right: var(--space-s);
+        }
+
+        &-m {
+            margin-right: var(--space-m);
+        }
+
+        &-l {
+            margin-right: var(--space-l);
+        }
+    }
+
+    &-top {
+        &-xs {
+            margin-top: var(--space-xs);
+        }
+
+        &,
+        &-s {
+            margin-top: var(--space-s);
+        }
+
+        &-m {
+            margin-top: var(--space-m);
+        }
+
+        &-l {
+            margin-top: var(--space-l);
+        }
+    }
+
+    &-bottom {
+        &-xs {
+            margin-bottom: var(--space-xs);
+        }
+
+        &,
+        &-s {
+            margin-bottom: var(--space-s);
+        }
+
+        &-m {
+            margin-bottom: var(--space-m);
+        }
+
+        &-l {
+            margin-bottom: var(--space-l);
         }
     }
 }
