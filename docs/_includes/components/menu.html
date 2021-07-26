@@ -1,0 +1,22 @@
+{% assign pages = site.pages | where_exp: 'page', "page.subdirectory != nil" %}
+{% assign subdirectories = pages | map: 'subdirectory' | uniq | sort %}
+
+<nav class="menu">
+{% for directory in subdirectories %}
+{% assign subpages = pages | where: 'subdirectory', directory | sort: "title" %}
+    <span class="menu__header">{{directory | split: ' ' | last }}</span>
+    <ul>
+    {% for subpage in subpages %}
+        <li>
+            <a 
+                href="{{ subpage.url | absolute_url }}"
+                {% if page == subpage %}class="selected"{% endif %}
+            >
+                {{ subpage.title }}
+            </a>
+        </li>
+    
+    {% endfor %}
+    </ul>
+{% endfor %}
+</nav>

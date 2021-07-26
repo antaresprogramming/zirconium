@@ -5,7 +5,7 @@
 .menu .menu__header,
 .menu :is(h1, h2, h3, h4, h5, h6) {
     color         : var(--default-text);
-    display: block;
+    display       : block;
     font-size     : 0.8em;
     font-weight   : normal;
     letter-spacing: 1px;
@@ -41,7 +41,7 @@
 .menu a:hover,
 .menu button:hover {
     --background-color: var(--bg-1);
-    --color: revert;
+    --color           : revert;
     text-decoration   : none;
 }
 
@@ -53,6 +53,11 @@
 .menu .selected {
     --background-color: var(--bubblegum-500);
     --color           : var(--silver-100);
+}
+
+.menu .selected:hover {
+    --background-color: var(--bubblegum-100);
+    --color           : var(--bubblegum-900);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -67,5 +72,10 @@
 
     .menu li {
         border-left-color: var(--bg-1);
+    }
+
+    .menu .selected:hover {
+        --background-color: var(--bubblegum-900);
+        --color           : var(--bubblegum-100);
     }
 }

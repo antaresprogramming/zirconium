@@ -40,9 +40,12 @@
 }
 
 .breadcrumb a:hover {
+    text-decoration: none;
+}
+
+.breadcrumb a[href]:hover {
     background-color: var(--hover-color, #0003);
     opacity         : 1;
-    text-decoration : none;
 }
 
 .breadcrumb a[aria-current="page"] {

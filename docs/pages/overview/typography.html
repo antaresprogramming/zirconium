@@ -1,0 +1,84 @@
+---
+title:  Typography and Icons
+description: The set of typefaces and icons used in Zirconium.
+
+layout: page
+permalink: /overview/typography
+author: teacherbuknoy
+publish_date: '2021-07-19'
+subdirectory: '01. Overview'
+---
+
+<h2>Inter</h2>
+            <p>Zirconium uses <a href="https://rsms.me/inter/">Inter</a> as its only sans serif typeface. Use this for all headings and user interface components. Use the class <code>.sans</code> to override elements with this typeface.</p>
+
+            <div class="grid">
+                <span class="h1">Heading 1</span>
+                <span class="h2">Heading 2</span>
+                <span class="h3">Heading 3</span>
+                <span class="h4">Heading 4</span>
+                <span class="h5">Heading 5</span>
+                <span class="h6">Heading 6</span>
+            </div>
+
+            <h2>Lora</h2>
+            <p>Zirconium uses <a href="http://www.cyreal.org/2012/07/lora/">Lora</a> as its only serif typeface. Use this for longform content only (blog articles, course lessons, etc.). Use the class <code>.serif</code> to override elements with this typeface.</p></p>
+            <div class="ruled multicolumn padding-l columns-3 text-justified">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ut velit enim aut quaerat neque?</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum temporibus perferendis. Provident alias corporis inventore reiciendis quaerat autem ipsam porro, dolorum dicta tempora dignissimos.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt optio impedit tempora repudiandae, facilis, doloribus eaque dolorem quibusdam illo animi nesciunt id atque excepturi odit hic fugit exercitationem voluptate molestias ad nobis ducimus quasi quos!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quaerat nostrum corporis, consequuntur soluta ad cumque consectetur dolores recusandae quae nam ex incidunt reiciendis est?</p>
+            </div>
+
+            <h2>Monacode</h2>
+            <p>Zirconium uses <a href="http://www.cyreal.org/2012/07/lora/">Monacode</a> as its only serif typeface. Use this for longform content only (blog articles, course lessons, etc.). Use the class <code>.serif</code> to override elements with this typeface.</p></p>
+
+            <h2>Including fonts</h2>
+            <p>The typefaces are not embedded within the CSS. You can do any of the following:</p>
+
+            <h3>Download the typefaces</h3>
+            <p>Download the typefaces and host them in your server. Place them in the same folder as your <code>zirconium.css</code> or <code>zirconium.min.css</code> file.</p>
+
+            <h3>Add a link to the typefaces</h3>
+            <p>Both of these fonts are hosted in <a href="https://fonts.google.com/">Google Fonts</a>. You can choose to use this service to use the typefaces.</p>
+            <p>Add the following to your HTML's <code>&lt;head></code> tag.</p>
+            <pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;link rel="preconnect" href="https://fonts.googleapis.com" />
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+&lt;link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+  rel="stylesheet"
+/>
+&lt;link
+  href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+  rel="stylesheet"
+/></code></pre>
+
+<h2>Icons</h2>
+<p>Zirconium uses icons from <a href="https://feathericons.com">Feather Icons</a>. Using icons from other sources is only recommended if the icon needed is missing from Feather Icons, or an icon from that set cannot be repurposed to fit the need.</p>
+
+<p>It is preferred to use the SVG inline instead of including it via the <code>&lt;img></code> tag. Including it inline makes it possible for the icons to take its fill and stroke colors from the colors of text around it.</p>
+
+<p>When used inside user interface components, the icons are automatically sized to the font size of the component or slightly larger than that. Otherwise, the sizes of SVG icons follow whatever is inside their <code>width</code> and <code>height</code> attributes.</p>
+
+<div class="flex section" id="iconset">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-octagon"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-triangle"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-delete"><path d="M21 4H8l-7 8 7 8h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"></path><line x1="18" y1="9" x2="12" y2="15"></line><line x1="12" y1="9" x2="18" y2="15"></line></svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bookmark"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tool"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-save"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-left"><polyline points="11 17 6 12 11 7"></polyline><polyline points="18 17 13 12 18 7"></polyline></svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-right"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg>
+</div>
+<a href="https://feathericons.com/" class="large primary button" target="_blank">See more icons</a>
+        

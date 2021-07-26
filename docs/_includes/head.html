@@ -1,0 +1,87 @@
+{% if page.title %} {% assign title = page.title %} {% else %} {% assign title =
+site.title %} {% endif %} {% if page.description %} {% assign description =
+page.description %} {% else %} {% assign description = site.description %} {%
+endif %}
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Primary Meta Tags -->
+  <title>{{ title }}</title>
+  <meta name="title" content="{{ title }}" />
+  <meta name="description" content="{{ description }}" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:url"
+    content="https://antaresprogramming.github.io/zirconium/"
+  />
+  <meta property="og:title" content="{{ title }}" />
+  <meta property="og:description" content="{{ description }}" />
+  <meta
+    property="og:image"
+    content="https://antaresprogramming.github.io/zirconium/images/seo-cover.png"
+  />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta
+    property="twitter:url"
+    content="{{ page.url | prepend: site.baseurl }}"
+  />
+  <meta property="twitter:title" content="{{ title }}" />
+  <meta property="twitter:description" content="{{ description }}" />
+  <meta
+    property="twitter:image"
+    content="https://antaresprogramming.github.io/zirconium/images/seo-cover.png"
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet"
+  />
+  {% assign timestamp = site.time | date: "%N" %}
+  <link
+    rel="stylesheet"
+    href="{{ '/assets/css/zirconium.min.css' | prepend: site.baseurl | append: '?v=' | append: timestamp }}"
+  />
+
+  <style>
+    .color {
+      --size: 6em;
+      background-color: var(--color);
+      width: var(--size);
+      height: var(--size);
+      border-radius: 100%;
+    }
+
+    .card {
+      gap: var(--space, --space-s);
+    }
+
+    .card > * {
+      margin: 0;
+    }
+
+    .card h3 {
+      font-size: 1em;
+      margin: 0;
+    }
+
+    .post .section {
+      grid-column: 1/4;
+    }
+
+    .post .section > :is(p, ul, ol, dl) {
+      font-size: 1.1em;
+      line-height: 1.5;
+    }
+  </style>
+</head>
