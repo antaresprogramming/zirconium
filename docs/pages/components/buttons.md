@@ -8,9 +8,11 @@ author: teacherbuknoy
 publish_date: '2021-07-26'
 subdirectory: '02. Components'
 cover: buttons.jpg
+
+breadcrumbs: [Components, Buttons]
 ---
 
-## Default button
+<h2 class="weight-light h3">Default button</h2>
 
 Buttons are not styled on themselves. Instead, you have to add the `.button` class.
 
@@ -32,7 +34,7 @@ You can also use the `.button` class on links to make them look like buttons.
         type="warning"
 %}
 
-## Icons
+<h2 class="weight-light h3">Icons</h2>
 
 Icons can be used inside buttons. Putting them before the text makes them appear to the left of the button, and putting them after the text makes the appear to the right.
 
@@ -83,7 +85,7 @@ Zirconium buttons have paddings that double on the left and right sides. Because
     &lt;span class="visually-hidden">Download&lt;/span>
 &lt;/button></code></pre>
 
-## Loading state
+<h2 class="weight-light h3">Loading state</h2>
 
 By adding the class `.loading` to your button, you can add a spinner to it to communicate that the process it triggered is still ongoing.
 
@@ -113,14 +115,14 @@ By adding the class `.loading` to your button, you can add a spinner to it to co
         })
 </script>
 
-## Appearance
-<h3 class="h5">Primary</h3>
+<h2 class="weight-light h3">Appearance</h2>
+<h3 class="h4">Primary</h3>
 Use primary buttons to call the attention of your users. Use this to highlight the most important action in the UI. For the rest of the buttons, use the default appearance.
 
 <button class="primary button" aria-hidden="true">Primary button</button>
 <pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;button class="primary button">Primary button&lt;/button></code></pre>
 
-<h3 class="h5">No background color</h3>
+<h3 class="h4">No background color</h3>
 Use buttons with no background color to represent actions that are less important than what default buttons represent. You can also use this in common actions like the close button in dialogs.
 
 <button class="no-bg button" aria-hidden="true">Button</button>
@@ -131,7 +133,7 @@ You can also add the `.primary` class to the default `.no-bg` button to give it 
 <button class="primary no-bg button" aria-hidden="true">Button</button>
 <pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;button class="primary no-bg button">Button&lt;/button></code></pre>
 
-## Sizes
+<h2 class="weight-light h3">Sizes</h2>
 <h3 class="h5">Large buttons</h3>
 
 Add `.large` to your button to make it larger.
@@ -143,7 +145,7 @@ Add `.large` to your button to make it larger.
 <pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;button class="button">Default button&lt;/button>
 &lt;button class="large button">Large button&lt;/button></code></pre>
 
-<h3 class="h5">Small buttons</h3>
+<h3 class="h4">Small buttons</h3>
 
 Add `.small` to your button to make it smaller.
 

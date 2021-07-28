@@ -13,12 +13,12 @@
 
 .header.image-card {
     box-shadow: none;
+    max-height: 45ch;
 }
 
 .header.image-card>img {
-    grid-row  : 1/2;
-    max-height: 45ch;
-    width     : 100%;
+    grid-row: 1/2;
+    width   : 100%;
 }
 
 .header.image-card .card {

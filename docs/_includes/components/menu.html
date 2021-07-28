@@ -7,15 +7,16 @@
     <span class="menu__header">{{directory | split: ' ' | last }}</span>
     <ul>
     {% for subpage in subpages %}
+        {% unless subpage.hidden %}
         <li>
             <a 
-                href="{{ subpage.url | prepend: site.baseurl }}"
+                href="{{ subpage.url }}"
                 {% if page == subpage %}class="selected"{% endif %}
             >
                 {{ subpage.title }}
             </a>
         </li>
-    
+        {% endunless %}    
     {% endfor %}
     </ul>
 {% endfor %}
