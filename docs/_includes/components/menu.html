@@ -10,7 +10,7 @@
         {% unless subpage.hidden %}
         <li>
             <a 
-                href="{{ subpage.url | prepend: '.' | prepend: site.baseurl }}"
+                href="{{ site.url | append: site.baseurl | append: subpage.url }}"
                 {% if page == subpage %}class="selected"{% endif %}
             >
                 {{ subpage.title }}

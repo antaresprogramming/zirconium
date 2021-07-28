@@ -2,12 +2,12 @@
 <nav class="small breadcrumb" aria-label="breadcrumbs">
   <ol>
     <li><a href="https://antaresprogramming.github.io/">Antares Programming</a></li>
-    <li><a href="{{ site.baseurl }}">Zirconium</a></li>
+    <li><a href="{{ site.url | append: site.baseurl }}">Zirconium</a></li>
     {% assign crumbset = '' %}
     {% for item in page.breadcrumbs %}
       {% assign crumb = item | downcase | split: ' ' | join: '-'  %}
       {% assign crumbset = crumb | append: '/' | prepend: crumbset %}
-      <li><a href="{{ crumbset | prepend: site.baseurl  }}">{{ item }}</a></li>
+      <li><a href="{{ site.url | append: site.baseurl | append: crumbset }}">{{ item }}</a></li>
     {% endfor %}
   </ol>
 </nav>
