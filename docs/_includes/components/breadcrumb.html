@@ -7,7 +7,7 @@
     {% for item in page.breadcrumbs %}
       {% assign crumb = item | downcase | split: ' ' | join: '-'  %}
       {% assign crumbset = crumb | append: '/' | prepend: crumbset %}
-      <li><a href="{{ crumbset | | prepend: site.baseurl  }}">{{ item }}</a></li>
+      <li><a href="{{ crumbset | prepend: site.baseurl  }}">{{ item }}</a></li>
     {% endfor %}
   </ol>
 </nav>
