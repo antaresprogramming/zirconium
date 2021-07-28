@@ -7,6 +7,7 @@ permalink: /components/button
 author: teacherbuknoy
 publish_date: '2021-07-26'
 subdirectory: '02. Components'
+cover: buttons.jpg
 ---
 
 ## Default button

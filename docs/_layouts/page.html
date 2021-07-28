@@ -9,8 +9,10 @@
       <article class="post">
         <header class="header image-card">
           <img
-            src="https://antaresprogramming.github.io/images/courses/css.jpg"
+            src="{{ page.cover | prepend: '/assets/images/' | prepend: site.baseurl }}"
             alt=""
+            width="1280"
+            height="640"
           />
           <div class="raised card">
             <h1 class="post__title">{{ page.title }}</h1>

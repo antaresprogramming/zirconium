@@ -7,6 +7,7 @@ permalink: /components/banners
 author: teacherbuknoy
 publish_date: '2021-07-19'
 subdirectory: '02. Components'
+cover: banners.jpg
 ---
 
 Banners are simple. Create a `div` with the class `.banner`
