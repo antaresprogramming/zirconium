@@ -51,7 +51,7 @@
     position      : absolute;
 }
 
-.navbar .dropdown.end-aligned {
+.navbar .dropdown.fixed-to-right {
     right: var(--space, --space-s);
     top  : 100%;
 }

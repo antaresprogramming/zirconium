@@ -179,11 +179,11 @@ nav li:before {
 
 .header.image-card {
   box-shadow: none;
+  max-height: 45ch;
 }
 
 .header.image-card > img {
   grid-row: 1/2;
-  max-height: 45ch;
   width: 100%;
 }
 
@@ -1142,29 +1142,9 @@ h6 {
   font-weight: 800;
 }
 
-.h1,
-h1 {
-  font-size: clamp(3em, 15vw, 4em);
-}
-
-.h2,
-h2 {
-  font-size: clamp(2.25em, 15vw, 2.5em);
-}
-
-.h3,
-h3 {
-  font-size: clamp(1.75em, 15vw, 2.25em);
-}
-
-.h4,
-h4 {
-  font-size: clamp(1.5em, 5vw, 1.75em);
-}
-
 .h5,
 h5 {
-  font-size: clamp(1em, 5vw, 1.5em);
+  font-size: clamp(1em, 5vw, 1.25em);
 }
 
 .h6,
@@ -1173,6 +1153,46 @@ h6 {
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+.h4,
+h4 {
+  font-size: 1.5rem;
+  font-size: clamp(1rem, 4vw, 1.5rem);
+}
+
+.h3,
+h3 {
+  font-size: 2.25rem;
+  font-size: clamp(1.333rem, 6vw, 2.25rem);
+}
+
+.h2,
+h2 {
+  font-size: 3.375rem;
+  font-size: clamp(1.9995rem, 8vw, 3.375rem);
+}
+
+.h1,
+h1 {
+  font-size: 5.0625rem;
+  font-size: clamp(2.99925rem, 10vw, 5.0625rem);
+}
+
+.weight-light {
+  font-weight: 300;
+}
+
+.weight-normal {
+  font-weight: 400;
+}
+
+.weight-bold {
+  font-weight: 600;
+}
+
+.weight-x-bold {
+  font-weight: 800;
 }
 
 /* DEFINITION LISTS */
@@ -1334,6 +1354,7 @@ dl dd::before {
 }
 
 .breadcrumb ol {
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
   gap: 0.25em;
@@ -1346,6 +1367,13 @@ dl dd::before {
   align-items: baseline;
   display: flex;
   gap: 0.25em;
+}
+
+.breadcrumb ol::before {
+  content: "//";
+  color: currentColor;
+  opacity: 0.5;
+  padding-inline: 0.5ch;
 }
 
 .breadcrumb li:not(:last-child)::after {
@@ -1826,7 +1854,7 @@ details[open] > summary::after {
 }
 
 .dropdown {
-  background-color: var(--bg-100);
+  background-color: var(--bg-0);
   border-radius: var(--border-radius);
   box-shadow: 0 4px 15px #0003;
   display: grid;
@@ -2122,7 +2150,7 @@ details[open] > summary::after {
   position: absolute;
 }
 
-.navbar .dropdown.end-aligned {
+.navbar .dropdown.fixed-to-right {
   right: var(--space, --space-s);
   top: 100%;
 }

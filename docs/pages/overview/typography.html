@@ -7,42 +7,46 @@ permalink: /overview/typography
 author: teacherbuknoy
 publish_date: '2021-07-19'
 subdirectory: '01. Overview'
+cover: typography.jpg
+
+breadcrumbs: [Overview, Typography]
 ---
 
-<h2>Inter</h2>
-            <p>Zirconium uses <a href="https://rsms.me/inter/">Inter</a> as its only sans serif typeface. Use this for all headings and user interface components. Use the class <code>.sans</code> to override elements with this typeface.</p>
+<h2 class="weight-light h3">Inter</h2>
+<p>Zirconium uses <a href="https://rsms.me/inter/">Inter</a> as its only sans serif typeface. Use this for all headings and user interface components. Use the class <code>.sans</code> to override elements with this typeface.</p>
+<p>Font sizes for headings use the CSS <code>clamp()</code> function. Minimum font sizes use the perfect fourth ratio, and the maximum font sizes use the perfect fifth ratio. <code>h4</code>, <code>h5</code>, and <code>h6</code>'s minimum font size are <code>1em</code>. Also, <code>h5</code> and <code>h6</code> do not participate in the ratio sizing.</p>
 
-            <div class="grid">
-                <span class="h1">Heading 1</span>
-                <span class="h2">Heading 2</span>
-                <span class="h3">Heading 3</span>
-                <span class="h4">Heading 4</span>
-                <span class="h5">Heading 5</span>
-                <span class="h6">Heading 6</span>
-            </div>
+<div class="grid">
+    <span class="h1">Heading 1</span>
+    <span class="h2">Heading 2</span>
+    <span class="h3">Heading 3</span>
+    <span class="h4">Heading 4</span>
+    <span class="h5">Heading 5</span>
+    <span class="h6">Heading 6</span>
+</div>
 
-            <h2>Lora</h2>
-            <p>Zirconium uses <a href="http://www.cyreal.org/2012/07/lora/">Lora</a> as its only serif typeface. Use this for longform content only (blog articles, course lessons, etc.). Use the class <code>.serif</code> to override elements with this typeface.</p></p>
-            <div class="ruled multicolumn padding-l columns-3 text-justified">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ut velit enim aut quaerat neque?</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum temporibus perferendis. Provident alias corporis inventore reiciendis quaerat autem ipsam porro, dolorum dicta tempora dignissimos.</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt optio impedit tempora repudiandae, facilis, doloribus eaque dolorem quibusdam illo animi nesciunt id atque excepturi odit hic fugit exercitationem voluptate molestias ad nobis ducimus quasi quos!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quaerat nostrum corporis, consequuntur soluta ad cumque consectetur dolores recusandae quae nam ex incidunt reiciendis est?</p>
-            </div>
+<h2 class="weight-light h3">Lora</h2>
+<p>Zirconium uses <a href="http://www.cyreal.org/2012/07/lora/">Lora</a> as its only serif typeface. Use this for longform content only (blog articles, course lessons, etc.). Use the class <code>.serif</code> to override elements with this typeface.</p></p>
+<div class="ruled multicolumn padding-l columns-3 text-justified serif">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ut velit enim aut quaerat neque?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum temporibus perferendis. Provident alias corporis inventore reiciendis quaerat autem ipsam porro, dolorum dicta tempora dignissimos.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt optio impedit tempora repudiandae, facilis, doloribus eaque dolorem quibusdam illo animi nesciunt id atque excepturi odit hic fugit exercitationem voluptate molestias ad nobis ducimus quasi quos!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quaerat nostrum corporis, consequuntur soluta ad cumque consectetur dolores recusandae quae nam ex incidunt reiciendis est?</p>
+</div>
 
-            <h2>Monacode</h2>
-            <p>Zirconium uses <a href="http://www.cyreal.org/2012/07/lora/">Monacode</a> as its only serif typeface. Use this for longform content only (blog articles, course lessons, etc.). Use the class <code>.serif</code> to override elements with this typeface.</p></p>
+<h2 class="weight-light h3">Monacode</h2>
+<p>Zirconium uses <a href="http://www.cyreal.org/2012/07/lora/">Monacode</a> as its only serif typeface. Use this for longform content only (blog articles, course lessons, etc.). Use the class <code>.serif</code> to override elements with this typeface.</p></p>
 
-            <h2>Including fonts</h2>
-            <p>The typefaces are not embedded within the CSS. You can do any of the following:</p>
+<h2 class="weight-light h3">Including fonts</h2>
+<p>The typefaces are not embedded within the CSS. You can do any of the following:</p>
 
-            <h3>Download the typefaces</h3>
-            <p>Download the typefaces and host them in your server. Place them in the same folder as your <code>zirconium.css</code> or <code>zirconium.min.css</code> file.</p>
+<h3 class="h4">Download the typefaces</h3>
+<p>Download the typefaces and host them in your server. Place them in the same folder as your <code>zirconium.css</code> or <code>zirconium.min.css</code> file.</p>
 
-            <h3>Add a link to the typefaces</h3>
-            <p>Both of these fonts are hosted in <a href="https://fonts.google.com/">Google Fonts</a>. You can choose to use this service to use the typefaces.</p>
-            <p>Add the following to your HTML's <code>&lt;head></code> tag.</p>
-            <pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;link rel="preconnect" href="https://fonts.googleapis.com" />
+<h3 class="h4">Add a link to the typefaces</h3>
+<p>Both of these fonts are hosted in <a href="https://fonts.google.com/">Google Fonts</a>. You can choose to use this service to use the typefaces.</p>
+<p>Add the following to your HTML's <code>&lt;head></code> tag.</p>
+<pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;link rel="preconnect" href="https://fonts.googleapis.com" />
 &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 &lt;link
   href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
@@ -53,7 +57,7 @@ subdirectory: '01. Overview'
   rel="stylesheet"
 /></code></pre>
 
-<h2>Icons</h2>
+<h2 class="weight-light h3">Icons</h2>
 <p>Zirconium uses icons from <a href="https://feathericons.com">Feather Icons</a>. Using icons from other sources is only recommended if the icon needed is missing from Feather Icons, or an icon from that set cannot be repurposed to fit the need.</p>
 
 <p>It is preferred to use the SVG inline instead of including it via the <code>&lt;img></code> tag. Including it inline makes it possible for the icons to take its fill and stroke colors from the colors of text around it.</p>

@@ -1,3 +1,27 @@
+@use "sass:math";
+$type-ratios: ("minorSecond": 1.067,
+    "majorSecond": 1.125,
+    "minorThird": 1.2,
+    "majorThird": 1.25,
+    "perfectFourth": 1.333,
+    "augmentedFourth": 1.414,
+    "perfectFifth": 1.5,
+    "goldenRatio": 1.618,
+);
+
+// Recommended starting point
+$type-base-size: 1rem;
+
+// Select by key of map, or use a custom value
+$type-size-ratio  : 1.5;
+$type-size-ratio-2: 1.333;
+$type-levels      : 4,
+3,
+2,
+1;
+$type-levels-count: 6;
+$level-size       : $type-base-size;
+
 :root {
     --font-sans : "Inter", sans-serif;
     --font-serif: "Lora", serif;
@@ -77,29 +101,9 @@ h6 {
     font-weight: 800;
 }
 
-.h1,
-h1 {
-    font-size: clamp(3em, 15vw, 4em);
-}
-
-.h2,
-h2 {
-    font-size: clamp(2.25em, 15vw, 2.5em)
-}
-
-.h3,
-h3 {
-    font-size: clamp(1.75em, 15vw, 2.25em);
-}
-
-.h4,
-h4 {
-    font-size: clamp(1.5em, 5vw, 1.75em)
-}
-
 .h5,
 h5 {
-    font-size: clamp(1em, 5vw, 1.5em)
+    font-size: clamp(1em, 5vw, 1.25em);
 }
 
 .h6,
@@ -108,6 +112,43 @@ h6 {
     font-weight   : normal;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+@each $level in $type-levels {
+    $level-size-2: (math.div($level-size, 3) * 2) * $type-size-ratio-2;
+    $level-size  : $level-size * $type-size-ratio;
+
+    $viewport-size: ($type-levels-count - $level) * 2vw;
+
+    @if $level-size < 1rem {
+        $level-size: 1rem
+    }
+
+    @if $level-size-2 < 1rem {
+        $level-size-2: 1rem
+    }
+
+    .h#{$level},
+    h#{$level} {
+        font-size: $level-size;
+        font-size: clamp(#{$level-size-2}, #{$viewport-size}, #{$level-size});
+    }
+}
+
+.weight-light {
+    font-weight: 300;
+}
+
+.weight-normal {
+    font-weight: 400;
+}
+
+.weight-bold {
+    font-weight: 600;
+}
+
+.weight-x-bold {
+    font-weight: 800;
 }
 
 /* DEFINITION LISTS */

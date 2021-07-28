@@ -7,6 +7,9 @@ permalink: /components/banners
 author: teacherbuknoy
 publish_date: '2021-07-19'
 subdirectory: '02. Components'
+cover: banners.jpg
+
+breadcrumbs: [Components, Banners]
 ---
 
 Banners are simple. Create a `div` with the class `.banner`
@@ -15,7 +18,7 @@ Banners are simple. Create a `div` with the class `.banner`
 
 <pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;div class="banner">This is a default banner&lt;/div></code></pre>
 
-## Banners with icons
+<h2 class="weight-light h3">Banners with icons</h2>
 
 Banners can have icons. It is recommended to inline `svg` instead of using an `img` to embed it in the page or using raster formats link PNG or JPEG. Inlining SVGs in the markup will make it inherit colors from its parent.
 
@@ -33,7 +36,7 @@ Put your `svg` before or after the text. It is also recommended to wrap your tex
     &lt;span class="banner__text">Lorem ipsum dolor sit amet.&lt;/span>
 &lt;/div></code></pre>
 
-## Text truncation
+<h2 class="weight-light h3">Text truncation</h2>
 
 Texts inside banners truncate when it gets too long. Normally, the limit is 65 characters. To prevent this, make sure to keep your notices inside banners short and to the point.
 
@@ -47,7 +50,7 @@ Texts inside banners truncate when it gets too long. Normally, the limit is 65 c
     &lt;span class="banner__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit incidunt quas, eaque dicta molestiae cum beatae magni illo modi nesciunt voluptatibus nisi architecto vel labore dignissimos fugiat autem nobis eligendi dolorum. Consequuntur quod voluptates dolorem.&lt;/span>
 &lt;/div></code></pre>
 
-## Types
+<h2 class="weight-light h3">Types</h2>
 
 Banners can also use colors to signify the nature of the notice inside it. Use `.info`, `.success`, `.warning`, and `.error` classes for this purpose.
 
@@ -79,7 +82,7 @@ Banners can also use colors to signify the nature of the notice inside it. Use `
     <p><strong>Note:</strong> include an icon so color-blind users won't have to rely on colors to understand what you mean.</p>
 </aside>
 
-## Close button
+<h2 class="weight-light h3">Close button</h2>
 You can give users an ability to close your banner when they have read your notice. Add a [button](./buttons.html) with the attribute `[data-close]`.
 
 
@@ -108,7 +111,7 @@ You can give users an ability to close your banner when they have read your noti
     <p>Add a text label to your close button for assistive technologies. Add the <code>.visually-hidden</code> class to hide it from sighted users.</p>
 </aside>
 
-## Use cases
+<h2 class="weight-light h3">Use cases</h2>
 
 Banners can be used for giving notice to the user. Banners normally sit at the top of the page so the user can see it immediately.
 

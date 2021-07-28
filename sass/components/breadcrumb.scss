@@ -9,18 +9,26 @@
 }
 
 .breadcrumb ol {
-    display   : flex;
-    flex-wrap : wrap;
-    gap       : 0.25em;
-    list-style: none;
-    margin    : 0;
-    padding   : 0;
+    align-items: center;
+    display    : flex;
+    flex-wrap  : wrap;
+    gap        : 0.25em;
+    list-style : none;
+    margin     : 0;
+    padding    : 0;
 }
 
 .breadcrumb li {
     align-items: baseline;
     display    : flex;
     gap        : 0.25em;
+}
+
+.breadcrumb ol::before {
+    content             : "//";
+    color               : currentColor;
+    opacity             : 0.5;
+    padding-inline: 0.5ch;
 }
 
 .breadcrumb li:not(:last-child)::after {

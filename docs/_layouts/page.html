@@ -9,8 +9,10 @@
       <article class="post">
         <header class="header image-card">
           <img
-            src="https://antaresprogramming.github.io/images/courses/css.jpg"
+            src="{{ page.cover | prepend: 'assets/images/' | prepend: site.baseurl }}"
             alt=""
+            width="1280"
+            height="640"
           />
           <div class="raised card">
             <h1 class="post__title">{{ page.title }}</h1>
@@ -32,18 +34,7 @@
             </div>
             <div class="uppercase badge-group">
             </div>
-            <nav class="small breadcrumb" aria-label="breadcrumbs">
-              <ol>
-                <li>
-                  <a href="https://antaresprogramming.github.io/"
-                    >Antares Programming</a
-                  >
-                </li>
-                <li><a href="../">Zirconium</a></li>
-                <li><a>{{ page.subdirectory | split: ' ' | last }}</a></li>
-                <li><a aria-current="page">{{ page.title }}</a></li>
-              </ol>
-            </nav>
+            {% include components/breadcrumb.html %}
           </div>
         </header>
         <section class="sans page section">{{ content }}</section>
