@@ -28,7 +28,7 @@ endif %}
   <meta property="twitter:card" content="summary_large_image" />
   <meta
     property="twitter:url"
-    content="{{ page.url | prepend: site.baseurl }}"
+    content="{{ site.url | append: site.baseurl | append: page.url }}"
   />
   <meta property="twitter:title" content="{{ title }}" />
   <meta property="twitter:description" content="{{ description }}" />
@@ -50,7 +50,7 @@ endif %}
   {% assign timestamp = site.time | date: "%N" %}
   <link
     rel="stylesheet"
-    href="{{ 'assets/css/zirconium.min.css' | prepend: site.baseurl | append: '?v=' | append: timestamp }}"
+    href="{{site.url | append: site.baseurl | append: 'assets/css/zirconium.min.css' | append: '?v=' | append: timestamp }}"
   />
 
   <style>
