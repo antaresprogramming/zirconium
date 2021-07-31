@@ -1,4 +1,5 @@
 {% unless page.breadcrumbs == nil %}
+{% assign lastCrumb = page.breadcrumbs | last %}
 <nav class="small breadcrumb" aria-label="breadcrumbs">
   <ol>
     <li><a href="https://antaresprogramming.github.io/">Antares Programming</a></li>
@@ -7,7 +8,7 @@
     {% for item in page.breadcrumbs %}
       {% assign crumb = item | downcase | split: ' ' | join: '-'  %}
       {% assign crumbset = crumb | append: '/' | prepend: crumbset %}
-      <li><a href="{{ site.url | append: site.baseurl | append: '/' | append: crumbset }}">{{ item }}</a></li>
+      <li><a href="{{ site.url | append: site.baseurl | append: '/' | append: crumbset }}" {% if item == lastCrumb %}aria-current="page"{% endif %}>{{ item }}</a></li>
     {% endfor %}
   </ol>
 </nav>

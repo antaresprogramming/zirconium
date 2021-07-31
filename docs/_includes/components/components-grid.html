@@ -1,0 +1,29 @@
+{% assign pages = site.pages | where_exp: 'page', "page.subdirectory != nil" %}
+{% assign subdirectories = pages | map: 'subdirectory' | uniq | sort %}
+
+{% assign sub = include.subdirectory %}
+{% if sub %}
+{% assign subdirectories = pages  | where: "subdirectory", sub | map: 'subdirectory' | uniq | sort %}
+{% endif %}
+
+{% assign hasHeaders = include.hasHeaders %}
+
+{% for directory in subdirectories %}
+{% assign subpages = pages | where: 'subdirectory', directory | sort: "title" %}
+{% unless !hasHeaders or hasHeaders != nil %}
+<h2>{{directory | split: ' ' | last }}</h2>
+{% endunless %}
+<div class="responsive-flex" style="--flex-gap: calc(var(--space-l) * 2)">
+{% for subpage in subpages %}
+{% unless subpage.hidden %}
+<article class="{% unless subpage.card_image %}bordered primary raised{% endunless %} focusable hoverable card" style="--space: 0">
+    {% if subpage.card_image %}
+    <img src="{{ site.url | append: site.baseurl | append: '/assets/images/component-representations/' | append: subpage.card_image }}" width="1080" height="1080" alt="">
+    {% endif %}
+    <h3 class="padding weight-light {% if subpage.card_image %}h4{% endif %} "><a href="{{ site.url | append: site.baseurl | append: subpage.url }}">{{subpage.title}}</a></h3>
+    <p class="padding-m padding-top-none">{{ subpage.description }}</p>
+</article>
+{% endunless %}
+{% endfor %}
+</div>
+{% endfor %}

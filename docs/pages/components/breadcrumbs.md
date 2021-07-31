@@ -10,6 +10,7 @@ subdirectory: '02. Components'
 cover: breadcrumbs.jpg
 
 breadcrumbs: [Components, Breadcrumbs]
+card_image: Breadcrumbs.png
 ---
 
 Breadcrumbs use the `nav` element with an `ol` inside it. We use an ordered list since breadcrumbs signify the sequence of locations in the website's hierarchy.

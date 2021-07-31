@@ -1,5 +1,4 @@
 const sass = require('sass')
-const Fiber = require('fibers')
 const fs = require('fs')
 const logFormat = require('./scripts/logformat')
 

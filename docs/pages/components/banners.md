@@ -10,6 +10,7 @@ subdirectory: '02. Components'
 cover: banners.jpg
 
 breadcrumbs: [Components, Banners]
+card_image: Banner.png
 ---
 
 Banners are simple. Create a `div` with the class `.banner`

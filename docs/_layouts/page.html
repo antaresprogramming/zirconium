@@ -2,10 +2,13 @@
 <html lang="en">
   {% include head.html %}
   <body class="page-with-sidebar">
+    <a id='skip-nav' class='h4 skip-link' href='#main'>
+      Skip to Content
+    </a>
     {% include components/navbar.html %}
     {% include components/menu.html %}
     {% assign author = site.authors[page.author] %}
-    <main>
+    <main id="main">
       <article class="post">
         <header class="header image-card">
           <img
@@ -41,5 +44,6 @@
       </article>
     </main>
     {% include scripts.html %}
+    {% include footer.html %}
   </body>
 </html>

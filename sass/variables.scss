@@ -10,7 +10,14 @@
     /* Z-index for components */
     --elevate-dropdown: 800;
     --elevate-navbar  : 900;
+    --elevate-dialog  : 1000;
 
     /* Maximum width of article paragraphs */
     --longform-width: 65ch;
+
+    /* Shadows */
+    --shadow-1: 0 4px 8px var(--shadow-color, #0003);
+    --shadow-2: 0 8px 16px var(--shadow-color, #0003);
+    --shadow-3: 0 16px 32px var(--shadow-color, #0004);
+    --shadow-4: 0 32px 64px var(--shadow-color, #0005);
 }

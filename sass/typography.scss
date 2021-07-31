@@ -25,7 +25,7 @@ $level-size       : $type-base-size;
 :root {
     --font-sans : "Inter", sans-serif;
     --font-serif: "Lora", serif;
-    --monospace : "Monacode", monospace;
+    --monospace : "Cascadia Code", monospace;
 
     /* ALIASES */
     --font-mono     : var(--monospace);
@@ -48,6 +48,7 @@ code {
     background-color: #0001;
     border-radius   : var(--border-radius);
     padding         : calc(var(--space-xs) / 2);
+    font-weight: 400;
 }
 
 @media (prefers-color-scheme: dark) {

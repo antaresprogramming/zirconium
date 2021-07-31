@@ -28,7 +28,15 @@
 }
 
 .byline__name {
-    font-weight: 700;
+    font-weight  : 700;
+    padding      : 0.5em;
+    margin       : -0.5em;
+    border-radius: 0.25em;
+}
+
+.byline__name:focus-visible {
+    outline         : none;
+    background-color: var(--bubblegum-100);
 }
 
 .byline.large .byline__label {

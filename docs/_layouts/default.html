@@ -2,9 +2,13 @@
 <html lang="en">
   {% include head.html %}
   <body class="page-with-sidebar">
+    <a id='skip-nav' class='h4 skip-link' href='#main'>
+      Skip to Content
+    </a>
       {% include components/navbar.html %}
       {% include components/menu.html %}
       {{ content }}
       {% include scripts.html %}
+      {% include footer.html %}
   </body>
 </html>

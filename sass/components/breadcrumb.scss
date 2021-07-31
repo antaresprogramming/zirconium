@@ -24,13 +24,6 @@
     gap        : 0.25em;
 }
 
-.breadcrumb ol::before {
-    content             : "//";
-    color               : currentColor;
-    opacity             : 0.5;
-    padding-inline: 0.5ch;
-}
-
 .breadcrumb li:not(:last-child)::after {
     color  : currentColor;
     content: '/';
@@ -51,7 +44,9 @@
     text-decoration: none;
 }
 
+.breadcrumb a:focus-visible,
 .breadcrumb a[href]:hover {
+    outline: none;
     background-color: var(--hover-color, #0003);
     opacity         : 1;
 }

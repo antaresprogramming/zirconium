@@ -1,9 +1,9 @@
 ---
 layout: default
 ---
-<main class="section">
+<main class="section" id="main">
   <div class="grid" style="--space: var(--space-m); --padding: var(--space)">
-    <h1 class="post__title">{{ site.title }}</h1>
+    <h1>{{ site.title }}</h1>
     <p class="post__subtitle">
       An opinionated CSS library of components. Offical CSS written by
       <a href="https://github.com/maniczirconium/">Francis Rubio</a>
@@ -23,5 +23,8 @@ layout: default
       </li>
       <li>Include minimal JavaScript (this is for a blog, not a website)</li>
     </ul>
+  </div>
+  <div class="section">
+    {% include components/components-grid.html %}
   </div>
 </main>

@@ -38,7 +38,7 @@
     --background-color: transparent;
 }
 
-.menu a:hover,
+.menu a[href]:hover,
 .menu button:hover {
     --background-color: var(--bg-1);
     --color           : revert;
@@ -47,7 +47,7 @@
 
 .menu a:focus,
 .menu .button:focus {
-    @include focus-ring(var(--focus-color, var(--bubblegum-700)));
+    @include focus-ring(var(--focus-color, var(--bubblegum-700)), true);
 }
 
 .menu .selected {

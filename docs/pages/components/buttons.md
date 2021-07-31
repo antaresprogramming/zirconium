@@ -3,13 +3,14 @@ title: Buttons
 description: Buttons trigger an event or an action.
 
 layout: page
-permalink: /components/button
+permalink: /components/buttons
 author: teacherbuknoy
 publish_date: '2021-07-26'
 subdirectory: '02. Components'
 cover: buttons.jpg
 
 breadcrumbs: [Components, Buttons]
+card_image: Buttons.png
 ---
 
 <h2 class="weight-light h3">Default button</h2>

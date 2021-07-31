@@ -1,3 +1,27 @@
+.skip-link {
+    position     : absolute;
+    left         : -999px;
+    width        : 1px;
+    height       : 1px;
+    top          : -999px;
+    padding      : var(--space-s);
+    border-radius: var(--border-radius);
+    z-index      : var(--elevate-dialog);
+
+    &:focus {
+        outline         : none;
+        color           : var(--default-text);
+        background-color: var(--bg-2);
+        display         : inline-block;
+        height          : auto;
+        width           : auto;
+        margin          : auto;
+        top             : 0;
+        left            : 50%;
+        transform       : translateX(-50%);
+    }
+}
+
 .flex {
     display    : flex;
     flex-wrap  : wrap;
@@ -24,6 +48,18 @@
     .columns-#{$index} {
         column-count: $index;
     }
+}
+
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block
+}
+
+.inline {
+    display: inline;
 }
 
 .section {
@@ -75,10 +111,6 @@
 .raised {
     box-shadow: var(--shadow, var(--shadow-1));
     --shadow  : var(--shadow-1);
-    --shadow-1: 0 4px 8px var(--shadow-color, #0003);
-    --shadow-2: 0 8px 16px var(--shadow-color, #0003);
-    --shadow-3: 0 16px 32px var(--shadow-color, #0004);
-    --shadow-4: 0 32px 64px var(--shadow-color, #0005);
 }
 
 .shadow.level-2,
@@ -128,15 +160,15 @@
 
 .responsive-grid {
     display              : grid;
-    gap                  : var(--space, --space-s);
-    padding              : var(--space, --space-s);
+    gap                  : var(--grid-gap, var(--space-s));
+    padding              : var(--grid-padding, var(--space-s));
     grid-template-columns: repeat(auto-fill, minmax(var(--column-size, 200px), 1fr));
 }
 
 .responsive-flex {
     display  : flex;
-    gap      : var(--space, --space-s);
-    padding  : var(--space, --space-s);
+    gap      : var(--flex-gap, var(--space-s));
+    padding  : var(--flex-padding, var(--space-s));
     flex-wrap: wrap;
 
     &>* {
@@ -229,7 +261,7 @@
 }
 
 .bordered {
-    border: 1px solid var(--bg-1);
+    border: 1px solid var(--border-color, var(--bg-1));
 }
 
 /*
@@ -247,10 +279,14 @@
 .circle {
     aspect-ratio : 1;
     border-radius: 100%;
-    min-width: 6em
+    min-width    : 6em
 }
 
 .padding {
+    &-none {
+        padding: 0;
+    }
+
     &-xs {
         padding: var(--space-xs);
     }
@@ -269,6 +305,10 @@
     }
 
     &-left {
+        &-none {
+            padding-left: 0;
+        }
+
         &-xs {
             padding-left: var(--space-xs);
         }
@@ -288,6 +328,10 @@
     }
 
     &-right {
+        &-none {
+            padding-right: 0;
+        }
+
         &-xs {
             padding-right: var(--space-xs);
         }
@@ -307,6 +351,10 @@
     }
 
     &-top {
+        &-none {
+            padding-top: 0;
+        }
+
         &-xs {
             padding-top: var(--space-xs);
         }
@@ -326,6 +374,10 @@
     }
 
     &-bottom {
+        &-none {
+            padding-bottom: 0;
+        }
+
         &-xs {
             padding-bottom: var(--space-xs);
         }
@@ -346,6 +398,10 @@
 }
 
 .margin {
+    &-none {
+        margin: 0;
+    }
+
     &-xs {
         margin: var(--space-xs);
     }
@@ -364,6 +420,10 @@
     }
 
     &-left {
+        &-none {
+            margin-left: 0;
+        }
+
         &-xs {
             margin-left: var(--space-xs);
         }
@@ -383,6 +443,10 @@
     }
 
     &-right {
+        &-none {
+            margin-right: 0;
+        }
+
         &-xs {
             margin-right: var(--space-xs);
         }
@@ -402,6 +466,10 @@
     }
 
     &-top {
+        &-none {
+            margin-top: 0;
+        }
+
         &-xs {
             margin-top: var(--space-xs);
         }
@@ -421,6 +489,10 @@
     }
 
     &-bottom {
+        &-none {
+            margin-bottom: 0;
+        }
+
         &-xs {
             margin-bottom: var(--space-xs);
         }
@@ -438,4 +510,8 @@
             margin-bottom: var(--space-l);
         }
     }
+}
+
+.no-border {
+    border: none;
 }

@@ -52,8 +52,9 @@
 }
 
 .navbar .dropdown.fixed-to-right {
-    right: var(--space, --space-s);
-    top  : 100%;
+    right          : var(--space, --space-s);
+    top            : 100%;
+    justify-content: right;
 }
 
 @media (max-width: 959px) {
@@ -71,7 +72,7 @@
         position        : static;
     }
 
-    .navbar .nav-item.menu {
+    .navbar [data-navmenu] {
         display: none;
     }
 

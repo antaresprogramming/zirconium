@@ -6,22 +6,19 @@
     padding         : var(--space, var(--space-s));
     transition      : box-shadow 300ms;
 
-    --border: 1px solid var(--border-color, #0002);
-}
-
-.card.brand {
-    --background  : var(--brand-transparent);
-    --border-color: var(--brand-100);
+    --border: 1px solid var(--border-color, var(--bg-2));
 }
 
 .card.accent {
-    --background  : var(--blueberry-100);
-    --border-color: var(--blueberry-300);
+    --background          : var(--blueberry-100);
+    --border-color        : var(--blueberry-300);
+    --selection-background: var(--blueberry-300);
 }
 
 .card.primary {
-    --background  : var(--bubblegum-100);
-    --border-color: var(--bubblegum-300);
+    --background          : var(--bubblegum-100);
+    --border-color        : var(--bubblegum-300);
+    --selection-background: var(--bubblegum-300);
 }
 
 .card.raised {
@@ -33,16 +30,16 @@
         --background: var(--bg-100);
     }
 
-    .card.brand {
-        --border-color: var(--brand-900);
-    }
-
-    .card.secondary {
-        --border-color: var(--secondary-900);
+    .card.card.primary {
+        --background          : var(--bubblegum-900);
+        --border-color        : var(--bubblegum-700);
+        --selection-background: var(--bubblegum-500);
     }
 
     .card.accent {
-        --border-color: var(--accent-900);
+        --background  : var(--blueberry-900);
+        --border-color: var(--blueberry-700);
+        --selection-background: var(--blueberry-500);
     }
 }
 
@@ -82,7 +79,7 @@
 
     .image-card img {
         grid-row: 1/3;
-        height: 100%;
+        height  : 100%;
     }
 
     .image-card.horizontal img {
@@ -100,4 +97,10 @@
         grid-column: 2/3;
         grid-row   : 1/2;
     }
+}
+
+.card.focusable:focus-visible,
+.card.focusable:focus-within,
+.card.hoverable:hover {
+    box-shadow: var(--shadow-3)
 }

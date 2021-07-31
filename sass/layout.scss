@@ -137,6 +137,10 @@
     display: none;
 }
 
+.page-with-sidebar .main-footer {
+    grid-column: 1/-1;
+}
+
 @media (min-width: 960px) {
     .page-with-sidebar {
         grid-template-columns: 1fr 3fr;
