@@ -1,29 +1,29 @@
 {
-	"name": "zirconium",
-	"version": "1.0.0",
-	"description": "An opinionated CSS library of components created for Antares Programming.",
-	"main": "index.js",
-	"scripts": {
-		"start": "node index.js",
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"serve": "cd docs && bundle exec jekyll serve --config _config-dev.yml"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/antaresprogramming/zirconium.git"
-	},
-	"author": "Francis Rubio <devFrancisRubio@gmail.com>",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/antaresprogramming/zirconium/issues"
-	},
-	"homepage": "https://github.com/antaresprogramming/zirconium#readme",
-	"devDependencies": {
-		"chalk": "^4.1.1",
-		"http-server": "^0.12.3",
-		"sass": "^1.35.2"
-	},
-	"dependencies": {
-		"fibers": "^5.0.0"
-	}
+  "name": "zirconium",
+  "version": "1.0.0",
+  "description": "An opinionated CSS library of components created for Antares Programming.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "cd docs && bundle exec jekyll serve --config _config-dev.yml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antaresprogramming/zirconium.git"
+  },
+  "author": "Francis Rubio67542653+maniczirconium@users.noreply.github.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antaresprogramming/zirconium/issues"
+  },
+  "homepage": "https://github.com/antaresprogramming/zirconium#readme",
+  "devDependencies": {
+    "chalk": "^4.1.1",
+    "http-server": "^0.12.3",
+    "sass": "^1.35.2"
+  },
+  "dependencies": {
+    "fibers": "^5.0.0"
+  }
 }
