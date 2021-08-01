@@ -12,6 +12,10 @@ details summary {
 	align-items: center;
 }
 
+details[open] summary {
+	background-color: var(--bg-1);
+}
+
 details summary::after {
 	content: '';
 	width: 0.5em;

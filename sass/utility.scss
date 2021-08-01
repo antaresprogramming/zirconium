@@ -32,7 +32,7 @@
 .grid {
     --padding: calc(var(--space, 0.5em) * 4);
     display  : grid;
-    gap      : var(--space, 0.5em);
+    gap      : var(--grid-gap, 0.5em);
     padding  : var(--padding, 4em);
 }
 
@@ -262,6 +262,21 @@
 
 .bordered {
     border: 1px solid var(--border-color, var(--bg-1));
+}
+
+.border {
+    &-top {
+        border-top: 1px solid var(--border-color, var(--bg-1));
+    }
+    &-bottom {
+        border-bottom: 1px solid var(--border-color, var(--bg-1));
+    }
+    &-left {
+        border-left: 1px solid var(--border-color, var(--bg-1));
+    }
+    &-right {
+        border-right: 1px solid var(--border-color, var(--bg-1));
+    }
 }
 
 /*
@@ -514,4 +529,20 @@
 
 .no-border {
     border: none;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.static {
+    position: static;
 }

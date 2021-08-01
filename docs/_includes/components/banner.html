@@ -1,0 +1,24 @@
+{% assign message = include.content %}
+{% assign type = include.type %}
+{% assign modifiers = include.modifiers %}
+
+{% if type == "success" %}
+    {% assign icon = "check-circle" %}
+{% elsif type == "info" %}
+    {% assign icon="info" %}
+{% elsif type == "warning" %}
+    {% assign icon="alert-triangle" %}
+{% elsif type == "error" %}
+    {% assign icon="x-octagon" %}
+{% endif %}
+
+{% if include.tag != nil %}
+{% assign tag = include.tag %}
+{% else %}
+{% assign tag = 'aside' %}
+{% endif %}
+
+<{{ tag }} class="{{ type }} {{ modifiers }} banner">
+    {% include components/icon.html icon=icon %}
+    <span class="banner__text">{{ message }}</span>
+</{{ tag }}>

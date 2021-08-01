@@ -3,6 +3,8 @@
     border          : var(--border);
     border-radius   : var(--border-radius);
     display         : grid;
+    grid-auto-rows  : min-content;
+    overflow        : hidden;
     padding         : var(--space, var(--space-s));
     transition      : box-shadow 300ms;
 
@@ -37,8 +39,8 @@
     }
 
     .card.accent {
-        --background  : var(--blueberry-900);
-        --border-color: var(--blueberry-700);
+        --background          : var(--blueberry-900);
+        --border-color        : var(--blueberry-700);
         --selection-background: var(--blueberry-500);
     }
 }
@@ -102,5 +104,5 @@
 .card.focusable:focus-visible,
 .card.focusable:focus-within,
 .card.hoverable:hover {
-    box-shadow: var(--shadow-3)
+    box-shadow: var(--shadow-2)
 }

@@ -126,7 +126,7 @@ h6 {
     }
 
     @if $level-size-2 < 1rem {
-        $level-size-2: 1rem
+        $level-size-2: 1.25rem
     }
 
     .h#{$level},
@@ -159,8 +159,10 @@ dl {
 }
 
 dl dt {
-    font-family: var(--font-sans);
-    font-weight: 800;
+    grid-column: 1;
+    display    : flex;
+    font-weight: 600;
+    align-items: start;
 }
 
 dl dd+dt {

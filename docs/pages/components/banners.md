@@ -77,20 +77,18 @@ Banners can also use colors to signify the nature of the notice inside it. Use `
 &lt;div class="warning banner">&hellip;&lt;/div>
 &lt;div class="error banner">&hellip;&lt;/div></code></pre>
 
-
-<aside class="warning side-note">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-triangle"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-    <p><strong>Note:</strong> include an icon so color-blind users won't have to rely on colors to understand what you mean.</p>
-</aside>
+{% include components/side-note.html
+    content="<strong>Note:</strong> include an icon so color-blind users won't have to rely on colors to understand what you mean."
+    type="warning"
+%}
 
 <h2 class="weight-light h3">Close button</h2>
 You can give users an ability to close your banner when they have read your notice. Add a [button](./buttons.html) with the attribute `[data-close]`.
 
-
-<aside class="info side-note">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-    Include <code>zirconium.js</code> in your markup to make this work.
-</aside>
+{% include components/side-note.html
+    content="Include <code>zirconium.js</code> in your markup to make this work."
+    type="info"
+%}
 
 
 <aside class="info banner margin-top">
@@ -107,10 +105,10 @@ You can give users an ability to close your banner when they have read your noti
         &lt;span class="visually-hidden">Dismiss&lt;/span>&lt;/button>
 &lt;/aside></code></pre>
 
-<aside class="info side-note">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-    <p>Add a text label to your close button for assistive technologies. Add the <code>.visually-hidden</code> class to hide it from sighted users.</p>
-</aside>
+{% include components/side-note.html
+    content="<>Add a text label to your close button for assistive technologies. Add the <code>.visually-hidden</code> class to hide it from sighted users."
+    type="info"
+%}
 
 <h2 class="weight-light h3">Use cases</h2>
 

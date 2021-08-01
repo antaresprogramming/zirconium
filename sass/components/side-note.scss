@@ -4,8 +4,9 @@
     display        : flex;
     gap            : 1ch;
     justify-content: center;
-    padding        : var(--space-l);
+    line-height    : 1.5;
     margin         : var(--space-l);
+    padding        : var(--space-l);
 
     --color: var(--subtle-text);
 }

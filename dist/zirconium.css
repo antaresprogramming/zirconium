@@ -255,8 +255,8 @@ nav li:before {
   margin-top: 1em;
 }
 
-.contents .full-width {
-  grid-column: 1/4;
+.full-width {
+  grid-column: 1/-1;
   width: 100%;
 }
 
@@ -1163,7 +1163,7 @@ h6 {
 .h4,
 h4 {
   font-size: 1.5rem;
-  font-size: clamp(1rem, 4vw, 1.5rem);
+  font-size: clamp(1.25rem, 4vw, 1.5rem);
 }
 
 .h3,
@@ -1206,8 +1206,10 @@ dl {
 }
 
 dl dt {
-  font-family: var(--font-sans);
-  font-weight: 800;
+  grid-column: 1;
+  display: flex;
+  font-weight: 600;
+  align-items: start;
 }
 
 dl dd + dt {
@@ -1276,7 +1278,7 @@ dl dd::before {
   padding: var(--space-s) var(--space-l);
 }
 
-.badge:hover {
+a.badge[href]:hover {
   background-color: var(--hover-color);
 }
 
@@ -1691,6 +1693,8 @@ dl dd::before {
   border: var(--border);
   border-radius: var(--border-radius);
   display: grid;
+  grid-auto-rows: min-content;
+  overflow: hidden;
   padding: var(--space, var(--space-s));
   transition: box-shadow 300ms;
   --border: 1px solid var(--border-color, var(--bg-2));
@@ -1786,7 +1790,7 @@ dl dd::before {
 .card.focusable:focus-visible,
 .card.focusable:focus-within,
 .card.hoverable:hover {
-  box-shadow: var(--shadow-3);
+  box-shadow: var(--shadow-2);
 }
 
 .code-snippet {
@@ -1839,6 +1843,10 @@ details summary {
   align-items: center;
 }
 
+details[open] summary {
+  background-color: var(--bg-1);
+}
+
 details summary::after {
   content: "";
   width: 0.5em;
@@ -1872,6 +1880,8 @@ details[open] > summary::after {
   gap: var(--space-s);
   min-width: 20ch;
   padding: var(--space-s);
+  width: -moz-fit-content;
+  width: fit-content;
   z-index: var(--elevate-dropdown);
 }
 
@@ -1881,6 +1891,16 @@ details[open] > summary::after {
 
 .dropdown.large {
   --space: var(--space-m);
+}
+
+.dropdown:not(.uppercase) .nav-item {
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.dropdown:not(.open),
+.dropdown[hidden] {
+  display: none;
 }
 
 .figure {
@@ -2336,8 +2356,9 @@ details[open] > summary::after {
   display: flex;
   gap: 1ch;
   justify-content: center;
-  padding: var(--space-l);
+  line-height: 1.5;
   margin: var(--space-l);
+  padding: var(--space-l);
   --color: var(--subtle-text);
 }
 
@@ -2445,7 +2466,7 @@ details[open] > summary::after {
 }
 
 .banner__text {
-  max-width: 65ch;
+  max-width: 65%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -2578,7 +2599,7 @@ details[open] > summary::after {
 .grid {
   --padding: calc(var(--space, 0.5em) * 4);
   display: grid;
-  gap: var(--space, 0.5em);
+  gap: var(--grid-gap, 0.5em);
   padding: var(--padding, 4em);
 }
 
@@ -2821,6 +2842,19 @@ details[open] > summary::after {
   border: 1px solid var(--border-color, var(--bg-1));
 }
 
+.border-top {
+  border-top: 1px solid var(--border-color, var(--bg-1));
+}
+.border-bottom {
+  border-bottom: 1px solid var(--border-color, var(--bg-1));
+}
+.border-left {
+  border-left: 1px solid var(--border-color, var(--bg-1));
+}
+.border-right {
+  border-right: 1px solid var(--border-color, var(--bg-1));
+}
+
 /*
  * SIZE UTILITIES
  * paddings and margins use `em`. Resizing font size will resize them too. 
@@ -2993,6 +3027,22 @@ details[open] > summary::after {
 
 .no-border {
   border: none;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.static {
+  position: static;
 }
 
 /*# sourceMappingURL=zirconium.css.map */

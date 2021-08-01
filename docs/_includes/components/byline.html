@@ -1,0 +1,17 @@
+{% assign username = include.author %}
+{% assign authorName = site.authors[username].name %}
+{% assign gravatar = site.authors[username].gravatar %}
+{% assign authorPic = "https://www.gravatar.com/avatar/" | append: gravatar | append: '?s=400' %}
+<div class="byline">
+    {% include components/image.html
+        image=authorPic
+        width="400"
+        height="400"
+        alt=authorName
+        class="byline__image"
+        type="gravatar"
+    %}
+    <div class="byline__body">
+        <a href="https://antaresprogramming.github.io/authors/{{ username }}" class="byline__name">{{ authorName }}</a>
+    </div>
+</div>

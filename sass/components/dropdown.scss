@@ -6,6 +6,8 @@
     gap             : var(--space-s);
     min-width       : 20ch;
     padding         : var(--space-s);
+    width           : -moz-fit-content;
+    width           : fit-content;
     z-index         : var(--elevate-dropdown);
 }
 
@@ -15,4 +17,14 @@
 
 .dropdown.large {
     --space: var(--space-m);
+}
+
+.dropdown:not(.uppercase) .nav-item {
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.dropdown:not(.open),
+.dropdown[hidden] {
+    display: none;
 }

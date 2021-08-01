@@ -2,6 +2,13 @@
 <html lang="en">
   {% include head.html %}
   <body class="page-with-sidebar">
+    {% if page.needs_js %}
+    {% include components/banner.html
+      content="JavaScript is disabled in this browser, so some things will not work. <a href='https://enable-javascript.com/' target='_blank' rel='noopener'>How to enable JavaScript?</a>"
+      type="warning"
+      tag="noscript"
+      modifiers="full-width" %}
+    {% endif %}
     <a id='skip-nav' class='h4 skip-link' href='#main'>
       Skip to Content
     </a>
@@ -10,40 +17,33 @@
     {% assign author = site.authors[page.author] %}
     <main id="main">
       <article class="post">
-        <header class="header image-card">
-          <img
-            src="{{ site.url | append: site.baseurl | append: '/assets/images/'| append: page.cover }}"
-            alt=""
-            width="1280"
-            height="640"
-          />
-          <div class="raised card">
-            <h1 class="post__title">{{ page.title }}</h1>
-            <p class="post__subtitle">{{ page.description }}</p>
-            <div class="spaced flex">
-              <div class="byline">
-                <img
-                  class="byline__image"
-                  src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=400"
-                  alt=""
-                />
-                <div class="byline__body">
-                  <address>
-                    <a href="https://antaresprogramming.github.io/authors/{{page.author}}" class="byline__name">{{ author.name }}</a>
-                  </address>
-                </div>
+        <header class="header no-border card padding-l" style="--space: var(--space-m); gap: 0;">
+            <div class="start-aligned responsive-flex padding-bottom-none" style=" --flex-gap: var(--space-l);">
+              <div class="grid padding-none">
+                <h1 class="margin-bottom-none">{{ page.title }}</h1>
+                {% if page.needs_js %}
+                <p class="post__subtitle">{{ page.description }}</p>
+                <small class="warning badge margin-bottom-l start-self-justified">Needs JavaScript</small>
+                {% else %}
+                <p class="post__subtitle padding-bottom-l">{{ page.description }}</p>
+                {% endif %}
               </div>
-              <time datetime="{{ page.publish_date | date: '%Y-%m-%d' }}">{{ page.publish_date | date: '%B %e, %Y' }}</time>
+              {% if page.card_image %}
+              <img src="{{ site.url | append: site.baseurl | append: '/assets/images/component-representations/' | append: page.card_image }}" width="1080" height="607.5" alt="">
+              {% endif %}
             </div>
             <div class="uppercase badge-group">
             </div>
             {% include components/breadcrumb.html %}
-          </div>
         </header>
         <section class="sans page section">{{ content }}</section>
+        <footer class="full-width padding-l spaced flex border-top">
+          {% include components/byline.html author=page.author %}
+          <time datetime="{{ page.publish_date | date: '%Y-%m-%d ' }}">{{ page.publish_date | date: "%B %d, %Y" }}</time>
+        </footer>
       </article>
     </main>
-    {% include scripts.html %}
     {% include footer.html %}
+    {% include scripts.html %}
   </body>
 </html>
