@@ -5,7 +5,7 @@
 {% for directory in subdirectories %}
 {% assign subpages = pages | where: 'subdirectory', directory | sort: "title" %}
 {% assign directoryPath = directory | downcase | split: ' ' | last %}
-    <a href="{{ site.url | append: site.baseurl | append: directoryPath }}" class="menu__header">{{directory | split: ' ' | last }}</a>
+    <a href="{{ site.url | append: site.baseurl | append: '/' | append: directoryPath }}" class="menu__header">{{directory | split: ' ' | last }}</a>
     <ul>
     {% for subpage in subpages %}
         {% unless subpage.hidden %}
