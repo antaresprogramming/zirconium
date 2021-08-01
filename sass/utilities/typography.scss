@@ -1,0 +1,43 @@
+/* TYPEFACE UTILITIES */
+.sans {
+    font-family: var(--font-sans);
+}
+
+.serif {
+    font-family: var(--font-serif);
+}
+
+.mono {
+    font-family: var(--font-mono);
+}
+
+/* TRANSFORM UTILITIES */
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.normalcase {
+    text-transform: none;
+}
+
+/* LETTER SPACING UTILITIES */
+
+.letters-non-spaced {
+    letter-spacing: 0;
+}
+
+.letters-spaced {
+    letter-spacing: 1px;
+}
+
+.letters-widely-spaced {
+    letter-spacing: 3px;
+}

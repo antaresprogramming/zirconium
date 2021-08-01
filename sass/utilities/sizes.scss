@@ -1,0 +1,19 @@
+/*
+ * SIZE UTILITIES
+ * paddings and margins use `em`. Resizing font size will resize them too. 
+ */
+.small {
+    font-size: 0.8em;
+}
+
+.large {
+    font-size: 1.25em;
+}
+
+.regular {
+    font-size: 1em;
+}
+
+.root-size {
+    font-size: 1rem;
+}

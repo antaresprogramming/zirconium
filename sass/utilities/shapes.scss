@@ -1,0 +1,17 @@
+.circle {
+    aspect-ratio : 1;
+    border-radius: 100%;
+    min-width    : 6em
+}
+
+.square {
+    aspect-ratio: 1;
+}
+
+.landscape {
+    aspect-ratio: 16/9;
+}
+
+.portrait {
+    aspect-ratio: 9/16
+}

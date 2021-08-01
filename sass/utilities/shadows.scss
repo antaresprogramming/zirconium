@@ -1,0 +1,39 @@
+/* SHADOWS */
+.shadow,
+.raised {
+    box-shadow: var(--shadow, var(--shadow-1));
+    --shadow  : var(--shadow-1);
+}
+
+.shadow.level-2,
+.raised.level-2 {
+    --shadow: var(--shadow-2);
+}
+
+.shadow.level-3,
+.raised.level-3 {
+    --shadow: var(--shadow-3);
+}
+
+.shadow.level-4,
+.raised.level-4 {
+    --shadow: var(--shadow-4);
+}
+
+.raised.primary {
+    --shadow-color: var(--bubblegum-100);
+}
+
+.raised.accent {
+    --shadow-color: var(--blueberry-100);
+}
+
+@media (prefers-color-scheme: dark) {
+    .raised.primary {
+        --shadow-color: var(--bubblegum-900);
+    }
+
+    .raised.accent {
+        --shadow-color: var(--blueberry-900);
+    }
+}

@@ -1,0 +1,36 @@
+.bordered {
+    border: 1px solid var(--border-color, var(--bg-1));
+}
+
+.border {
+    &-top {
+        border-top: 1px solid var(--border-color, var(--bg-1));
+    }
+
+    &-bottom {
+        border-bottom: 1px solid var(--border-color, var(--bg-1));
+    }
+
+    &-left {
+        border-left: 1px solid var(--border-color, var(--bg-1));
+    }
+
+    &-right {
+        border-right: 1px solid var(--border-color, var(--bg-1));
+    }
+}
+
+.no-border {
+    border: none;
+}
+
+$levels: 0,
+1,
+2,
+3;
+
+@each $level in $levels {
+    .level-#{$level}-border {
+        border-color: var(--bg-#{$level});
+    }
+}

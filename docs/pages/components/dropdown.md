@@ -100,3 +100,5 @@ You can also add icons to your dropdown links or actions by adding an SVG or an 
 Do not use this as a `<select>` replacement. This should be used for actual dropdown menus, or navigation links in mobile devices (i.e. when the navigation bar cannot contain enough horizontal links).
 
 Reevaluate if you actually need a dropdown. Although Zirconium includes dropdowns in its components, it is highly recommended that you use something else. Only use dropdowns if you <em>really</em> need it.
+
+If you actually want to use it, do not use a link as your dropdown toggle. <strong>Use an actual <code>button</code> element.</strong>

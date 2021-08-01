@@ -1,0 +1,81 @@
+/* LAYOUT UTILITIES */
+.flex {
+    display    : flex;
+    flex-wrap  : wrap;
+    align-items: center;
+    gap        : 1em;
+}
+
+.grid {
+    --padding: calc(var(--space, 0.5em) * 4);
+    display  : grid;
+    gap      : var(--grid-gap, 0.5em);
+    padding  : var(--padding, 4em);
+}
+
+.multicolumn {
+    column-gap: 2em;
+}
+
+.multicolumn.ruled {
+    column-rule: 1px solid var(--bg-1);
+}
+
+@for $index from 2 through 6 {
+    .columns-#{$index} {
+        column-count: $index;
+    }
+}
+
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block
+}
+
+.inline {
+    display: inline;
+}
+
+.section {
+    padding: 1em;
+}
+
+.section+.section {
+    margin-top: 1em;
+}
+
+.page {
+    width : 90%;
+    margin: auto;
+}
+
+@media (min-width: 75%) {
+    .page {
+        width: 75%;
+    }
+}
+
+.responsive-grid {
+    display              : grid;
+    gap                  : var(--grid-gap, var(--space-s));
+    padding              : var(--grid-padding, var(--space-s));
+    grid-template-columns: repeat(auto-fill, minmax(var(--column-size, 200px), 1fr));
+}
+
+.responsive-flex {
+    display  : flex;
+    gap      : var(--flex-gap, var(--space-s));
+    padding  : var(--flex-padding, var(--space-s));
+    flex-wrap: wrap;
+
+    &>* {
+        flex: 1 0 var(--column-size, 12em);
+    }
+}
+
+.spaced {
+    justify-content: space-between;
+}

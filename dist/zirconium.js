@@ -14,6 +14,11 @@
   const dropdownToggles = document.querySelectorAll('[data-toggle]')
   dropdownToggles.forEach((button) => initializeDropdownToggle(button))
 
+  /**
+   * Initializes a dropdown inside a navigation bar
+   * @param {HTMLButtonElement} button the dropdown toggle
+   * @deprecated  
+   */
   function initializeMenuToggle(button) {
     const dropdown = button.nextElementSibling
 
@@ -27,6 +32,10 @@
     })
   }
 
+  /**
+   * Initializes a dropdown everywhere else in the page
+   * @param {HTMLButtonElement} button the dropdown toggle
+   */
   function initializeDropdownToggle(button) {
     let dropdown = null
 
@@ -40,6 +49,7 @@
     }
 
     button.setAttribute('aria-expanded', false)
+    dropdown.setAttribute('hidden', true)
 
     button.addEventListener('click', (e) => {
       toggleDropdown(button, dropdown)
@@ -78,12 +88,15 @@
       }
     })
 
-    dropdown.addEventListener('blur', (e) => {
-      console.log('blur')
-      closeDropdown(button, dropdown)
-    })
+    dropdown.querySelectorAll('button, a[href]')
+      .forEach(item => item.addEventListener('click', e => closeDropdown(button, dropdown)))
   }
 
+  /**
+   * Toggles a dropdown
+   * @param {HTMLButtonElement} button the button that toggles the dropdown
+   * @param {HTMLElement} dropdown the dropdown
+   */
   function toggleDropdown(button, dropdown) {
     const expanded = button.getAttribute('aria-expanded') === 'true'
 
@@ -94,13 +107,25 @@
     }
   }
 
+  /**
+   * Closes a dropdown
+   * @param {HTMLButtonElement} button the button that toggles the dropdown
+   * @param {HTMLElement} dropdown the dropdown
+   */
   function closeDropdown(button = document.createElement('button'), dropdown) {
     dropdown.classList.remove('open')
+    dropdown.setAttribute('hidden', 'true')
     button.setAttribute('aria-expanded', 'false')
   }
 
+  /**
+   * Opens a dropdown
+   * @param {HTMLButtonElement} button the button that toggles the dropdown
+   * @param {HTMLElement} dropdown the dropdown
+   */
   function openDropdown(button = document.createElement('button'), dropdown) {
     dropdown.classList.add('open')
+    dropdown.removeAttribute('hidden')
     dropdown.querySelector(':not([disabled])').focus()
     button.setAttribute('aria-expanded', 'true')
   }
