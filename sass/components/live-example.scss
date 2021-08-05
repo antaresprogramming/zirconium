@@ -1,0 +1,21 @@
+.live-example {
+    display      : grid;
+    overflow     : hidden;
+    border-radius: var(--border-radius);
+    border       : 1px solid var(--bg-2);
+}
+
+.live-example__code .code-snippet {
+    margin       : 0;
+    border-radius: 0;
+    border       : none;
+}
+
+.live-example__result {
+    border-bottom: 1px solid var(--bg-2);
+    padding      : var(--space-m);
+    background-image:
+        linear-gradient(#fffa, #fffa),
+        url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Crect width='100' height='100' fill='white'/%3E%3Crect width='100' height='50' transform='matrix(-1 0 0 1 150 0)' fill='%23D4D4D4'/%3E%3Crect width='100' height='50' transform='matrix(-1 0 0 1 50 0)' fill='%23FAFAFA'/%3E%3Crect x='-50' y='50' width='100' height='50' fill='%23D4D4D4'/%3E%3Crect x='50' y='50' width='100' height='50' fill='%23FAFAFA'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='100' height='100' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+    background-size: 25px 25px;
+}
