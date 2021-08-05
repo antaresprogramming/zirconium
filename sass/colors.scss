@@ -13,77 +13,151 @@
     --slate     : 210;
     --black     : 0;
 
-    --black-100: hsl(var(--black), 0%, 40%, var(--alpha, 1));
-    --black-300: hsl(var(--black), 0%, 30%, var(--alpha, 1));
-    --black-500: hsl(var(--black), 0%, 20%, var(--alpha, 1));
-    --black-700: hsl(var(--black), 0%, 10%, var(--alpha, 1));
-    --black-900: hsl(var(--black), 0%, 0%, var(--alpha, 1));
+    --black-100-raw: var(--black) 0% 40%;
+    --black-300-raw: var(--black) 0% 30%;
+    --black-500-raw: var(--black) 0% 20%;
+    --black-700-raw: var(--black) 0% 10%;
+    --black-900-raw: var(--black) 0% 0%;
 
-    --slate-100: hsl(var(--slate), 20%, 85%, var(--alpha, 1));
-    --slate-300: hsl(var(--slate), 20%, 65%, var(--alpha, 1));
-    --slate-500: hsl(var(--slate), 20%, 45%, var(--alpha, 1));
-    --slate-700: hsl(var(--slate), 20%, 25%, var(--alpha, 1));
-    --slate-900: hsl(var(--slate), 20%, 15%, var(--alpha, 1));
+    --slate-100-raw: var(--slate) 20% 85%;
+    --slate-300-raw: var(--slate) 20% 65%;
+    --slate-500-raw: var(--slate) 20% 45%;
+    --slate-700-raw: var(--slate) 20% 25%;
+    --slate-900-raw: var(--slate) 20% 15%;
 
-    --silver-100: hsl(var(--silver), 2%, 100%, var(--alpha, 1));
-    --silver-300: hsl(var(--silver), 2%, 90%, var(--alpha, 1));
-    --silver-500: hsl(var(--silver), 2%, 80%, var(--alpha, 1));
-    --silver-700: hsl(var(--silver), 2%, 70%, var(--alpha, 1));
-    --silver-900: hsl(var(--silver), 2%, 65%, var(--alpha, 1));
+    --silver-100-raw: var(--silver) 2% 100%;
+    --silver-300-raw: var(--silver) 2% 90%;
+    --silver-500-raw: var(--silver) 2% 80%;
+    --silver-700-raw: var(--silver) 2% 70%;
+    --silver-900-raw: var(--silver) 2% 65%;
 
-    --chocolate-100: hsl(var(--chocolate), 25%, 55%, var(--alpha, 1));
-    --chocolate-300: hsl(var(--chocolate), 25%, 45%, var(--alpha, 1));
-    --chocolate-500: hsl(var(--chocolate), 25%, 35%, var(--alpha, 1));
-    --chocolate-700: hsl(var(--chocolate), 25%, 25%, var(--alpha, 1));
-    --chocolate-900: hsl(var(--chocolate), 25%, 15%, var(--alpha, 1));
+    --chocolate-100-raw: var(--chocolate) 25% 55%;
+    --chocolate-300-raw: var(--chocolate) 25% 45%;
+    --chocolate-500-raw: var(--chocolate) 25% 35%;
+    --chocolate-700-raw: var(--chocolate) 25% 25%;
+    --chocolate-900-raw: var(--chocolate) 25% 15%;
 
-    --bubblegum-100: hsl(var(--bubblegum), 71%, 86%, var(--alpha, 1));
-    --bubblegum-300: hsl(var(--bubblegum), 71%, 66%, var(--alpha, 1));
-    --bubblegum-500: hsl(var(--bubblegum), 71%, 56%, var(--alpha, 1));
-    --bubblegum-700: hsl(var(--bubblegum), 71%, 46%, var(--alpha, 1));
-    --bubblegum-900: hsl(var(--bubblegum), 71%, 16%, var(--alpha, 1));
+    --bubblegum-100-raw: var(--bubblegum) 71% 86%;
+    --bubblegum-300-raw: var(--bubblegum) 71% 66%;
+    --bubblegum-500-raw: var(--bubblegum) 71% 56%;
+    --bubblegum-700-raw: var(--bubblegum) 71% 46%;
+    --bubblegum-900-raw: var(--bubblegum) 71% 16%;
 
-    --grape-100: hsl(var(--grape), 67%, 86%, var(--alpha, 1));
-    --grape-300: hsl(var(--grape), 67%, 76%, var(--alpha, 1));
-    --grape-500: hsl(var(--grape), 67%, 66%, var(--alpha, 1));
-    --grape-700: hsl(var(--grape), 67%, 56%, var(--alpha, 1));
-    --grape-900: hsl(var(--grape), 67%, 46%, var(--alpha, 1));
+    --grape-100-raw: var(--grape) 67% 86%;
+    --grape-300-raw: var(--grape) 67% 76%;
+    --grape-500-raw: var(--grape) 67% 66%;
+    --grape-700-raw: var(--grape) 67% 56%;
+    --grape-900-raw: var(--grape) 67% 46%;
 
-    --blueberry-100: hsl(var(--blueberry), 78%, 86%, var(--alpha, 1));
-    --blueberry-300: hsl(var(--blueberry), 78%, 76%, var(--alpha, 1));
-    --blueberry-500: hsl(var(--blueberry), 78%, 56%, var(--alpha, 1));
-    --blueberry-700: hsl(var(--blueberry), 78%, 26%, var(--alpha, 1));
-    --blueberry-900: hsl(var(--blueberry), 78%, 16%, var(--alpha, 1));
+    --blueberry-100-raw: var(--blueberry) 78% 86%;
+    --blueberry-300-raw: var(--blueberry) 78% 76%;
+    --blueberry-500-raw: var(--blueberry) 78% 56%;
+    --blueberry-700-raw: var(--blueberry) 78% 26%;
+    --blueberry-900-raw: var(--blueberry) 78% 16%;
 
-    --mint-100: hsl(var(--mint), 65%, 85%, var(--alpha, 1));
-    --mint-300: hsl(var(--mint), 65%, 65%, var(--alpha, 1));
-    --mint-500: hsl(var(--mint), 65%, 45%, var(--alpha, 1));
-    --mint-700: hsl(var(--mint), 65%, 35%, var(--alpha, 1));
-    --mint-900: hsl(var(--mint), 65%, 25%, var(--alpha, 1));
+    --mint-100-raw: var(--mint) 65% 85%;
+    --mint-300-raw: var(--mint) 65% 65%;
+    --mint-500-raw: var(--mint) 65% 45%;
+    --mint-700-raw: var(--mint) 65% 35%;
+    --mint-900-raw: var(--mint) 65% 25%;
 
-    --lime-100: hsl(var(--lime), 68%, 83%, var(--alpha, 1));
-    --lime-300: hsl(var(--lime), 68%, 73%, var(--alpha, 1));
-    --lime-500: hsl(var(--lime), 68%, 63%, var(--alpha, 1));
-    --lime-700: hsl(var(--lime), 68%, 43%, var(--alpha, 1));
-    --lime-900: hsl(var(--lime), 68%, 23%, var(--alpha, 1));
+    --lime-100-raw: var(--lime) 68% 83%;
+    --lime-300-raw: var(--lime) 68% 73%;
+    --lime-500-raw: var(--lime) 68% 63%;
+    --lime-700-raw: var(--lime) 68% 43%;
+    --lime-900-raw: var(--lime) 68% 23%;
 
-    --strawberry-100: hsl(var(--strawberry), 68%, 90%, var(--alpha, 1));
-    --strawberry-300: hsl(var(--strawberry), 68%, 70%, var(--alpha, 1));
-    --strawberry-500: hsl(var(--strawberry), 68%, 46%, var(--alpha, 1));
-    --strawberry-700: hsl(var(--strawberry), 68%, 36%, var(--alpha, 1));
-    --strawberry-900: hsl(var(--strawberry), 68%, 16%, var(--alpha, 1));
+    --strawberry-100-raw: var(--strawberry) 68% 90%;
+    --strawberry-300-raw: var(--strawberry) 68% 70%;
+    --strawberry-500-raw: var(--strawberry) 68% 46%;
+    --strawberry-700-raw: var(--strawberry) 68% 36%;
+    --strawberry-900-raw: var(--strawberry) 68% 16%;
 
-    --orange-100: hsl(var(--orange), 89%, 76%, var(--alpha, 1));
-    --orange-300: hsl(var(--orange), 89%, 66%, var(--alpha, 1));
-    --orange-500: hsl(var(--orange), 89%, 56%, var(--alpha, 1));
-    --orange-700: hsl(var(--orange), 89%, 46%, var(--alpha, 1));
-    --orange-900: hsl(var(--orange), 89%, 36%, var(--alpha, 1));
+    --orange-100-raw: var(--orange) 89% 76%;
+    --orange-300-raw: var(--orange) 89% 66%;
+    --orange-500-raw: var(--orange) 89% 56%;
+    --orange-700-raw: var(--orange) 89% 46%;
+    --orange-900-raw: var(--orange) 89% 36%;
 
-    --banana-100: hsl(var(--banana), 94%, 81%, var(--alpha, 1));
-    --banana-300: hsl(var(--banana), 94%, 71%, var(--alpha, 1));
-    --banana-500: hsl(var(--banana), 94%, 61%, var(--alpha, 1));
-    --banana-700: hsl(var(--banana), 94%, 41%, var(--alpha, 1));
-    --banana-900: hsl(var(--banana), 94%, 21%, var(--alpha, 1));
+    --banana-100-raw: var(--banana) 94% 81%;
+    --banana-300-raw: var(--banana) 94% 71%;
+    --banana-500-raw: var(--banana) 94% 61%;
+    --banana-700-raw: var(--banana) 94% 41%;
+    --banana-900-raw: var(--banana) 94% 21%;
+}
+
+:root {
+    --black-100: hsl(var(--black-100-raw));
+    --black-300: hsl(var(--black-300-raw));
+    --black-500: hsl(var(--black-500-raw));
+    --black-700: hsl(var(--black-700-raw));
+    --black-900: hsl(var(--black-900-raw));
+
+    --slate-100: hsl(var(--slate-100-raw));
+    --slate-300: hsl(var(--slate-300-raw));
+    --slate-500: hsl(var(--slate-500-raw));
+    --slate-700: hsl(var(--slate-700-raw));
+    --slate-900: hsl(var(--slate-900-raw));
+
+    --silver-100: hsl(var(--silver-100-raw));
+    --silver-300: hsl(var(--silver-300-raw));
+    --silver-500: hsl(var(--silver-500-raw));
+    --silver-700: hsl(var(--silver-700-raw));
+    --silver-900: hsl(var(--silver-900-raw));
+
+    --chocolate-100: hsl(var(--chocolate-100-raw));
+    --chocolate-300: hsl(var(--chocolate-300-raw));
+    --chocolate-500: hsl(var(--chocolate-500-raw));
+    --chocolate-700: hsl(var(--chocolate-700-raw));
+    --chocolate-900: hsl(var(--chocolate-900-raw));
+
+    --bubblegum-100: hsl(var(--bubblegum-100-raw));
+    --bubblegum-300: hsl(var(--bubblegum-300-raw));
+    --bubblegum-500: hsl(var(--bubblegum-500-raw));
+    --bubblegum-700: hsl(var(--bubblegum-700-raw));
+    --bubblegum-900: hsl(var(--bubblegum-900-raw));
+
+    --grape-100: hsl(var(--grape-100-raw));
+    --grape-300: hsl(var(--grape-300-raw));
+    --grape-500: hsl(var(--grape-500-raw));
+    --grape-700: hsl(var(--grape-700-raw));
+    --grape-900: hsl(var(--grape-900-raw));
+
+    --blueberry-100: hsl(var(--blueberry-100-raw));
+    --blueberry-300: hsl(var(--blueberry-300-raw));
+    --blueberry-500: hsl(var(--blueberry-500-raw));
+    --blueberry-700: hsl(var(--blueberry-700-raw));
+    --blueberry-900: hsl(var(--blueberry-900-raw));
+
+    --mint-100: hsl(var(--mint-100-raw));
+    --mint-300: hsl(var(--mint-300-raw));
+    --mint-500: hsl(var(--mint-500-raw));
+    --mint-700: hsl(var(--mint-700-raw));
+    --mint-900: hsl(var(--mint-900-raw));
+
+    --lime-100: hsl(var(--lime-100-raw));
+    --lime-300: hsl(var(--lime-300-raw));
+    --lime-500: hsl(var(--lime-500-raw));
+    --lime-700: hsl(var(--lime-700-raw));
+    --lime-900: hsl(var(--lime-900-raw));
+
+    --strawberry-100: hsl(var(--strawberry-100-raw) 68% 90%);
+    --strawberry-300: hsl(var(--strawberry-300-raw) 68% 70%);
+    --strawberry-500: hsl(var(--strawberry-500-raw) 68% 46%);
+    --strawberry-700: hsl(var(--strawberry-700-raw) 68% 36%);
+    --strawberry-900: hsl(var(--strawberry-900-raw) 68% 16%);
+
+    --orange-100: hsl(var(--orange-100-raw));
+    --orange-300: hsl(var(--orange-300-raw));
+    --orange-500: hsl(var(--orange-500-raw));
+    --orange-700: hsl(var(--orange-700-raw));
+    --orange-900: hsl(var(--orange-900-raw));
+
+    --banana-100: hsl(var(--banana-100-raw));
+    --banana-300: hsl(var(--banana-300-raw));
+    --banana-500: hsl(var(--banana-500-raw));
+    --banana-700: hsl(var(--banana-700-raw));
+    --banana-900: hsl(var(--banana-900-raw));
 }
 
 @mixin dark-colors {
@@ -96,6 +170,9 @@
     --default-text      : var(--silver-300);
     --subtle-text       : var(--silver-500);
     --non-essential-text: var(--silver-700);
+
+    --selection-background: var(--banana-900);
+    --selection-foreground: var(--banana-100);
 }
 
 @mixin light-colors {
@@ -109,6 +186,8 @@
     --subtle-text       : var(--black-300);
     --non-essential-text: var(--black-100);
 
+    --selection-background: var(--banana-100);
+    --selection-foreground: var(--banana-900);
 }
 
 :root {

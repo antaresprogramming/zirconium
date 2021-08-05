@@ -323,130 +323,548 @@ nav li:before {
     grid-column: 2/3;
   }
 }
-:root {
-  --strawberry-100: #ff8c82;
-  --strawberry-300: #ed5353;
-  --strawberry-500: #c6262e;
-  --strawberry-700: #a10705;
-  --strawberry-900: #7a0000;
-  --orange-100: #ffc27d;
-  --orange-300: #ffa154;
-  --orange-500: #f37329;
-  --orange-700: #cc3b02;
-  --orange-900: #a62100;
-  --banana-100: #fff394;
-  --banana-300: #ffe16b;
-  --banana-500: #f9c440;
-  --banana-700: #d48e15;
-  --banana-900: #ad5f00;
-  --lime-100: #d1ff82;
-  --lime-300: #9bdb4d;
-  --lime-500: #68b723;
-  --lime-700: #3a9104;
-  --lime-900: #206b00;
-  --blueberry-100: #8cd5ff;
-  --blueberry-300: #64baff;
-  --blueberry-500: #3689e6;
-  --blueberry-700: #0d52bf;
-  --blueberry-900: #002e99;
-  --grape-100: #e4c6fa;
-  --grape-300: #cd9ef7;
-  --grape-500: #a56de2;
-  --grape-700: #7239b3;
-  --grape-900: #452981;
-  --cocoa-100: #a3907c;
-  --cocoa-300: #8a715e;
-  --cocoa-500: #715344;
-  --cocoa-700: #57392d;
-  --cocoa-900: #3d211b;
-  --slate-100: #95a3ab;
-  --slate-300: #667885;
-  --slate-500: #485a6c;
-  --slate-700: #273445;
-  --slate-900: #0e141f;
-  --silver-100: #fafafa;
-  --silver-300: #d4d4d4;
-  --silver-500: #abacae;
-  --silver-700: #7e8087;
-  --silver-900: #555761;
+code[class*=language-],
+pre[class*=language-] {
+  color: var(--default-text);
+  background: none;
+  font-family: var(--font-mono);
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
 }
 
-.rainbow {
-  color: var(--silver-900);
+pre[class*=language-]::-moz-selection,
+pre[class*=language-] ::-moz-selection,
+code[class*=language-]::-moz-selection,
+code[class*=language-] ::-moz-selection {
+  text-shadow: none;
+  background: var(--selection-background);
 }
 
-.support.tag {
-  display: inline-block;
+pre[class*=language-]::selection,
+pre[class*=language-] ::selection,
+code[class*=language-]::selection,
+code[class*=language-] ::selection {
+  text-shadow: none;
+  background: var(--selection-background);
 }
 
-.support.tag-name {
-  color: var(--grape-700);
+@media print {
+  code[class*=language-],
+pre[class*=language-] {
+    text-shadow: none;
+  }
+}
+/* Code blocks */
+pre[class*=language-] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
 }
 
-.support.attribute {
+:not(pre) > code[class*=language-],
+pre[class*=language-] {
+  background: var(--bg-1);
+}
+
+/* Inline code */
+:not(pre) > code[class*=language-] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--slate-300);
+}
+
+.token.punctuation {
+  color: var(--non-essential-text);
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.symbol,
+.token.deleted {
+  color: var(--bubblegum-900);
+}
+
+.token.color,
+.token.boolean,
+.token.number,
+.token.constant {
   color: var(--blueberry-700);
 }
 
-.string.quote,
-.string.value {
-  color: var(--orange-700);
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: var(--mint-900);
 }
 
-.entity.name.tag {
-  color: var(--accent-700);
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: var(--default-text);
 }
 
-.entity.name.class {
-  color: var(--orange-700);
+.token.atrule,
+.token.attr-value,
+.token.keyword,
+.token.function,
+.token.class-name {
+  color: var(--orange-900);
 }
 
-.entity.name.id {
-  color: var(--banana-700);
+.token.regex,
+.token.important,
+.token.variable {
+  color: var(--banana-900);
 }
 
-.support.css-property {
-  color: var(--grape-700);
+.token.important,
+.token.bold {
   font-weight: bold;
 }
 
-.support.css-value {
-  color: var(--banana-700);
+.token.italic {
+  font-style: italic;
 }
 
-@media (prefers-color-scheme: dark) {
-  .rainbow {
-    color: var(--silver-500);
-  }
+.token.entity {
+  cursor: help;
+}
 
-  .support.tag-name {
-    color: var(--grape-300);
-  }
+pre[data-line] {
+  position: relative;
+}
 
-  .support.attribute {
-    color: var(--blueberry-300);
-  }
+.line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: var(--banana-100);
+  background: linear-gradient(to right, hsl(var(--banana-500-raw)/20%) 70%, hsl(var(--banana-100-raw)/0%));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
 
-  .string.quote,
-.string.value {
-    color: var(--orange-100);
-  }
-
-  .entity.name.tag {
-    color: var(--accent-300);
-  }
-
-  .entity.name.class {
-    color: var(--banana-300);
-  }
-
-  .entity.name.id {
-    color: var(--banana-300);
-  }
-
-  .support.css-property {
-    color: var(--grape-300);
+@media print {
+  .line-highlight {
+    /*
+    * This will prevent browsers from replacing the background color with white.
+    * It's necessary because the element is layered on top of the displayed code.
+    */
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
   }
 }
+.line-highlight:before,
+.line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: 0.4em;
+  left: 0.6em;
+  min-width: 1em;
+  padding: 0 0.5em;
+  background-color: rgba(153, 122, 102, 0.4);
+  color: #f5f2f0;
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: 0.3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+.line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: 0.4em;
+}
+
+.line-numbers .line-highlight:before,
+.line-numbers .line-highlight:after {
+  content: none;
+}
+
+pre[id].linkable-line-numbers span.line-numbers-rows {
+  pointer-events: all;
+}
+
+pre[id].linkable-line-numbers span.line-numbers-rows > span:before {
+  cursor: pointer;
+}
+
+pre[id].linkable-line-numbers span.line-numbers-rows > span:hover:before {
+  background-color: rgba(128, 128, 128, 0.2);
+}
+
+pre[class*=language-].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre[class*=language-].line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em;
+  /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid var(--bg-3);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.line-numbers-rows > span {
+  display: block;
+  counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: var(--bg-3);
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+}
+
+.prism-previewer,
+.prism-previewer:before,
+.prism-previewer:after {
+  position: absolute;
+  pointer-events: none;
+}
+
+.prism-previewer,
+.prism-previewer:after {
+  left: 50%;
+}
+
+.prism-previewer {
+  margin-top: -48px;
+  width: 32px;
+  height: 32px;
+  margin-left: -16px;
+  opacity: 0;
+  -webkit-transition: opacity 0.25s;
+  -o-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+}
+
+.prism-previewer.flipped {
+  margin-top: 0;
+  margin-bottom: -48px;
+}
+
+.prism-previewer:before,
+.prism-previewer:after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.prism-previewer:before {
+  top: -5px;
+  right: -5px;
+  left: -5px;
+  bottom: -5px;
+  border-radius: 10px;
+  border: 5px solid #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75);
+}
+
+.prism-previewer:after {
+  top: 100%;
+  width: 0;
+  height: 0;
+  margin: 5px 0 0 -7px;
+  border: 7px solid transparent;
+  border-color: rgba(255, 0, 0, 0);
+  border-top-color: #fff;
+}
+
+.prism-previewer.flipped:after {
+  top: auto;
+  bottom: 100%;
+  margin-top: 0;
+  margin-bottom: 5px;
+  border-top-color: rgba(255, 0, 0, 0);
+  border-bottom-color: #fff;
+}
+
+.prism-previewer.active {
+  opacity: 1;
+}
+
+.prism-previewer-angle:before {
+  border-radius: 50%;
+  background: #fff;
+}
+
+.prism-previewer-angle:after {
+  margin-top: 4px;
+}
+
+.prism-previewer-angle svg {
+  width: 32px;
+  height: 32px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.prism-previewer-angle[data-negative] svg {
+  -webkit-transform: scaleX(-1) rotate(-90deg);
+  -moz-transform: scaleX(-1) rotate(-90deg);
+  -ms-transform: scaleX(-1) rotate(-90deg);
+  -o-transform: scaleX(-1) rotate(-90deg);
+  transform: scaleX(-1) rotate(-90deg);
+}
+
+.prism-previewer-angle circle {
+  fill: transparent;
+  stroke: #2e3538;
+  stroke-opacity: 0.9;
+  stroke-width: 32;
+  stroke-dasharray: 0, 500;
+}
+
+.prism-previewer-gradient {
+  background-image: linear-gradient(45deg, #bbb 25%, transparent 25%, transparent 75%, #bbb 75%, #bbb), linear-gradient(45deg, #bbb 25%, #eee 25%, #eee 75%, #bbb 75%, #bbb);
+  background-size: 10px 10px;
+  background-position: 0 0, 5px 5px;
+  width: 64px;
+  margin-left: -32px;
+}
+
+.prism-previewer-gradient:before {
+  content: none;
+}
+
+.prism-previewer-gradient div {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 10px;
+  border: 5px solid #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75);
+}
+
+.prism-previewer-color {
+  background-image: linear-gradient(45deg, #bbb 25%, transparent 25%, transparent 75%, #bbb 75%, #bbb), linear-gradient(45deg, #bbb 25%, #eee 25%, #eee 75%, #bbb 75%, #bbb);
+  background-size: 10px 10px;
+  background-position: 0 0, 5px 5px;
+}
+
+.prism-previewer-color:before {
+  background-color: inherit;
+  background-clip: padding-box;
+}
+
+.prism-previewer-easing {
+  margin-top: -76px;
+  margin-left: -30px;
+  width: 60px;
+  height: 60px;
+  background: #333;
+}
+
+.prism-previewer-easing.flipped {
+  margin-bottom: -116px;
+}
+
+.prism-previewer-easing svg {
+  width: 60px;
+  height: 60px;
+}
+
+.prism-previewer-easing circle {
+  fill: #2e3538;
+  stroke: white;
+}
+
+.prism-previewer-easing path {
+  fill: none;
+  stroke: white;
+  stroke-linecap: round;
+  stroke-width: 4;
+}
+
+.prism-previewer-easing line {
+  stroke: white;
+  stroke-opacity: 0.5;
+  stroke-width: 2;
+}
+
+@-webkit-keyframes prism-previewer-time {
+  0% {
+    stroke-dasharray: 0, 500;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 100, 500;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: 0, 500;
+    stroke-dashoffset: -100;
+  }
+}
+@-o-keyframes prism-previewer-time {
+  0% {
+    stroke-dasharray: 0, 500;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 100, 500;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: 0, 500;
+    stroke-dashoffset: -100;
+  }
+}
+@-moz-keyframes prism-previewer-time {
+  0% {
+    stroke-dasharray: 0, 500;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 100, 500;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: 0, 500;
+    stroke-dashoffset: -100;
+  }
+}
+@keyframes prism-previewer-time {
+  0% {
+    stroke-dasharray: 0, 500;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 100, 500;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: 0, 500;
+    stroke-dashoffset: -100;
+  }
+}
+.prism-previewer-time:before {
+  border-radius: 50%;
+  background: #fff;
+}
+
+.prism-previewer-time:after {
+  margin-top: 4px;
+}
+
+.prism-previewer-time svg {
+  width: 32px;
+  height: 32px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.prism-previewer-time circle {
+  fill: transparent;
+  stroke: #2e3538;
+  stroke-opacity: 0.9;
+  stroke-width: 32;
+  stroke-dasharray: 0, 500;
+  stroke-dashoffset: 0;
+  -webkit-animation: prism-previewer-time linear infinite 3s;
+  -moz-animation: prism-previewer-time linear infinite 3s;
+  -o-animation: prism-previewer-time linear infinite 3s;
+  animation: prism-previewer-time linear infinite 3s;
+}
+
+div.code-toolbar {
+  position: relative;
+}
+
+div.code-toolbar > .toolbar {
+  position: absolute;
+  top: var(--space-s);
+  right: var(--space-s);
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+div.code-toolbar:hover > .toolbar {
+  opacity: 1;
+}
+
+/* Separate line b/c rules are thrown out if selector is invalid.
+   IE11 and old Edge versions don't support :focus-within. */
+div.code-toolbar:focus-within > .toolbar {
+  opacity: 1;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a,
+div.code-toolbar > .toolbar > .toolbar-item > button,
+div.code-toolbar > .toolbar > .toolbar-item > span {
+  --button-background: var(--bg-2);
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a:hover,
+div.code-toolbar > .toolbar > .toolbar-item > a:focus,
+div.code-toolbar > .toolbar > .toolbar-item > button:hover,
+div.code-toolbar > .toolbar > .toolbar-item > button:focus,
+div.code-toolbar > .toolbar > .toolbar-item > span:hover,
+div.code-toolbar > .toolbar > .toolbar-item > span:focus {
+  color: inherit;
+  text-decoration: none;
+  --button-background: var(--bg-3);
+}
+
 :root {
   /* HUES */
   --strawberry: 357;
@@ -461,66 +879,129 @@ nav li:before {
   --silver: 220;
   --slate: 210;
   --black: 0;
-  --black-100: hsl(var(--black), 0%, 40%, var(--alpha, 1));
-  --black-300: hsl(var(--black), 0%, 30%, var(--alpha, 1));
-  --black-500: hsl(var(--black), 0%, 20%, var(--alpha, 1));
-  --black-700: hsl(var(--black), 0%, 10%, var(--alpha, 1));
-  --black-900: hsl(var(--black), 0%, 0%, var(--alpha, 1));
-  --slate-100: hsl(var(--slate), 20%, 85%, var(--alpha, 1));
-  --slate-300: hsl(var(--slate), 20%, 65%, var(--alpha, 1));
-  --slate-500: hsl(var(--slate), 20%, 45%, var(--alpha, 1));
-  --slate-700: hsl(var(--slate), 20%, 25%, var(--alpha, 1));
-  --slate-900: hsl(var(--slate), 20%, 15%, var(--alpha, 1));
-  --silver-100: hsl(var(--silver), 2%, 100%, var(--alpha, 1));
-  --silver-300: hsl(var(--silver), 2%, 90%, var(--alpha, 1));
-  --silver-500: hsl(var(--silver), 2%, 80%, var(--alpha, 1));
-  --silver-700: hsl(var(--silver), 2%, 70%, var(--alpha, 1));
-  --silver-900: hsl(var(--silver), 2%, 65%, var(--alpha, 1));
-  --chocolate-100: hsl(var(--chocolate), 25%, 55%, var(--alpha, 1));
-  --chocolate-300: hsl(var(--chocolate), 25%, 45%, var(--alpha, 1));
-  --chocolate-500: hsl(var(--chocolate), 25%, 35%, var(--alpha, 1));
-  --chocolate-700: hsl(var(--chocolate), 25%, 25%, var(--alpha, 1));
-  --chocolate-900: hsl(var(--chocolate), 25%, 15%, var(--alpha, 1));
-  --bubblegum-100: hsl(var(--bubblegum), 71%, 86%, var(--alpha, 1));
-  --bubblegum-300: hsl(var(--bubblegum), 71%, 66%, var(--alpha, 1));
-  --bubblegum-500: hsl(var(--bubblegum), 71%, 56%, var(--alpha, 1));
-  --bubblegum-700: hsl(var(--bubblegum), 71%, 46%, var(--alpha, 1));
-  --bubblegum-900: hsl(var(--bubblegum), 71%, 16%, var(--alpha, 1));
-  --grape-100: hsl(var(--grape), 67%, 86%, var(--alpha, 1));
-  --grape-300: hsl(var(--grape), 67%, 76%, var(--alpha, 1));
-  --grape-500: hsl(var(--grape), 67%, 66%, var(--alpha, 1));
-  --grape-700: hsl(var(--grape), 67%, 56%, var(--alpha, 1));
-  --grape-900: hsl(var(--grape), 67%, 46%, var(--alpha, 1));
-  --blueberry-100: hsl(var(--blueberry), 78%, 86%, var(--alpha, 1));
-  --blueberry-300: hsl(var(--blueberry), 78%, 76%, var(--alpha, 1));
-  --blueberry-500: hsl(var(--blueberry), 78%, 56%, var(--alpha, 1));
-  --blueberry-700: hsl(var(--blueberry), 78%, 26%, var(--alpha, 1));
-  --blueberry-900: hsl(var(--blueberry), 78%, 16%, var(--alpha, 1));
-  --mint-100: hsl(var(--mint), 65%, 85%, var(--alpha, 1));
-  --mint-300: hsl(var(--mint), 65%, 65%, var(--alpha, 1));
-  --mint-500: hsl(var(--mint), 65%, 45%, var(--alpha, 1));
-  --mint-700: hsl(var(--mint), 65%, 35%, var(--alpha, 1));
-  --mint-900: hsl(var(--mint), 65%, 25%, var(--alpha, 1));
-  --lime-100: hsl(var(--lime), 68%, 83%, var(--alpha, 1));
-  --lime-300: hsl(var(--lime), 68%, 73%, var(--alpha, 1));
-  --lime-500: hsl(var(--lime), 68%, 63%, var(--alpha, 1));
-  --lime-700: hsl(var(--lime), 68%, 43%, var(--alpha, 1));
-  --lime-900: hsl(var(--lime), 68%, 23%, var(--alpha, 1));
-  --strawberry-100: hsl(var(--strawberry), 68%, 90%, var(--alpha, 1));
-  --strawberry-300: hsl(var(--strawberry), 68%, 70%, var(--alpha, 1));
-  --strawberry-500: hsl(var(--strawberry), 68%, 46%, var(--alpha, 1));
-  --strawberry-700: hsl(var(--strawberry), 68%, 36%, var(--alpha, 1));
-  --strawberry-900: hsl(var(--strawberry), 68%, 16%, var(--alpha, 1));
-  --orange-100: hsl(var(--orange), 89%, 76%, var(--alpha, 1));
-  --orange-300: hsl(var(--orange), 89%, 66%, var(--alpha, 1));
-  --orange-500: hsl(var(--orange), 89%, 56%, var(--alpha, 1));
-  --orange-700: hsl(var(--orange), 89%, 46%, var(--alpha, 1));
-  --orange-900: hsl(var(--orange), 89%, 36%, var(--alpha, 1));
-  --banana-100: hsl(var(--banana), 94%, 81%, var(--alpha, 1));
-  --banana-300: hsl(var(--banana), 94%, 71%, var(--alpha, 1));
-  --banana-500: hsl(var(--banana), 94%, 61%, var(--alpha, 1));
-  --banana-700: hsl(var(--banana), 94%, 41%, var(--alpha, 1));
-  --banana-900: hsl(var(--banana), 94%, 21%, var(--alpha, 1));
+  --black-100-raw: var(--black) 0% 40%;
+  --black-300-raw: var(--black) 0% 30%;
+  --black-500-raw: var(--black) 0% 20%;
+  --black-700-raw: var(--black) 0% 10%;
+  --black-900-raw: var(--black) 0% 0%;
+  --slate-100-raw: var(--slate) 20% 85%;
+  --slate-300-raw: var(--slate) 20% 65%;
+  --slate-500-raw: var(--slate) 20% 45%;
+  --slate-700-raw: var(--slate) 20% 25%;
+  --slate-900-raw: var(--slate) 20% 15%;
+  --silver-100-raw: var(--silver) 2% 100%;
+  --silver-300-raw: var(--silver) 2% 90%;
+  --silver-500-raw: var(--silver) 2% 80%;
+  --silver-700-raw: var(--silver) 2% 70%;
+  --silver-900-raw: var(--silver) 2% 65%;
+  --chocolate-100-raw: var(--chocolate) 25% 55%;
+  --chocolate-300-raw: var(--chocolate) 25% 45%;
+  --chocolate-500-raw: var(--chocolate) 25% 35%;
+  --chocolate-700-raw: var(--chocolate) 25% 25%;
+  --chocolate-900-raw: var(--chocolate) 25% 15%;
+  --bubblegum-100-raw: var(--bubblegum) 71% 86%;
+  --bubblegum-300-raw: var(--bubblegum) 71% 66%;
+  --bubblegum-500-raw: var(--bubblegum) 71% 56%;
+  --bubblegum-700-raw: var(--bubblegum) 71% 46%;
+  --bubblegum-900-raw: var(--bubblegum) 71% 16%;
+  --grape-100-raw: var(--grape) 67% 86%;
+  --grape-300-raw: var(--grape) 67% 76%;
+  --grape-500-raw: var(--grape) 67% 66%;
+  --grape-700-raw: var(--grape) 67% 56%;
+  --grape-900-raw: var(--grape) 67% 46%;
+  --blueberry-100-raw: var(--blueberry) 78% 86%;
+  --blueberry-300-raw: var(--blueberry) 78% 76%;
+  --blueberry-500-raw: var(--blueberry) 78% 56%;
+  --blueberry-700-raw: var(--blueberry) 78% 26%;
+  --blueberry-900-raw: var(--blueberry) 78% 16%;
+  --mint-100-raw: var(--mint) 65% 85%;
+  --mint-300-raw: var(--mint) 65% 65%;
+  --mint-500-raw: var(--mint) 65% 45%;
+  --mint-700-raw: var(--mint) 65% 35%;
+  --mint-900-raw: var(--mint) 65% 25%;
+  --lime-100-raw: var(--lime) 68% 83%;
+  --lime-300-raw: var(--lime) 68% 73%;
+  --lime-500-raw: var(--lime) 68% 63%;
+  --lime-700-raw: var(--lime) 68% 43%;
+  --lime-900-raw: var(--lime) 68% 23%;
+  --strawberry-100-raw: var(--strawberry) 68% 90%;
+  --strawberry-300-raw: var(--strawberry) 68% 70%;
+  --strawberry-500-raw: var(--strawberry) 68% 46%;
+  --strawberry-700-raw: var(--strawberry) 68% 36%;
+  --strawberry-900-raw: var(--strawberry) 68% 16%;
+  --orange-100-raw: var(--orange) 89% 76%;
+  --orange-300-raw: var(--orange) 89% 66%;
+  --orange-500-raw: var(--orange) 89% 56%;
+  --orange-700-raw: var(--orange) 89% 46%;
+  --orange-900-raw: var(--orange) 89% 36%;
+  --banana-100-raw: var(--banana) 94% 81%;
+  --banana-300-raw: var(--banana) 94% 71%;
+  --banana-500-raw: var(--banana) 94% 61%;
+  --banana-700-raw: var(--banana) 94% 41%;
+  --banana-900-raw: var(--banana) 94% 21%;
+}
+
+:root {
+  --black-100: hsl(var(--black-100-raw));
+  --black-300: hsl(var(--black-300-raw));
+  --black-500: hsl(var(--black-500-raw));
+  --black-700: hsl(var(--black-700-raw));
+  --black-900: hsl(var(--black-900-raw));
+  --slate-100: hsl(var(--slate-100-raw));
+  --slate-300: hsl(var(--slate-300-raw));
+  --slate-500: hsl(var(--slate-500-raw));
+  --slate-700: hsl(var(--slate-700-raw));
+  --slate-900: hsl(var(--slate-900-raw));
+  --silver-100: hsl(var(--silver-100-raw));
+  --silver-300: hsl(var(--silver-300-raw));
+  --silver-500: hsl(var(--silver-500-raw));
+  --silver-700: hsl(var(--silver-700-raw));
+  --silver-900: hsl(var(--silver-900-raw));
+  --chocolate-100: hsl(var(--chocolate-100-raw));
+  --chocolate-300: hsl(var(--chocolate-300-raw));
+  --chocolate-500: hsl(var(--chocolate-500-raw));
+  --chocolate-700: hsl(var(--chocolate-700-raw));
+  --chocolate-900: hsl(var(--chocolate-900-raw));
+  --bubblegum-100: hsl(var(--bubblegum-100-raw));
+  --bubblegum-300: hsl(var(--bubblegum-300-raw));
+  --bubblegum-500: hsl(var(--bubblegum-500-raw));
+  --bubblegum-700: hsl(var(--bubblegum-700-raw));
+  --bubblegum-900: hsl(var(--bubblegum-900-raw));
+  --grape-100: hsl(var(--grape-100-raw));
+  --grape-300: hsl(var(--grape-300-raw));
+  --grape-500: hsl(var(--grape-500-raw));
+  --grape-700: hsl(var(--grape-700-raw));
+  --grape-900: hsl(var(--grape-900-raw));
+  --blueberry-100: hsl(var(--blueberry-100-raw));
+  --blueberry-300: hsl(var(--blueberry-300-raw));
+  --blueberry-500: hsl(var(--blueberry-500-raw));
+  --blueberry-700: hsl(var(--blueberry-700-raw));
+  --blueberry-900: hsl(var(--blueberry-900-raw));
+  --mint-100: hsl(var(--mint-100-raw));
+  --mint-300: hsl(var(--mint-300-raw));
+  --mint-500: hsl(var(--mint-500-raw));
+  --mint-700: hsl(var(--mint-700-raw));
+  --mint-900: hsl(var(--mint-900-raw));
+  --lime-100: hsl(var(--lime-100-raw));
+  --lime-300: hsl(var(--lime-300-raw));
+  --lime-500: hsl(var(--lime-500-raw));
+  --lime-700: hsl(var(--lime-700-raw));
+  --lime-900: hsl(var(--lime-900-raw));
+  --strawberry-100: hsl(var(--strawberry-100-raw) 68% 90%);
+  --strawberry-300: hsl(var(--strawberry-300-raw) 68% 70%);
+  --strawberry-500: hsl(var(--strawberry-500-raw) 68% 46%);
+  --strawberry-700: hsl(var(--strawberry-700-raw) 68% 36%);
+  --strawberry-900: hsl(var(--strawberry-900-raw) 68% 16%);
+  --orange-100: hsl(var(--orange-100-raw));
+  --orange-300: hsl(var(--orange-300-raw));
+  --orange-500: hsl(var(--orange-500-raw));
+  --orange-700: hsl(var(--orange-700-raw));
+  --orange-900: hsl(var(--orange-900-raw));
+  --banana-100: hsl(var(--banana-100-raw));
+  --banana-300: hsl(var(--banana-300-raw));
+  --banana-500: hsl(var(--banana-500-raw));
+  --banana-700: hsl(var(--banana-700-raw));
+  --banana-900: hsl(var(--banana-900-raw));
 }
 
 :root {
@@ -532,6 +1013,8 @@ nav li:before {
   --default-text: var(--black-500);
   --subtle-text: var(--black-300);
   --non-essential-text: var(--black-100);
+  --selection-background: var(--banana-100);
+  --selection-foreground: var(--banana-900);
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -543,6 +1026,8 @@ nav li:before {
     --default-text: var(--silver-300);
     --subtle-text: var(--silver-500);
     --non-essential-text: var(--silver-700);
+    --selection-background: var(--banana-900);
+    --selection-foreground: var(--banana-100);
   }
 }
 
@@ -555,6 +1040,8 @@ nav li:before {
   --default-text: var(--black-500);
   --subtle-text: var(--black-300);
   --non-essential-text: var(--black-100);
+  --selection-background: var(--banana-100);
+  --selection-foreground: var(--banana-900);
 }
 
 .dark {
@@ -566,6 +1053,8 @@ nav li:before {
   --default-text: var(--silver-300);
   --subtle-text: var(--silver-500);
   --non-essential-text: var(--silver-700);
+  --selection-background: var(--banana-900);
+  --selection-foreground: var(--banana-100);
 }
 
 .black-100-fg {
@@ -1297,12 +1786,14 @@ a.badge[href]:hover {
   padding: var(--space);
 }
 
-.button {
+.button, div.code-toolbar > .toolbar > .toolbar-item > a,
+div.code-toolbar > .toolbar > .toolbar-item > button,
+div.code-toolbar > .toolbar > .toolbar-item > span {
   align-items: center;
-  background-color: var(--background-color, var(--bg-1));
+  background-color: var(--button-background, var(--background-color, var(--bg-1)));
   border: none;
   border-radius: 0.25em;
-  color: var(--color, var(--default-text));
+  color: var(--button-color, var(--color, var(--default-text)));
   cursor: pointer;
   display: inline-flex;
   font-family: var(--font-sans);
@@ -1316,33 +1807,45 @@ a.badge[href]:hover {
   --focus-color: var(--blueberry-500);
 }
 
-.button.icon-only {
+.button.icon-only, div.code-toolbar > .toolbar > .toolbar-item > a.icon-only,
+div.code-toolbar > .toolbar > .toolbar-item > button.icon-only,
+div.code-toolbar > .toolbar > .toolbar-item > span.icon-only {
   padding: var(--space-s);
 }
 
-.button:hover {
-  color: var(--hover-color, var(--default-text));
-  background-color: var(--hover-background-color, var(--silver-500));
+.button:hover, div.code-toolbar > .toolbar > .toolbar-item > a:hover,
+div.code-toolbar > .toolbar > .toolbar-item > button:hover,
+div.code-toolbar > .toolbar > .toolbar-item > span:hover {
+  color: var(--button-color, var(--hover-color, var(--default-text)));
+  background-color: var(--button-background, var(--hover-background-color, var(--silver-500)));
   text-decoration: none;
 }
 
-.button:focus {
+.button:focus, div.code-toolbar > .toolbar > .toolbar-item > a:focus,
+div.code-toolbar > .toolbar > .toolbar-item > button:focus,
+div.code-toolbar > .toolbar > .toolbar-item > span:focus {
   outline: none;
   box-shadow: 0 0 0 5px var(--focus-color);
 }
 
-.button:active {
+.button:active, div.code-toolbar > .toolbar > .toolbar-item > a:active,
+div.code-toolbar > .toolbar > .toolbar-item > button:active,
+div.code-toolbar > .toolbar > .toolbar-item > span:active {
   opacity: 0.5;
 }
 
-.button.no-bg {
+.button.no-bg, div.code-toolbar > .toolbar > .toolbar-item > a.no-bg,
+div.code-toolbar > .toolbar > .toolbar-item > button.no-bg,
+div.code-toolbar > .toolbar > .toolbar-item > span.no-bg {
   --color: var(--default-text, inherit);
   --background-color: transparent;
   --shadow: transparent !important;
   --hover-background-color: var(--silver-300);
 }
 
-.button.primary {
+.button.primary, div.code-toolbar > .toolbar > .toolbar-item > a.primary,
+div.code-toolbar > .toolbar > .toolbar-item > button.primary,
+div.code-toolbar > .toolbar > .toolbar-item > span.primary {
   --background-color: var(--bubblegum-500);
   --color: var(--silver-100);
   --hover-background-color: var(--bubblegum-100);
@@ -1350,14 +1853,18 @@ a.badge[href]:hover {
   --shadow-color: var(--bubblegum-500-transparent);
 }
 
-.button.primary.no-bg {
+.button.primary.no-bg, div.code-toolbar > .toolbar > .toolbar-item > a.primary.no-bg,
+div.code-toolbar > .toolbar > .toolbar-item > button.primary.no-bg,
+div.code-toolbar > .toolbar > .toolbar-item > span.primary.no-bg {
   --background-color: transparent;
   --color: var(--bubblegum-700);
   --hover-background-color: var(--bubblegum-100);
   --hover-color: var(--bubblegum-900);
 }
 
-.button.accent {
+.button.accent, div.code-toolbar > .toolbar > .toolbar-item > a.accent,
+div.code-toolbar > .toolbar > .toolbar-item > button.accent,
+div.code-toolbar > .toolbar > .toolbar-item > span.accent {
   --background-color: var(--blueberry-500);
   --color: var(--silver-100);
   --focus-color: var(--blueberry-300);
@@ -1366,52 +1873,71 @@ a.badge[href]:hover {
   --shadow-color: var(--blueberry-500-transparent);
 }
 
-.button.accent.no-bg {
+.button.accent.no-bg, div.code-toolbar > .toolbar > .toolbar-item > a.accent.no-bg,
+div.code-toolbar > .toolbar > .toolbar-item > button.accent.no-bg,
+div.code-toolbar > .toolbar > .toolbar-item > span.accent.no-bg {
   --background-color: transparent;
   --color: var(--blueberry-700);
   --hover-background-color: var(--blueberry-100);
   --hover-color: var(--blueberry-900);
 }
 
-.button .feather,
-.button .icon {
+.button .feather, div.code-toolbar > .toolbar > .toolbar-item > a .feather,
+div.code-toolbar > .toolbar > .toolbar-item > button .feather,
+div.code-toolbar > .toolbar > .toolbar-item > span .feather,
+.button .icon,
+div.code-toolbar > .toolbar > .toolbar-item > a .icon,
+div.code-toolbar > .toolbar > .toolbar-item > button .icon,
+div.code-toolbar > .toolbar > .toolbar-item > span .icon {
   height: 0.9em;
   width: auto;
 }
 
 @media (prefers-color-scheme: dark) {
-  .button {
+  .button, div.code-toolbar > .toolbar > .toolbar-item > a,
+div.code-toolbar > .toolbar > .toolbar-item > button,
+div.code-toolbar > .toolbar > .toolbar-item > span {
     --color: var(--default-text);
     --background-color: var(--bg-1);
     --hover-background-color: var(--bg-2);
   }
 
-  .button.no-bg {
+  .button.no-bg, div.code-toolbar > .toolbar > .toolbar-item > a.no-bg,
+div.code-toolbar > .toolbar > .toolbar-item > button.no-bg,
+div.code-toolbar > .toolbar > .toolbar-item > span.no-bg {
     --background-color: transparent;
     --color: var(--default-text, inherit);
     --hover-background-color: var(--bg-1);
   }
 
-  .button.primary {
+  .button.primary, div.code-toolbar > .toolbar > .toolbar-item > a.primary,
+div.code-toolbar > .toolbar > .toolbar-item > button.primary,
+div.code-toolbar > .toolbar > .toolbar-item > span.primary {
     --background-color: var(--bubblegum-700);
     --color: var(--bubblegum-100);
     --hover-background-color: var(--bubblegum-900);
     --hover-color: var(--bubblegum-100);
   }
 
-  .button.primary.no-bg {
+  .button.primary.no-bg, div.code-toolbar > .toolbar > .toolbar-item > a.primary.no-bg,
+div.code-toolbar > .toolbar > .toolbar-item > button.primary.no-bg,
+div.code-toolbar > .toolbar > .toolbar-item > span.primary.no-bg {
     --background-color: transparent;
     --color: var(--bubblegum-300);
   }
 
-  .button.accent {
+  .button.accent, div.code-toolbar > .toolbar > .toolbar-item > a.accent,
+div.code-toolbar > .toolbar > .toolbar-item > button.accent,
+div.code-toolbar > .toolbar > .toolbar-item > span.accent {
     --background-color: var(--blueberry-700);
     --color: var(--silver-100);
     --hover-background-color: var(--blueberry-900);
     --hover-color: var(--blueberry-100);
   }
 
-  .button.accent.no-bg {
+  .button.accent.no-bg, div.code-toolbar > .toolbar > .toolbar-item > a.accent.no-bg,
+div.code-toolbar > .toolbar > .toolbar-item > button.accent.no-bg,
+div.code-toolbar > .toolbar > .toolbar-item > span.accent.no-bg {
     --background-color: transparent;
     --color: var(--blueberry-300);
   }
@@ -1427,11 +1953,15 @@ a.badge[href]:hover {
   position: fixed;
 }
 
-.button.circle {
+.button.circle, div.code-toolbar > .toolbar > .toolbar-item > a.circle,
+div.code-toolbar > .toolbar > .toolbar-item > button.circle,
+div.code-toolbar > .toolbar > .toolbar-item > span.circle {
   min-width: 0;
 }
 
-.button.loading::before {
+.button.loading::before, div.code-toolbar > .toolbar > .toolbar-item > a.loading::before,
+div.code-toolbar > .toolbar > .toolbar-item > button.loading::before,
+div.code-toolbar > .toolbar > .toolbar-item > span.loading::before {
   content: "";
   animation: spin 1s infinite;
   border: 2px solid transparent;
@@ -1441,7 +1971,9 @@ a.badge[href]:hover {
   width: 1em;
 }
 
-.button.loading svg {
+.button.loading svg, div.code-toolbar > .toolbar > .toolbar-item > a.loading svg,
+div.code-toolbar > .toolbar > .toolbar-item > button.loading svg,
+div.code-toolbar > .toolbar > .toolbar-item > span.loading svg {
   display: none;
 }
 
@@ -1459,11 +1991,15 @@ a.badge[href]:hover {
   width: fit-content;
 }
 
-.button-group .button {
+.button-group .button, .button-group div.code-toolbar > .toolbar > .toolbar-item > a,
+.button-group div.code-toolbar > .toolbar > .toolbar-item > button,
+.button-group div.code-toolbar > .toolbar > .toolbar-item > span {
   border-radius: 0;
 }
 
-.button-group .button:focus {
+.button-group .button:focus, .button-group div.code-toolbar > .toolbar > .toolbar-item > a:focus,
+.button-group div.code-toolbar > .toolbar > .toolbar-item > button:focus,
+.button-group div.code-toolbar > .toolbar > .toolbar-item > span:focus {
   outline: none;
   box-shadow: 0 0 0 3px var(--blueberry-500) inset;
 }
@@ -1472,7 +2008,9 @@ a.badge[href]:hover {
   border: 1px solid var(--border-color, #0003);
 }
 
-.button-group.bordered .button:not(:last-child) {
+.button-group.bordered .button:not(:last-child), .button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > a:not(:last-child),
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > button:not(:last-child),
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > span:not(:last-child) {
   border-right: 1px solid var(--border-color, #0003);
 }
 
@@ -1480,7 +2018,9 @@ a.badge[href]:hover {
   --border-color: var(--bubblegum-100);
 }
 
-.button-group.primary .button {
+.button-group.primary .button, .button-group.primary div.code-toolbar > .toolbar > .toolbar-item > a,
+.button-group.primary div.code-toolbar > .toolbar > .toolbar-item > button,
+.button-group.primary div.code-toolbar > .toolbar > .toolbar-item > span {
   --hover-background-color: var(--bubblegum-100);
   --hover-color: var(--bubblegum-900);
 }
@@ -1489,7 +2029,9 @@ a.badge[href]:hover {
   --border-color: var(--blueberry-100);
 }
 
-.button-group.accent .button {
+.button-group.accent .button, .button-group.accent div.code-toolbar > .toolbar > .toolbar-item > a,
+.button-group.accent div.code-toolbar > .toolbar > .toolbar-item > button,
+.button-group.accent div.code-toolbar > .toolbar > .toolbar-item > span {
   --hover-background-color: var(--blueberry-100);
   --hover-color: var(--blueberry-900);
 }
@@ -1503,12 +2045,16 @@ a.badge[href]:hover {
     --border-color: var(--blueberry-900);
   }
 
-  .button-group.primary .button {
+  .button-group.primary .button, .button-group.primary div.code-toolbar > .toolbar > .toolbar-item > a,
+.button-group.primary div.code-toolbar > .toolbar > .toolbar-item > button,
+.button-group.primary div.code-toolbar > .toolbar > .toolbar-item > span {
     --hover-background-color: var(--bubblegum-900);
     --hover-color: var(--bubblegum-100);
   }
 
-  .button-group.accent .button {
+  .button-group.accent .button, .button-group.accent div.code-toolbar > .toolbar > .toolbar-item > a,
+.button-group.accent div.code-toolbar > .toolbar > .toolbar-item > button,
+.button-group.accent div.code-toolbar > .toolbar > .toolbar-item > span {
     --hover-background-color: var(--blueberry-900);
     --hover-color: var(--blueberry-100);
   }
@@ -1670,6 +2216,7 @@ a.badge[href]:hover {
   font-size: 1rem;
   gap: var(--space-l);
   grid-template-rows: auto 1fr;
+  max-width: 90vw;
   overflow: auto;
   padding: var(--space-s);
   scrollbar-color: var(--bg-3) transparent;
@@ -1698,6 +2245,29 @@ a.badge[href]:hover {
   border-radius: 0;
   background-color: transparent;
   color: var(--default-text);
+}
+
+.code-snippet[data-line],
+.code-snippet.line-numbers {
+  padding: var(--space-s);
+}
+
+.code-snippet[data-line]::before,
+.code-snippet.line-numbers::before {
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.code-snippet .line-highlight {
+  margin-top: calc(var(--space-m) * 4.9);
+  width: 100% !important;
+}
+
+/* Remove line numbers */
+.code-snippet .line-highlight::after,
+.code-snippet .line-highlight::before {
+  content: none !important;
 }
 
 /* Disclosure Widget */
@@ -1895,7 +2465,10 @@ details[open] > summary::after {
 }
 
 .menu a,
-.menu .button {
+.menu .button,
+.menu div.code-toolbar > .toolbar > .toolbar-item > a,
+.menu div.code-toolbar > .toolbar > .toolbar-item > button,
+.menu div.code-toolbar > .toolbar > .toolbar-item > span {
   background-color: var(--background-color);
   border-radius: var(--border-radius);
   color: var(--color, var(--default-text));
@@ -1915,7 +2488,10 @@ details[open] > summary::after {
 }
 
 .menu a:focus,
-.menu .button:focus {
+.menu .button:focus,
+.menu div.code-toolbar > .toolbar > .toolbar-item > a:focus,
+.menu div.code-toolbar > .toolbar > .toolbar-item > button:focus,
+.menu div.code-toolbar > .toolbar > .toolbar-item > span:focus {
   outline: none;
   box-shadow: 0 0 0 3px var(--focus-color, var(--bubblegum-700)) inset;
 }
@@ -2429,7 +3005,9 @@ details[open] > summary::after {
     background-color: var(--strawberry-700);
   }
 }
-.banner .button {
+.banner .button, .banner div.code-toolbar > .toolbar > .toolbar-item > a,
+.banner div.code-toolbar > .toolbar > .toolbar-item > button,
+.banner div.code-toolbar > .toolbar > .toolbar-item > span {
   bottom: auto;
   position: absolute;
   right: var(--space-s);

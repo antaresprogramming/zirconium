@@ -5,6 +5,7 @@
     font-size         : 1rem;
     gap               : var(--space-l);
     grid-template-rows: auto 1fr;
+    max-width         : 90vw;
     overflow          : auto;
     padding           : var(--space-s);
     scrollbar-color   : var(--bg-3) transparent;
@@ -19,9 +20,9 @@
     font-size       : smaller;
     font-weight     : bold;
     justify-self    : start;
-    left: 0;
+    left            : 0;
     padding         : var(--space-s);
-    position: sticky;
+    position        : sticky;
     text-transform  : uppercase;
 }
 
@@ -33,4 +34,27 @@
     border-radius   : 0;
     background-color: transparent;
     color           : var(--default-text);
+}
+
+.code-snippet[data-line],
+.code-snippet.line-numbers {
+    padding: var(--space-s);
+}
+
+.code-snippet[data-line]::before,
+.code-snippet.line-numbers::before {
+    position: sticky;
+    top     : 0;
+    left    : 0;
+}
+
+.code-snippet .line-highlight {
+    margin-top: calc(var(--space-m) * 4.9);
+    width     : 100% !important;
+}
+
+/* Remove line numbers */
+.code-snippet .line-highlight::after,
+.code-snippet .line-highlight::before {
+    content: none !important;
 }
