@@ -1,61 +1,73 @@
 .center-aligned {
-    align-items: center;
+    align-items: center !important;
 }
 
 .end-aligned {
-    align-items: end;
+    align-items: end !important;
 }
 
 .start-aligned {
-    align-items: start;
+    align-items: start !important;
+}
+
+.stretch-aligned {
+    align-items: stretch !important;;
+}
+
+.stretch-justified {
+    justify-content: stretch !important;;
+
+    & > * {
+        width: 100%;
+    }
 }
 
 .center-justified {
-    justify-items: center;
+    justify-items: center !important;
 }
 
 .end-justified {
-    justify-items: end;
+    justify-items: end !important;
 }
 
 .start-justified {
-    justify-items: start;
+    justify-items: start !important;
 }
 
 .end-self-justified {
-    justify-self: end;
+    justify-self: end !important;
 }
 
 .center-self-justified {
-    justify-self: center;
+    justify-self: center !important;
 }
 
 .start-self-justified {
-    justify-self: start;
+    justify-self: start !important;
 }
 
 .end-self-aligned {
-    align-self: end;
+    align-self: end !important;
 }
 
 .center-self-aligned {
-    align-self: center;
+    align-self: center !important;
 }
 
 .start-self-aligned {
-    align-self: start;
+    align-self: start !important;
 }
 
 .text-left {
-    text-align: left;
+    text-align: left !important;
 }
 
 .text-right {
-    text-align: right;
+    text-align: right !important;
 }
 
 .text-center {
-    text-align: center;
+    text-align: center !important;
 }
 
 .text-justified {
@@ -63,17 +75,57 @@
 }
 
 .text-end {
-    text-align: end;
+    text-align: end !important;
 }
 
 .text-start {
-    text-align: start;
+    text-align: start !important;
 }
 
 $alignments: baseline, sub, super, text-top, text-bottom, middle, top, bottom, unset;
 
 @each $alignment in $alignments {
     .vertical-align-#{$alignment} {
-        vertical-align: $alignment;
+        vertical-align: $alignment !important;
+    }
+}
+
+$alignments: start, end, flex-start, flex-end, center, left, right, normal, baseline, space-between, space-around, space-evenly, stretch;
+
+@each $alignment in $alignments {
+    .justify-content-#{$alignment} {
+        justify-content: $alignment;
+    }
+}
+
+$alignments: auto, normal, stretch, center, start, end, flex-start, flex-end, self-start, self-end, left, right, baseline;
+
+@each $alignment in $alignments {
+    .justify-items-#{$alignment} {
+        justify-items: $alignment;
+    }
+
+    .justify-self-#{$alignment} {
+        justify-self: $alignment;
+    }
+}
+
+$alignments: center, start, end, flex-start, flex-end, normal, baseline, space-between, space-around, space-evenly, stretch;
+
+@each $alignment in $alignments {
+    .align-content-#{$alignment} {
+        align-content: $alignment;
+    }
+}
+
+$alignments: normal, stretch, center, start, end, flex-start, flex-end, baseline;
+
+@each $alignment in $alignments {
+    .align-items-#{$alignment} {
+        align-items: $alignment;
+    }
+
+    .align-self-#{$alignment} {
+        align-self: $alignment;
     }
 }
