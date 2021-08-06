@@ -147,3 +147,7 @@ nav li:before {
 *:focus-visible {
     @include focus-ring(var(--banana-500), false)
 }
+
+:target {
+    scroll-margin-top: 15vh
+}
