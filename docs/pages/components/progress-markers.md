@@ -10,7 +10,7 @@ subdirectory: '02. Components'
 cover: banners.jpg
 
 breadcrumbs: [Components, Progress Markers]
-card_image: Banner.png
+card_image: progress-marker.png
 ---
 
 Developers should use `<ol>` for progress markers because this information follows an order. Use the class `.progress-marker`.
