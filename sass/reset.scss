@@ -142,3 +142,7 @@ nav li:before {
     background-color: var(--selection-background, var(--blueberry-100));
     color           : var(--selection-foreground, var(--blueberry-900));
 }
+
+*:focus-visible {
+    @include focus-ring(var(--banana-500), false)
+}

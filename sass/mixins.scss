@@ -1,9 +1,19 @@
+////
+/// @author Francis Rubio (@maniczirconium)
+////
+
+/// @name Focus Ring
+/// Adds a focus ring around an element
+/// @parameter { color } $color the color of the focus ring
+/// @parameter { boolean } $inset whether the focus ring appears inside the element or not. Default: false
 @mixin focus-ring($color, $inset: false) {
-    outline: none;
+    outline: 3px solid $color;
 
     @if $inset {
-        box-shadow: 0 0 0 3px $color inset;
-    } @else {
-        box-shadow: 0 0 0 5px $color;
+        outline-offset: -3px;
+    }
+
+    @else {
+        outline-offset: 3px;
     }
 }

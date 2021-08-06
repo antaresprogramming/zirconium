@@ -15,9 +15,12 @@ card_image: Banner.png
 
 Banners are simple. Create a `div` with the class `.banner`
 
-<div class="banner">This is a default banner</div>
-
-<pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;div class="banner">This is a default banner&lt;/div></code></pre>
+<article class="live-example">
+    <div class="live-example__result"><div class="banner">This is a default banner</div></div>
+    <div class="live-example__code">
+        <pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;div class="banner">This is a default banner&lt;/div></code></pre>
+    </div>
+</article>
 
 <h2 class="weight-light h3">Banners with icons</h2>
 
@@ -27,35 +30,47 @@ You can use any SVG you may find online, or you may also create one yourself. Ho
 
 Put your `svg` before or after the text. It is also recommended to wrap your text inside a `.banner__text` element.
 
-<div class="banner">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-    <span class="banner__text">Lorem ipsum dolor sit amet.</span>
-</div>
-
-<pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;div class="banner">
+<article class="live-example">
+    <div class="live-example__result">
+        <div class="banner">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            <span class="banner__text">Lorem ipsum dolor sit amet.</span>
+        </div>
+    </div>
+    <div class="live-example__code">
+        <pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;div class="banner">
     &lt;svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info">&lt;circle cx="12" cy="12" r="10">&lt;/circle>&lt;line x1="12" y1="16" x2="12" y2="12">&lt;/line>&lt;line x1="12" y1="8" x2="12.01" y2="8">&lt;/line>&lt;/svg>
     &lt;span class="banner__text">Lorem ipsum dolor sit amet.&lt;/span>
 &lt;/div></code></pre>
+    </div>
+</article>
 
 <h2 class="weight-light h3">Text truncation</h2>
 
 Texts inside banners truncate when it gets too long. Normally, the limit is 65 characters. To prevent this, make sure to keep your notices inside banners short and to the point.
 
-<div class="banner">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-    <span class="banner__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit incidunt quas, eaque dicta molestiae cum beatae magni illo modi nesciunt voluptatibus nisi architecto vel labore dignissimos fugiat autem nobis eligendi dolorum. Consequuntur quod voluptates dolorem.</span>
-</div>
-
-<pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;div class="banner">
+<article class="live-example">
+    <div class="live-example__result">
+        <div class="banner">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            <span class="banner__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit incidunt quas, eaque dicta molestiae cum beatae magni illo modi nesciunt voluptatibus nisi architecto vel labore dignissimos fugiat autem nobis eligendi dolorum. Consequuntur quod voluptates dolorem.</span>
+        </div>
+    </div>
+    <div class="live-example__code">
+        <pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;div class="banner">
     &lt;svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info">&lt;circle cx="12" cy="12" r="10">&lt;/circle>&lt;line x1="12" y1="16" x2="12" y2="12">&lt;/line>&lt;line x1="12" y1="8" x2="12.01" y2="8">&lt;/line>&lt;/svg>
     &lt;span class="banner__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit incidunt quas, eaque dicta molestiae cum beatae magni illo modi nesciunt voluptatibus nisi architecto vel labore dignissimos fugiat autem nobis eligendi dolorum. Consequuntur quod voluptates dolorem.&lt;/span>
 &lt;/div></code></pre>
+    </div>
+</article>
 
 <h2 class="weight-light h3">Types</h2>
 
 Banners can also use colors to signify the nature of the notice inside it. Use `.info`, `.success`, `.warning`, and `.error` classes for this purpose.
 
-<div class="info banner margin-top">
+<article class="live-example">
+    <div class="live-example__result">
+        <div class="info banner margin-top">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
     <span class="banner__text">Lorem ipsum dolor sit amet.</span>
 </div>
@@ -71,11 +86,14 @@ Banners can also use colors to signify the nature of the notice inside it. Use `
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-octagon"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
     <div class="banner__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, saepe!</div>
 </div>
-
-<pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;div class="info banner">&hellip;&lt;/div>
+    </div>
+    <div class="live-example__code">
+        <pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;div class="info banner">&hellip;&lt;/div>
 &lt;div class="success banner">&hellip;&lt;/div>
 &lt;div class="warning banner">&hellip;&lt;/div>
 &lt;div class="error banner">&hellip;&lt;/div></code></pre>
+    </div>
+</article>
 
 {% include components/side-note.html
     content="<strong>Note:</strong> include an icon so color-blind users won't have to rely on colors to understand what you mean."
@@ -90,21 +108,24 @@ You can give users an ability to close your banner when they have read your noti
     type="info"
 %}
 
-
-<aside class="info banner margin-top">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-    <div class="banner__text">Click this button to close this banner ->.</div>
-    <button class="small square no-bg button" data-close>&times; <span class="visually-hidden">Dismiss</span></button>
-</aside>
-
-<pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;aside class="info banner margin-top">
+<article class="live-example">
+    <div class="live-example__result">
+        <aside class="info banner margin-top">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            <div class="banner__text">Click this button to close this banner ->.</div>
+            <button class="small square no-bg button" data-close>&times; <span class="visually-hidden">Dismiss</span></button>
+        </aside>
+    </div>
+    <div class="live-example__code">
+        <pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;aside class="info banner margin-top">
     &lt;svg>&hellip;&lt;/svg>
     &lt;div class="banner__text">Click this button to close this banner ->.&lt;/div>
     &lt;button class="small square no-bg button" data-close>
         &times;
         &lt;span class="visually-hidden">Dismiss&lt;/span>&lt;/button>
 &lt;/aside></code></pre>
-
+    </div>
+</article>
 {% include components/side-note.html
     content="<>Add a text label to your close button for assistive technologies. Add the <code>.visually-hidden</code> class to hide it from sighted users."
     type="info"

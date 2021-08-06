@@ -28,7 +28,7 @@
     text-decoration : none;
 }
 
-.button:focus {
+.button:focus-visible {
     @include focus-ring(var(--focus-color));
 }
 

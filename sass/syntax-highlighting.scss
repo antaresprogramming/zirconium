@@ -80,9 +80,12 @@ pre[class*="language-"] {
 
 .token.property,
 .token.tag,
-.token.symbol,
+.token.symbol {
+    color: var(--blueberry-700);
+}
+
 .token.deleted {
-    color: var(--bubblegum-900);
+    color: var(--strawberry-700);
 }
 
 .token.color,
@@ -134,9 +137,12 @@ pre[class*="language-"] {
 
     .token.property,
     .token.tag,
-    .token.symbol,
+    .token.symbol {
+        color: var(--blueberry-300);
+    }
+
     .token.deleted {
-        color: var(--bubblegum-300);
+        color: var(--strawberry-300);
     }
 
     .token.color,

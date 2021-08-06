@@ -144,6 +144,11 @@ nav li:before {
   color: var(--selection-foreground, var(--blueberry-900));
 }
 
+*:focus-visible {
+  outline: 3px solid var(--banana-500);
+  outline-offset: 3px;
+}
+
 :root {
   --border-radius: 0.25em;
   /* Used for paddings and margins */
@@ -151,6 +156,8 @@ nav li:before {
   --space-s: 0.5em;
   --space-m: 0.75em;
   --space-l: 1em;
+  --space-xl: 2em;
+  --space-xxl: 4em;
   /* Z-index for components */
   --elevate-dropdown: 800;
   --elevate-navbar: 900;
@@ -368,7 +375,6 @@ pre[class*=language-] {
 }
 /* Code blocks */
 pre[class*=language-] {
-  padding: 1em;
   margin: 0.5em 0;
   overflow: auto;
 }
@@ -402,9 +408,12 @@ pre[class*=language-] {
 
 .token.property,
 .token.tag,
-.token.symbol,
+.token.symbol {
+  color: var(--blueberry-700);
+}
+
 .token.deleted {
-  color: var(--bubblegum-900);
+  color: var(--strawberry-700);
 }
 
 .token.color,
@@ -445,6 +454,54 @@ pre[class*=language-] {
   color: var(--banana-900);
 }
 
+@media (prefers-color-scheme: dark) {
+  .token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: var(--slate-700);
+  }
+
+  .token.property,
+.token.tag,
+.token.symbol {
+    color: var(--blueberry-300);
+  }
+
+  .token.deleted {
+    color: var(--strawberry-300);
+  }
+
+  .token.color,
+.token.boolean,
+.token.number,
+.token.constant {
+    color: var(--blueberry-300);
+  }
+
+  .token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: var(--mint-300);
+  }
+
+  .token.atrule,
+.token.attr-value,
+.token.keyword,
+.token.function,
+.token.class-name {
+    color: var(--orange-300);
+  }
+
+  .token.regex,
+.token.important,
+.token.variable {
+    color: var(--banana-300);
+  }
+}
 .token.important,
 .token.bold {
   font-weight: bold;
@@ -987,11 +1044,11 @@ div.code-toolbar > .toolbar > .toolbar-item > span:focus {
   --lime-500: hsl(var(--lime-500-raw));
   --lime-700: hsl(var(--lime-700-raw));
   --lime-900: hsl(var(--lime-900-raw));
-  --strawberry-100: hsl(var(--strawberry-100-raw) 68% 90%);
-  --strawberry-300: hsl(var(--strawberry-300-raw) 68% 70%);
-  --strawberry-500: hsl(var(--strawberry-500-raw) 68% 46%);
-  --strawberry-700: hsl(var(--strawberry-700-raw) 68% 36%);
-  --strawberry-900: hsl(var(--strawberry-900-raw) 68% 16%);
+  --strawberry-100: hsl(var(--strawberry-100-raw));
+  --strawberry-300: hsl(var(--strawberry-300-raw));
+  --strawberry-500: hsl(var(--strawberry-500-raw));
+  --strawberry-700: hsl(var(--strawberry-700-raw));
+  --strawberry-900: hsl(var(--strawberry-900-raw));
   --orange-100: hsl(var(--orange-100-raw));
   --orange-300: hsl(var(--orange-300-raw));
   --orange-500: hsl(var(--orange-500-raw));
@@ -1022,6 +1079,10 @@ div.code-toolbar > .toolbar > .toolbar-item > span:focus {
     --bg-1: var(--black-500);
     --bg-2: var(--black-300);
     --bg-3: var(--black-100);
+    --bg-0-raw: var(--black-700-raw);
+    --bg-1-raw: var(--black-500-raw);
+    --bg-2-raw: var(--black-300-raw);
+    --bg-3-raw: var(--black-100-raw);
     --contrast-text: var(--silver-100);
     --default-text: var(--silver-300);
     --subtle-text: var(--silver-500);
@@ -1049,6 +1110,10 @@ div.code-toolbar > .toolbar > .toolbar-item > span:focus {
   --bg-1: var(--black-500);
   --bg-2: var(--black-300);
   --bg-3: var(--black-100);
+  --bg-0-raw: var(--black-700-raw);
+  --bg-1-raw: var(--black-500-raw);
+  --bg-2-raw: var(--black-300-raw);
+  --bg-3-raw: var(--black-100-raw);
   --contrast-text: var(--silver-100);
   --default-text: var(--silver-300);
   --subtle-text: var(--silver-500);
@@ -1617,7 +1682,7 @@ dl dd::before {
   font-weight: 600;
   padding: var(--space-xs) var(--space-s);
   text-decoration: none;
-  transition: background-color 300ms, box-shadow 300ms;
+  transition: background-color 300ms;
   --bg-color: var(--bg-1);
   --focus-color: var(--bg-2);
   --hover-color: var(--bg-2);
@@ -1641,8 +1706,9 @@ a.badge[href]:hover {
   background-color: var(--hover-color);
 }
 
-.badge:focus {
-  box-shadow: 0 0 0 5px var(--focus-color);
+.badge:focus-visible {
+  outline: 3px solid var(--focus-color);
+  outline-offset: 3px;
 }
 
 .badge.success {
@@ -1821,11 +1887,11 @@ div.code-toolbar > .toolbar > .toolbar-item > span:hover {
   text-decoration: none;
 }
 
-.button:focus, div.code-toolbar > .toolbar > .toolbar-item > a:focus,
-div.code-toolbar > .toolbar > .toolbar-item > button:focus,
-div.code-toolbar > .toolbar > .toolbar-item > span:focus {
-  outline: none;
-  box-shadow: 0 0 0 5px var(--focus-color);
+.button:focus-visible, div.code-toolbar > .toolbar > .toolbar-item > a:focus-visible,
+div.code-toolbar > .toolbar > .toolbar-item > button:focus-visible,
+div.code-toolbar > .toolbar > .toolbar-item > span:focus-visible {
+  outline: 3px solid var(--focus-color);
+  outline-offset: 3px;
 }
 
 .button:active, div.code-toolbar > .toolbar > .toolbar-item > a:active,
@@ -1997,11 +2063,11 @@ div.code-toolbar > .toolbar > .toolbar-item > span.loading svg {
   border-radius: 0;
 }
 
-.button-group .button:focus, .button-group div.code-toolbar > .toolbar > .toolbar-item > a:focus,
-.button-group div.code-toolbar > .toolbar > .toolbar-item > button:focus,
-.button-group div.code-toolbar > .toolbar > .toolbar-item > span:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px var(--blueberry-500) inset;
+.button-group .button:focus-visible, .button-group div.code-toolbar > .toolbar > .toolbar-item > a:focus-visible,
+.button-group div.code-toolbar > .toolbar > .toolbar-item > button:focus-visible,
+.button-group div.code-toolbar > .toolbar > .toolbar-item > span:focus-visible {
+  outline: 3px solid var(--blueberry-500);
+  outline-offset: -3px;
 }
 
 .button-group.bordered {
@@ -2034,6 +2100,17 @@ div.code-toolbar > .toolbar > .toolbar-item > span.loading svg {
 .button-group.accent div.code-toolbar > .toolbar > .toolbar-item > span {
   --hover-background-color: var(--blueberry-100);
   --hover-color: var(--blueberry-900);
+}
+
+.button-group .button.accent:focus-visible, .button-group div.code-toolbar > .toolbar > .toolbar-item > a.accent:focus-visible,
+.button-group div.code-toolbar > .toolbar > .toolbar-item > button.accent:focus-visible,
+.button-group div.code-toolbar > .toolbar > .toolbar-item > span.accent:focus-visible,
+.button-group.accent .button:focus-visible,
+.button-group.accent div.code-toolbar > .toolbar > .toolbar-item > a:focus-visible,
+.button-group.accent div.code-toolbar > .toolbar > .toolbar-item > button:focus-visible,
+.button-group.accent div.code-toolbar > .toolbar > .toolbar-item > span:focus-visible {
+  outline: 3px solid var(--banana-500);
+  outline-offset: -3px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -2212,9 +2289,10 @@ div.code-toolbar > .toolbar > .toolbar-item > span.loading svg {
 .code-snippet {
   background-color: var(--bg-1);
   border-radius: var(--border-radius);
+  border: 1px solid var(--bg-2);
   display: grid;
   font-size: 1rem;
-  gap: var(--space-l);
+  gap: var(--space-s);
   grid-template-rows: auto 1fr;
   max-width: 90vw;
   overflow: auto;
@@ -2260,7 +2338,7 @@ div.code-toolbar > .toolbar > .toolbar-item > span.loading svg {
 }
 
 .code-snippet .line-highlight {
-  margin-top: calc(var(--space-m) * 4.9);
+  margin-top: calc(var(--space-m) * 4.3);
   width: 100% !important;
 }
 
@@ -2270,9 +2348,19 @@ div.code-toolbar > .toolbar > .toolbar-item > span.loading svg {
   content: none !important;
 }
 
+.code-snippet:focus-visible {
+  outline: 3px solid var(--banana-500);
+  outline-offset: -3px;
+}
+
 /* Disclosure Widget */
 details {
   border: 1px solid var(--bg-1);
+  background-color: var(--bg-0);
+}
+
+details[open] {
+  border: 1px solid var(--bg-2);
 }
 
 details summary {
@@ -2283,7 +2371,13 @@ details summary {
   align-items: center;
 }
 
+summary:focus-visible {
+  outline: 3px solid var(--blueberry-500);
+  outline-offset: 3px;
+}
+
 details[open] summary {
+  border-bottom: 1px solid var(--bg-2);
   background-color: var(--bg-1);
 }
 
@@ -2308,8 +2402,9 @@ details[open] > summary::after {
   margin: var(--space-l);
 }
 
-.disclosure-group details + details {
-  border-top: none;
+.disclosure-group details + details:not(:last-child),
+.disclosure-group details:first-child {
+  border-bottom: none;
 }
 
 .dropdown {
@@ -2343,21 +2438,19 @@ details[open] > summary::after {
   display: none;
 }
 
-.figure {
-  display: grid;
-}
-
-.figure img {
+.figure img,
+.figure video {
   border-radius: var(--border-radius);
 }
 
 .figure figcaption {
   font-family: var(--body-copy, var(--font-serif));
   font-size: 0.9em;
+  margin: auto;
+  margin-top: var(--space-m);
+  max-width: 45ch;
   text-align: center;
   width: 75%;
-  max-width: 45ch;
-  margin: auto;
 }
 
 .figure figcaption b {
@@ -2367,6 +2460,7 @@ details[open] > summary::after {
 .quotation {
   padding: 1em 2em;
   border: 1px solid var(--bg-1);
+  background-color: var(--bg-0);
 }
 
 .quotation blockquote {
@@ -2492,8 +2586,8 @@ details[open] > summary::after {
 .menu div.code-toolbar > .toolbar > .toolbar-item > a:focus,
 .menu div.code-toolbar > .toolbar > .toolbar-item > button:focus,
 .menu div.code-toolbar > .toolbar > .toolbar-item > span:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px var(--focus-color, var(--bubblegum-700)) inset;
+  outline: 3px solid var(--focus-color, var(--bubblegum-700));
+  outline-offset: -3px;
 }
 
 .menu .selected {
@@ -3014,6 +3108,34 @@ details[open] > summary::after {
   top: auto;
 }
 
+.live-example {
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--bg-2);
+}
+
+.live-example__code .code-snippet {
+  margin: 0;
+  border-radius: 0;
+  border: none;
+}
+
+.live-example__result {
+  border-bottom: 1px solid var(--bg-2);
+  padding: var(--space-xl);
+  background-image: linear-gradient(#fffc, #fffc), url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Crect width='100' height='100' fill='white'/%3E%3Crect width='100' height='50' transform='matrix(-1 0 0 1 150 0)' fill='%23D4D4D4'/%3E%3Crect width='100' height='50' transform='matrix(-1 0 0 1 50 0)' fill='%23FAFAFA'/%3E%3Crect x='-50' y='50' width='100' height='50' fill='%23D4D4D4'/%3E%3Crect x='50' y='50' width='100' height='50' fill='%23FAFAFA'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='100' height='100' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  background-size: 1.1rem 1.1rem;
+}
+
+.dim.live-example__result {
+  background-image: linear-gradient(#0003, #0003), url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Crect width='100' height='100' fill='white'/%3E%3Crect width='100' height='50' transform='matrix(-1 0 0 1 150 0)' fill='%23D4D4D4'/%3E%3Crect width='100' height='50' transform='matrix(-1 0 0 1 50 0)' fill='%23FAFAFA'/%3E%3Crect x='-50' y='50' width='100' height='50' fill='%23D4D4D4'/%3E%3Crect x='50' y='50' width='100' height='50' fill='%23FAFAFA'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='100' height='100' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+}
+
+.live-example__code {
+  width: 100%;
+  overflow: hidden;
+}
+
 /* OVERRIDING UTILITIES */
 .skip-link {
   position: absolute;
@@ -3368,6 +3490,14 @@ details[open] > summary::after {
 
 .padding-none {
   padding: 0;
+}
+.padding-none > *:focus-visible {
+  /*
+   * Make focus ring inset because there's
+   * no space around it and the outline disappears
+   */
+  outline: 3px solid var(--focus-color, var(--banana-500));
+  outline-offset: -3px;
 }
 .padding-xs {
   padding: var(--space-xs);

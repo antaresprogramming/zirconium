@@ -17,6 +17,11 @@ details summary {
 	align-items: center;
 }
 
+summary:focus-visible {
+	outline       : 3px solid var(--blueberry-500);
+	outline-offset: 3px;
+}
+
 details[open] summary {
 	border-bottom: 1px solid var(--bg-2);
 	background-color: var(--bg-1);

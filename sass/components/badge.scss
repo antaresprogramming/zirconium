@@ -5,7 +5,7 @@
     font-weight     : 600;
     padding         : var(--space-xs) var(--space-s);
     text-decoration : none;
-    transition      : background-color 300ms, box-shadow 300ms;
+    transition      : background-color 300ms;
 
     --bg-color   : var(--bg-1);
     --focus-color: var(--bg-2);
@@ -30,8 +30,8 @@ a.badge[href]:hover {
     background-color: var(--hover-color);
 }
 
-.badge:focus {
-    box-shadow: 0 0 0 5px var(--focus-color);
+.badge:focus-visible {
+    @include focus-ring(var(--focus-color))
 }
 
 .badge.success {

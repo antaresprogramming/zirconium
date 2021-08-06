@@ -1,7 +1,9 @@
-{% assign syntax_highlighting = page.syntax_highlighting %}
 <script src="{{ site.url | append: site.baseurl | append: '/assets/js/zirconium.js' | append: '?v=' | append: timestamp }}"></script>
-{% if syntax_highlighting == nil or syntax_highlighting == 'rainbow' %}
-<script src="{{ site.url | append: site.baseurl | append: '/assets/js/rainbow.min.js' | append: '?v=' | append: timestamp }}"></script>
-{% else %}
 <script src="{{ site.url | append: site.baseurl | append: '/assets/js/prism.js' | append: '?v=' | append: timestamp }}"></script>
-{% endif %}
+<script>
+    document.querySelectorAll('[data-prog-lang]')
+        .forEach(pre => {
+            const language = pre.dataset.progLang
+            pre.classList.add('language-' + language)
+        })
+</script>

@@ -1,10 +1,6 @@
 <img 
     {% if include.type == nil %}
-    src="{{ 
-        site.url
-        | append: site.baseurl
-        | append: '/assets/images/'
-        | append: include.image }}"
+    src="{{ "/assets/images/" | append: include.image | relative_url }}"
     {% else %}
     src="{{ include.image }}"
     {% endif %}

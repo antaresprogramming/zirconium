@@ -11,7 +11,7 @@
     border-radius: 0;
 }
 
-.button-group .button:focus {
+.button-group .button:focus-visible {
     @include focus-ring(var(--blueberry-500), true);
 }
 
@@ -39,6 +39,11 @@
 .button-group.accent .button {
     --hover-background-color: var(--blueberry-100);
     --hover-color           : var(--blueberry-900);
+}
+
+.button-group .button.accent:focus-visible,
+.button-group.accent .button:focus-visible {
+    @include focus-ring(var(--banana-500), true);
 }
 
 @media (prefers-color-scheme: dark) {

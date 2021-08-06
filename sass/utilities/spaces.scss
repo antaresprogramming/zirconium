@@ -1,6 +1,14 @@
 .padding {
     &-none {
         padding: 0;
+
+        & > *:focus-visible {
+            /*
+             * Make focus ring inset because there's
+             * no space around it and the outline disappears
+             */
+            @include focus-ring(var(--focus-color, var(--banana-500)), true);
+        }
     }
 
     &-xs {

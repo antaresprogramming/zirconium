@@ -19,51 +19,60 @@ If the byline component is placed inside an `<article>` element, it represents t
 
 <h2 class="weight-light h3 padding-top-l margin-top-l">Minimal Byline</h2>
 
-<div class="section"><div class="byline">
-    <div class="byline__body">
-        <a href="#!" class="byline__name" rel="author">Francis Rubio</a>
+<article class="live-example">
+    <div class="live-example__result">
+        <div class="byline">
+            <div class="byline__body">
+                <a href="#!" class="byline__name" rel="author">Francis Rubio</a>
+            </div>
+        </div>
     </div>
-</div></div>
-
-<pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;div class="byline">
+    <div class="live-example__code">
+        <pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;div class="byline">
     &lt;div class="byline__body">
         &lt;a href="/link/to/author/information/page" class="byline__name" rel="author">Francis Rubio&lt;/a>
     &lt;/div>
 &lt;/div></code></pre>
+    </div>
+</article>
 
 Notice how we added the attribute `rel="author`. This is important if we want to indicate that this is the author's name. The URL placed inside the `href` attribute should point to a page with the author's information. If there's no link for the author, you should use the `<address>` element instead of the `<a>` element.
 
-<div class="section padding-top-l">
-<div class="byline">
-    <div class="byline__body">
-        <address class="byline__name">Francis Rubio</address>
+<article class="live-example">
+    <div class="live-example__result">
+        <div class="byline">
+            <div class="byline__body">
+                <address class="byline__name">Francis Rubio</address>
+            </div>
+        </div>
     </div>
-</div>
-</div>
-
-<pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;div class="byline">
+    <div class="live-example__code">
+        <pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;div class="byline">
     &lt;div class="byline__body">
         &lt;address class="byline__name">Francis Rubio&lt;/address>
     &lt;/div>
 &lt;/div></code></pre>
+    </div>
+</article>
 
 <h2 class="weight-light h3 padding-top-l margin-top-l">Byline with photo</h2>
 
-<div class="section">
-<div class="byline">
-    <img
-        class="byline__image"
-        src="https://www.gravatar.com/avatar/821268102c1c7397c7ee4fc3ecb2cb6a?s=400" 
-        alt="Francis Rubio"
-        width="400"
-        height="400">
-    <div class="byline__body">
-        <a href="/link/to/author/information/page" class="byline__name" rel="author">Francis Rubio</a>
+<article class="live-example">
+    <div class="live-example__result">
+        <div class="byline">
+            <img
+                class="byline__image"
+                src="https://www.gravatar.com/avatar/821268102c1c7397c7ee4fc3ecb2cb6a?s=400" 
+                alt="Francis Rubio"
+                width="400"
+                height="400">
+            <div class="byline__body">
+                <a href="/link/to/author/information/page" class="byline__name" rel="author">Francis Rubio</a>
+            </div>
+        </div>
     </div>
-</div>
-</div>
-
-<pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;div class="byline">
+    <div class="live-example__code">
+        <pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;div class="byline">
     &lt;img
         class="byline__image"
         src="https://www.gravatar.com/avatar/821268102c1c7397c7ee4fc3ecb2cb6a?s=400" 
@@ -74,25 +83,28 @@ Notice how we added the attribute `rel="author`. This is important if we want to
         &lt;a href="/link/to/author/information/page" class="byline__name" rel="author">Francis Rubio&lt;/a>
     &lt;/div>
 &lt;/div></code></pre>
+    </div>
+</article>
 
 <h2 class="weight-light h3 padding-top-l margin-top-l">Byline with designation</h2>
 
-<div class="section">
-<div class="byline">
-    <img
-        class="byline__image"
-        src="https://www.gravatar.com/avatar/821268102c1c7397c7ee4fc3ecb2cb6a?s=400" 
-        alt="Francis Rubio"
-        width="400"
-        height="400">
-    <div class="byline__body">
-        <a href="/link/to/author/information/page" class="large byline__name" rel="author">Francis Rubio</a>
-        <span class="byline__label">Web developer, designer, and educator</span>
+<article class="live-example">
+    <div class="live-example__result">
+        <div class="byline">
+            <img
+                class="byline__image"
+                src="https://www.gravatar.com/avatar/821268102c1c7397c7ee4fc3ecb2cb6a?s=400" 
+                alt="Francis Rubio"
+                width="400"
+                height="400">
+            <div class="byline__body">
+                <a href="/link/to/author/information/page" class="large byline__name" rel="author">Francis Rubio</a>
+                <span class="byline__label">Web developer, designer, and educator</span>
+            </div>
+        </div>
     </div>
-</div>
-</div>
-
-<pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;div class="byline">
+    <div class="live-example__code">
+        <pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;div class="byline">
     &lt;img
         class="byline__image"
         src="https://www.gravatar.com/avatar/821268102c1c7397c7ee4fc3ecb2cb6a?s=400" 
@@ -104,25 +116,28 @@ Notice how we added the attribute `rel="author`. This is important if we want to
         &lt;span class="byline__label">Web developer, designer, and educator&lt;/span>
     &lt;/div>
 &lt;/div></code></pre>
+    </div>
+</article>
 
 <h2 class="weight-light h3 padding-top-l margin-top-l">Byline with indicator</h2>
 
-<div class="section">
-<div class="byline">
-    <img
-        class="byline__image"
-        src="https://www.gravatar.com/avatar/821268102c1c7397c7ee4fc3ecb2cb6a?s=400" 
-        alt="Francis Rubio"
-        width="400"
-        height="400">
-    <div class="byline__body">
-        <span class="small byline__label">Written by</span>
-        <a href="/link/to/author/information/page" class="large byline__name" rel="author">Francis Rubio</a>
+<article class="live-example">
+    <div class="live-example__result">
+        <div class="byline">
+            <img
+                class="byline__image"
+                src="https://www.gravatar.com/avatar/821268102c1c7397c7ee4fc3ecb2cb6a?s=400" 
+                alt="Francis Rubio"
+                width="400"
+                height="400">
+            <div class="byline__body">
+                <span class="small byline__label">Written by</span>
+                <a href="/link/to/author/information/page" class="large byline__name" rel="author">Francis Rubio</a>
+            </div>
+        </div>
     </div>
-</div>
-</div>
-
-<pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;div class="byline">
+    <div class="live-example__code">
+        <pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;div class="byline">
     &lt;img
         class="byline__image"
         src="https://www.gravatar.com/avatar/821268102c1c7397c7ee4fc3ecb2cb6a?s=400" 
@@ -134,26 +149,29 @@ Notice how we added the attribute `rel="author`. This is important if we want to
         &lt;a href="/link/to/author/information/page" class="large byline__name" rel="author">Francis Rubio&lt;/a>
     &lt;/div>
 &lt;/div></code></pre>
+    </div>
+</article>
 
 <h2 class="weight-light h3 padding-top-l margin-top-l">Byline with indicator and designation</h2>
 
-<div class="section">
-<div class="large byline">
-    <img
-        class="byline__image"
-        src="https://www.gravatar.com/avatar/821268102c1c7397c7ee4fc3ecb2cb6a?s=400" 
-        alt="Francis Rubio"
-        width="400"
-        height="400">
-    <div class="byline__body">
-        <span class="small byline__label">Written by</span>
-        <a href="/link/to/author/information/page" class="large byline__name" rel="author">Francis Rubio</a>
-        <span class="small byline__label">Web developer, designer, and educator</span>
+<article class="live-example">
+    <div class="live-example__result">
+        <div class="large byline">
+            <img
+                class="byline__image"
+                src="https://www.gravatar.com/avatar/821268102c1c7397c7ee4fc3ecb2cb6a?s=400" 
+                alt="Francis Rubio"
+                width="400"
+                height="400">
+            <div class="byline__body">
+                <span class="small byline__label">Written by</span>
+                <a href="/link/to/author/information/page" class="large byline__name" rel="author">Francis Rubio</a>
+                <span class="small byline__label">Web developer, designer, and educator</span>
+            </div>
+        </div>
     </div>
-</div>
-</div>
-
-<pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;div class="large byline">
+    <div class="live-example__code">
+        <pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;div class="large byline">
     &lt;img
         class="byline__image"
         src="https://www.gravatar.com/avatar/821268102c1c7397c7ee4fc3ecb2cb6a?s=400" 
@@ -166,3 +184,5 @@ Notice how we added the attribute `rel="author`. This is important if we want to
         &lt;span class="small byline__label">Web developer, designer, and educator&lt;/span>
     &lt;/div>
 &lt;/div></code></pre>
+    </div>
+</article>
