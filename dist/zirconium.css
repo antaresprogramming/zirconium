@@ -3026,6 +3026,7 @@ details[open] > summary::after {
 .banner .icon {
   height: auto;
   width: 1em;
+  flex-shrink: 0;
 }
 
 .info.banner {

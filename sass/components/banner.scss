@@ -14,8 +14,9 @@
 
 .banner .feather,
 .banner .icon {
-    height: auto;
-    width : 1em;
+    height     : auto;
+    width      : 1em;
+    flex-shrink: 0;
 }
 
 .info.banner {
