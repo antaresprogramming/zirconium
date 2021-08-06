@@ -22,3 +22,7 @@
         display: none !important;
     }
 }
+
+.hide-if-empty:empty {
+    display: none;
+}
