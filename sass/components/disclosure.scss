@@ -2,6 +2,11 @@
 
 details {
 	border: 1px solid var(--bg-1);
+	background-color: var(--bg-0);
+}
+
+details[open] {
+	border: 1px solid var(--bg-2);
 }
 
 details summary {
@@ -13,6 +18,7 @@ details summary {
 }
 
 details[open] summary {
+	border-bottom: 1px solid var(--bg-2);
 	background-color: var(--bg-1);
 }
 
@@ -37,6 +43,7 @@ details[open] > summary::after {
   margin: var(--space-l);
 }
 
-.disclosure-group details + details {
-  border-top: none;
+.disclosure-group details+details:not(:last-child),
+.disclosure-group details:first-child {
+	border-bottom: none;
 }
