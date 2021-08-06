@@ -1,7 +1,7 @@
 # Zirconium
 
 [![GitHub issues](https://img.shields.io/github/issues/antaresprogramming/zirconium)](https://github.com/antaresprogramming/zirconium/issues)
-[![GitHub license](https://img.shields.io/github/license/antaresprogramming/zirconium)](https://github.com/antaresprogramming/zirconium)
+[![GitHub license](https://img.shields.io/github/license/antaresprogramming/zirconium)](https://github.com/antaresprogramming/zirconium/blob/main/LICENSE)
 [![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fantaresprogramming%2Fzirconium)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fantaresprogramming%2Fzirconium)
 
 An opinionated CSS library of components. Offical CSS written by [Francis Rubio](https://github.com/maniczirconium/maniczirconium) for [Antares Programming](https://antaresprogramming.github.io/)
