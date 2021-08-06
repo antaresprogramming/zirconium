@@ -32,7 +32,9 @@ npm start
 After the build finishes, the CSS files and source maps can be accessed inside the `dist/` folder.
 
 ## Documentation
-The docs for this stylesheet can be found in the `public` folder. An updated one is also hosted at https://antaresprogramming.github.io/zirconium/
+The docs for this stylesheet can be found in the `docs` folder. An updated one is also hosted at https://antaresprogramming.github.io/zirconium/
+
+**NOTE:** You need to have [Jekyll](https://jekyllrb.com/) installed.
 
 ```bash
 # Clone the repository
