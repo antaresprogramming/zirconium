@@ -39,8 +39,12 @@
   function initializeDropdownToggle(button) {
     let dropdown = null
 
+    console.log({
+      length: button.dataset.toggle.length,
+      isMoreThanZero: button.dataset.toggle.length > 0,
+    })
     if (
-      button.dataset.toggle != null &&
+      button.dataset.toggle.length <= 0 &&
       button.nextElementSibling.matches('.dropdown')
     ) {
       dropdown = button.nextElementSibling
@@ -48,6 +52,7 @@
       dropdown = document.getElementById(button.dataset.toggle)
     }
 
+    console.log({ button, dropdown })
     button.setAttribute('aria-expanded', false)
     dropdown.setAttribute('hidden', true)
 

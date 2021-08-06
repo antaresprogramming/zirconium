@@ -1910,7 +1910,11 @@ div.code-toolbar > .toolbar > .toolbar-item > span:active {
   opacity: 0.5;
 }
 
-.button.no-bg, div.code-toolbar > .toolbar > .toolbar-item > a.no-bg,
+.button-group.no-bg .button, .button-group.no-bg div.code-toolbar > .toolbar > .toolbar-item > a,
+.button-group.no-bg div.code-toolbar > .toolbar > .toolbar-item > button,
+.button-group.no-bg div.code-toolbar > .toolbar > .toolbar-item > span,
+.button.no-bg,
+div.code-toolbar > .toolbar > .toolbar-item > a.no-bg,
 div.code-toolbar > .toolbar > .toolbar-item > button.no-bg,
 div.code-toolbar > .toolbar > .toolbar-item > span.no-bg {
   --color: var(--default-text, inherit);
@@ -1919,7 +1923,11 @@ div.code-toolbar > .toolbar > .toolbar-item > span.no-bg {
   --hover-background-color: var(--silver-300);
 }
 
-.button.primary, div.code-toolbar > .toolbar > .toolbar-item > a.primary,
+.button-group.primary .button, .button-group.primary div.code-toolbar > .toolbar > .toolbar-item > a,
+.button-group.primary div.code-toolbar > .toolbar > .toolbar-item > button,
+.button-group.primary div.code-toolbar > .toolbar > .toolbar-item > span,
+.button.primary,
+div.code-toolbar > .toolbar > .toolbar-item > a.primary,
 div.code-toolbar > .toolbar > .toolbar-item > button.primary,
 div.code-toolbar > .toolbar > .toolbar-item > span.primary {
   --background-color: var(--bubblegum-500);
@@ -1929,7 +1937,11 @@ div.code-toolbar > .toolbar > .toolbar-item > span.primary {
   --shadow-color: var(--bubblegum-500-transparent);
 }
 
-.button.primary.no-bg, div.code-toolbar > .toolbar > .toolbar-item > a.primary.no-bg,
+.button-group.primary.no-bg .button, .button-group.primary.no-bg div.code-toolbar > .toolbar > .toolbar-item > a,
+.button-group.primary.no-bg div.code-toolbar > .toolbar > .toolbar-item > button,
+.button-group.primary.no-bg div.code-toolbar > .toolbar > .toolbar-item > span,
+.button.primary.no-bg,
+div.code-toolbar > .toolbar > .toolbar-item > a.primary.no-bg,
 div.code-toolbar > .toolbar > .toolbar-item > button.primary.no-bg,
 div.code-toolbar > .toolbar > .toolbar-item > span.primary.no-bg {
   --background-color: transparent;
@@ -1938,7 +1950,11 @@ div.code-toolbar > .toolbar > .toolbar-item > span.primary.no-bg {
   --hover-color: var(--bubblegum-900);
 }
 
-.button.accent, div.code-toolbar > .toolbar > .toolbar-item > a.accent,
+.button-group.accent .button, .button-group.accent div.code-toolbar > .toolbar > .toolbar-item > a,
+.button-group.accent div.code-toolbar > .toolbar > .toolbar-item > button,
+.button-group.accent div.code-toolbar > .toolbar > .toolbar-item > span,
+.button.accent,
+div.code-toolbar > .toolbar > .toolbar-item > a.accent,
 div.code-toolbar > .toolbar > .toolbar-item > button.accent,
 div.code-toolbar > .toolbar > .toolbar-item > span.accent {
   --background-color: var(--blueberry-500);
@@ -1949,7 +1965,11 @@ div.code-toolbar > .toolbar > .toolbar-item > span.accent {
   --shadow-color: var(--blueberry-500-transparent);
 }
 
-.button.accent.no-bg, div.code-toolbar > .toolbar > .toolbar-item > a.accent.no-bg,
+.button-group.accent.no-bg .button, .button-group.accent.no-bg div.code-toolbar > .toolbar > .toolbar-item > a,
+.button-group.accent.no-bg div.code-toolbar > .toolbar > .toolbar-item > button,
+.button-group.accent.no-bg div.code-toolbar > .toolbar > .toolbar-item > span,
+.button.accent.no-bg,
+div.code-toolbar > .toolbar > .toolbar-item > a.accent.no-bg,
 div.code-toolbar > .toolbar > .toolbar-item > button.accent.no-bg,
 div.code-toolbar > .toolbar > .toolbar-item > span.accent.no-bg {
   --background-color: transparent;
@@ -1978,7 +1998,11 @@ div.code-toolbar > .toolbar > .toolbar-item > span {
     --hover-background-color: var(--bg-2);
   }
 
-  .button.no-bg, div.code-toolbar > .toolbar > .toolbar-item > a.no-bg,
+  .button-group.no-bg .button, .button-group.no-bg div.code-toolbar > .toolbar > .toolbar-item > a,
+.button-group.no-bg div.code-toolbar > .toolbar > .toolbar-item > button,
+.button-group.no-bg div.code-toolbar > .toolbar > .toolbar-item > span,
+.button.no-bg,
+div.code-toolbar > .toolbar > .toolbar-item > a.no-bg,
 div.code-toolbar > .toolbar > .toolbar-item > button.no-bg,
 div.code-toolbar > .toolbar > .toolbar-item > span.no-bg {
     --background-color: transparent;
@@ -1986,7 +2010,11 @@ div.code-toolbar > .toolbar > .toolbar-item > span.no-bg {
     --hover-background-color: var(--bg-1);
   }
 
-  .button.primary, div.code-toolbar > .toolbar > .toolbar-item > a.primary,
+  .button-group.primary .button, .button-group.primary div.code-toolbar > .toolbar > .toolbar-item > a,
+.button-group.primary div.code-toolbar > .toolbar > .toolbar-item > button,
+.button-group.primary div.code-toolbar > .toolbar > .toolbar-item > span,
+.button.primary,
+div.code-toolbar > .toolbar > .toolbar-item > a.primary,
 div.code-toolbar > .toolbar > .toolbar-item > button.primary,
 div.code-toolbar > .toolbar > .toolbar-item > span.primary {
     --background-color: var(--bubblegum-700);
@@ -1995,14 +2023,22 @@ div.code-toolbar > .toolbar > .toolbar-item > span.primary {
     --hover-color: var(--bubblegum-100);
   }
 
-  .button.primary.no-bg, div.code-toolbar > .toolbar > .toolbar-item > a.primary.no-bg,
+  .button-group.primary.no-bg .button, .button-group.primary.no-bg div.code-toolbar > .toolbar > .toolbar-item > a,
+.button-group.primary.no-bg div.code-toolbar > .toolbar > .toolbar-item > button,
+.button-group.primary.no-bg div.code-toolbar > .toolbar > .toolbar-item > span,
+.button.primary.no-bg,
+div.code-toolbar > .toolbar > .toolbar-item > a.primary.no-bg,
 div.code-toolbar > .toolbar > .toolbar-item > button.primary.no-bg,
 div.code-toolbar > .toolbar > .toolbar-item > span.primary.no-bg {
     --background-color: transparent;
     --color: var(--bubblegum-300);
   }
 
-  .button.accent, div.code-toolbar > .toolbar > .toolbar-item > a.accent,
+  .button-group.accent .button, .button-group.accent div.code-toolbar > .toolbar > .toolbar-item > a,
+.button-group.accent div.code-toolbar > .toolbar > .toolbar-item > button,
+.button-group.accent div.code-toolbar > .toolbar > .toolbar-item > span,
+.button.accent,
+div.code-toolbar > .toolbar > .toolbar-item > a.accent,
 div.code-toolbar > .toolbar > .toolbar-item > button.accent,
 div.code-toolbar > .toolbar > .toolbar-item > span.accent {
     --background-color: var(--blueberry-700);
@@ -2011,7 +2047,11 @@ div.code-toolbar > .toolbar > .toolbar-item > span.accent {
     --hover-color: var(--blueberry-100);
   }
 
-  .button.accent.no-bg, div.code-toolbar > .toolbar > .toolbar-item > a.accent.no-bg,
+  .button-group.accent.no-bg .button, .button-group.accent.no-bg div.code-toolbar > .toolbar > .toolbar-item > a,
+.button-group.accent.no-bg div.code-toolbar > .toolbar > .toolbar-item > button,
+.button-group.accent.no-bg div.code-toolbar > .toolbar > .toolbar-item > span,
+.button.accent.no-bg,
+div.code-toolbar > .toolbar > .toolbar-item > a.accent.no-bg,
 div.code-toolbar > .toolbar > .toolbar-item > button.accent.no-bg,
 div.code-toolbar > .toolbar > .toolbar-item > span.accent.no-bg {
     --background-color: transparent;
@@ -2091,7 +2131,7 @@ div.code-toolbar > .toolbar > .toolbar-item > span.loading svg {
 }
 
 .button-group.primary {
-  --border-color: var(--bubblegum-100);
+  --border-color: var(--bubblegum-700);
 }
 
 .button-group.primary .button, .button-group.primary div.code-toolbar > .toolbar > .toolbar-item > a,
@@ -2102,7 +2142,7 @@ div.code-toolbar > .toolbar > .toolbar-item > span.loading svg {
 }
 
 .button-group.accent {
-  --border-color: var(--blueberry-100);
+  --border-color: var(--blueberry-700);
 }
 
 .button-group.accent .button, .button-group.accent div.code-toolbar > .toolbar > .toolbar-item > a,
@@ -2125,11 +2165,11 @@ div.code-toolbar > .toolbar > .toolbar-item > span.loading svg {
 
 @media (prefers-color-scheme: dark) {
   .button-group.primary {
-    --border-color: var(--bubblegum-900);
+    --border-color: var(--bubblegum-300);
   }
 
   .button-group.accent {
-    --border-color: var(--blueberry-900);
+    --border-color: var(--blueberry-9300);
   }
 
   .button-group.primary .button, .button-group.primary div.code-toolbar > .toolbar > .toolbar-item > a,
@@ -3304,7 +3344,7 @@ details[open] > summary::after {
 }
 
 .no-border {
-  border: none;
+  border: none !important;
 }
 
 .level-0-border {

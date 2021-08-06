@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% assign dropdownCounter = 0 %}
 <main class="section" id="main">
   <div class="grid" style="--space: var(--space-m); --padding: var(--space)">
     <h1>{{ site.title }} <small class="warning badge root-size vertical-align-middle">Alpha</small></h1>
@@ -12,7 +13,11 @@ layout: default
     </p>
     <div class="grid center-justified padding-m">
       <div class="flex">
-        {% include components/download.html modifier="primary padding-l padding-inline-xl" %}
+        {% include components/download.html 
+          linkModifier="padding-l padding-inline-xl"
+          groupModifier="bordered primary"
+          separatedDropdown=true
+        %}
         <a href="https://github.com/antaresprogramming/zirconium" class="padding-l padding-inline-xl bordered button">
           {% include feathericons/github.svg %}
           Help us at Github

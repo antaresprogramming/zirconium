@@ -24,7 +24,7 @@
 }
 
 .button-group.primary {
-    --border-color: var(--bubblegum-100);
+    --border-color: var(--bubblegum-700);
 }
 
 .button-group.primary .button {
@@ -33,7 +33,7 @@
 }
 
 .button-group.accent {
-    --border-color: var(--blueberry-100);
+    --border-color: var(--blueberry-700);
 }
 
 .button-group.accent .button {
@@ -48,11 +48,11 @@
 
 @media (prefers-color-scheme: dark) {
     .button-group.primary {
-        --border-color: var(--bubblegum-900);
+        --border-color: var(--bubblegum-300);
     }
 
     .button-group.accent {
-        --border-color: var(--blueberry-900);
+        --border-color: var(--blueberry-9300);
     }
 
     .button-group.primary .button {

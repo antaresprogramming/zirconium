@@ -1,9 +1,35 @@
+{% assign id = site.time | date: "%N" %}
+{% assign separatedDropdown = include.separatedDropdown %}
+
 {% if include.hasContainer == nil or include.hasContainer %}<div class="relative {{ include.containerModifier }}">{% endif %}
-<button class="button {{ include.modifier }}" data-toggle="dropdown-1">
+{%if separatedDropdown %}
+<div class="button-group {{ include.groupModifier }}">
+<a href="https://github.com/antaresprogramming/zirconium/releases" class="primary button {{ include.linkModifier }} {{ include.modifier }}">
+Download v0.0.2-alpha
+</a>
+<div class="">
+    <button class="no-border button {{ include.dropdownButtonModifier }} {{ include.modifier }}" data-toggle style="height: 100%; {{ include.dropdownButtonModifier }}">
+        <div class="visually-hidden">Dropdown</div>
+        {% include feathericons/chevron-down.svg %}
+    </button>
+    <div class="absolute bordered margin-top-s level-2 raised dropdown {{ include.dropdownModifier }}" style="right: 0; border-color: var(--bg-2); --space: var(--space-s) {{ include.dropdownStyle }}">
+        <a href="https://github.com/antaresprogramming/zirconium/releases/download/v0.0.2-alpha/zirconium.zip" class="nav-item" download>
+            {% include feathericons/package.svg %}
+            <span class="nav-item__main"> zirconium.zip (47.7 KB) </span>
+        </a>
+        <a href="https://github.com/antaresprogramming/zirconium/releases/download/v0.0.2-alpha/zirconium.tar.gz" class="nav-item" download>
+            {% include feathericons/package.svg %}
+            <span class="nav-item__main"> zirconium.tar.gz file (23.9 KB) </span>
+        </a>
+    </div>
+</div>
+</div>
+{% else %}
+<button class="button {{ include.modifier }}" data-toggle>
     Download v0.0.2-alpha
 {% include feathericons/chevron-down.svg %}
 </button>
-<div class="absolute margin-top-s level-2 raised dropdown {{ include.dropdownModifier }}" id="dropdown-1">
+<div class="absolute bordered margin-top-s level-2 raised dropdown {{ include.dropdownModifier }}">
     <a href="https://github.com/antaresprogramming/zirconium/releases/download/v0.0.2-alpha/zirconium.zip" class="nav-item" download>
         {% include feathericons/package.svg %}
         <span class="nav-item__main"> zirconium.zip (47.7 KB) </span>
@@ -13,4 +39,5 @@
         <span class="nav-item__main"> zirconium.tar.gz file (23.9 KB) </span>
     </a>
 </div>
+{% endif %}
 {% if include.hasContainer == nil or include.hasContainer %}</div>{% endif %}
