@@ -1,9 +1,10 @@
 .code-snippet {
     background-color  : var(--bg-1);
     border-radius     : var(--border-radius);
+    border            : 1px solid var(--bg-2);
     display           : grid;
     font-size         : 1rem;
-    gap               : var(--space-l);
+    gap               : var(--space-s);
     grid-template-rows: auto 1fr;
     max-width         : 90vw;
     overflow          : auto;
@@ -49,7 +50,7 @@
 }
 
 .code-snippet .line-highlight {
-    margin-top: calc(var(--space-m) * 4.9);
+    margin-top: calc(var(--space-m) * 4.3);
     width     : 100% !important;
 }
 

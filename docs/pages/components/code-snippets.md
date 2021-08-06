@@ -14,22 +14,38 @@ card_image: "Code Snippets.png"
 needs_js: true
 ---
 
-Zirconium code snippets use [rainbow.js](https://craig.is/making/rainbows) to apply syntax highlighting to raw code snippets. The styling, however, is provided by the Zirconium stylesheet.
+Zirconium code snippets use [prism.js](https://prismjs.com/index.html) to apply syntax highlighting to raw code snippets. The styling, however, is provided by the Zirconium stylesheet.
 
 {% include components/side-note.html
-    content='Make sure you include the <code>rainbow.js</code> script in your markup so syntax highlighting works.'
+    content='Make sure you include the <code>prism.js</code> script in your markup so syntax highlighting works.'
     type="warning"
 %}
 
-<pre class="code-snippet" data-prog-lang="html"><code data-language="html">&lt;pre class="code-snippet" data-prog-lang="html">&lt;code data-language="html">
-    &hellip;
+<pre class="code-snippet" data-prog-lang="html"><code>&lt;pre class="code-snippet" data-prog-lang="html">
+    &lt;code>&hellip;&lt;/code>
+&lt;/pre></code></pre>
+
+The `data-prog-lang` indicates the programming language of the code snippet. Under the hood, we are using [Prism.js](https://prismjs.com/index.html) for syntax highlighting, plus a few plugins. Prism.js needs to see the `.language-*` class for it to work. Zirconium.js handles this for you, and adds a `.language-*` class depending on the value of the `data-prog-lang` attribute.
+
+<h2 class="weight-light h3">Copy to Clipboard</h2>
+Using the [Copy to Clipboard plugin](https://prismjs.com/plugins/copy-to-clipboard/), Prism.js automatically adds a <i>Copy to Clipboard</i> button that appears on hover. If you want this to work, be sure to add the Copy to Clipboard plugin, as well as the [Toolbar plugin](https://prismjs.com/plugins/toolbar/) when [downloading Prism.js](https://prismjs.com/download.html).
+
+<h2 class="weight-light h3">Line Highlights</h2>
+Using the [Line Highlight plugin](https://prismjs.com/plugins/line-highlight/), we can indicate lines that we want to highlight in the code.
+
+Use the `data-line` on the `.code-snippet` element with the line numbers, or ranges of line numbers you want to highlight.
+
+<div class="live-example">
+    <div class="live-example__result">
+        <pre class="code-snippet" data-prog-lang="html" data-line="1,3"><code>&lt;div class="button-group">
+    &lt;button class="button">Button 1&lt;/button>
+    &lt;button class="button">Button 2&lt;/button>
+    &lt;button class="button">Button 3&lt;/button>
+&lt;/div></code></pre>
+    </div>
+    <div class="live-example__code">
+        <pre class="code-snippet" data-prog-lang="html"><code>&lt;pre class="code-snippet" data-prog-lang="html" data-line="1,3">&lt;code>
+&hellip
 &lt;/code>&lt;/pre></code></pre>
-
-In this code, the attributes `data-prog-lang` and `data-lang` are both important. They both specify the programming language of the code snippet. But they have different purposes.
-
-<dl>
-    <dt><code>data-prog-lang</code></dt>
-    <dd>Specifies the programming language that appears in the header of the code snippet. Put this in your <code>&lt;pre></code> tag.</dd>
-    <dt><code>data-lang</code></dt>
-    <dd>Specifies the programming language that rainbow.js will use to syntax highlight the code. Put this in your <code>&lt;code></code> tag.</dd>
-</dl>
+    </div>
+</div>
