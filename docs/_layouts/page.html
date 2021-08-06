@@ -12,9 +12,9 @@
     <a id='skip-nav' class='h4 skip-link' href='#main'>
       Skip to Content
     </a>
-    {% if site.not_ready == nil or site.not_ready %}
+    {% unless site.ready %}
     {% include components/banner.html content="This is not yet ready for production. Help us at <a href='https://github.com/antaresprogramming/zirconium'>Github</a>." type="warning" modifier="full-width" %}
-    {% endif %}
+    {% endunless %}
     {% include components/navbar.html %}
     {% include components/menu.html %}
     {% assign author = site.authors[page.author] %}

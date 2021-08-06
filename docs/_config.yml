@@ -29,7 +29,7 @@ twitter_username: antaresphdev
 github_username:  antaresprogramming
 
 # Is this project ready yet?
-not_ready: false
+ready: true
 
 authors:
   teacherbuknoy:
