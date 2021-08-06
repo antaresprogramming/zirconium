@@ -30,6 +30,12 @@
       if (e.keyCode === ESCAPE_KEY || e.keyCode === ENTER_KEY)
         closeDropdown(button, dropdown)
     })
+
+    document.body.addEventListener('click', (e) => {
+      if (e.target != dropdown) {
+        closeDropdown(button, dropdown)
+      }
+    })
   }
 
   /**
@@ -39,10 +45,6 @@
   function initializeDropdownToggle(button) {
     let dropdown = null
 
-    console.log({
-      length: button.dataset.toggle.length,
-      isMoreThanZero: button.dataset.toggle.length > 0,
-    })
     if (
       button.dataset.toggle.length <= 0 &&
       button.nextElementSibling.matches('.dropdown')
@@ -52,7 +54,19 @@
       dropdown = document.getElementById(button.dataset.toggle)
     }
 
-    console.log({ button, dropdown })
+    document.addEventListener('click', (e) => {
+      let target = e.target
+      do {
+        if (target === dropdown || target === button) {
+          return
+        }
+
+        target = target.parentNode
+      } while (target)
+
+      closeDropdown(button, dropdown)
+    })
+
     button.setAttribute('aria-expanded', false)
     dropdown.setAttribute('hidden', true)
 
@@ -73,7 +87,6 @@
       if (e.keyCode === ESCAPE_KEY || e.keyCode === ENTER_KEY) {
         closeDropdown(button, dropdown)
       } else if (e.keyCode === DOWN_ARROW) {
-        console.log(e.target)
         if (e.target.matches(':last-child')) {
           closeDropdown(button, dropdown)
         } else if (isFocusable(e.target.nextElementSibling)) {
@@ -210,11 +223,6 @@
 
       previousScrollPosition = currentScrolledPosition
 
-      console.log({
-        currentScrolledPosition,
-        previousScrollPosition,
-        scrollingDown,
-      })
       return scrollingDown
     }
 
