@@ -28,6 +28,9 @@ url: "https://antaresprogramming.github.io"
 twitter_username: antaresphdev
 github_username:  antaresprogramming
 
+# Is this project ready yet?
+not_ready: false
+
 authors:
   teacherbuknoy:
     name: Francis Rubio

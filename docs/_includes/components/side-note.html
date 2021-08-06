@@ -1,6 +1,6 @@
 {% assign message = include.content %}
 {% assign type = include.type %}
-{% assign modifiers = include.modifiers %}
+{% assign modifiers = include.modifier %}
 
 {% if type == "success" %}
     {% assign icon = "check-circle" %}
@@ -12,7 +12,7 @@
     {% assign icon="x-octagon" %}
 {% endif %}
 
-<aside class="{{ type }} side-note">
+<aside class="{{ type }} side-note {{ modifiers }}">
     {% include components/icon.html icon=icon %}
     <p>{{ message }}</p>
 </aside>

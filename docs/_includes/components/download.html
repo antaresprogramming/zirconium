@@ -1,0 +1,16 @@
+{% if include.hasContainer == nil or include.hasContainer %}<div class="relative {{ include.containerModifier }}">{% endif %}
+<button class="button {{ include.modifier }}" data-toggle="dropdown-1">
+    Download v0.0.2-alpha
+{% include feathericons/chevron-down.svg %}
+</button>
+<div class="absolute margin-top-s level-2 raised dropdown {{ include.dropdownModifier }}" id="dropdown-1">
+    <a href="https://github.com/antaresprogramming/zirconium/releases/download/v0.0.2-alpha/zirconium.zip" class="nav-item" download>
+        {% include feathericons/package.svg %}
+        <span class="nav-item__main"> zirconium.zip (47.7 KB) </span>
+    </a>
+    <a href="https://github.com/antaresprogramming/zirconium/releases/download/v0.0.2-alpha/zirconium.tar.gz" class="nav-item" download>
+        {% include feathericons/package.svg %}
+        <span class="nav-item__main"> zirconium.tar.gz file (23.9 KB) </span>
+    </a>
+</div>
+{% if include.hasContainer == nil or include.hasContainer %}</div>{% endif %}

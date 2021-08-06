@@ -9,7 +9,13 @@
     max-width         : 90vw;
     overflow          : auto;
     padding           : var(--space-s);
-    scrollbar-color   : var(--bg-3) transparent;
+    scrollbar-color   : transparent transparent;
+}
+
+.code-snippet:hover,
+.code-snippet:focus,
+.code-snippet:focus-visible {
+    scrollbar-color: var(--bg-3) transparent;
 }
 
 .code-snippet[data-prog-lang]::before {

@@ -69,3 +69,11 @@
 .text-start {
     text-align: start;
 }
+
+$alignments: baseline, sub, super, text-top, text-bottom, middle, top, bottom, unset;
+
+@each $alignment in $alignments {
+    .vertical-align-#{$alignment} {
+        vertical-align: $alignment;
+    }
+}

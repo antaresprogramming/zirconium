@@ -65,7 +65,6 @@ pre[class*="language-"] {
 
 .token.comment,
 .token.prolog,
-.token.doctype,
 .token.cdata {
     color: var(--slate-300);
 }
@@ -88,6 +87,7 @@ pre[class*="language-"] {
     color: var(--strawberry-700);
 }
 
+.token.doctype,
 .token.color,
 .token.boolean,
 .token.number,
@@ -145,6 +145,7 @@ pre[class*="language-"] {
         color: var(--strawberry-300);
     }
 
+    .token.doctype,
     .token.color,
     .token.boolean,
     .token.number,

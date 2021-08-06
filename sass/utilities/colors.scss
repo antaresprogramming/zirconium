@@ -14,7 +14,7 @@
     color: var(--non-essential-text);
 }
 
-.level-0-bg {
+/* .level-0-bg {
     background-color: var(--bg-0);
 }
 
@@ -28,4 +28,11 @@
 
 .level-3-bg {
     background-color: var(--bg-3);
+} */
+
+@for $level from 0 to 3 {
+    .bg-#{$level},
+    .level-#{$level}-bg {
+        background-color: var(--bg-#{$level});
+    }
 }

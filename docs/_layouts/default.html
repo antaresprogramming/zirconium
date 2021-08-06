@@ -5,10 +5,13 @@
     <a id='skip-nav' class='h4 skip-link' href='#main'>
       Skip to Content
     </a>
-      {% include components/navbar.html %}
-      {% include components/menu.html %}
-      {{ content }}
-      {% include scripts.html syntax_highlighting=page.syntax_highlighting %}
-      {% include footer.html %}
+    {% if site.not_ready == nil or site.not_ready %}
+    {% include components/banner.html content="This is not yet ready for production. Help us at <a href='https://github.com/antaresprogramming/zirconium'>Github</a>." type="warning" modifier="full-width" %}
+    {% endif %}
+    {% include components/navbar.html %}
+    {% include components/menu.html %}
+    {{ content }}
+    {% include scripts.html syntax_highlighting=page.syntax_highlighting %}
+    {% include footer.html %}
   </body>
 </html>

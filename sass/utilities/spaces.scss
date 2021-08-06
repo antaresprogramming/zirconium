@@ -2,7 +2,7 @@
     &-none {
         padding: 0;
 
-        & > *:focus-visible {
+        &>*:focus-visible {
             /*
              * Make focus ring inset because there's
              * no space around it and the outline disappears
@@ -137,6 +137,84 @@
 
         &-xl {
             padding-top: calc(var(--space-l) * 2);
+        }
+    }
+
+    &-block {
+        &-none {
+            padding-top   : 0;
+            padding-bottom: 0;
+            padding-block : 0;
+        }
+
+        &-xs {
+            padding-top   : var(--space-xs);
+            padding-bottom: var(--space-xs);
+            padding-block : var(--space-xs);
+        }
+
+        &,
+        &-s {
+            padding-top   : var(--space-s);
+            padding-bottom: var(--space-s);
+            padding-block : var(--space-s);
+        }
+
+        &-m {
+            padding-top   : var(--space-m);
+            padding-bottom: var(--space-m);
+            padding-block : var(--space-m);
+        }
+
+        &-l {
+            padding-top   : var(--space-l);
+            padding-bottom: var(--space-l);
+            padding-block : var(--space-l);
+        }
+
+        &-xl {
+            padding-top   : calc(var(--space-l) * 2);
+            padding-bottom: calc(var(--space-l) * 2);
+            padding-block : calc(var(--space-l) * 2);
+        }
+    }
+
+    &-inline {
+        &-none {
+            padding-left  : 0;
+            padding-right : 0;
+            padding-inline: 0;
+        }
+
+        &-xs {
+            padding-left  : var(--space-xs);
+            padding-right : var(--space-xs);
+            padding-inline: var(--space-xs);
+        }
+
+        &,
+        &-s {
+            padding-left  : var(--space-s);
+            padding-right : var(--space-s);
+            padding-inline: var(--space-s);
+        }
+
+        &-m {
+            padding-left  : var(--space-m);
+            padding-right : var(--space-m);
+            padding-inline: var(--space-m);
+        }
+
+        &-l {
+            padding-left  : var(--space-l);
+            padding-right : var(--space-l);
+            padding-inline: var(--space-l);
+        }
+
+        &-xl {
+            padding-left  : calc(var(--space-l) * 2);
+            padding-right : calc(var(--space-l) * 2);
+            padding-inline: calc(var(--space-l) * 2);
         }
     }
 }

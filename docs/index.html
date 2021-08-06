@@ -3,26 +3,58 @@ layout: default
 ---
 <main class="section" id="main">
   <div class="grid" style="--space: var(--space-m); --padding: var(--space)">
-    <h1>{{ site.title }}</h1>
+    <h1>{{ site.title }} <small class="warning badge root-size vertical-align-middle">Alpha</small></h1>
     <p class="post__subtitle">
       An opinionated CSS library of components. Offical CSS written by
       <a href="https://github.com/maniczirconium/">Francis Rubio</a>
       for
       <a href="https://antaresprogramming.github.io/">Antares Programming</a>.
     </p>
-    {% include components/breadcrumb.html %}
+    <div class="grid center-justified padding-m">
+      <div class="flex">
+        {% include components/download.html modifier="primary padding-l padding-inline-xl" %}
+        <a href="https://github.com/antaresprogramming/zirconium" class="padding-l padding-inline-xl bordered button">
+          {% include feathericons/github.svg %}
+          Help us at Github
+        </a>
+      </div>
+    </div>
   </div>
-  <div class="section" style="--space: 0">
-    <h2>Goals</h2>
-    <ul class="sans contents">
-      <li>Standardize components for the website</li>
-      <li>Support dark mode from the get-go</li>
+  <div class="section">
+    <h2 class="margin-bottom-none">How to use</h2>
+    {% include components/side-note.html content="This is not yet ready for production" type="warning" modifier="padding-none margin-none" %}
+    <ol>
       <li>
-        Promote accessibility by using HTML structure as basis for styling in
-        some components
+        <h3 class="h5">Download the Github release</h3>
+        <p>You can download the <code>.zip</code> or <code>.tar.gz</code> file from Github.</p>
+        {% include components/download.html modifier="primary" %}
       </li>
-      <li>Include minimal JavaScript (this is for a blog, not a website)</li>
-    </ul>
+      <li>
+        <h3 class="h5">Add the HTML5 Doctype</h3>
+        <p>This tells browsers that we are using the latest web technologies.</p>
+        <pre class="code-snippet" data-prog-lang="html"><code>&lt;!DOCTYPE html></code></pre>
+      </li>
+      <li>
+        <h3 class="h5">Add the viewport meta tag</h3>
+        <p>This tells browsers that we want our page to be responsive.</p>
+        <pre class="code-snippet" data-prog-lang="html"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"></code></pre>
+      </li>
+      <li>
+        <h3 class="h5">Include the stylesheet</h3>
+        <p>Put this inside your <code>&lt;head></code> tag.</p>
+        <pre class="code-snippet" data-prog-lang="html"><code>&lt;link rel="stylesheet" href="zirconium.min.css"/></code></pre>
+      </li>
+      <li>
+        <h3 class="h5">Include the script</h3>
+        <p>Put this toward the end of your <code>&lt;body></code> tag.</p>
+        <pre class="code-snippet" data-prog-lang="html"><code>&lt;script src="zirconium.js">&lt;/script></code></pre>
+      </li>
+      <li>
+        <h3 class="h5">Include the <a href="https://prismjs.com/index.html">Prism.js</a></h3>
+        <p>This is for syntax highlighting in code snippets. There's more information in the <a href="{{ 'components/code-snippet' | relative_url }}">Code Snippets</a> documentation.</p>
+        <pre class="code-snippet" data-prog-lang="html"><code>&lt;script src="prism.js">&lt;/script></code></pre>
+      </li>
+    </ol>
   </div>
   <div class="section">
     {% include components/components-grid.html subdirectory="01. Overview" layout="responsive-flex" %}

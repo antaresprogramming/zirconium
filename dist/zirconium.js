@@ -17,7 +17,7 @@
   /**
    * Initializes a dropdown inside a navigation bar
    * @param {HTMLButtonElement} button the dropdown toggle
-   * @deprecated  
+   * @deprecated
    */
   function initializeMenuToggle(button) {
     const dropdown = button.nextElementSibling
@@ -88,8 +88,11 @@
       }
     })
 
-    dropdown.querySelectorAll('button, a[href]')
-      .forEach(item => item.addEventListener('click', e => closeDropdown(button, dropdown)))
+    dropdown
+      .querySelectorAll('button, a[href]')
+      .forEach((item) =>
+        item.addEventListener('click', (e) => closeDropdown(button, dropdown))
+      )
   }
 
   /**
@@ -175,6 +178,72 @@
       if (parent != null) {
         parent.remove()
       }
+    })
+  })
+
+  // Add classes to pre tags
+  document.querySelectorAll('[data-prog-lang]').forEach((pre) => {
+    const language = pre.dataset.progLang
+    pre.classList.add('language-' + language)
+  })
+
+  // STICKY NAVBARS
+  const navigationBars = document.querySelectorAll('.navbar[data-sticky]')
+  navigationBars.forEach((nav) => {
+    let previousScrollPosition = +nav.dataset.sticky || 0
+    let throttleWait
+
+    const isScrollingDown = () => {
+      let currentScrolledPosition = window.scrollY || window.pageYOffset
+      let scrollingDown
+
+      if (currentScrolledPosition > previousScrollPosition) {
+        scrollingDown = true
+      } else {
+        scrollingDown = false
+      }
+
+      previousScrollPosition = currentScrolledPosition
+
+      console.log({
+        currentScrolledPosition,
+        previousScrollPosition,
+        scrollingDown,
+      })
+      return scrollingDown
+    }
+
+    const handleNavScroll = () => {
+      if (isScrollingDown() && !nav.contains(document.activeElement)) {
+        nav.classList.add('scroll-down')
+        nav.classList.remove('scroll-up')
+      } else {
+        nav.classList.remove('scroll-down')
+        nav.classList.add('scroll-up')
+      }
+
+      let currentScrolledPosition = window.scrollY || window.pageYOffset
+      if (currentScrolledPosition > 0) {
+        nav.classList.add('level-2', 'raised', 'fixed')
+      } else {
+        nav.classList.remove('level-2', 'raised', 'fixed')
+      }
+    }
+
+    const throttle = (callback, time) => {
+      if (throttleWait) return
+
+      throttleWait = true
+
+      setTimeout(() => {
+        callback()
+
+        throttleWait = false
+      }, time)
+    }
+
+    window.addEventListener('scroll', () => {
+      throttle(handleNavScroll, 0)
     })
   })
 })()

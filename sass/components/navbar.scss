@@ -1,9 +1,11 @@
 .navbar {
     align-items     : center;
-    background-color: var(--bg-100);
+    background-color: var(--bg-0);
     display         : flex;
     position        : relative;
     width           : 100%;
+    transition      : top 300ms;
+    z-index: var(--elevate-navbar);
 
     --space: var(--space-m);
 }
@@ -22,20 +24,12 @@
     .blurred.navbar {
         backdrop-filter : saturate(180%) blur(20px);
         background-color: rgba(255, 255, 255, 0.8);
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    @supports (backdrop-filter: blur(72px)) {
-        .blurred.navbar {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
+        background-color: hsla(var(--bg-0-raw) / 80%)
     }
 }
 
 .navbar ul {
     display   : flex;
-    flex      : 1;
     list-style: none;
     margin    : 0;
     padding   : var(--space, --space-s);
@@ -43,6 +37,8 @@
 
 .navbar .end-aligned {
     justify-content: flex-end;
+    margin-left: auto;
+    margin-inline-start: auto;
 }
 
 .navbar .dropdown {
@@ -65,19 +61,28 @@
 
 @media (min-width: 960px) {
     .navbar .dropdown {
-        background-color: transparent;
-        box-shadow      : none;
-        flex-direction  : row;
-        padding         : var(--space);
-        position        : static;
-    }
-
-    .navbar [data-toggle],
-    .navbar [data-navmenu] {
-        display: none;
+        background-color: var(--bg-0);
     }
 
     .navbar.pinned {
         --space: var(--space-xs)
     }
+}
+
+.navbar:focus-within,
+.navbar.scroll-up {
+    top: 0;
+}
+
+.navbar.scroll-down {
+    top: -100%;
+}
+
+.navbar ul {
+    gap       : var(--flex-gap, 1em);
+    transition: padding 300ms;
+}
+
+.navbar.fixed {
+    border-bottom: 1px solid var(--bg-2);
 }

@@ -1,4 +1,4 @@
-<nav class="navbar">
+<nav class="blurred navbar padding-right" data-sticky="30">
   <ul>
     <li>
       <a href="{{ site.url | append: site.baseurl }}" class="nav-item">
@@ -318,7 +318,7 @@
             </clipPath>
           </defs>
         </svg>
-        <span class="nav-item__main"
+        <span class="nav-item__main hide-on-mobile"
           >Zirconium
           <small style="letter-spacing: 1px"
             >by Antares Programming</small
@@ -392,7 +392,7 @@
       </a>
     </li>
   </ul>
-  <button class="nav-item" data-toggle aria-expanded="false">
+  <button class="nav-item hide-on-larger-than-mobile end-aligned" data-toggle aria-expanded="false">
     <svg
       class="nav-item__main"
       xmlns="http://www.w3.org/2000/svg"
@@ -477,4 +477,8 @@
       </a>
     </li>
   </ul>
+  {% include components/download.html
+    modifier="padding-m hide-on-mobile primary"
+    dropdownModifier="margin-right-xs"
+    containerModifier="static" %}
 </nav>
