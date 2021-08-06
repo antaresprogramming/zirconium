@@ -3,7 +3,11 @@
     display    : flex;
     flex-wrap  : wrap;
     align-items: center;
-    gap        : 1em;
+    gap        : var(--flex-gap, 1em);
+}
+
+.vertical {
+    flex-direction: column;
 }
 
 .grid {
