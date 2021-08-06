@@ -83,3 +83,36 @@
 .spaced {
     justify-content: space-between;
 }
+
+@media screen and (min-width: 960px) {
+    .three-pane-grid {
+        display              : grid;
+        grid-template-columns: 1fr minmax(65ch, 100%) 1fr;
+    }
+
+    .three-pane-grid .full-width {
+        grid-column: 1/-1;
+        width      : 100%;
+    }
+
+
+    .three-pane-grid .pane__left {
+        grid-column: 1;
+    }
+
+    .three-pane-grid .pane__center {
+        grid-column: 2;
+    }
+
+    .three-pane-grid .pane__right {
+        grid-column: 3;
+    }
+
+    .three-pane-grid .pane__left-center {
+        grid-column: 1/3;
+    }
+
+    .three-pane-grid .pane__right-center {
+        grid-column: 2/4;
+    }
+}
