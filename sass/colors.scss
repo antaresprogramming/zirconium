@@ -141,11 +141,11 @@
     --lime-700: hsl(var(--lime-700-raw));
     --lime-900: hsl(var(--lime-900-raw));
 
-    --strawberry-100: hsl(var(--strawberry-100-raw) 68% 90%);
-    --strawberry-300: hsl(var(--strawberry-300-raw) 68% 70%);
-    --strawberry-500: hsl(var(--strawberry-500-raw) 68% 46%);
-    --strawberry-700: hsl(var(--strawberry-700-raw) 68% 36%);
-    --strawberry-900: hsl(var(--strawberry-900-raw) 68% 16%);
+    --strawberry-100: hsl(var(--strawberry-100-raw));
+    --strawberry-300: hsl(var(--strawberry-300-raw));
+    --strawberry-500: hsl(var(--strawberry-500-raw));
+    --strawberry-700: hsl(var(--strawberry-700-raw));
+    --strawberry-900: hsl(var(--strawberry-900-raw));
 
     --orange-100: hsl(var(--orange-100-raw));
     --orange-300: hsl(var(--orange-300-raw));
@@ -165,6 +165,11 @@
     --bg-1: var(--black-500);
     --bg-2: var(--black-300);
     --bg-3: var(--black-100);
+
+    --bg-0-raw: var(--black-700-raw);
+    --bg-1-raw: var(--black-500-raw);
+    --bg-2-raw: var(--black-300-raw);
+    --bg-3-raw: var(--black-100-raw);
 
     --contrast-text     : var(--silver-100);
     --default-text      : var(--silver-300);
