@@ -16,7 +16,6 @@
     text-transform  : uppercase;
 }
 .nav-item.selected,
-.nav-item:focus,
 .nav-item:hover {
     background-color: var(--bg-1);
     text-decoration: none;
@@ -26,8 +25,8 @@
     background-color: var(--bg-2);
 }
 
-.nav-item:focus {
-    box-shadow: 0 0 0 3px var(--bg-500);
+.nav-item:focus-visible {
+    box-shadow: 0 0 0 3px var(--bg-1);
     outline   : none;
 }
 
