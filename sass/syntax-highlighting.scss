@@ -47,7 +47,6 @@ code[class*="language-"] ::selection {
 
 /* Code blocks */
 pre[class*="language-"] {
-    padding : 1em;
     margin  : .5em 0;
     overflow: auto;
 }
@@ -122,6 +121,53 @@ pre[class*="language-"] {
 .token.important,
 .token.variable {
     color: var(--banana-900);
+}
+
+@media (prefers-color-scheme: dark) {
+
+    .token.comment,
+    .token.prolog,
+    .token.doctype,
+    .token.cdata {
+        color: var(--slate-700);
+    }
+
+    .token.property,
+    .token.tag,
+    .token.symbol,
+    .token.deleted {
+        color: var(--bubblegum-300);
+    }
+
+    .token.color,
+    .token.boolean,
+    .token.number,
+    .token.constant {
+        color: var(--blueberry-300);
+    }
+
+    .token.selector,
+    .token.attr-name,
+    .token.string,
+    .token.char,
+    .token.builtin,
+    .token.inserted {
+        color: var(--mint-300);
+    }
+
+    .token.atrule,
+    .token.attr-value,
+    .token.keyword,
+    .token.function,
+    .token.class-name {
+        color: var(--orange-300);
+    }
+
+    .token.regex,
+    .token.important,
+    .token.variable {
+        color: var(--banana-300);
+    }
 }
 
 .token.important,
