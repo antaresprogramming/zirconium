@@ -434,3 +434,42 @@
         column-gap: calc(var(--space-l) * 2);
     }
 }
+
+$directions: top, bottom, left, right;
+$sizes: xs, s, m, l, xl, xxl;
+
+.item-padding {
+    @each $direction in $directions {
+        &-#{$direction} {
+            @each $size in $sizes {
+                &-#{$size} > * {
+                    padding-#{$direction}: var(--space-#{$size});
+                }
+            }
+        }
+    }
+}
+
+.item-margin {
+    @each $direction in $directions {
+        &-#{$direction} {
+            @each $size in $sizes {
+                &-#{$size}>* {
+                    margin-#{$direction}: var(--space-#{$size});
+
+                    @if $direction == top {
+                        &:first-child {
+                            margin-#{$direction}: 0;
+                        }
+                    }
+
+                    @if $direction == bottom {
+                        &:last-child {
+                            margin-#{$direction}: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
