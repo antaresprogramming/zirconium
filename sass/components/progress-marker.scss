@@ -1,0 +1,52 @@
+.progress-marker {
+    list-style   : none;
+    counter-reset: progress-marker;
+
+    --progress-color: var(--bg-3);
+}
+
+.progress-marker li {
+    align-items      : center;
+    counter-increment: progress-marker;
+    display          : flex;
+    gap              : 1ch;
+    position         : relative;
+}
+
+.progress-marker li:not(:last-child) {
+    padding-bottom: var(--space-l);
+}
+
+.progress-marker li::before {
+    --marker-size   : 5ch;
+    align-items     : center;
+    background-color: var(--bg-0);
+    border          : 0.5ch solid var(--progress-color);
+    border-radius   : 100%;
+    content         : counter(progress-marker);
+    display         : flex;
+    flex            : 0 0 var(--marker-size);
+    font-family     : var(--font-sans);
+    height          : var(--marker-size);
+    justify-content : center;
+    width           : var(--marker-size);
+    z-index         : 1;
+}
+
+.progress-marker li::after {
+    content         : "";
+    height          : calc(100% + var(--space-s));
+    left            : calc(2.5ch - 0.2ch);
+    position        : absolute;
+    top             : 50%;
+    width           : 0.5ch;
+    background-color: var(--progress-color);
+}
+
+.progress-marker li:last-child::after {
+    content: none;
+}
+
+.progress-marker li.enabled {
+    --progress-color: var(--banana-500);
+}
