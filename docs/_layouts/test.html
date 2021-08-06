@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    <a id='skip-nav' class='h4 skip-link' href='#main'>
+      Skip to Content
+    </a>
+    {% include components/banner.html content="This is not yet ready for production. Help us at <a href='https://github.com/antaresprogramming/zirconium'>Github</a>." type="warning" modifier="full-width" %}
+    {% include components/navbar.html %}
+    {{ content }}
+    {% include scripts.html syntax_highlighting=page.syntax_highlighting %}
+    {% include footer.html %}
+  </body>
+</html>
