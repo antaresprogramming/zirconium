@@ -1,7 +1,16 @@
-{% if page.title %} {% assign title = page.title %} {% else %} {% assign title =
-site.title %} {% endif %} {% if page.description %} {% assign description =
-page.description %} {% else %} {% assign description = site.description %} {%
-endif %}
+{% if page.title %}
+{% assign title = page.title %}
+{% else %}
+{% assign title = site.title %}
+{% endif %}
+
+{% if page.description %}
+{% assign description = page.description %}
+{% else %}
+{% assign description = site.description %}
+{% endif %}
+
+{% assign cover = site.cover | prepend: '/assets/images/'  %}
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -21,7 +30,7 @@ endif %}
   <meta property="og:description" content="{{ description }}" />
   <meta
     property="og:image"
-    content="https://antaresprogramming.github.io/zirconium/images/seo-cover.png"
+    content="{{ cover | absolute_url }}"
   />
 
   <!-- Twitter -->
@@ -34,7 +43,7 @@ endif %}
   <meta property="twitter:description" content="{{ description }}" />
   <meta
     property="twitter:image"
-    content="https://antaresprogramming.github.io/zirconium/images/seo-cover.png"
+    content="{{ cover | absolute_url }}"
   />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
