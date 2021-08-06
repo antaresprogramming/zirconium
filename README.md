@@ -47,4 +47,4 @@ npm install
 npm run serve
 ```
 
-The docs can then be accessed at [localhost:8080](http://localhost:8080).
+The docs can then be accessed at [localhost:4000](http://localhost:4000).
