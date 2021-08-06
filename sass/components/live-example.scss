@@ -4,6 +4,10 @@
     border       : 1px solid var(--bg-2);
 }
 
+.live-example > *:first-child:not(:only-child) {
+    border-bottom: 1px solid var(--bg-2);
+}
+
 .live-example__code .code-snippet {
     margin       : 0;
     border-radius: 0;
@@ -11,7 +15,6 @@
 }
 
 .live-example__result {
-    border-bottom: 1px solid var(--bg-2);
     padding      : var(--space-xl);
     background-image:
         linear-gradient(#fffc, #fffc),
