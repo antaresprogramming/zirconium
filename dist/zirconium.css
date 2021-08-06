@@ -152,12 +152,12 @@ nav li:before {
 :root {
   --border-radius: 0.25em;
   /* Used for paddings and margins */
-  --space-xs: 0.25em;
-  --space-s: 0.5em;
-  --space-m: 0.75em;
-  --space-l: 1em;
-  --space-xl: 2em;
-  --space-xxl: 4em;
+  --space-xs: 0.25rem;
+  --space-s: 0.5rem;
+  --space-m: 0.75rem;
+  --space-l: 1rem;
+  --space-xl: 2rem;
+  --space-xxl: 4rem;
   /* Z-index for components */
   --elevate-dropdown: 800;
   --elevate-navbar: 900;
@@ -2653,7 +2653,6 @@ details[open] > summary::after {
 }
 
 .nav-item.selected,
-.nav-item:focus,
 .nav-item:hover {
   background-color: var(--bg-1);
   text-decoration: none;
@@ -2663,8 +2662,8 @@ details[open] > summary::after {
   background-color: var(--bg-2);
 }
 
-.nav-item:focus {
-  box-shadow: 0 0 0 3px var(--bg-500);
+.nav-item:focus-visible {
+  box-shadow: 0 0 0 3px var(--bg-1);
   outline: none;
 }
 
@@ -3130,6 +3129,10 @@ details[open] > summary::after {
   border: 1px solid var(--bg-2);
 }
 
+.live-example > *:first-child:not(:only-child) {
+  border-bottom: 1px solid var(--bg-2);
+}
+
 .live-example__code .code-snippet {
   margin: 0;
   border-radius: 0;
@@ -3137,7 +3140,6 @@ details[open] > summary::after {
 }
 
 .live-example__result {
-  border-bottom: 1px solid var(--bg-2);
   padding: var(--space-xl);
   background-image: linear-gradient(#fffc, #fffc), url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Crect width='100' height='100' fill='white'/%3E%3Crect width='100' height='50' transform='matrix(-1 0 0 1 150 0)' fill='%23D4D4D4'/%3E%3Crect width='100' height='50' transform='matrix(-1 0 0 1 50 0)' fill='%23FAFAFA'/%3E%3Crect x='-50' y='50' width='100' height='50' fill='%23D4D4D4'/%3E%3Crect x='50' y='50' width='100' height='50' fill='%23FAFAFA'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='100' height='100' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
   background-size: 1.1rem 1.1rem;
