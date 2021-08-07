@@ -4,10 +4,14 @@ title: Zirconium by Antares Programming
 description: An opinionated CSS library of components used in Antares Programming
 cover: zirconium.png
 ---
+
 {% assign dropdownCounter = 0 %}
 <main class="section" id="main">
   <div class="grid" style="--space: var(--space-m); --padding: var(--space)">
-    <h1>{{ site.title }} <small class="warning badge root-size vertical-align-middle">Alpha</small></h1>
+    <h1>
+      {{ site.title }}
+      <small class="warning badge root-size vertical-align-middle">Alpha</small>
+    </h1>
     <p class="post__subtitle">
       An opinionated CSS library of components. Offical CSS written by
       <a href="https://github.com/maniczirconium/">Francis Rubio</a>
@@ -16,56 +20,168 @@ cover: zirconium.png
     </p>
     <div class="grid center-justified padding-m">
       <div class="flex">
-        {% include components/download.html 
-          linkModifier="padding-l padding-inline-xl"
-          groupModifier="bordered primary"
-          separatedDropdown=true
-        %}
-        <a href="https://github.com/antaresprogramming/zirconium" class="padding-l padding-inline-xl bordered button">
-          {% include feathericons/github.svg %}
-          Help us at Github
+        <div
+          class="relative primary bordered button-group"
+          style="overflow: revert"
+        >
+          <a
+            href="https://github.com/antaresprogramming/zirconium/releases"
+            class="padding-inline-xl padding-block-l primary button"
+            data-github
+          >
+            Download Latest Release
+          </a>
+          <div id="github-releases" data-gh-hide hidden>
+            <button class="button" data-toggle style="height: 100%">
+              <div class="visually-hidden">Dropdown</div>
+              {% include feathericons/chevron-down.svg %}
+            </button>
+            <div
+              class="absolute bordered margin-top-s level-2 raised dropdown"
+              style="right: 0; border-color: var(--bg-2); --space: var(--space-s) {{ include.dropdownStyle }}"
+            >
+              <a
+                class="nav-item"
+                download
+                data-zipball
+              >
+                {% include feathericons/package.svg %}
+                <span class="nav-item__main"> zirconium.zip </span>
+              </a>
+              <a
+                href="https://github.com/antaresprogramming/zirconium/releases/download/v0.0.2-alpha/zirconium.tar.gz"
+                class="nav-item"
+                download
+                data-tarball
+              >
+                {% include feathericons/package.svg %}
+                <span class="nav-item__main">
+                  zirconium.tar.gz
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a
+          href="https://github.com/antaresprogramming/zirconium"
+          class="padding-l padding-inline-xl bordered button"
+        >
+          {% include feathericons/github.svg %} Help us at Github
         </a>
       </div>
     </div>
   </div>
   <div class="section">
     <h2 class="margin-bottom-none">How to use</h2>
-    {% include components/side-note.html content="This is not yet ready for production" type="warning" modifier="padding-none margin-none" %}
+    {% include components/side-note.html content="This is not yet ready for
+    production" type="warning" modifier="padding-none margin-none" %}
     <ol>
       <li>
         <h3 class="h5">Download the Github release</h3>
-        <p>You can download the <code>.zip</code> or <code>.tar.gz</code> file from Github.</p>
-        {% include components/download.html modifier="primary" %}
+        <p>
+          You can download the <code>.zip</code> or <code>.tar.gz</code> file
+          from Github.
+        </p>
+        {% include components/download.html modifier="primary" dropdownButtonAttrs="data-github" %}
       </li>
       <li>
         <h3 class="h5">Add the HTML5 Doctype</h3>
-        <p>This tells browsers that we are using the latest web technologies.</p>
-        <pre class="code-snippet" data-prog-lang="html"><code>&lt;!DOCTYPE html></code></pre>
+        <p>
+          This tells browsers that we are using the latest web technologies.
+        </p>
+        <pre
+          class="code-snippet"
+          data-prog-lang="html"
+        ><code>&lt;!DOCTYPE html></code></pre>
       </li>
       <li>
         <h3 class="h5">Add the viewport meta tag</h3>
         <p>This tells browsers that we want our page to be responsive.</p>
-        <pre class="code-snippet" data-prog-lang="html"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"></code></pre>
+        <pre
+          class="code-snippet"
+          data-prog-lang="html"
+        ><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"></code></pre>
       </li>
       <li>
         <h3 class="h5">Include the stylesheet</h3>
         <p>Put this inside your <code>&lt;head></code> tag.</p>
-        <pre class="code-snippet" data-prog-lang="html"><code>&lt;link rel="stylesheet" href="zirconium.min.css"/></code></pre>
+        <pre
+          class="code-snippet"
+          data-prog-lang="html"
+        ><code>&lt;link rel="stylesheet" href="zirconium.min.css"/></code></pre>
       </li>
       <li>
         <h3 class="h5">Include the script</h3>
         <p>Put this toward the end of your <code>&lt;body></code> tag.</p>
-        <pre class="code-snippet" data-prog-lang="html"><code>&lt;script src="zirconium.js">&lt;/script></code></pre>
+        <pre
+          class="code-snippet"
+          data-prog-lang="html"
+        ><code>&lt;script src="zirconium.js">&lt;/script></code></pre>
       </li>
       <li>
-        <h3 class="h5">Include the <a href="https://prismjs.com/index.html">Prism.js</a></h3>
-        <p>This is for syntax highlighting in code snippets. There's more information in the <a href="{{ 'components/code-snippet' | relative_url }}">Code Snippets</a> documentation.</p>
-        <pre class="code-snippet" data-prog-lang="html"><code>&lt;script src="prism.js">&lt;/script></code></pre>
+        <h3 class="h5">
+          Include the <a href="https://prismjs.com/index.html">Prism.js</a>
+        </h3>
+        <p>
+          This is for syntax highlighting in code snippets. There's more
+          information in the
+          <a href="{{ 'components/code-snippet' | relative_url }}"
+            >Code Snippets</a
+          >
+          documentation.
+        </p>
+        <pre
+          class="code-snippet"
+          data-prog-lang="html"
+        ><code>&lt;script src="prism.js">&lt;/script></code></pre>
       </li>
     </ol>
   </div>
   <div class="section">
-    {% include components/components-grid.html subdirectory="01. Overview" layout="responsive-flex" %}
-    {% include components/components-grid.html subdirectory="02. Components" %}
+    {% include components/components-grid.html subdirectory="01. Overview"
+    layout="responsive-flex" %} {% include components/components-grid.html
+    subdirectory="02. Components" %}
   </div>
 </main>
+<script>
+  /* CHECK LATEST RELEASES */
+  let latestRelease 
+
+  (async function(){
+    latestRelease = await getLatestRelease()
+    updateDownloadButtons(latestRelease.name)
+    updateZipballButtons(latestRelease.name)
+    updateTarballButtons(latestRelease.name)
+
+    document.querySelectorAll('[data-gh-hide]')
+      .forEach(item => item.removeAttribute('hidden'))
+  })()
+  
+  async function getLatestRelease() {
+    const tagsURL = `https://api.github.com/repos/antaresprogramming/zirconium/tags`
+    return await fetch(tagsURL)
+      .then((raw) => raw.json())
+      .then((response) => response[0])
+  }
+
+  function updateDownloadButtons(releaseName) {
+    const downloadButtons = document.querySelectorAll('.button[data-github], .button [data-github]')
+    downloadButtons.forEach(button => {
+      button.innerText = `Download (${releaseName})`
+    })
+  }
+
+  function updateZipballButtons(zipballLink) {
+    const zipballButtons = document.querySelectorAll('a[data-zipball]')
+    zipballButtons.forEach(button => {
+      button.href = `https://github.com/antaresprogramming/zirconium/releases/download/${zipballLink}/zirconium.zip`
+    })
+  }
+
+  function updateTarballButtons(tarballLink) {
+    const tarballButtons = document.querySelectorAll('a[data-tarball]')
+    tarballButtons.forEach(button => {
+      button.href = `https://github.com/antaresprogramming/zirconium/releases/download/${tarballLink}/zirconium.tar.gz`
+    })
+  }
+</script>

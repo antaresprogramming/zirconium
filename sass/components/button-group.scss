@@ -1,14 +1,25 @@
 .button-group {
-    border-radius: var(--border-radius);
-    display      : flex;
-    gap          : 0;
-    overflow     : hidden;
-    width        : -moz-fit-content;
-    width        : fit-content;
+    display : flex;
+    gap     : 0;
+    overflow: hidden;
+    width   : -moz-fit-content;
+    width   : fit-content;
 }
 
 .button-group .button {
     border-radius: 0;
+}
+
+.button-group>*:first-child button,
+.button-group>.button:first-child {
+    border-top-left-radius   : var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+}
+
+.button-group>*:last-child button,
+.button-group>.button:last-child {
+    border-top-right-radius   : var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
 }
 
 .button-group .button:focus-visible {
@@ -16,11 +27,18 @@
 }
 
 .button-group.bordered {
+    border: none;
+}
+
+.button-group.bordered .button {
     border: 1px solid var(--border-color, #0003);
 }
 
-.button-group.bordered .button:not(:last-child) {
-    border-right: 1px solid var(--border-color, #0003);
+.button-group.bordered *+* .button,
+.button-group.bordered *+.button,
+.button-group.bordered .button+* .button,
+.button-group.bordered .button+.button {
+    border-left: none;
 }
 
 .button-group.primary {

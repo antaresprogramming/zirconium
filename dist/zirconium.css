@@ -76,7 +76,7 @@ audio:not([controls]) {
 }
 
 [hidden] {
-  display: none;
+  display: none !important;
 }
 
 picture {
@@ -2117,7 +2117,6 @@ div.code-toolbar > .toolbar > .toolbar-item > span.loading svg {
   }
 }
 .button-group {
-  border-radius: var(--border-radius);
   display: flex;
   gap: 0;
   overflow: hidden;
@@ -2131,6 +2130,24 @@ div.code-toolbar > .toolbar > .toolbar-item > span.loading svg {
   border-radius: 0;
 }
 
+.button-group > *:first-child button,
+.button-group > .button:first-child,
+div.code-toolbar > .toolbar > .toolbar-item.button-group > a:first-child,
+div.code-toolbar > .toolbar > .toolbar-item.button-group > button:first-child,
+div.code-toolbar > .toolbar > .toolbar-item.button-group > span:first-child {
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.button-group > *:last-child button,
+.button-group > .button:last-child,
+div.code-toolbar > .toolbar > .toolbar-item.button-group > a:last-child,
+div.code-toolbar > .toolbar > .toolbar-item.button-group > button:last-child,
+div.code-toolbar > .toolbar > .toolbar-item.button-group > span:last-child {
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
 .button-group .button:focus-visible, .button-group div.code-toolbar > .toolbar > .toolbar-item > a:focus-visible,
 .button-group div.code-toolbar > .toolbar > .toolbar-item > button:focus-visible,
 .button-group div.code-toolbar > .toolbar > .toolbar-item > span:focus-visible {
@@ -2139,13 +2156,55 @@ div.code-toolbar > .toolbar > .toolbar-item > span.loading svg {
 }
 
 .button-group.bordered {
+  border: none;
+}
+
+.button-group.bordered .button, .button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > a,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > button,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > span {
   border: 1px solid var(--border-color, #0003);
 }
 
-.button-group.bordered .button:not(:last-child), .button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > a:not(:last-child),
-.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > button:not(:last-child),
-.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > span:not(:last-child) {
-  border-right: 1px solid var(--border-color, #0003);
+.button-group.bordered * + * .button, .button-group.bordered * + * div.code-toolbar > .toolbar > .toolbar-item > a,
+.button-group.bordered * + * div.code-toolbar > .toolbar > .toolbar-item > button,
+.button-group.bordered * + * div.code-toolbar > .toolbar > .toolbar-item > span,
+.button-group.bordered * + .button,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > * + a,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > * + button,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > * + span,
+.button-group.bordered .button + * .button,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > a + * .button,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > button + * .button,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > span + * .button,
+.button-group.bordered .button + * div.code-toolbar > .toolbar > .toolbar-item > a,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > a + * div.code-toolbar > .toolbar > .toolbar-item > a,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > button + * div.code-toolbar > .toolbar > .toolbar-item > a,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > span + * div.code-toolbar > .toolbar > .toolbar-item > a,
+.button-group.bordered .button + * div.code-toolbar > .toolbar > .toolbar-item > button,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > a + * div.code-toolbar > .toolbar > .toolbar-item > button,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > button + * div.code-toolbar > .toolbar > .toolbar-item > button,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > span + * div.code-toolbar > .toolbar > .toolbar-item > button,
+.button-group.bordered .button + * div.code-toolbar > .toolbar > .toolbar-item > span,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > a + * div.code-toolbar > .toolbar > .toolbar-item > span,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > button + * div.code-toolbar > .toolbar > .toolbar-item > span,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > span + * div.code-toolbar > .toolbar > .toolbar-item > span,
+.button-group.bordered .button + .button,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > a + .button,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > button + .button,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > span + .button,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > .button + a,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > a + a,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > button + a,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > span + a,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > .button + button,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > a + button,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > button + button,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > span + button,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > .button + span,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > a + span,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > button + span,
+.button-group.bordered div.code-toolbar > .toolbar > .toolbar-item > span + span {
+  border-left: none;
 }
 
 .button-group.primary {
