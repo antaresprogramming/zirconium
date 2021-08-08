@@ -256,7 +256,7 @@
     }
 
     window.addEventListener('scroll', () => {
-      throttle(handleNavScroll, 0)
+      throttle(handleNavScroll, 300)
     })
   })
 })()

@@ -202,3 +202,179 @@ Special image cards can also be horizontal. This is used primarily to present fe
 &lt;/article></code></pre>
     </div>
 </article>
+
+<h2 class="weight-light h3 padding-top-l margin-top-l">Blurred Image Cards</h2>
+
+{% include components/side-note.html
+    content="Blurs can slow devices down. Use it sparingly."
+    type="warning"
+%}
+
+Cards can also be fancy and have frosted glass effect. This is used for cards that depict media content like video thumbnails and album covers. To make this work, do the folllowing:
+
+1. Add the class `.blurred` to the `.image-card` component.
+1. Using the `style` attribute on the `.image-card` component, set the value of the `--blur-background` variable to the URL of the image in the image card.
+
+<article class="live-example">
+    <div class="live-example__result responsive-grid align-items-start padding-xl" style="--grid-gap: var(--space-xl)">
+        <article class="raised blurred image-card" style="--blur-background: url('https://upload.wikimedia.org/wikipedia/en/d/d6/Lady_Gaga_-_Chromatica_%28Official_Album_Cover%29.png')">
+            <img 
+                src="https://upload.wikimedia.org/wikipedia/en/d/d6/Lady_Gaga_-_Chromatica_%28Official_Album_Cover%29.png"
+                alt="Lady Gaga - Chromatica (Official Album Cover).png">
+            <div class="card">
+                <span class="h4 weight-light">Chromatica</span>
+                <span class="flex">
+                    {% include components/icon.html icon="user" modifiers="small" %}
+                    <span class="visually-hidden">Artist: </span>
+                    Lady Gaga
+                </span>
+                <span class="flex">
+                    {% include components/icon.html icon="calendar" modifiers="small" %}
+                    <span class="visually-hidden">Release Date: </span>
+                    <time datetime="2020">2009</time>
+                </span>
+            </div>
+        </article>
+        <article class="raised blurred image-card" style="--blur-background: url('https://upload.wikimedia.org/wikipedia/en/4/45/The_Fame_Monster.png')">
+            <img src="https://upload.wikimedia.org/wikipedia/en/4/45/The_Fame_Monster.png"
+                 alt="Black-and-white image of Lady Gaga in a blond bob wig with a black collar hiding her mouth.">
+            <div class="card">
+                <span class="h4 weight-light">The Fame Monster</span>
+                <span class="flex">
+                    {% include components/icon.html icon="user" modifiers="small" %}
+                    <span class="visually-hidden">Artist: </span>
+                    Lady Gaga
+                </span>
+                <span class="flex">
+                    {% include components/icon.html icon="calendar" modifiers="small" %}
+                    <span class="visually-hidden">Release Date: </span>
+                    <time datetime="2020">2009</time>
+                </span>
+            </div>
+        </article>
+        <article class="raised blurred image-card" style="--blur-background: url('https://upload.wikimedia.org/wikipedia/en/d/dd/Lady_Gaga_%E2%80%93_The_Fame_album_cover.png')">
+            <img src="https://upload.wikimedia.org/wikipedia/en/d/dd/Lady_Gaga_%E2%80%93_The_Fame_album_cover.png"
+                alt="Gaga's face wearing black glasses, whose right side is covered by blue crystals. On the bottom of the left side of the glasses, the word &quot;The Fame&quot; is inscribed in white."
+                width="300"
+                height="300"
+            >
+            <div class="card">
+                <span class="h4 weight-light">The Fame</span>
+                <span class="flex">
+                    {% include components/icon.html icon="user" modifiers="small" %}
+                    <span class="visually-hidden">Artist: </span>
+                    Lady Gaga
+                </span>
+                <span class="flex">
+                    {% include components/icon.html icon="calendar" modifiers="small" %}
+                    <span class="visually-hidden">Release Date: </span>
+                    <time datetime="2020">2008</time>
+                </span>
+            </div>
+        </article>
+    </div>
+    <div class="live-example__code">
+        <pre class="code-snippet" data-prog-lang="html" data-line='2,3,6'><code>&lt;article
+  class="blurred image-card"
+  style="--blur-background: url('album_cover.png')"
+>
+  &lt;img
+    src="album_cover.png"
+    alt="Lady Gaga - Chromatica (Official Album Cover).png"
+    width="300"
+    height="300"
+  />
+  &lt;div class="card">
+    &hellip;
+  &lt;/div>
+&lt;/article></code></pre>
+    </div>
+</article>
+
+{% include components/side-note.html
+    content="In browsers that don't support <code>backdrop-filter</code>, this falls back to the normal <code>.image-card</code> component."
+    type="info"
+%}
+
+<h2 class="weight-light h3 padding-top-l margin-top-l">Hoverable Blurred Image Cards</h2>
+
+Hoverable blurred image cards hide the content, showing only the image part until the card is hovered on, or it or one of its children receives focus. To make a blurred image card hoverable, use the `.hoverable` class.
+
+{% include components/side-note.html
+    content="In touch devices, this component fallsback to a non-hoverable <code>.blurred.image-card</code> component."
+    type="info"
+%}
+
+<article class="live-example">
+    <div class="live-example__result responsive-grid align-items-start padding-xl" style="--grid-gap: var(--space-xl)">
+        <article class="raised hoverable blurred image-card" style="--blur-background: url('https://upload.wikimedia.org/wikipedia/en/d/d6/Lady_Gaga_-_Chromatica_%28Official_Album_Cover%29.png')">
+            <img 
+                src="https://upload.wikimedia.org/wikipedia/en/d/d6/Lady_Gaga_-_Chromatica_%28Official_Album_Cover%29.png"
+                alt="Lady Gaga - Chromatica (Official Album Cover).png">
+            <div class="card">
+                <span class="h4 weight-light">Chromatica</span>
+                <span class="flex">
+                    {% include components/icon.html icon="user" modifiers="small" %}
+                    <span class="visually-hidden">Artist: </span>
+                    Lady Gaga
+                </span>
+                <span class="flex">
+                    {% include components/icon.html icon="calendar" modifiers="small" %}
+                    <span class="visually-hidden">Release Date: </span>
+                    <time datetime="2020">2009</time>
+                </span>
+            </div>
+        </article>
+        <article class="raised hoverable blurred image-card" style="--blur-background: url('https://upload.wikimedia.org/wikipedia/en/4/45/The_Fame_Monster.png')">
+            <img src="https://upload.wikimedia.org/wikipedia/en/4/45/The_Fame_Monster.png"
+                 alt="Black-and-white image of Lady Gaga in a blond bob wig with a black collar hiding her mouth.">
+            <div class="card">
+                <span class="h4 weight-light">The Fame Monster</span>
+                <span class="flex">
+                    {% include components/icon.html icon="user" modifiers="small" %}
+                    <span class="visually-hidden">Artist: </span>
+                    Lady Gaga
+                </span>
+                <span class="flex">
+                    {% include components/icon.html icon="calendar" modifiers="small" %}
+                    <span class="visually-hidden">Release Date: </span>
+                    <time datetime="2020">2009</time>
+                </span>
+            </div>
+        </article>
+        <article class="raised hoverable blurred image-card" style="--blur-background: url('https://upload.wikimedia.org/wikipedia/en/d/dd/Lady_Gaga_%E2%80%93_The_Fame_album_cover.png')">
+            <img src="https://upload.wikimedia.org/wikipedia/en/d/dd/Lady_Gaga_%E2%80%93_The_Fame_album_cover.png"
+                alt="Gaga's face wearing black glasses, whose right side is covered by blue crystals. On the bottom of the left side of the glasses, the word &quot;The Fame&quot; is inscribed in white."
+                width="300"
+                height="300"
+            >
+            <div class="card">
+                <span class="h4 weight-light">The Fame</span>
+                <span class="flex">
+                    {% include components/icon.html icon="user" modifiers="small" %}
+                    <span class="visually-hidden">Artist: </span>
+                    Lady Gaga
+                </span>
+                <span class="flex">
+                    {% include components/icon.html icon="calendar" modifiers="small" %}
+                    <span class="visually-hidden">Release Date: </span>
+                    <time datetime="2020">2008</time>
+                </span>
+            </div>
+        </article>
+    </div>
+    <div class="live-example__code">
+        <pre class="code-snippet" data-prog-lang="html" data-line='2'><code>&lt;article
+  class="hoverable blurred image-card"
+  style="--blur-background: url('album_cover.png')"
+>
+  &lt;img
+    src="album_cover.png" alt="&hellip;"
+    width="300" height="300"
+  />
+  &lt;div class="card">
+    &hellip;
+  &lt;/div>
+&lt;/article></code></pre>
+    </div>
+</article>

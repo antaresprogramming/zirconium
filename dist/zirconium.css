@@ -2413,6 +2413,72 @@ div.code-toolbar > .toolbar > .toolbar-item.button-group > span:last-child {
   box-shadow: var(--shadow-2);
 }
 
+@supports (backdrop-filter: blur(1rem)) {
+  .blurred.image-card {
+    grid-template-rows: revert;
+    background-image: var(--blur-background);
+    background-color: var(--bg-0);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .blurred.image-card > * {
+    grid-row: span 1;
+  }
+
+  .blurred.image-card .card {
+    --brightness: 120%;
+    margin: 0;
+    border-radius: 0;
+    border: 0;
+    background-color: hsla(var(--bg-0-raw)/75%);
+    backdrop-filter: blur(0.25rem) saturate(200%) brightness(120%);
+  }
+  @media (prefers-color-scheme: dark) {
+    .blurred.image-card .card {
+      --brightness: 20%;
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .blurred.image-card.hoverable > * {
+      grid-row: 1;
+      grid-column: 1;
+    }
+    .blurred.image-card.hoverable > .card {
+      align-self: end;
+      backdrop-filter: none;
+      position: relative;
+      transform: translateY(100%);
+      transition: transform 300ms;
+    }
+    .blurred.image-card.hoverable > .card, .blurred.image-card.hoverable > .card::before {
+      background-image: var(--blur-background);
+      background-position: inherit;
+      background-repeat: inherit;
+      background-size: inherit;
+    }
+    .blurred.image-card.hoverable > .card::before, .blurred.image-card.hoverable > .card::after {
+      content: "";
+      bottom: -2rem;
+      left: -2rem;
+      position: absolute;
+      right: -2rem;
+      top: -2rem;
+      z-index: -1;
+    }
+    .blurred.image-card.hoverable > .card::before {
+      filter: blur(0.25rem) saturate(150%) brightness(120%);
+    }
+    .blurred.image-card.hoverable > .card::after {
+      background-color: hsla(var(--bg-0-raw)/75%);
+    }
+    .blurred.image-card.hoverable:hover > .card, .blurred.image-card.hoverable:focus > .card, .blurred.image-card.hoverable:focus-within > .card {
+      transform: translateY(0);
+    }
+  }
+}
 .code-snippet {
   background-color: var(--bg-1);
   border-radius: var(--border-radius);
@@ -4068,6 +4134,10 @@ details[open] > summary::after {
  */
 .small {
   font-size: 0.8em;
+}
+
+svg.small {
+  width: 1.25em;
 }
 
 .large {

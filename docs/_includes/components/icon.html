@@ -4,4 +4,9 @@
 {% include {{path}} %}
 {% endcapture %}
 
-{{ final_icon | replace: '<svg', '<svg aria-hidden="true"'}}
+{% assign classPrepend = 'class="' %}
+{% assign modifiers = include.modifiers | prepend: classPrepend | append: ' ' %}
+{{ final_icon
+    | replace: '<svg', '<svg aria-hidden="true"'
+    | replace: 'class="', modifiers
+}}
