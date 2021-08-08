@@ -104,6 +104,7 @@
 
 @supports (backdrop-filter: blur(1rem)) {
     .blurred.image-card {
+        --blur-size        : 0.25rem;
         grid-template-rows : revert;
         background-image   : var(--blur-background);
         background-color   : var(--bg-0);
@@ -122,8 +123,8 @@
         margin          : 0;
         border-radius   : 0;
         border          : 0;
-        background-color: hsla(var(--bg-0-raw) / 75%);
-        backdrop-filter : blur(0.25rem) saturate(200%) brightness(120%);
+        background-color: hsla(var(--bg-0-raw) / 85%);
+        backdrop-filter : blur(var(--blur-size)) saturate(200%);
 
         @media (prefers-color-scheme: dark) {
             --brightness: 20%;
@@ -132,6 +133,7 @@
 
     @media (hover: hover) and (pointer: fine) {
         .blurred.image-card.hoverable {
+            --blur-size: 1rem;
 
             &>* {
                 grid-row   : 1;
@@ -147,30 +149,31 @@
 
                 &,
                 &::before {
-                    background-image   : var(--blur-background);
-                    background-position: bottom;
-                    background-repeat  : inherit;
-                    background-size    : inherit;
+                    background-image     : var(--blur-background);
+                    background-position  : bottom;
+                    background-repeat    : inherit;
+                    background-size      : inherit;
                     background-attachment: local;
                 }
 
                 &::before,
                 &::after {
-                    content : "";
-                    bottom  : -0.25rem;
-                    left    : -0.25rem;
-                    position: absolute;
-                    right   : -0.25rem;
-                    top     : -0.25rem;
-                    z-index : -1;
+                    --blur-offset: calc(var(--blur-size) * -1.5);
+                    content      : "";
+                    bottom       : var(--blur-offset);
+                    left         : var(--blur-offset);
+                    position     : absolute;
+                    right        : var(--blur-offset);
+                    top          : var(--blur-offset);
+                    z-index      : -1;
                 }
 
                 &::before {
-                    filter: blur(0.25rem) saturate(150%) brightness(120%);
+                    filter: blur(var(--blur-size)) saturate(150%) brightness(120%);
                 }
 
                 &::after {
-                    background-color: hsla(var(--bg-0-raw) / 75%);
+                    background-color: hsla(var(--bg-0-raw) / 85%);
                 }
             }
 
