@@ -106,3 +106,83 @@
 .card.hoverable:hover {
     box-shadow: var(--shadow-2)
 }
+
+@supports (backdrop-filter: blur(1rem)) {
+    .blurred.image-card {
+        grid-template-rows : revert;
+        background-image   : var(--blur-background);
+        background-color   : var(--bg-0);
+        background-repeat  : no-repeat;
+        background-size    : cover;
+        background-position: center;
+    }
+
+    .blurred.image-card>* {
+        grid-row: span 1;
+    }
+
+    .blurred.image-card .card {
+        --brightness: 120%;
+
+        margin          : 0;
+        border-radius   : 0;
+        border          : 0;
+        background-color: hsla(var(--bg-0-raw) / 75%);
+        backdrop-filter : blur(0.25rem) saturate(200%) brightness(120%);
+
+        @media (prefers-color-scheme: dark) {
+            --brightness: 20%;
+        }
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .blurred.image-card.hoverable {
+
+            &>* {
+                grid-row   : 1;
+                grid-column: 1;
+            }
+
+            &>.card {
+                align-self     : end;
+                backdrop-filter: none;
+                position       : relative;
+                transform      : translateY(100%);
+                transition     : transform 300ms;
+
+                &,
+                &::before {
+                    background-image   : var(--blur-background);
+                    background-position: inherit;
+                    background-repeat  : inherit;
+                    background-size    : inherit;
+                }
+
+                &::before,
+                &::after {
+                    content : "";
+                    bottom  : -2rem;
+                    left    : -2rem;
+                    position: absolute;
+                    right   : -2rem;
+                    top     : -2rem;
+                    z-index : -1;
+                }
+
+                &::before {
+                    filter: blur(0.25rem) saturate(150%) brightness(120%);
+                }
+
+                &::after {
+                    background-color: hsla(var(--bg-0-raw) / 75%);
+                }
+            }
+
+            &:hover>.card,
+            &:focus>.card,
+            &:focus-within>.card {
+                transform: translateY(0);
+            }
+        }
+    }
+}
