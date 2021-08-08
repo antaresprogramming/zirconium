@@ -104,7 +104,7 @@
 
 @supports (backdrop-filter: blur(1rem)) {
     .blurred.image-card {
-        --blur-size        : 0.25rem;
+        --blur-size        : 8px;
         grid-template-rows : revert;
         background-image   : var(--blur-background);
         background-color   : var(--bg-0);
@@ -133,7 +133,7 @@
 
     @media (hover: hover) and (pointer: fine) {
         .blurred.image-card.hoverable {
-            --blur-size: 1rem;
+            --blur-size: 16px;
 
             &>* {
                 grid-row   : 1;
