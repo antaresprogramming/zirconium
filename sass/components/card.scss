@@ -59,8 +59,9 @@
     max-width: none;
 }
 
-.image-card .card {
+.image-card>.card {
     --shadow: none;
+    --border: none;
 }
 
 @media (min-width: 840px) {
@@ -89,22 +90,16 @@
         grid-row   : 1/2;
     }
 
-    .image-card .card {
-        --shadow: revert;
+    .image-card>.card {
+        --shadow: var(--shadow-2);
         grid-row: 2/3;
         margin  : var(--space, var(--space-s));
     }
 
-    .image-card.horizontal .card {
+    .image-card.horizontal>.card {
         grid-column: 2/3;
         grid-row   : 1/2;
     }
-}
-
-.card.focusable:focus-visible,
-.card.focusable:focus-within,
-.card.hoverable:hover {
-    box-shadow: var(--shadow-2)
 }
 
 @supports (backdrop-filter: blur(1rem)) {
@@ -121,7 +116,7 @@
         grid-row: span 1;
     }
 
-    .blurred.image-card .card {
+    .blurred.image-card>.card {
         --brightness: 120%;
 
         margin          : 0;
@@ -153,19 +148,20 @@
                 &,
                 &::before {
                     background-image   : var(--blur-background);
-                    background-position: inherit;
+                    background-position: bottom;
                     background-repeat  : inherit;
                     background-size    : inherit;
+                    background-attachment: local;
                 }
 
                 &::before,
                 &::after {
                     content : "";
-                    bottom  : -2rem;
-                    left    : -2rem;
+                    bottom  : -0.25rem;
+                    left    : -0.25rem;
                     position: absolute;
-                    right   : -2rem;
-                    top     : -2rem;
+                    right   : -0.25rem;
+                    top     : -0.25rem;
                     z-index : -1;
                 }
 
@@ -185,4 +181,10 @@
             }
         }
     }
+}
+
+.card.focusable:focus-visible,
+.card.focusable:focus-within,
+.card.hoverable:hover {
+    box-shadow: var(--shadow-2)
 }
