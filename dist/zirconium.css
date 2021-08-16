@@ -1710,7 +1710,6 @@ dl dd::before {
   font-weight: 600;
   padding: var(--space-xs) var(--space-s);
   text-decoration: none;
-  transition: background-color 300ms;
   --bg-color: var(--bg-1);
   --focus-color: var(--bg-2);
   --hover-color: var(--bg-2);
@@ -1730,6 +1729,7 @@ dl dd::before {
   padding: var(--space-s) var(--space-l);
 }
 
+button.badge:hover,
 a.badge[href]:hover {
   background-color: var(--hover-color);
 }
@@ -1801,6 +1801,11 @@ a.badge[href]:hover {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space, var(--space-s));
+}
+
+.badge.outline {
+  background: transparent;
+  border: 1px solid var(--text-color);
 }
 
 .breadcrumb {
