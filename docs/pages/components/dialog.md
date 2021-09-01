@@ -66,18 +66,18 @@ If you decide to add a close button inside the dialog's contents, you just need 
         <pre class="code-snippet" data-prog-lang="html"><code>&lt;button class="button" data-dialog="dialog-2">Toggle dialog&lt;/button>
 &lt;div class="dialog" id="dialog-2">
     &lt;div class="dialog__backdrop" data-dialog-hide>&lt;/div>
-    &lt;article class="dialog__inner card no-border raised padding-none">
-        &lt;header class="flex padding-l justify-content-end">
+    &lt;article class="dialog__inner card bordered raised padding-none">
+        &lt;header class="flex padding-l justify-content-space-between border-bottom">
+            &lt;p class="h5 margin-none">Dialog header&lt;/p>
             &lt;button class="square button padding-s" data-dialog-hide>
                 &lt;span aria-hidden="true">&times;&lt;/span>
                 &lt;span class="visually-hidden">Close dialog&lt;/span>
             &lt;/button>
         &lt;/header>
         &lt;div class="padding-l">
-            &lt;h5 class="margin-none">Dialog header&lt;/h5>
             &lt;p>This is a dialog.&lt;/p>
         &lt;/div>
-        &lt;footer class="flex padding-l justify-content-end bg-1">
+        &lt;footer class="flex padding-l justify-content-end border-top">
             &lt;button class="button" data-dialog-hide>Close&lt;/button>
         &lt;/footer>
     &lt;/article>
