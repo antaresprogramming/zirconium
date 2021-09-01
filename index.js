@@ -1,5 +1,6 @@
 const sass = require('sass')
 const fs = require('fs')
+const glob = require('glob')
 const logFormat = require('./scripts/logformat')
 
 const inputFile = './sass/index.scss'
@@ -71,6 +72,7 @@ sass.render(
       )
 
       copyToPublic()
+      compileScripts()
     } else {
       console.log(logFormat.errorBody(err.formatted), '\n\n')
     }
@@ -90,16 +92,36 @@ function copyToPublic() {
     logFormat.successHeader('Done:'),
     logFormat.successBody(publicMapfile)
   )
+}
 
-  fs.copyFileSync(rawScriptFile, publicScriptFile)
-  console.log(
-    logFormat.successHeader('Done:'),
-    logFormat.successBody(publicScriptFile)
-  )
+async function compileScripts() {
+  console.log('Compiling scripts...')
+  const scripts = 'js/**/*.js'
 
-  fs.copyFileSync(publicScriptFile, distScriptFile)
-  console.log(
-    logFormat.successHeader('Done:'),
-    logFormat.successBody(distScriptFile)
-  )
+  glob(scripts, function (err, files) {
+    const compiledScript = []
+    files.forEach((file) => {
+      const contents = fs.readFileSync(file, { encoding: 'utf-8' })
+
+      compiledScript.push(contents)
+    })
+
+    console.log(`Writing to ${distScriptFile}`)
+    fs.writeFileSync(distScriptFile, compiledScript.join('\n'), {
+      encoding: 'utf-8',
+    })
+    console.log(
+      logFormat.successHeader('Done:'),
+      logFormat.successBody(distScriptFile),
+      '\n'
+    )
+
+    console.log('Copying scripts to public folders')
+    fs.copyFileSync(distScriptFile, publicScriptFile)
+    console.log(
+      logFormat.successHeader('Done:'),
+      logFormat.successBody(publicScriptFile),
+      '\n'
+    )
+  })
 }

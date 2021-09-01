@@ -1,0 +1,27 @@
+.dialog {
+    display : grid;
+    height  : 100%;
+    left    : 0;
+    position: fixed;
+    top     : 0;
+    width   : 100%;
+    z-index : var(--elevate-dialog);
+
+    &>* {
+        grid-row   : 1;
+        grid-column: 1;
+    }
+}
+
+.dialog__backdrop {
+    background-color: hsl(var(--bg-0-raw) / 75%);
+}
+
+.dialog__inner {
+    place-self: center;
+}
+
+.dialog__inner {
+    width    : 90%;
+    max-width: 80ch;
+}

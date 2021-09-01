@@ -2564,6 +2564,33 @@ div.code-toolbar > .toolbar > .toolbar-item.button-group > span:last-child {
   outline-offset: -3px;
 }
 
+.dialog {
+  display: grid;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: var(--elevate-dialog);
+}
+.dialog > * {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.dialog__backdrop {
+  background-color: hsl(var(--bg-0-raw)/75%);
+}
+
+.dialog__inner {
+  place-self: center;
+}
+
+.dialog__inner {
+  width: 90%;
+  max-width: 80ch;
+}
+
 /* Disclosure Widget */
 details {
   border: 1px solid var(--bg-1);
@@ -3840,6 +3867,7 @@ details[open] > summary::after {
   border-right: 1px solid var(--border-color, var(--bg-1));
 }
 
+.borderless,
 .no-border {
   border: none !important;
 }
