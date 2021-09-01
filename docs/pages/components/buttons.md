@@ -221,3 +221,14 @@ Add `.small` to your button to make it smaller.
 &lt;button class="small button">Small button&lt;/button></code></pre>
     </div>
 </article>
+
+<h2 class="weight-light h3">Disabled buttons</h2>
+
+Disabled buttons are, accessibility-wise, not great. They communicate that something is wrong and the user cannot continue, but it does not clarify why and how to solve it. As an alternative to disabled buttons, it is better to use a regular button and show a note that explains why and how the user cannot continue.
+
+<article class="live-example">
+    <div class="live-example__result">
+        <button class="button" data-show="hide-1">Submit</button>
+        <p id="hide-1" class="text-error" hidden>You have not filled all required information.</p>
+    </div>
+</article>
