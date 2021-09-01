@@ -178,6 +178,16 @@
 
     --selection-background: var(--banana-900);
     --selection-foreground: var(--banana-100);
+
+    --bg-error  : var(--strawberry-900);
+    --bg-success: var(--lime-900);
+    --bg-warning: var(--banana-900);
+    --bg-info   : var(--blueberry-900);
+
+    --text-error  : var(--strawberry-300);
+    --text-success: var(--lime-300);
+    --text-warning: var(--banana-300);
+    --text-info   : var(--blueberry-300);
 }
 
 @mixin light-colors {
@@ -198,6 +208,16 @@
 
     --selection-background: var(--banana-100);
     --selection-foreground: var(--banana-900);
+
+    --bg-error  : var(--strawberry-100);
+    --bg-success: var(--lime-100);
+    --bg-warning: var(--banana-100);
+    --bg-info   : var(--blueberry-100);
+
+    --text-error  : var(--strawberry-700);
+    --text-success: var(--lime-700);
+    --text-warning: var(--banana-700);
+    --text-info   : var(--blueberry-700);
 }
 
 :root {

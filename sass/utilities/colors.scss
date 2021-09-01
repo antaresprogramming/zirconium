@@ -14,25 +14,21 @@
     color: var(--non-essential-text);
 }
 
-/* .level-0-bg {
-    background-color: var(--bg-0);
-}
-
-.level-1-bg {
-    background-color: var(--bg-1);
-}
-
-.level-2-bg {
-    background-color: var(--bg-2);
-}
-
-.level-3-bg {
-    background-color: var(--bg-3);
-} */
-
 @for $level from 0 to 3 {
     .bg-#{$level},
     .level-#{$level}-bg {
         background-color: var(--bg-#{$level});
+    }
+}
+
+$types: error, success, warning, info;
+
+@each $color in $types {
+    .text-#{$color} {
+        color: var(--text-#{$color})
+    }
+
+    .bg-#{$color} {
+        background-color: var(--bg-#{$color})
     }
 }
